@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Restaurateur;
+use App\Restaurant;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
