@@ -18,7 +18,7 @@ class CreateRestaurantsTable extends Migration
 
             $table->string('name');
             $table->string('address');
-            $table->integer('telephone');
+            $table->string('telephone');
             $table->string('p-iva');
             $table->string('img') -> nullable();
             $table->bigInteger('user_id') -> unsigned() -> index();
