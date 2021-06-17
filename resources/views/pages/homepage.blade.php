@@ -35,47 +35,17 @@
      <section id="categories">
           <h2>Cosa mangerai oggi?</h2>
           <ul class="typeOfFoods">
-               <li>Sushi</li>
-
-               <li>Asiatico</li>
-
-               <li>Messicano</li>
-
-               <li>Italiano</li>
-
-               <li>Fast Food</li>
+               @foreach ($categories as $category)
+                   <li> {{ $category -> name }}</li>
+               @endforeach
           </ul>
           <ul class="restaurants">
-               
+               @foreach ($restaurants as $restaurant)
                <li>
-                    <img src="../img/sushi.jpg" alt="">
-                    <h3>Ristorante</h3>
+                    <img src="{{asset('storage/img/sushi.jpg')}}" alt="">
+                    <h3>{{$restaurant -> name}}</h3>
                </li>
-
-               <li>
-                    <img src="../img/sushi.jpg" alt="">
-                    <h3>Ristorante</h3>
-               </li>
-
-               <li>
-                    <img src="../img/sushi.jpg" alt="">
-                    <h3>Ristorante</h3>
-               </li>
-
-               <li>
-                    <img src="../img/sushi.jpg" alt="">
-                    <h3>Ristorante</h3>
-               </li>
-
-               <li>
-                    <img src="../img/sushi.jpg" alt="">
-                    <h3>Ristorante</h3>
-               </li>
-
-               <li>
-                    <img src="../img/sushi.jpg" alt="">
-                    <h3>Ristorante</h3>
-               </li>
+               @endforeach
           </ul>
      </section>
 
