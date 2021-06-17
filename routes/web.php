@@ -45,4 +45,6 @@ Route::get('/logged', 'HomeController@loggedPage')
 
 Route::get('/', 'MainController@homepage')->name('homepage');
 
+Route::post('/', 'HomeController@logout')->name('logout');
+
 
