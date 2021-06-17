@@ -10942,3 +10942,493 @@ a.text-dark:focus {
   }
 }
 
+header {
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 80px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+header aside {
+  flex-basis: 10%;
+}
+
+header aside div {
+  background-color: #dfba42;
+  height: 80px;
+  padding: 20px;
+  border: 1px solid black;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+header aside div:hover {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 5px 10px 3px #333232;
+  margin-top: 10px;
+}
+
+header aside div a {
+  font-family: "Monoton", cursive;
+  font-size: 30px;
+  font-weight: normal;
+  color: black;
+}
+
+header nav {
+  flex-basis: 70%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header nav ul li {
+  padding: 10px 15px;
+  background-color: #dfba42;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+}
+
+header nav ul li:hover {
+  border-radius: 10px;
+  box-shadow: 5px 10px 3px #333232;
+  margin-top: 10px;
+  padding: 10px 10px;
+}
+
+header nav ul li a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body #homepage .jumbotron,
+body #homepage .delivery,
+body #homepage .map {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+body #homepage .jumbotron .attach,
+body #homepage .jumbotron .text,
+body #homepage .delivery .attach,
+body #homepage .delivery .text,
+body #homepage .map .attach,
+body #homepage .map .text {
+  flex-basis: calc(50% - 20px);
+}
+
+body #homepage .jumbotron .text,
+body #homepage .delivery .text,
+body #homepage .map .text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body #homepage .jumbotron .text ::-moz-placeholder, body #homepage .delivery .text ::-moz-placeholder, body #homepage .map .text ::-moz-placeholder {
+  color: black;
+}
+
+body #homepage .jumbotron .text :-ms-input-placeholder, body #homepage .delivery .text :-ms-input-placeholder, body #homepage .map .text :-ms-input-placeholder {
+  color: black;
+}
+
+body #homepage .jumbotron .text ::placeholder,
+body #homepage .delivery .text ::placeholder,
+body #homepage .map .text ::placeholder {
+  color: black;
+}
+
+body #homepage .jumbotron .text h2,
+body #homepage .jumbotron .text h3,
+body #homepage .delivery .text h2,
+body #homepage .delivery .text h3,
+body #homepage .map .text h2,
+body #homepage .map .text h3 {
+  font-family: "Indie Flower", cursive;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+body #homepage .jumbotron .text input,
+body #homepage .delivery .text input,
+body #homepage .map .text input {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 20px;
+  height: 70px;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid #F5B436;
+  background-color: #F5B436;
+  transition: all 0.5s linear;
+}
+
+body #homepage .jumbotron .text input:hover,
+body #homepage .delivery .text input:hover,
+body #homepage .map .text input:hover {
+  box-shadow: 5px 10px 3px #333232;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+body #homepage .jumbotron .text button,
+body #homepage .delivery .text button,
+body #homepage .map .text button {
+  background-color: #EEE7D7;
+  margin: 20px 0;
+  padding: 20px;
+  border: 0;
+  border-radius: 10px;
+  transition: all 0.5s linear;
+}
+
+body #homepage .jumbotron .text button:hover,
+body #homepage .delivery .text button:hover,
+body #homepage .map .text button:hover {
+  box-shadow: 5px 10px 3px #333232;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+body #homepage .jumbotron .text button a,
+body #homepage .delivery .text button a,
+body #homepage .map .text button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: black;
+}
+
+body #homepage .jumbotron {
+  background-color: #F5B436;
+  padding: 100px 8% 0 0;
+}
+
+body #homepage .jumbotron .attach {
+  background-image: url(/images/carne3.png?bb551793b9c3d22c73dad6d6d2ea9973);
+  background-repeat: no-repeat;
+  background-size: 40% auto;
+  background-position: 2% 50%;
+  background-attachment: fixed;
+  height: 900px;
+  width: auto;
+}
+
+body #homepage .delivery {
+  background-color: #EEE7D7;
+  padding: 0 8% 0 0;
+}
+
+body #homepage .delivery .attach {
+  background-image: url(/images/food-delivery-vector-4428252-removebg-preview.png?0fe3819efc9d02124db1e2e4d252bf96);
+  background-repeat: no-repeat;
+  background-size: 40% auto;
+  background-position: 0 30%;
+  background-attachment: fixed;
+  height: 1000px;
+  width: auto;
+}
+
+body #homepage .map {
+  background-color: #8ab6cf;
+  padding: 0 8% 0 0;
+}
+
+body #homepage .map .attach {
+  background-image: url(/images/verde-italia-icona-mappa-cartoon-htmdm2-removebg-preview.png?0008584f0430e65802add4f576288120);
+  background-repeat: no-repeat;
+  background-size: 30% auto;
+  background-position: 2% 50%;
+  background-attachment: fixed;
+  height: 1000px;
+  width: auto;
+}
+
+body #homepage #categories {
+  text-align: center;
+  padding: 40px 8%;
+  background-color: #F5B436;
+}
+
+body #homepage #categories h2 {
+  font-size: 50px;
+  font-family: "Indie Flower", cursive;
+  margin-bottom: 20px;
+}
+
+body #homepage #categories .typeOfFoods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+body #homepage #categories .typeOfFoods li {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: darkseagreen;
+  transition: box-shadow 0.5s linear;
+}
+
+body #homepage #categories .typeOfFoods li:hover {
+  box-shadow: 5px 10px 3px #333232;
+}
+
+body #homepage #categories .restaurants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+body #homepage #categories .restaurants li {
+  flex-basis: calc(100% / 3 - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: darkseagreen;
+  transition: all 0.5s linear;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+body #homepage #categories .restaurants li:hover {
+  box-shadow: 20px 20px 3px #333232;
+}
+
+body #homepage #categories .restaurants li:hover .layover {
+  background-color: rgba(143, 188, 143, 0);
+}
+
+body #homepage #categories .restaurants li:hover img {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+
+body #homepage #categories .restaurants li:hover h3 {
+  opacity: 0;
+}
+
+body #homepage #categories .restaurants li h3 {
+  font-family: "Baloo 2", cursive;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body #homepage #categories .restaurants li img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+body #homepage .work {
+  text-align: center;
+  padding: 40px 8% 70px 8%;
+  background-color: #EEE7D7;
+}
+
+body #homepage .work h2 {
+  font-size: 50px;
+  font-family: "Indie Flower", cursive;
+  margin-bottom: 20px;
+}
+
+body #homepage .work ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body #homepage .work ul li {
+  flex-basis: calc(100% / 3 - 30px);
+  height: 650px;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #F5B436;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: box-shadow 0.5s linear;
+}
+
+body #homepage .work ul li:hover {
+  box-shadow: 20px 20px 3px #333232;
+}
+
+body #homepage .work ul li div {
+  flex-basis: 50%;
+  width: 100%;
+}
+
+body #homepage .work ul li div img {
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+body #homepage .work ul li div h3 {
+  width: 100%;
+  font-family: "Indie Flower", cursive;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+body #homepage .work ul li div .left {
+  text-align: left;
+}
+
+body #homepage .work ul li div .left p {
+  width: 100%;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+body #homepage .work ul li div button {
+  padding: 10px 20px;
+  background-color: darkseagreen;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: box-shadow 0.5s linear;
+}
+
+body #homepage .work ul li div button:hover {
+  box-shadow: 5px 10px 3px #333232;
+}
+
+body #homepage .work ul li div button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: white;
+}
+
+footer {
+  padding: 70px 8%;
+  background-color: black;
+}
+
+footer .footer-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .footer-list ul {
+  height: 432px;
+  background-color: #474646;
+  flex-basis: calc(100% / 4 - 20px);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  border: 1px solid #474646;
+  transition: border 0.5s linear;
+}
+
+footer .footer-list ul:hover {
+  border: 2px solid white;
+}
+
+footer .footer-list ul li {
+  padding: 3px;
+}
+
+footer .footer-list ul li strong {
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  color: white;
+}
+
+footer .footer-list ul li a {
+  font-family: "Baloo 2", cursive;
+  font-size: 16px;
+  color: white;
+}
+
+footer .footer-list ul li a img {
+  width: 60%;
+  height: auto;
+  margin: 10px 0;
+}
+
+footer .links {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .links ul {
+  flex-basis: 85%;
+}
+
+footer .links ul li {
+  display: inline-block;
+}
+
+footer .links ul li a {
+  color: white;
+  padding: 10px;
+}
+
+footer .links ul li a i {
+  font-size: 30px;
+}
+
+footer .links h5 {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-weight: normal;
+  flex-basis: 15%;
+  color: white;
+}
+

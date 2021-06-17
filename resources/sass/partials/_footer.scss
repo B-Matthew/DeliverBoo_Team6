@@ -1,0 +1,79 @@
+footer {
+     padding: 70px 8%;
+     background-color: black;
+
+     .footer-list {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          ul {
+               height: 432px;
+               background-color: rgb(71, 70, 70);
+               flex-basis: calc(100% / 4 - 20px);
+               padding: 40px;
+               border-radius: 20px;
+               color: white;
+               border: 1px solid rgb(71, 70, 70);
+               transition: border 0.5s linear;
+
+               &:hover {
+                    border: 2px solid white;
+               }
+
+               li {
+                    padding: 3px;
+                    
+                    strong {                        
+                         font-family: 'Indie Flower', cursive;
+                         font-size: 25px;
+                         color: white;                 
+                    }
+
+                    a {
+                         font-family: 'Baloo 2', cursive;
+                         font-size: 16px;
+                         color: white;
+
+                         img {
+                              width: 60%;
+                              height: auto;
+                              margin: 10px 0;
+                         }
+                    }
+               }
+          }
+     }
+
+     .links {
+          padding: 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          ul {
+               flex-basis: 85%;
+
+               li {
+                    display: inline-block;
+
+                    a {
+                         color: white;
+                         padding: 10px;
+     
+                         i {
+                              font-size: 30px;
+                         }
+                    }
+               }
+          }
+
+          h5 {
+               font-family: 'Baloo 2', cursive;
+               font-size: 20px;
+               font-weight: normal;
+               flex-basis: 15%;
+               color: white;
+          }
+     }
+}
