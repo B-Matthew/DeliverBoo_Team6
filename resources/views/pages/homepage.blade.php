@@ -84,7 +84,7 @@
           <ul>
                <li>
                     <div>
-                         <img src="../img/rider.jpg" alt="">
+                         <img src="{{asset('storage/img/rider.jpg')}}" alt="">
                     </div>
 
                     <div>
@@ -100,7 +100,7 @@
 
                <li>
                     <div>
-                         <img src="../img/ristorante.jpg" alt="">
+                         <img src="{{asset('storage/img/ristorante.jpg')}}" alt="">
                     </div>
                     <div>
                          <h3>Ristorante</h3>
@@ -115,7 +115,7 @@
 
                <li>
                     <div>
-                         <img src="../img/work.webp" alt="">
+                         <img src="{{asset('storage/img/work.webp')}}" alt="">
                     </div>
                     <div>
                          <h3>Lavora con noi</h3>

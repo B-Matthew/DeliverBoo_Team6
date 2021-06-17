@@ -110,7 +110,7 @@
                
                <li>
                     <a href="">
-                         <img src="../img/Googleplay.png" alt="">
+                         <img src="{{asset('storage/img/Googleplay.png')}}" alt="">
                     </a>
                </li>
           </ul>
