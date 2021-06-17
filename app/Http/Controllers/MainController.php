@@ -13,16 +13,22 @@ class MainController extends Controller
       // @TODO regole di validazione
     ];
   }
-  public function chi_siamo() {
-    return view('pages.chi_siamo');
+
+  // public function chi_siamo() {
+
+  //   return view('pages.chi_siamo');
+  // }
+
+  // public function restaurateur() {
+
+  //   return view('pages.restaurateur');
+  // }
+
+  public function homepage() {
+
+    $name="Ciao Ale";
+    return view('pages.homepage', compact('name'));
   }
-  public function restaurateur() {
-    return view('pages.restaurateur');
-  }
-  public function restaurateur() {
-    $restaurateur = Restaurateur::where('deleted', false) -> get();
-    return view('pages.home', compact(
-      'restaurateur'
-    ));
-  }
+  
 }
+  

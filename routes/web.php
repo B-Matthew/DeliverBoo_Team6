@@ -13,28 +13,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('welcome', function () {
     return view('welcome');
 });
+
 Route::get('/logged', 'HomeController@loggedPage')
 ->name('logged');
-Route::get('/chi_siamo', 'MainController@chi_siamo')
-->name('chi_siamo');
-Route::get('restaurateur', 'MainController@restaurateur')
-->name('restaurateur');
-Route::get('/create/restaurateur', 'HomeController@create')
--> name('create');
-Route::post('/store/restaurateur', 'HomeController@store')
-->name('store');
-Route::get('/restaurateur/edit/{id}', 'HomeController@edit')
-->name('restaurateur-edit');
-Route::post('/restaurateur/update/{id}', 'HomeController@update')
-->name('restaurateur-update');
-Route::get('/restaurateur/delete/{id}', 'HomeController@delete')
-->name('delete');
-Route::post('/restaurateur/store', 'MainController@storeRestaurateur')
-->name('store-restaurateur');
 
-Auth::routes();
+// Route::get('/chi_siamo', 'MainController@chi_siamo')
+// ->name('chi_siamo');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('restaurateur', 'MainController@restaurateur')
+// ->name('restaurateur');
+
+// Route::get('/create/restaurateur', 'HomeController@create')
+// -> name('create');
+// Route::post('/store/restaurateur', 'HomeController@store')
+// ->name('store');
+
+// Route::get('/restaurateur/edit/{id}', 'HomeController@edit')
+// ->name('restaurateur-edit');
+// Route::post('/restaurateur/update/{id}', 'HomeController@update')
+// ->name('restaurateur-update');
+
+// Route::get('/restaurateur/delete/{id}', 'HomeController@delete')
+// ->name('delete');
+// Route::post('/restaurateur/store', 'MainController@storeRestaurateur')
+// ->name('store-restaurateur');
+
+Route::get('/', 'MainController@index')->name('homepage');
+
+
