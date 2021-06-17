@@ -25,11 +25,20 @@
                          FAQ
                     </a>
                </li>
+
+               <li>
+                    @auth
+                        <a href="{{ url('/') }}">{{Auth::user() -> name}}</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+                    
+               </li>
           
                <li>
-                    <a href="">
-                         Area personale
+                    <a href="{{ route('register') }}">
+                         Registrati
                     </a>
+                    @endauth
                </li>
           </ul>
      </nav>
