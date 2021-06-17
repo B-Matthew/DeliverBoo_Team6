@@ -20,6 +20,11 @@ body {
                     flex-basis: calc(50% - 20px);
                }
 
+               .attach {
+                    height: 100%;
+                    width: auto;
+               }
+
                .text {
                     text-align: center;
                     display: flex;
@@ -89,8 +94,6 @@ body {
                    background-size: 40% auto;
                    background-position: 2% 50%;
                    background-attachment: fixed;
-                   height: 900px;
-                   width : auto;
                }
           }
 
@@ -104,8 +107,6 @@ body {
                    background-size: 40% auto;
                    background-position: 0 30%;
                    background-attachment: fixed;
-                   height: 1000px;
-                   width : auto;
                }
           }
 
@@ -119,8 +120,6 @@ body {
                    background-size: 30% auto;
                    background-position: 2% 50%;
                    background-attachment: fixed;
-                   height: 1000px;
-                   width : auto;
                }
           }
 
