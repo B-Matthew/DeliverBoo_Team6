@@ -27,8 +27,13 @@ class MainController extends Controller
   public function homepage() {
 
     $name="Ciao Ale";
-    return view('pages.homepage', compact('name'));
+    
+    $categories = Category::all();
+    $restaurants = Restaurant::all();
+    
+    return view('pages.homepage', compact('name', 'categories' , 'restaurants'));
   }
-  
 }
+
+  
   
