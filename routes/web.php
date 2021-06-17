@@ -43,6 +43,6 @@ Route::get('/logged', 'HomeController@loggedPage')
 // Route::post('/restaurateur/store', 'MainController@storeRestaurateur')
 // ->name('store-restaurateur');
 
-Route::get('/', 'MainController@index')->name('homepage');
+Route::get('/', 'MainController@homepage')->name('homepage');
 
 
