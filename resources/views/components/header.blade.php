@@ -29,6 +29,12 @@
                <li>
                     @auth
                         <a href="{{ url('/') }}">{{Auth::user() -> name}}</a>
+                    <li>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    </li>
+                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                         @csrf
+                         </form>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                     
