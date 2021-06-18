@@ -26,7 +26,29 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+init(){
 
-const app = new Vue({
-    el: '#app',
-});
+    const app = new Vue({
+        el: '#app',
+        data: {
+                'restaurant':[]
+            },
+            mounted() {
+                axios.get('data.php')
+                    .then(r => {
+    
+                        let datas = r.data;
+                        this.albums = datas;
+                        console.log(this.albums);
+    
+                    })
+                    .catch(c => {
+    
+                        console.log('error');
+                    })
+            }
+    });
+
+}
+
+document.addEventListener("DOMContentLoaded",init);   

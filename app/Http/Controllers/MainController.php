@@ -19,13 +19,13 @@ class MainController extends Controller
   //   return view('pages.restaurateur');
   // }
   
-  public function filterSearch(Request $request) {
+  // public function filterSearch(Request $request) {
     
-    $filter = Restaurant::WHERE('name' , $request)->get();
-    return response() -> json($filter);
-  }
+  //   $filter = Restaurant::WHERE('name' , $request)->get();
+  //   return response() -> json($filter);
+  // }
 
-  public function homepage() {
+  public function homepage() {   
 
     $categories = Category::all();
     $restaurants = Restaurant::all();

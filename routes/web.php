@@ -51,6 +51,7 @@ Route::get('/', 'MainController@homepage')
 Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
-Route::post('filter/{name}' , 'MainController@filterSearch')
-        ->name('filterSearch');
+// Route::post('filter/{name}' , 'MainController@filterSearch')
+//         ->name('filterSearch');
 
+   
