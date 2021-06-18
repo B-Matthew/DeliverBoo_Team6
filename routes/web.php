@@ -22,26 +22,25 @@ Route::get('welcome', function () {
 Route::get('/logged', 'HomeController@loggedPage')
 ->name('logged');
 
-// Route::get('/chi_siamo', 'MainController@chi_siamo')
-// ->name('chi_siamo');
+Route::get('restaurant/{id}', 'MainController@restaurant')
+->name('restaurant');
+Route::get('show', 'MainController@show')
+->name('show');
 
-// Route::get('restaurateur', 'MainController@restaurateur')
-// ->name('restaurateur');
+Route::get('/create/restaurant', 'HomeController@create')
+-> name('create');
+Route::post('/store/restaurant', 'HomeController@store')
+->name('store');
 
-// Route::get('/create/restaurateur', 'HomeController@create')
-// -> name('create');
-// Route::post('/store/restaurateur', 'HomeController@store')
-// ->name('store');
+Route::get('/restaurant/edit/{id}', 'HomeController@edit')
+->name('edit');
+Route::post('/restaurant/update/{id}', 'HomeController@update')
+->name('update');
 
-// Route::get('/restaurateur/edit/{id}', 'HomeController@edit')
-// ->name('restaurateur-edit');
-// Route::post('/restaurateur/update/{id}', 'HomeController@update')
-// ->name('restaurateur-update');
-
-// Route::get('/restaurateur/delete/{id}', 'HomeController@delete')
-// ->name('delete');
-// Route::post('/restaurateur/store', 'MainController@storeRestaurateur')
-// ->name('store-restaurateur');
+Route::get('/restaurant/destroyRestaurant/{id}', 'HomeController@destroyRestaurant')
+->name('destroyRestaurant');
+Route::post('/restaurant/store', 'HomeController@storeRestaurateur')
+->name('storeRestaurant');
 
 // HOMEPAGE
 Route::get('/', 'MainController@homepage')
@@ -50,6 +49,3 @@ Route::get('/', 'MainController@homepage')
 // CHI SIAMO
 Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
-
-
-

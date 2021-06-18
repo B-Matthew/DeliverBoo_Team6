@@ -5,9 +5,19 @@
      list-style-type: none;
      text-decoration: none;
 }
-
+.show_div{
+  padding: 100px;
+  ul{
+    li{
+      padding: 5px;
+      a{
+        padding-right: 5px;
+      }
+    }
+  }
+}
 body {
-     
+
     #homepage  {
 
           .jumbotron, .delivery, .map {
@@ -176,7 +186,7 @@ body {
                          background-color: $green;
                          transition: all 0.5s linear;
                          position: relative;
-                         margin-bottom: 40px; 
+                         margin-bottom: 40px;
 
                          &:hover {
                               box-shadow: 20px 20px 3px rgb(51, 50, 50);
@@ -200,7 +210,7 @@ body {
                               font-size: 50px;
                               color: white;
                               position: absolute;
-                              top: 50%;  
+                              top: 50%;
                               left: 50%;
                               transform: translate(-50%, -50%);
                          }
@@ -273,7 +283,7 @@ body {
                                         font-family: 'Baloo 2', cursive;
                                         font-size: 20px;
                                         margin-bottom: 20px;
-                                   }                                   
+                                   }
                               }
 
                               button {
