@@ -13,62 +13,56 @@ class HomeController extends Controller
       $this->middleware('auth');
     }
 
-    
-      
-
-
     // public function loggedPage() {
 
-    //   return view('pages.logged-in');
+    //   return view('pages.loggedIn');
     // }
 
-    // public function create() {
+    public function create() {
 
-    // return view('pages.create');
-    // }
+    return view('pages.create');
+    }
 
-    // public function store(Request $request){
+    public function store(Request $request){
 
     // $validate = $request -> validate($this -> getValidate());
-    // $restaurateur = Restaurateur::create($validate);
+    $resturant = Restaurant::create();  //create($validate)
 
-    // return redirect() -> route('restaurateur', $restaurateur -> id);
-    // }
+    return redirect() -> route('resturant', $resturant -> id);
+    }
 
-    // public function edit($id){
+    public function edit($id){
 
-    // $restaurateur = Restaurateur::findOrFail($id);
-    // $product = Product::all();
-    // $category=Category::all();
+    $resturant = Restaurant::findOrFail($id);
+    $product = Product::all();
+    $category=Category::all();
 
-    // return view('pages.edit-restaurateur', compact(
-    //   'restaurateur',
-    //   'product',
-    //   'category'
-    // ));
-    // }
+    return view('pages.edit', compact(
+      'resturant',
+      'product',
+      'category'
+    ));
+    }
 
-    // public function update(Request $request, $id){
-      
-    //   $validate = $request -> validate($this -> getValidate());
-    //   $restaurateur = Restaurateur::findOrFail($id);
-    //   $restaurateur -> update($validate);
+    public function update(Request $request, $id){
 
-    //   $restaurateur -> category() -> associate($request -> category_id);
-    //   $restaurateur -> save();
-    //   $restaurateur -> products() -> sync($request -> product_id);
+      // $validate = $request -> validate($this -> getValidate());
+      $resturant = Restaurant::findOrFail($id);
+      $resturant -> update(); //update($validate)
 
-    //   return redirect() -> route('restaurateur');
-    // }
+      $resturant -> category() -> associate($request -> category_id);
+      $resturant -> save();
+      $resturant -> products() -> sync($request -> product_id);
 
-    // public function delete($id){
+      return redirect() -> route('resturant');
+    }
 
-    // $restaurateur = Restaurateur::findOrFail($id);
-    // $restaurateur -> deleted = true;
-    // $restaurateur -> save();
+    public function destroyRestaurant($id){
 
-    // return redirect() -> route('restaurateur');
-    // }
+    $resturant = Restaurant::findOrFail($id);
+    $resturant -> deleted = true;
+    $resturant -> save();
+
+    return redirect() -> route('resturant');
+    }
 }
-    
-

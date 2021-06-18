@@ -85,6 +85,18 @@ header nav ul li a {
   text-decoration: none;
 }
 
+.show_div {
+  padding: 100px;
+}
+
+.show_div ul li {
+  padding: 5px;
+}
+
+.show_div ul li a {
+  padding-right: 5px;
+}
+
 body #homepage .jumbotron,
 body #homepage .delivery,
 body #homepage .map {

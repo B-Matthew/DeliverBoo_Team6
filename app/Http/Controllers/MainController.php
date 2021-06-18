@@ -18,19 +18,27 @@ class MainController extends Controller
 
   //   return view('pages.chi_siamo');
   // }
+  public function show() {
+      $restaurants = Restaurant::all();
+      return view('pages.show', compact(
+        'restaurants'
+      ));
+    }
 
-  // public function restaurateur() {
-
-  //   return view('pages.restaurateur');
-  // }
+  public function restaurant($id) {
+    $restaurant = Restaurant::findOrFail($id);
+    return view('pages.restaurant', compact(
+        'restaurant'
+    ));
+  }
 
   public function homepage() {
 
     $name="Ciao Ale";
-    
+
     $categories = Category::all();
     $restaurants = Restaurant::all();
-    
+
     return view('pages.homepage', compact('name', 'categories' , 'restaurants'));
   }
 
@@ -39,6 +47,3 @@ class MainController extends Controller
     return view('pages.infoWebPage');
   }
 }
-
-  
-  

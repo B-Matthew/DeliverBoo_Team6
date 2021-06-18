@@ -13,13 +13,21 @@
                          Contatti
                     </a>
                </li>
-          
+
                <li>
                     <a href="{{route('infoWebPage')}}">
                          Chi siamo
                     </a>
                </li>
-          
+               
+               <li>
+
+                 <a href="{{ route('create') }}">
+                   Go to form
+                 </a>
+
+               </li>
+
                <li>
                     <a href="">
                          FAQ
@@ -37,9 +45,9 @@
                          </form>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-                    
+
                </li>
-          
+
                <li>
                     <a href="{{ route('register') }}">
                          Registrati
