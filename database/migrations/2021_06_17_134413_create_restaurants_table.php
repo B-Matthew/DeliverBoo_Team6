@@ -18,6 +18,7 @@ class CreateRestaurantsTable extends Migration
 
             $table->string('name');
             $table->string('address');
+            $table->string('City');
             $table->string('telephone');
             $table->string('p-iva');
             $table->string('img') -> nullable();

@@ -13,16 +13,45 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-
-        factory(Category::class, 10) -> create()
-        ->each(function($category){
-
-            $restaurant = Restaurant::inRandomOrder()->limit(rand(1,3))->get(); 
-            $category -> restaurants() -> attach($restaurant);
-            $category -> save();   
-        });
+        $categories =[
+            [
+                'name' => 'Cinese',
+            ],  
+            [
+                'name' => 'Giapponese',
+            ],
+            [
+                'name' => 'Italiano',
+            ],
+            [
+                'name' => 'Messicano',
+            ],
+            [
+                'name' => 'Pizzeria',
+            ],
+            [
+                'name' => 'Fast-Food',
+            ],
+            [
+                'name' => 'Greco',
+            ],
+            [
+                'name' => 'Indiano',
+            ],
+            [
+                'name' => 'Paninoteca',
+            ],
+            [
+                'name' => 'Vegetariano',
+            ],
+        ];
+        
+        foreach ($categories as $key => $category) {
+            DB::table('categories')->insert($category);
+        }
     }
 }
+            
        
             
 
