@@ -33,6 +33,11 @@ class MainController extends Controller
     
     return view('pages.homepage', compact('name', 'categories' , 'restaurants'));
   }
+
+  public function chi_siamo() {
+
+    return view('pages.chi-siamo');
+  }
 }
 
   
