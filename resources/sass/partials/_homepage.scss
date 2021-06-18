@@ -6,18 +6,19 @@
      text-decoration: none;
 }
 .show_div{
-  padding: 100px;
-  ul{
-    li{
-      padding: 5px;
-      a{
-        padding-right: 5px;
-      }
-    }
-  }
-}
-body {
+     padding: 100px;
+     ul{
+       li{
+         padding: 5px;
+         a{
+           padding-right: 5px;
+         }
+       }
+     }
+   }
 
+body {
+     
     #homepage  {
 
           .jumbotron, .delivery, .map {
@@ -50,25 +51,6 @@ body {
                          font-family: 'Indie Flower', cursive;
                          font-size: 50px;
                          letter-spacing: 2px;
-                    }
-
-                    input {
-                         font-family: 'Baloo 2', cursive;
-                         font-size: 20px;
-                         margin: 20px 0;
-                         padding: 20px;
-                         height: 70px;
-                         width: 500px;
-                         border-radius: 10px;
-                         border: 1px solid #F5B436;
-                         background-color: #F5B436;
-                         transition: all 0.5s linear;
-
-                         &:hover {
-                              box-shadow: 5px 10px 3px rgb(51, 50, 50);
-                              border: 1px solid black;
-                              margin-top: 10px;
-                         }
                     }
 
                     button {
@@ -144,6 +126,30 @@ body {
                     margin-bottom: 20px;
                }
 
+               ::placeholder {
+                    color: black;
+               }
+
+               input {
+                    font-family: 'Baloo 2', cursive;
+                    font-size: 20px;
+                    margin: 20px 0;
+                    padding: 20px;
+                    height: 70px;
+                    width: 500px;
+                    border-radius: 10px;
+                    border: 1px solid #F5B436;
+                    background-color: #F5B436;
+                    transition: all 0.5s linear;
+
+                    &:hover {
+                         box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                         border: 1px solid black;
+                         margin-top: 10px;
+                    }
+               }
+
+
                .typeOfFoods {
                     display: flex;
                     justify-content: center;
@@ -186,7 +192,7 @@ body {
                          background-color: $green;
                          transition: all 0.5s linear;
                          position: relative;
-                         margin-bottom: 40px;
+                         margin-bottom: 40px; 
 
                          &:hover {
                               box-shadow: 20px 20px 3px rgb(51, 50, 50);
@@ -210,7 +216,7 @@ body {
                               font-size: 50px;
                               color: white;
                               position: absolute;
-                              top: 50%;
+                              top: 50%;  
                               left: 50%;
                               transform: translate(-50%, -50%);
                          }
@@ -243,10 +249,9 @@ body {
 
                     li {
                          flex-basis: calc(100% / 3 - 30px);
-                         height: 650px;
                          border-radius: 20px;
                          border: 1px solid black;
-                         padding: 10px;
+                         padding: 10px 10px 40px;
                          background-color: $yellow;
                          display: flex;
                          flex-direction: column;
@@ -258,8 +263,9 @@ body {
                          }
 
                          div {
-                              flex-basis: 50%;
+                              height: 50%;
                               width: 100%;
+
 
                               img {
                                    width: 100%;
@@ -283,7 +289,7 @@ body {
                                         font-family: 'Baloo 2', cursive;
                                         font-size: 20px;
                                         margin-bottom: 20px;
-                                   }
+                                   }                                   
                               }
 
                               button {

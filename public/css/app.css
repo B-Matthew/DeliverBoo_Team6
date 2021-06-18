@@ -157,29 +157,6 @@ body #homepage .map .text h3 {
   letter-spacing: 2px;
 }
 
-body #homepage .jumbotron .text input,
-body #homepage .delivery .text input,
-body #homepage .map .text input {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  margin: 20px 0;
-  padding: 20px;
-  height: 70px;
-  width: 500px;
-  border-radius: 10px;
-  border: 1px solid #F5B436;
-  background-color: #F5B436;
-  transition: all 0.5s linear;
-}
-
-body #homepage .jumbotron .text input:hover,
-body #homepage .delivery .text input:hover,
-body #homepage .map .text input:hover {
-  box-shadow: 5px 10px 3px #333232;
-  border: 1px solid black;
-  margin-top: 10px;
-}
-
 body #homepage .jumbotron .text button,
 body #homepage .delivery .text button,
 body #homepage .map .text button {
@@ -256,6 +233,37 @@ body #homepage #categories h2 {
   font-size: 50px;
   font-family: "Indie Flower", cursive;
   margin-bottom: 20px;
+}
+
+body #homepage #categories ::-moz-placeholder {
+  color: black;
+}
+
+body #homepage #categories :-ms-input-placeholder {
+  color: black;
+}
+
+body #homepage #categories ::placeholder {
+  color: black;
+}
+
+body #homepage #categories input {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 20px;
+  height: 70px;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid #F5B436;
+  background-color: #F5B436;
+  transition: all 0.5s linear;
+}
+
+body #homepage #categories input:hover {
+  box-shadow: 5px 10px 3px #333232;
+  border: 1px solid black;
+  margin-top: 10px;
 }
 
 body #homepage #categories .typeOfFoods {
@@ -358,10 +366,9 @@ body #homepage .work ul {
 
 body #homepage .work ul li {
   flex-basis: calc(100% / 3 - 30px);
-  height: 650px;
   border-radius: 20px;
   border: 1px solid black;
-  padding: 10px;
+  padding: 10px 10px 40px;
   background-color: #F5B436;
   display: flex;
   flex-direction: column;
@@ -374,7 +381,7 @@ body #homepage .work ul li:hover {
 }
 
 body #homepage .work ul li div {
-  flex-basis: 50%;
+  height: 50%;
   width: 100%;
 }
 
