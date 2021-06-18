@@ -14,11 +14,6 @@ class MainController extends Controller
     ];
   }
 
-  // public function restaurateur() {
-  // public function chi_siamo() {
-
-  //   return view('pages.chi_siamo');
-  // }
   public function show() {
       $restaurants = Restaurant::all();
       return view('pages.show', compact(
@@ -32,33 +27,36 @@ class MainController extends Controller
         'restaurant'
     ));
   }
-
-  //   return view('pages.restaurateur');
-  // }
   
-  public function filterSearch(Request $request) {
+  // Funzione per passare json encode
+  public function filterSearch() {
     
-    $filter = Restaurant::WHERE('name' , $request)->get();
-    return response() -> json($filter);
+    $filter = Restaurant::all();
+    return $filter;
   }
 
   public function homepage() {
-
-    $name="Ciao Ale";
 
     $categories = Category::all();
     $restaurants = Restaurant::all();
     
     return view('pages.homepage', compact('categories' , 'restaurants'));
-
-    return view('pages.homepage', compact('name', 'categories' , 'restaurants'));
   }
-     
+
   public function infoWebPage() {
 
     return view('pages.infoWebPage');
   }
 }
+  
+    
+
+    
+     
+
+  
+  
+  
 
   
   
