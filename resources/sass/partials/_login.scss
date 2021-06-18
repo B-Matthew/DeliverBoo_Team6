@@ -28,22 +28,26 @@
                          font-size: 25px;
                     }
 
-                    input {
-                         width: 100%;
-                         height: 40px;
-                         padding: 20px;
-                         background-color: #F5B436;
-                         border: 1px solid black;
-                         border-radius: 10px;
+                    .email, .password {
                          transition: box-shadow 0.5s linear;
+                         width: 100%;
 
                          &:hover {
                               box-shadow: 5px 10px 3px rgb(51, 50, 50);
                          }
                     }
+
+                    input {
+                         height: 40px;
+                         padding: 20px;
+                         background-color: #F5B436;
+                         border: 1px solid black;
+                         border-radius: 10px;
+                    }
                     
                     .checkbox {
                          margin: 0 20px;
+                         vertical-align: middle;
                     }
 
                     button {
