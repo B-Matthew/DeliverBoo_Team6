@@ -42,6 +42,8 @@ Route::get('/restaurant/destroyRestaurant/{id}', 'HomeController@destroyRestaura
 Route::post('/restaurant/store', 'HomeController@storeRestaurateur')
 ->name('storeRestaurant');
 
+
+
 // HOMEPAGE
 Route::get('/', 'MainController@homepage')
         ->name('homepage');
@@ -50,6 +52,7 @@ Route::get('/', 'MainController@homepage')
 Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
-Route::post('filter/{name}' , 'MainController@filterSearch')
+ // Route per Ajax Request       
+Route::post('restaurant/nome' , 'MainController@filterSearch')
         ->name('filterSearch');
 
