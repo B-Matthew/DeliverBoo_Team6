@@ -533,22 +533,28 @@ footer .links h5 {
   font-size: 25px;
 }
 
-#login section form fieldset input {
+#login section form fieldset .email,
+#login section form fieldset .password {
+  transition: box-shadow 0.5s linear;
   width: 100%;
+}
+
+#login section form fieldset .email:hover,
+#login section form fieldset .password:hover {
+  box-shadow: 5px 10px 3px #333232;
+}
+
+#login section form fieldset input {
   height: 40px;
   padding: 20px;
   background-color: #F5B436;
   border: 1px solid black;
   border-radius: 10px;
-  transition: box-shadow 0.5s linear;
-}
-
-#login section form fieldset input:hover {
-  box-shadow: 5px 10px 3px #333232;
 }
 
 #login section form fieldset .checkbox {
   margin: 0 20px;
+  vertical-align: middle;
 }
 
 #login section form fieldset button {
