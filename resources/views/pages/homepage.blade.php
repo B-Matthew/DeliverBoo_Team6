@@ -5,11 +5,7 @@
 
      <section class="jumbotron">
           <div class="attach"></div>
-          <div class="text">
-               <h2>I tuoi piatti preferiti, a domicilio.</h2>
-               <h3>Ricerca subito il tuo ristorante preferito.</h3>
-               <input type="text" placeholder="Ricerca ristorante. . .">
-          </div>
+          <search-component></search-component>
      </section>
 
      <section class="delivery">
