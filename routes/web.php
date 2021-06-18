@@ -43,8 +43,11 @@ Route::get('/logged', 'HomeController@loggedPage')
 // Route::post('/restaurateur/store', 'MainController@storeRestaurateur')
 // ->name('store-restaurateur');
 
+// HOMEPAGE
 Route::get('/', 'MainController@homepage')->name('homepage');
 
+// CHI SIAMO
+Route::get('/chi-siamo ', 'MainController@chi_Siamo')->name('chi_siamo');
 
 
 
