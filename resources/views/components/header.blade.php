@@ -2,7 +2,7 @@
 
      <aside>
           <div>
-               <a href="">Deliverboo</a>
+               <a href="{{route('homepage')}}">Deliverboo</a>
           </div>
      </aside>
 
@@ -15,7 +15,7 @@
                </li>
           
                <li>
-                    <a href="">
+                    <a href="{{route('infoWebPage')}}">
                          Chi siamo
                     </a>
                </li>

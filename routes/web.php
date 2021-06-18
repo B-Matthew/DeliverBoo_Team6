@@ -44,10 +44,12 @@ Route::get('/logged', 'HomeController@loggedPage')
 // ->name('store-restaurateur');
 
 // HOMEPAGE
-Route::get('/', 'MainController@homepage')->name('homepage');
+Route::get('/', 'MainController@homepage')
+        ->name('homepage');
 
 // CHI SIAMO
-Route::get('/chi-siamo ', 'MainController@chi_Siamo')->name('chi_siamo');
+Route::get('info', 'MainController@infoWebPage')
+        ->name('infoWebPage');
 
 
 
