@@ -4,7 +4,7 @@
           <ul>
                <li>
                     <strong>
-                         Scopri DeliveBoo
+                         Scopri DeliverBoo
                     </strong> 
                </li>
                
@@ -99,7 +99,7 @@
           <ul>
                <li>
                     <strong>
-                         Porta DeliveBoo con te
+                         Porta DeliverBoo con te
                     </strong> 
                </li>
                <li>
@@ -143,7 +143,7 @@
                </li>
           </ul>
 
-          <h5>2021 DeliveBoo.</h5>               
+          <h5>2021 DeliverBoo.</h5>               
      </section>
 
 </footer>    

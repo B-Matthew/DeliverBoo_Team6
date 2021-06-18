@@ -14,7 +14,7 @@
      <section class="delivery">
           <div class="attach"></div>
           <div class="text">
-               <h2>Non hai tempo di uscire? Ci pensa DeliveBoo.</h2>
+               <h2>Non hai tempo di uscire? Ci pensa DeliverBoo.</h2>
                <h3>Ordina qualcosa... ti aiuteremo noi a scegliere.</h3>
                <button>
                     <a href="#categories">
