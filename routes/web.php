@@ -52,7 +52,5 @@ Route::get('/', 'MainController@homepage')
 Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
- // Route per Ajax Request       
-Route::post('restaurant/nome' , 'MainController@filterSearch')
-        ->name('filterSearch');
+
 
