@@ -53,4 +53,3 @@ Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
 
-
