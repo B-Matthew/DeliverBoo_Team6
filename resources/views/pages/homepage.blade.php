@@ -5,7 +5,10 @@
 
      <section class="jumbotron">
           <div class="attach"></div>
-          <search-component></search-component>
+          <div class="text">
+               <h2>I tuoi piatti preferiti, a domicilio.</h2>
+               <h3>Ricerca subito il tuo ristorante preferito.</h3>
+          </div>
      </section>
 
      <section class="delivery">
@@ -28,22 +31,7 @@
           </div>
      </section>
 
-     <section id="categories">
-          <h2>Cosa mangerai oggi?</h2>
-          <ul class="typeOfFoods">
-               @foreach ($categories as $category)
-                   <li> {{ $category -> name }}</li>
-               @endforeach
-          </ul>
-          <ul class="restaurants">
-               @foreach ($restaurants as $restaurant)
-               <li>
-                    <img src="{{asset('storage/img/sushi.jpg')}}" alt="">
-                    <h3>{{$restaurant -> name}}</h3>
-               </li>
-               @endforeach
-          </ul>
-     </section>
+     <search-component :restaurants="{{$restaurants}}" :categories="{{$categories}}"></search-component>
 
      <section class="work">
           <h2>Ti piacerebbe lavorare con noi?</h2>
