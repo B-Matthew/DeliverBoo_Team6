@@ -1,0 +1,74 @@
+#chi-siamo {
+
+     .banner {
+
+          div {
+               padding: 200px 0 200px 8%;
+               background-image: url(../img/chisiamo.jpg);
+               background-size: 100% 70%;
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+               width: 100%;
+               height: auto;
+               display: flex;
+               justify-content: flex-start;
+               align-items: center;
+
+               h1 {
+                    margin-top: 30px;
+                    font-family: 'Indie Flower', cursive;
+                    font-size: 65px;
+                    color: white;
+               }
+          }
+     }
+
+     .text {
+          padding: 100px 20%;
+          background-color: $green;
+
+          p {
+               font-family: 'Baloo 2', cursive;
+               font-size: 25px;
+               letter-spacing: 1px;
+               margin-bottom: 30px;
+          }
+     }
+
+     .box {
+          padding: 30px 20% 100px 20%;
+          background-color: $green;
+
+          ul {
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               
+               li {
+                    flex-basis: calc(30% - 20px);
+                    padding: 10px;
+                    background-color: $yellow;
+                    border: 1px solid black;
+                    text-align: center;
+                    transition: box-shadow 0.5s linear;
+                    border-radius: 20px;
+
+                    h2 {
+                         font-family: 'Indie Flower', cursive;
+                         font-size: 70px;
+                         font-weight: normal;
+                    }
+
+                    h5 {
+                         font-family: 'Baloo 2', cursive;
+                         font-size: 30px;
+                         font-weight: normal;
+                    }
+
+                    &:hover {
+                         box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                    }
+               }
+          }
+     }     
+}
