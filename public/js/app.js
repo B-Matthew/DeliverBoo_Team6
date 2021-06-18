@@ -136,6 +136,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
@@ -143,13 +164,19 @@ __webpack_require__.r(__webpack_exports__);
       'searchInput': ''
     };
   },
+  props: ['restaurants', 'categories'],
   methods: {
-    hello: function hello() {
-      console.log(this.searchInput);
+    filter: function filter() {
+      var _this = this;
+
+      var filteredRestaurants = this.restaurants.filter(function (element) {
+        return element.name.toLowerCase().includes(_this.searchInput.toLowerCase());
+      });
+      return filteredRestaurants;
     }
   },
   mounted: function mounted() {
-    console.log('list mounted.');
+    console.log(this.restaurants);
   }
 });
 
@@ -685,10 +712,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "text" }, [
-    _c("h2", [_vm._v("I tuoi piatti preferiti, a domicilio.")]),
-    _vm._v(" "),
-    _c("h3", [_vm._v("Ricerca subito il tuo ristorante preferito.")]),
+  return _c("section", { attrs: { id: "categories" } }, [
+    _c("h2", [_vm._v("Cosa mangerai oggi?")]),
     _vm._v(" "),
     _c("input", {
       directives: [
@@ -703,7 +728,7 @@ var render = function() {
       domProps: { value: _vm.searchInput },
       on: {
         keyup: function($event) {
-          return _vm.hello()
+          return _vm.filter()
         },
         input: function($event) {
           if ($event.target.composing) {
@@ -712,7 +737,38 @@ var render = function() {
           _vm.searchInput = $event.target.value
         }
       }
-    })
+    }),
+    _vm._v(" "),
+    _c(
+      "ul",
+      { staticClass: "typeOfFoods" },
+      _vm._l(_vm.categories, function(category) {
+        return _c("li", [
+          _vm._v(" \n               " + _vm._s(category.name) + "\n          ")
+        ])
+      }),
+      0
+    ),
+    _vm._v(" "),
+    _vm.searchInput == ""
+      ? _c(
+          "ul",
+          { staticClass: "restaurants" },
+          _vm._l(_vm.restaurants, function(restaurant, index) {
+            return index < 6
+              ? _c("li", [_c("h3", [_vm._v(_vm._s(restaurant.name))])])
+              : _vm._e()
+          }),
+          0
+        )
+      : _c(
+          "ul",
+          { staticClass: "restaurants" },
+          _vm._l(_vm.filter(), function(restaurant) {
+            return _c("li", [_c("h3", [_vm._v(_vm._s(restaurant.name))])])
+          }),
+          0
+        )
   ])
 }
 var staticRenderFns = []

@@ -30,9 +30,9 @@ class MainController extends Controller
   
   // Funzione per passare json encode
   public function filterSearch() {
-    
+
     $filter = Restaurant::all();
-    return $filter;
+    return response() -> json($filter);
   }
 
   public function homepage() {
