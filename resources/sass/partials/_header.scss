@@ -12,7 +12,7 @@ header {
           flex-basis: 10%;
 
           div {
-               background-color: rgb(223, 186, 66);;
+               background-color: $yellowPastel;
                height: 80px;
                padding: 20px;
                border: 1px solid black;
@@ -52,7 +52,7 @@ header {
                li {
                    
                     padding: 10px 15px;
-                    background-color: rgb(223, 186, 66);
+                    background-color: $yellowPastel;
                     border-bottom-left-radius: 30px;
                     border-bottom-right-radius: 30px;
                     border: 1px solid black;
