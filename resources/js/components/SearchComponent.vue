@@ -12,7 +12,11 @@
           <ul v-if="searchInput == '' " class="restaurants">
                <li v-for="(restaurant, index) in restaurants" v-if="index < 6">
                     <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
-                    <h3>{{restaurant.name}}</h3>
+                    <h3>
+                         <a href="">
+                              {{restaurant.name}}
+                         </a>
+                    </h3>
                </li>
           </ul>
 

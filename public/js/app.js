@@ -157,6 +157,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
@@ -756,7 +760,17 @@ var render = function() {
           { staticClass: "restaurants" },
           _vm._l(_vm.restaurants, function(restaurant, index) {
             return index < 6
-              ? _c("li", [_c("h3", [_vm._v(_vm._s(restaurant.name))])])
+              ? _c("li", [
+                  _c("h3", [
+                    _c("a", { attrs: { href: "" } }, [
+                      _vm._v(
+                        "\n                         " +
+                          _vm._s(restaurant.name) +
+                          "\n                    "
+                      )
+                    ])
+                  ])
+                ])
               : _vm._e()
           }),
           0
@@ -13188,8 +13202,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

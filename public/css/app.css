@@ -291,52 +291,39 @@ body #homepage #categories .typeOfFoods li:hover {
 
 body #homepage #categories .restaurants {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px 0;
 }
 
 body #homepage #categories .restaurants li {
-  flex-basis: calc(100% / 3 - 30px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+  flex-basis: calc(100% / 3 - 40px);
+  margin: 20px;
   height: 300px;
   border-radius: 20px;
   border: 1px solid black;
   background-color: #8fbc8f;
   transition: all 0.5s linear;
   position: relative;
-  margin-bottom: 40px;
 }
 
 body #homepage #categories .restaurants li:hover {
   box-shadow: 20px 20px 3px #333232;
 }
 
-body #homepage #categories .restaurants li:hover .layover {
-  background-color: rgba(143, 188, 143, 0);
-}
-
-body #homepage #categories .restaurants li:hover img {
-  transition: all 1s ease-in-out;
-  opacity: 1;
-}
-
-body #homepage #categories .restaurants li:hover h3 {
-  opacity: 0;
-}
-
 body #homepage #categories .restaurants li h3 {
-  font-family: "Baloo 2", cursive;
-  font-size: 50px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  background-color: #f8f1ae;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+body #homepage #categories .restaurants li h3 a {
+  color: black;
 }
 
 body #homepage #categories .restaurants li img {
