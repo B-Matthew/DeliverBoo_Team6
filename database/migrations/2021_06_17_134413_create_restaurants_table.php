@@ -20,7 +20,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('address');
             $table->string('City');
             $table->string('telephone');
-            $table->string('p-iva');
+            $table->string('pIva');
             $table->string('img') -> nullable();
             $table->bigInteger('user_id') -> unsigned() -> index();
 

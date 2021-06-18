@@ -14,6 +14,7 @@ class MainController extends Controller
     ];
   }
 
+  // public function restaurateur() {
   // public function chi_siamo() {
 
   //   return view('pages.chi_siamo');
@@ -32,18 +33,32 @@ class MainController extends Controller
     ));
   }
 
+  //   return view('pages.restaurateur');
+  // }
+  
+  public function filterSearch(Request $request) {
+    
+    $filter = Restaurant::WHERE('name' , $request)->get();
+    return response() -> json($filter);
+  }
+
   public function homepage() {
 
     $name="Ciao Ale";
 
     $categories = Category::all();
     $restaurants = Restaurant::all();
+    
+    return view('pages.homepage', compact('categories' , 'restaurants'));
 
     return view('pages.homepage', compact('name', 'categories' , 'restaurants'));
   }
-
+     
   public function infoWebPage() {
 
     return view('pages.infoWebPage');
   }
 }
+
+  
+  

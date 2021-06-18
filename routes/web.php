@@ -49,3 +49,7 @@ Route::get('/', 'MainController@homepage')
 // CHI SIAMO
 Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
+
+Route::post('filter/{name}' , 'MainController@filterSearch')
+        ->name('filterSearch');
+
