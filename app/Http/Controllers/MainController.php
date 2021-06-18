@@ -28,13 +28,6 @@ class MainController extends Controller
     ));
   }
   
-  // Funzione per passare json encode
-  public function filterSearch() {
-    
-    $filter = Restaurant::all();
-    return $filter;
-  }
-
   public function homepage() {
 
     $categories = Category::all();
