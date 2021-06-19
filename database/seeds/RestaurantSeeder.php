@@ -19,8 +19,8 @@ class RestaurantSeeder extends Seeder
             $restaurant -> categories()->attach($category);
             $restaurant->save();
        });
-       
     }
 }
+       
 
         
