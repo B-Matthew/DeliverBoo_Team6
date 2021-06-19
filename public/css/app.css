@@ -28,8 +28,7 @@ header aside div {
 }
 
 header aside div:hover {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   box-shadow: 5px 10px 3px #333232;
   margin-top: 10px;
 }
@@ -52,7 +51,7 @@ header nav ul {
 }
 
 header nav ul li {
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-color: #f8f1ae;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -68,12 +67,11 @@ header nav ul li:hover {
   border-radius: 10px;
   box-shadow: 5px 10px 3px #333232;
   margin-top: 10px;
-  padding: 10px 10px;
 }
 
 header nav ul li a {
   font-family: "Baloo 2", cursive;
-  font-size: 20px;
+  font-size: 18px;
   color: black;
 }
 
@@ -132,28 +130,11 @@ body #homepage .map .text {
   align-items: center;
 }
 
-body #homepage .jumbotron .text ::-moz-placeholder, body #homepage .delivery .text ::-moz-placeholder, body #homepage .map .text ::-moz-placeholder {
-  color: black;
-}
-
-body #homepage .jumbotron .text :-ms-input-placeholder, body #homepage .delivery .text :-ms-input-placeholder, body #homepage .map .text :-ms-input-placeholder {
-  color: black;
-}
-
-body #homepage .jumbotron .text ::placeholder,
-body #homepage .delivery .text ::placeholder,
-body #homepage .map .text ::placeholder {
-  color: black;
-}
-
 body #homepage .jumbotron .text h2,
-body #homepage .jumbotron .text h3,
 body #homepage .delivery .text h2,
-body #homepage .delivery .text h3,
-body #homepage .map .text h2,
-body #homepage .map .text h3 {
+body #homepage .map .text h2 {
   font-family: "Indie Flower", cursive;
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: 2px;
 }
 
@@ -230,7 +211,7 @@ body #homepage #categories {
 }
 
 body #homepage #categories h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Indie Flower", cursive;
   margin-bottom: 20px;
 }
@@ -276,8 +257,8 @@ body #homepage #categories .typeOfFoods {
 
 body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 18px;
+  padding: 10px 20px;
   margin: 0 10px;
   border-radius: 10px;
   border: 1px solid black;
@@ -313,8 +294,9 @@ body #homepage #categories .restaurants li:hover {
 }
 
 body #homepage #categories .restaurants li h3 {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
+  font-family: "Baloo 2", cursive;
+  font-size: 30px;
+  font-weight: normal;
   background-color: #f8f1ae;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -340,7 +322,7 @@ body #homepage .work {
 }
 
 body #homepage .work h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Indie Flower", cursive;
   margin-bottom: 20px;
 }
@@ -382,8 +364,9 @@ body #homepage .work ul li div img {
 body #homepage .work ul li div h3 {
   width: 100%;
   font-family: "Indie Flower", cursive;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: normal;
+  margin: 20px 0;
 }
 
 body #homepage .work ul li div .left {
@@ -393,7 +376,7 @@ body #homepage .work ul li div .left {
 body #homepage .work ul li div .left p {
   width: 100%;
   font-family: "Baloo 2", cursive;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
@@ -411,8 +394,8 @@ body #homepage .work ul li div button:hover {
 
 body #homepage .work ul li div button a {
   font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  color: white;
+  font-size: 18px;
+  color: black;
 }
 
 footer {
@@ -438,17 +421,21 @@ footer .footer-list ul {
 }
 
 footer .footer-list ul:hover {
-  border: 2px solid white;
+  border: 2px solid #F5B436;
 }
 
 footer .footer-list ul li {
   padding: 3px;
 }
 
-footer .footer-list ul li strong {
+footer .footer-list ul li:first-child {
+  margin-bottom: 20px;
+}
+
+footer .footer-list ul li:first-child strong {
   font-family: "Indie Flower", cursive;
   font-size: 25px;
-  color: white;
+  color: whitesmoke;
 }
 
 footer .footer-list ul li a {

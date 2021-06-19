@@ -7,15 +7,14 @@
           <div class="attach"></div>
           <div class="text">
                <h2>I tuoi piatti preferiti, a domicilio.</h2>
-               <h3>Ricerca subito il tuo ristorante preferito.</h3>
           </div>
      </section>
 
      <section class="delivery">
           <div class="attach"></div>
           <div class="text">
-               <h2>Non hai tempo di uscire? Ci pensa DeliverBoo.</h2>
-               <h3>Ordina qualcosa... ti aiuteremo noi a scegliere.</h3>
+               <h2>Non hai tempo di uscire?</h2>
+               <h2>Ci pensa DeliverBoo.</h2>
                <button>
                     <a href="#categories">
                          Ordina subito
@@ -34,7 +33,7 @@
      <search-component :restaurants="{{$restaurants}}" :categories="{{$categories}}"></search-component>
 
      <section class="work">
-          <h2>Ti piacerebbe lavorare con noi?</h2>
+          <h2>Lavora con DeliverBoo</h2>
           <ul>
                <li>
                     <div>
