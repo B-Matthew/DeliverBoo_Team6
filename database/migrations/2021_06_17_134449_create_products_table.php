@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->string('type');
             $table->decimal('price');
-            $table->boolean('availability');
+            $table->boolean('availability')->default(true);
             $table->bigInteger('restaurant_id')->unsigned()->index();
 
             $table->timestamps();
