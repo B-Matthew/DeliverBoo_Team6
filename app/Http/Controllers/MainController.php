@@ -16,8 +16,10 @@ class MainController extends Controller
 
   public function show() {
       $restaurants = Restaurant::all();
+      $products = Product::all();
       return view('pages.show', compact(
-        'restaurants'
+        'restaurants',
+        'products'
       ));
     }
 
@@ -27,12 +29,18 @@ class MainController extends Controller
         'restaurant'
     ));
   }
-  
+  public function product($id) {
+    $product = Product::findOrFail($id);
+    return view('pages.product', compact(
+        'product'
+    ));
+  }
+
   public function homepage() {
 
     $categories = Category::all();
     $restaurants = Restaurant::all();
-    
+
     return view('pages.homepage', compact('categories' , 'restaurants'));
   }
 
@@ -46,15 +54,3 @@ class MainController extends Controller
     return view('pages.faq');
   }
 }
-  
-    
-
-    
-     
-
-  
-  
-  
-
-  
-  

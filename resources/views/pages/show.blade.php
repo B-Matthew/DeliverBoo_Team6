@@ -15,6 +15,24 @@
            <a href="{{ route('destroyRestaurant', $restaurant -> id) }}">
              &#10060;
            </a>
+           @foreach ($products as $product)
+             <li>
+               {{ $product -> name }} -->
+              <a href="{{ route('product', $product -> id) }}">
+                Ingredients:{{ $product -> ingredients }}
+                Description:{{ $product -> description }}
+                Type:{{ $product -> type }}
+                Price:{{ $product -> price }}
+                Availability:{{ $product -> availability }}
+              </a>
+              {{-- <a href="{{ route('editProduct', $product -> id) }}">
+                &#9998;
+              </a>
+              <a href="{{ route('destroyProduct', $product -> id) }}">
+                &#10060;
+              </a> --}}
+             </li>
+           @endforeach
           </li>
         @endforeach
     </ul>

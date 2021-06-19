@@ -13,7 +13,7 @@ class Product extends Model
         'type',
         'price',
         'availability',
-        'resturant_id',
+        'restaurant_id',
     ];
 
     public function orders() {

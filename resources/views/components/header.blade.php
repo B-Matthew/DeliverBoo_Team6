@@ -19,11 +19,19 @@
                          Chi siamo
                     </a>
                </li>
-               
+
                <li>
 
                  <a href="{{ route('create') }}">
-                   Go to form
+                   Create Restaurant
+                 </a>
+
+               </li>
+
+               <li>
+
+                 <a href="{{ route('createProduct') }}">
+                   Create Product
                  </a>
 
                </li>

@@ -24,6 +24,8 @@ Route::get('/logged', 'HomeController@loggedPage')
 
 Route::get('restaurant/{id}', 'MainController@restaurant')
 ->name('restaurant');
+Route::get('product/{id}', 'MainController@product')
+->name('product');
 Route::get('show', 'MainController@show')
 ->name('show');
 
@@ -31,6 +33,11 @@ Route::get('/create/restaurant', 'HomeController@create')
 -> name('create');
 Route::post('/store/restaurant', 'HomeController@store')
 ->name('store');
+
+Route::get('/createProduct/product', 'HomeController@createProduct')
+-> name('createProduct');
+Route::post('/storeProduct/product', 'HomeController@storeProduct')
+->name('storeProduct');
 
 Route::get('/restaurant/edit/{id}', 'HomeController@edit')
 ->name('edit');
@@ -56,4 +63,3 @@ Route::get('info', 'MainController@infoWebPage')
 
 Route::get('faq' , 'MainController@faq')
         ->name('faq');
-
