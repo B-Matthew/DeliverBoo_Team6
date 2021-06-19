@@ -259,7 +259,7 @@ body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
   font-size: 18px;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 10px;
   border-radius: 10px;
   border: 1px solid black;
   background-color: #8fbc8f;
@@ -330,7 +330,7 @@ body #homepage .work h2 {
 body #homepage .work ul {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 body #homepage .work ul li {
@@ -350,7 +350,6 @@ body #homepage .work ul li:hover {
 }
 
 body #homepage .work ul li div {
-  height: 50%;
   width: 100%;
 }
 
@@ -406,7 +405,7 @@ footer {
 footer .footer-list {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
 }
 
 footer .footer-list ul {
@@ -738,5 +737,27 @@ footer .links h5 {
   font-size: 25px;
   letter-spacing: 1px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1600px) and (min-width: 1200px) {
+  body #homepage #categories .restaurants li {
+    flex-basis: calc(50% - 40px);
+  }
+
+  body #homepage #categories {
+    padding: 40px 6%;
+  }
+
+  body #homepage .work {
+    padding: 40px 6% 70px 6%;
+  }
+
+  footer {
+    padding: 70px 6%;
+  }
+
+  footer .footer-list ul li {
+    padding: 0;
+  }
 }
 
