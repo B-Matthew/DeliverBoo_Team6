@@ -1,19 +1,16 @@
 footer {
-     padding: 70px 8%;
      background-color: black;
+     padding: 70px 8%;
 
      .footer-list {
-          display: flex;
-          justify-content: space-between;         
-          align-items: stretch;
+          @include flex(row, space-between, stretch, nowrap);
 
           ul {   
-                  
-               background-color: rgb(71, 70, 70);
                flex-basis: calc(100% / 4 - 20px);
+               background-color: rgb(71, 70, 70);
+               color: white;
                padding: 40px;
                border-radius: 20px;
-               color: white;
                border: 2px solid rgb(71, 70, 70);
                transition: border 0.5s linear;
                       
@@ -52,10 +49,8 @@ footer {
      }
 
      .links {
+          @include flex(row, space-between, center, nowrap);
           padding: 40px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
 
           ul {
                flex-basis: 85%;
@@ -75,11 +70,10 @@ footer {
           }
 
           h5 {
-               font-family: 'Baloo 2', cursive;
-               font-size: 20px;
-               font-weight: normal;
+               @include baloo;
                flex-basis: 15%;
                color: white;
+               font-weight: normal;
           }
      }
 }

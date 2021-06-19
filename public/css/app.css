@@ -1,12 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);header {
-  padding: 0 8%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
   height: 80px;
+  padding: 0 8%;
   position: fixed;
   z-index: 100;
-  width: 100%;
 }
 
 header aside {
@@ -14,23 +16,24 @@ header aside {
 }
 
 header aside div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   background-color: #f8f1ae;
-  height: 80px;
   padding: 20px;
   border: 1px solid black;
   border-bottom-left-radius: 45px;
   border-bottom-right-radius: 45px;
   z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.5s ease-in-out;
 }
 
 header aside div:hover {
+  margin-top: 10px;
   border-radius: 10px;
   box-shadow: 5px 10px 3px #333232;
-  margin-top: 10px;
 }
 
 header aside div a {
@@ -46,27 +49,31 @@ header nav {
 
 header nav ul {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 header nav ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   padding: 10px 20px;
   background-color: #f8f1ae;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
   z-index: 99;
+  transition: all 0.5s ease-in-out;
 }
 
 header nav ul li:hover {
+  margin-top: 10px;
   border-radius: 10px;
   box-shadow: 5px 10px 3px #333232;
-  margin-top: 10px;
 }
 
 header nav ul li a {
@@ -99,8 +106,10 @@ body #homepage .jumbotron,
 body #homepage .delivery,
 body #homepage .map {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   height: 100vh;
 }
 
@@ -123,11 +132,12 @@ body #homepage .map .attach {
 body #homepage .jumbotron .text,
 body #homepage .delivery .text,
 body #homepage .map .text {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
 }
 
 body #homepage .jumbotron .text h2,
@@ -142,10 +152,10 @@ body #homepage .jumbotron .text button,
 body #homepage .delivery .text button,
 body #homepage .map .text button {
   background-color: #EEE7D7;
-  margin: 20px 0;
-  padding: 20px;
-  border: 1px solid transparent;
+  border: 1px solid #EEE7D7;
+  padding: 10px 20px;
   border-radius: 10px;
+  margin: 10px;
   transition: all 0.5s linear;
 }
 
@@ -153,9 +163,9 @@ body #homepage .jumbotron .text button:hover,
 body #homepage .delivery .text button:hover,
 body #homepage .map .text button:hover {
   box-shadow: 5px 10px 3px #333232;
-  border: 1px solid black;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  border-color: black;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 body #homepage .jumbotron .text button a,
@@ -206,14 +216,15 @@ body #homepage .map .attach {
 }
 
 body #homepage #categories {
+  background-color: #F5B436;
   text-align: center;
   padding: 40px 8%;
-  background-color: #F5B436;
 }
 
 body #homepage #categories h2 {
-  font-size: 40px;
   font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
@@ -232,25 +243,26 @@ body #homepage #categories ::placeholder {
 body #homepage #categories input {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  margin: 20px 0;
-  padding: 20px;
+  background-color: #8fbc8f;
+  border: 1px solid #8fbc8f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.5s linear;
   height: 70px;
   width: 500px;
-  border-radius: 10px;
-  border: 1px solid #F5B436;
-  background-color: #8fbc8f;
-  transition: all 0.5s linear;
 }
 
 body #homepage #categories input:hover {
   box-shadow: 5px 10px 3px #333232;
   border-color: black;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 body #homepage #categories .typeOfFoods {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -260,11 +272,11 @@ body #homepage #categories .typeOfFoods {
 body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
   font-size: 18px;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 10px;
-  border: 1px solid #8fbc8f;
   background-color: #8fbc8f;
+  border: 1px solid #8fbc8f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
   transition: all 0.5s linear;
 }
 
@@ -277,6 +289,7 @@ body #homepage #categories .typeOfFoods li:hover {
 
 body #homepage #categories .restaurants {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -291,7 +304,6 @@ body #homepage #categories .restaurants li {
   border: 1px solid black;
   background-color: #8fbc8f;
   transition: all 0.5s linear;
-  position: relative;
 }
 
 body #homepage #categories .restaurants li:hover {
@@ -299,14 +311,14 @@ body #homepage #categories .restaurants li:hover {
 }
 
 body #homepage #categories .restaurants li h3 {
+  background-color: #f8f1ae;
+  padding: 10px;
   font-family: "Baloo 2", cursive;
   font-size: 30px;
   font-weight: normal;
-  background-color: #f8f1ae;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom: 1px solid black;
-  padding: 10px;
 }
 
 body #homepage #categories .restaurants li h3 a {
@@ -321,32 +333,37 @@ body #homepage #categories .restaurants li img {
 }
 
 body #homepage .work {
-  text-align: center;
-  padding: 40px 8% 70px 8%;
   background-color: #EEE7D7;
+  padding: 40px 8% 70px 8%;
+  text-align: center;
 }
 
 body #homepage .work h2 {
-  font-size: 40px;
   font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
 body #homepage .work ul {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+  flex-wrap: nowrap;
 }
 
 body #homepage .work ul li {
-  flex-basis: calc(100% / 3 - 30px);
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 10px 10px 40px;
-  background-color: #F5B436;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: auto;
+  flex-wrap: nowrap;
+  flex-basis: calc(100% / 3 - 30px);
+  background-color: #F5B436;
+  padding: 10px 10px 40px;
+  border-radius: 20px;
+  border: 1px solid black;
   transition: box-shadow 0.5s linear;
 }
 
@@ -369,9 +386,10 @@ body #homepage .work ul li div.bg {
 }
 
 body #homepage .work ul li div h3 {
-  width: 100%;
   font-family: "Indie Flower", cursive;
   font-size: 40px;
+  letter-spacing: 2px;
+  width: 100%;
   font-weight: normal;
   margin: 20px 0;
 }
@@ -383,23 +401,23 @@ body #homepage .work ul li div .left {
 
 body #homepage .work ul li div .left p {
   width: 100%;
+  margin-bottom: 20px;
   font-family: "Baloo 2", cursive;
   font-size: 18px;
-  margin-bottom: 20px;
 }
 
 body #homepage .work ul li div button {
-  align-self: center;
-  margin: 10px 0;
-  justify-self: end;
+  background-color: #8fbc8f;
+  border: 1px solid #8fbc8f;
   padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.5s linear;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #8fbc8f;
-  border: 1px solid #8fbc8f;
-  border-radius: 10px;
-  transition: all 0.5s linear;
+  align-self: center;
+  justify-self: end;
 }
 
 body #homepage .work ul li div button:hover {
@@ -411,7 +429,7 @@ body #homepage .work ul li div button:hover {
 
 body #homepage .work ul li div button a {
   font-family: "Baloo 2", cursive;
-  font-size: 18px;
+  font-size: 20px;
   color: black;
 }
 
@@ -434,22 +452,24 @@ body #homepage .work ul li .bg.work {
 }
 
 footer {
-  padding: 70px 8%;
   background-color: black;
+  padding: 70px 8%;
 }
 
 footer .footer-list {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+  flex-wrap: nowrap;
 }
 
 footer .footer-list ul {
-  background-color: #474646;
   flex-basis: calc(100% / 4 - 20px);
+  background-color: #474646;
+  color: white;
   padding: 40px;
   border-radius: 20px;
-  color: white;
   border: 2px solid #474646;
   transition: border 0.5s linear;
 }
@@ -485,10 +505,12 @@ footer .footer-list ul li a img {
 }
 
 footer .links {
-  padding: 40px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
+  padding: 40px;
 }
 
 footer .links ul {
@@ -511,18 +533,20 @@ footer .links ul li a i {
 footer .links h5 {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  font-weight: normal;
   flex-basis: 15%;
   color: white;
+  font-weight: normal;
 }
 
 #login section {
-  padding: 100px 8%;
-  height: 100vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   background-color: darkseagreen;
+  height: 100vh;
+  padding: 100px 8%;
 }
 
 #login section form {
@@ -537,21 +561,22 @@ footer .links h5 {
 
 #login section form fieldset legend {
   font-family: "Indie Flower", cursive;
-  padding: 20px;
   font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
 }
 
 #login section form fieldset label,
 #login section form fieldset input {
-  margin: 20px;
   font-family: "Baloo 2", cursive;
-  font-size: 25px;
+  font-size: 20px;
+  margin: 20px;
 }
 
 #login section form fieldset .email,
 #login section form fieldset .password {
-  transition: box-shadow 0.5s linear;
   width: 100%;
+  transition: box-shadow 0.5s linear;
 }
 
 #login section form fieldset .email:hover,
@@ -575,22 +600,25 @@ footer .links h5 {
 #login section form fieldset button {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  padding: 10px 15px;
-  margin: 30px;
-  border-radius: 10px;
   background-color: #F5B436;
-  border: 1px solid black;
+  border: 1px solid #F5B436;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
   transition: all 0.5s linear;
 }
 
 #login section form fieldset button:hover {
   box-shadow: 5px 10px 3px #333232;
+  border-color: black;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #login section form fieldset a {
   font-family: "Indie Flower", cursive;
   font-size: 30px;
-  color: #395eaf;
+  color: #EEE7D7;
 }
 
 #login section form fieldset a:hover {
@@ -598,12 +626,14 @@ footer .links h5 {
 }
 
 #register section {
-  padding: 100px 8%;
-  height: 100vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   background-color: darkseagreen;
+  height: 100vh;
+  padding: 100px 8%;
 }
 
 #register section form {
@@ -618,15 +648,16 @@ footer .links h5 {
 
 #register section form fieldset legend {
   font-family: "Indie Flower", cursive;
-  padding: 20px;
   font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
 }
 
 #register section form fieldset label,
 #register section form fieldset input {
-  margin: 20px;
   font-family: "Baloo 2", cursive;
-  font-size: 25px;
+  font-size: 20px;
+  margin: 20px;
 }
 
 #register section form fieldset input {
@@ -646,57 +677,51 @@ footer .links h5 {
 #register section form fieldset button {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  padding: 10px 15px;
-  margin: 30px;
-  border-radius: 10px;
   background-color: #F5B436;
-  border: 1px solid black;
+  border: 1px solid #F5B436;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
   transition: all 0.5s linear;
 }
 
 #register section form fieldset button:hover {
   box-shadow: 5px 10px 3px #333232;
-}
-
-#register section form fieldset a {
-  font-family: "Indie Flower", cursive;
-  font-size: 30px;
-  color: #395eaf;
-}
-
-#register section form fieldset a:hover {
-  text-decoration: underline;
+  border-color: black;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #chi-siamo .banner div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
   padding: 200px 0 200px 8%;
   background-image: url(/images/chisiamo.jpg?c567151a06037446c48e690f9b386b44);
   background-size: 100% 70%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 #chi-siamo .banner div h1 {
-  margin-top: 30px;
   font-family: "Indie Flower", cursive;
-  font-size: 65px;
-  color: white;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-top: 30px;
 }
 
 #chi-siamo .text {
-  padding: 100px 20%;
+  padding: 30px 20%;
   background-color: #8fbc8f;
 }
 
 #chi-siamo .text p {
   font-family: "Baloo 2", cursive;
-  font-size: 25px;
-  letter-spacing: 1px;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
@@ -707,43 +732,55 @@ footer .links h5 {
 
 #chi-siamo .box ul {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 #chi-siamo .box ul li {
   flex-basis: calc(30% - 20px);
-  padding: 10px;
-  background-color: #F5B436;
-  border: 1px solid black;
   text-align: center;
-  transition: box-shadow 0.5s linear;
-  border-radius: 20px;
-}
-
-#chi-siamo .box ul li h2 {
-  font-family: "Indie Flower", cursive;
-  font-size: 70px;
-  font-weight: normal;
-}
-
-#chi-siamo .box ul li h5 {
-  font-family: "Baloo 2", cursive;
-  font-size: 30px;
-  font-weight: normal;
+  background-color: #F5B436;
+  border: 1px solid #F5B436;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.5s linear;
 }
 
 #chi-siamo .box ul li:hover {
   box-shadow: 5px 10px 3px #333232;
+  border-color: black;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#chi-siamo .box ul li h2,
+#chi-siamo .box ul li h5 {
+  font-weight: normal;
+}
+
+#chi-siamo .box ul li h2 {
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+#chi-siamo .box ul li h5 {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
 }
 
 #faq .banner {
-  width: 100%;
-  height: 500px;
-  background-color: #f8f1ae;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  background-color: #EEE7D7;
+  width: 100%;
+  height: 500px;
 }
 
 #faq .banner div {
@@ -757,21 +794,20 @@ footer .links h5 {
 }
 
 #faq .text {
-  padding: 100px 20%;
+  padding: 30px 20%;
   background-color: darkseagreen;
 }
 
 #faq .text h1 {
   font-family: "Indie Flower", cursive;
-  font-size: 50px;
-  margin-top: 50px;
+  font-size: 40px;
+  letter-spacing: 2px;
 }
 
 #faq .text p {
   font-family: "Baloo 2", cursive;
-  font-size: 25px;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin: 15px 0 30px 0;
 }
 
 @media (max-width: 1600px) and (min-width: 1200px) {

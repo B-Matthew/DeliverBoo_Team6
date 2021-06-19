@@ -1,36 +1,29 @@
 #chi-siamo {
-
      .banner {
 
           div {
+               @include flex(row, flex-start, center,  nowrap);
+               width: 100%;
+               height: auto;
                padding: 200px 0 200px 8%;
                background-image: url(../img/chisiamo.jpg);
                background-size: 100% 70%;
                background-repeat: no-repeat;
                background-attachment: fixed;
-               width: 100%;
-               height: auto;
-               display: flex;
-               justify-content: flex-start;
-               align-items: center;
 
                h1 {
+                    @include indie;
                     margin-top: 30px;
-                    font-family: 'Indie Flower', cursive;
-                    font-size: 65px;
-                    color: white;
                }
           }
      }
 
      .text {
-          padding: 100px 20%;
+          padding: 30px 20%;
           background-color: $green;
 
           p {
-               font-family: 'Baloo 2', cursive;
-               font-size: 25px;
-               letter-spacing: 1px;
+               @include baloo;
                margin-bottom: 30px;
           }
      }
@@ -40,33 +33,23 @@
           background-color: $green;
 
           ul {
-               display: flex;
-               justify-content: space-around;
-               align-items: center;
+               @include flex(row, space-around, center,  nowrap);
                
                li {
                     flex-basis: calc(30% - 20px);
-                    padding: 10px;
-                    background-color: $yellow;
-                    border: 1px solid black;
                     text-align: center;
-                    transition: box-shadow 0.5s linear;
-                    border-radius: 20px;
+                    @include buttonDesign($yellow);
+
+                    h2, h5 {
+                         font-weight: normal;
+                    }
 
                     h2 {
-                         font-family: 'Indie Flower', cursive;
-                         font-size: 70px;
-                         font-weight: normal;
+                         @include indie;
                     }
 
                     h5 {
-                         font-family: 'Baloo 2', cursive;
-                         font-size: 30px;
-                         font-weight: normal;
-                    }
-
-                    &:hover {
-                         box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                         @include baloo;
                     }
                }
           }
