@@ -23,7 +23,7 @@ body {
 
           .jumbotron, .delivery, .map {
                display: flex;
-               justify-content: space-between;
+               justify-content: space-between;   
                align-items: center;
                height: 100vh;
 
@@ -53,14 +53,14 @@ body {
                          background-color: #EEE7D7;
                          margin: 20px 0;
                          padding: 20px;
-                         border: 0;
+                         border: 1px solid transparent;   
                          border-radius: 10px;
                          transition: all 0.5s linear;
 
                          &:hover {
                               box-shadow: 5px 10px 3px rgb(51, 50, 50);
                               border: 1px solid black;
-                              margin-top: 10px;
+                              // margin-top: 10px;
                          }
 
                          a {
@@ -132,7 +132,7 @@ body {
                     margin: 20px 0;
                     padding: 20px;
                     height: 70px;
-                    width: 500px;
+                    width: 500px;   
                     border-radius: 10px;
                     border: 1px solid #F5B436;
                     background-color: #F5B436;
@@ -141,7 +141,7 @@ body {
                     &:hover {
                          box-shadow: 5px 10px 3px rgb(51, 50, 50);
                          border: 1px solid black;
-                         margin-top: 10px;
+                         // margin-top: 10px;   
                     }
                }
 
@@ -238,24 +238,31 @@ body {
                          padding: 10px 10px 40px;
                          background-color: $yellow;
                          display: flex;
-                         flex-direction: column;
-                         justify-content: flex-start;
-                         transition: box-shadow 0.5s linear;
+                         flex-direction: column;       
+                         justify-content: flex-start;   
+                         transition: box-shadow 0.5s linear;    
 
                          &:hover {
                               box-shadow: 20px 20px 3px rgb(51, 50, 50);
                          }
 
                          div {
-                              width: 100%;
-
-
-                              img {
-                                   width: 100%;
-                                   height: 350px;
+                                   
+                              &:last-child{
+                                   display: flex;
+                                   flex-direction: column;
+                                   align-content: center;   
+                                   flex-grow: 1;   
+                              }   
+                                 
+                              &.bg{      
+                                   
+                                   min-height: 300px;      
                                    border-radius: 20px;
-                                   border: 1px solid black;
-                              }
+                                   border: 1px solid black;   
+                                   overflow: hidden;      
+                              } 
+                              
 
                               h3 {
                                    width: 100%;
@@ -265,9 +272,10 @@ body {
                                    margin: 20px 0;
                               }
 
-                              .left {
-                                   text-align: left;
-
+                              .left {   
+                                   text-align: left;      
+                                   flex-grow: 1;   
+                                                       
                                    p {
                                         width: 100%;
                                         font-family: 'Baloo 2', cursive;
@@ -275,13 +283,16 @@ body {
                                         margin-bottom: 20px;
                                    }                                   
                               }
-
-                              button {
-                                   padding: 10px 20px;
+                              
+                              button {   
+                                   align-self: center; 
+                                   justify-self: end;     
+                                   padding: 10px 20px; 
+                                   width: fit-content;          
                                    background-color: $green;
                                    border: 1px solid black;
                                    border-radius: 10px;
-                                   transition: box-shadow 0.5s linear;
+                                   transition: box-shadow 0.5s linear;      
 
                                    &:hover {
                                         box-shadow: 5px 10px 3px rgb(51, 50, 50);
@@ -294,9 +305,24 @@ body {
                                    }
                               }
                          }
-                    }
-               }
-          }
-     }
-}
+
+                         .bg{
+                              background-size: cover;  
+                              background-repeat: no-repeat; 
+                              background-position: center;    
+                              &.rider{
+                                   background-image: url('../img/rider.jpg');       
+                              }          
+                              &.ristorante{
+                                   background-image: url('../img/ristorante.jpg');
+                              }
+                              &.work{
+                                   background-image: url('../storage/img/work.webp');   
+                              }
+                         }   
+                    }      
+               }   
+          }         
+     }   
+}   
 

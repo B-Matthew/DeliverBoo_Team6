@@ -36,10 +36,10 @@
           <h2>Lavora con DeliverBoo</h2>
           <ul>
                <li>
-                    <div>
-                         <img src="{{asset('storage/img/rider.jpg')}}" alt="">
+                    <div class="bg rider">
+                         
                     </div>
-
+   
                     <div>
                          <h3>Rider</h3>
                          <div class="left">
@@ -47,13 +47,13 @@
                          </div>
                          <button>
                               <a href="">Unisciti a noi</a>
-                         </button>
-                    </div>
+                         </button>      
+                    </div>   
                </li>
-
+   
                <li>
-                    <div>
-                         <img src="{{asset('storage/img/ristorante.jpg')}}" alt="">
+                    <div class="bg ristorante">
+                         
                     </div>
                     <div>
                          <h3>Ristorante</h3>
@@ -61,14 +61,14 @@
                               <p>Sei in cerca di reali vantaggi? Diventa un nostro partner e raggiungerai sempre nuovi clienti. Noi ci occuperemo della consegna dei tuoi prodotti, tu non dovrai pensare ad altro.</p>
                          </div>
                          <button>
-                              <a href="">Collabora con noi</a>
-                         </button>
-                    </div>
+                              <a href="">Collabora con noi</a>   
+                         </button>   
+                    </div>   
                </li>
 
                <li>
-                    <div>
-                         <img src="{{asset('storage/img/work.webp')}}" alt="">
+                    <div class="bg work">   
+                        
                     </div>
                     <div>
                          <h3>Lavora con noi</h3>

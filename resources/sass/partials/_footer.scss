@@ -4,24 +4,25 @@ footer {
 
      .footer-list {
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;         
           align-items: stretch;
 
-          ul {
-               height: 432px;
+          ul {   
+                  
                background-color: rgb(71, 70, 70);
                flex-basis: calc(100% / 4 - 20px);
                padding: 40px;
                border-radius: 20px;
                color: white;
-               border: 1px solid rgb(71, 70, 70);
+               border: 2px solid rgb(71, 70, 70);
                transition: border 0.5s linear;
+                      
+         
+               &:hover {   
+                    border-color: $yellow;   
+               } 
 
-               &:hover {
-                    border: 2px solid $yellow;
-               }
-
-               li {
+               li {   
                     padding: 3px;
 
                     &:first-child {
