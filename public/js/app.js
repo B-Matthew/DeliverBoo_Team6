@@ -165,7 +165,8 @@ __webpack_require__.r(__webpack_exports__);
   name: 'SearchComponent',
   data: function data() {
     return {
-      'searchInput': ''
+      'restaurantInput': '',
+      'categoryInput': 'all'
     };
   },
   props: ['restaurants', 'categories'],
@@ -174,13 +175,18 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var filteredRestaurants = this.restaurants.filter(function (element) {
-        return element.name.toLowerCase().includes(_this.searchInput.toLowerCase());
+        return element.name.toLowerCase().includes(_this.restaurantInput.toLowerCase());
       });
       return filteredRestaurants;
+    },
+    getCategory: function getCategory(categoryName) {
+      this.categoryInput = categoryName;
+      console.log(this.categoryInput);
     }
   },
   mounted: function mounted() {
     console.log(this.restaurants);
+    console.log(this.categories);
   }
 });
 
@@ -724,12 +730,12 @@ var render = function() {
         {
           name: "model",
           rawName: "v-model",
-          value: _vm.searchInput,
-          expression: "searchInput"
+          value: _vm.restaurantInput,
+          expression: "restaurantInput"
         }
       ],
       attrs: { text: "", placeholder: "Ricerca ristorante. . ." },
-      domProps: { value: _vm.searchInput },
+      domProps: { value: _vm.restaurantInput },
       on: {
         keyup: function($event) {
           return _vm.filter()
@@ -738,7 +744,7 @@ var render = function() {
           if ($event.target.composing) {
             return
           }
-          _vm.searchInput = $event.target.value
+          _vm.restaurantInput = $event.target.value
         }
       }
     }),
@@ -747,14 +753,34 @@ var render = function() {
       "ul",
       { staticClass: "typeOfFoods" },
       _vm._l(_vm.categories, function(category) {
-        return _c("li", [
-          _vm._v(" \n               " + _vm._s(category.name) + "\n          ")
-        ])
+        return _c(
+          "li",
+          {
+            attrs: { value: category.name },
+            on: {
+              click: function($event) {
+                return _vm.getCategory(category.name)
+              }
+            },
+            model: {
+              value: _vm.categoryInput,
+              callback: function($$v) {
+                _vm.categoryInput = $$v
+              },
+              expression: "categoryInput"
+            }
+          },
+          [
+            _vm._v(
+              " \n               " + _vm._s(category.name) + "\n          "
+            )
+          ]
+        )
       }),
       0
     ),
     _vm._v(" "),
-    _vm.searchInput == ""
+    _vm.restaurantInput == ""
       ? _c(
           "ul",
           { staticClass: "restaurants" },

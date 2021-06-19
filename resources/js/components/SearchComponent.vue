@@ -1,15 +1,15 @@
 <template>
      <section id="categories">
           <h2>Cosa mangerai oggi?</h2>
-          <input v-model="searchInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
+          <input v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
           <ul class="typeOfFoods">
-               <li v-for="category in categories"> 
+               <li v-model ="categoryInput" v-for="category in categories" :value="category.name" @click="getCategory(category.name)"> 
                     {{ category.name }}
                </li>
           </ul>
           
           <!-- Ciclare solo 6 ristoranti  -->
-          <ul v-if="searchInput == '' " class="restaurants">
+          <ul v-if="restaurantInput == '' " class="restaurants">
                <li v-for="(restaurant, index) in restaurants" v-if="index < 6">
                     <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
                     <h3>
@@ -36,20 +36,27 @@
         name: 'SearchComponent',
          data: function() {
               return{
-                   'searchInput': '',
+                   'restaurantInput': '',
+                   'categoryInput': 'all',
               }
           },
           props: ['restaurants','categories'],
 
           methods: {
                filter: function() {
-                    const filteredRestaurants = this.restaurants.filter(element => element.name.toLowerCase().includes(this.searchInput.toLowerCase()));
+                    const filteredRestaurants = this.restaurants.filter(element => element.name.toLowerCase().includes(this.restaurantInput.toLowerCase()));
                     return filteredRestaurants;
+               },
+
+               getCategory: function(categoryName) {
+                    this.categoryInput = categoryName;
+                    console.log(this.categoryInput);
                }
           },
         
         mounted() {
             console.log(this.restaurants);
+            console.log(this.categories);
         }
      } 
 </script>
