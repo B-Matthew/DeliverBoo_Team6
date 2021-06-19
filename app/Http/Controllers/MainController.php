@@ -40,6 +40,11 @@ class MainController extends Controller
 
     return view('pages.infoWebPage');
   }
+
+  public function faq() {
+
+    return view('pages.faq');
+  }
 }
   
     

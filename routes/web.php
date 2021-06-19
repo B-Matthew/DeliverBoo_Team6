@@ -52,4 +52,8 @@ Route::get('/', 'MainController@homepage')
 Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
+// FAQ
+
+Route::get('faq' , 'MainController@faq')
+        ->name('faq');
 
