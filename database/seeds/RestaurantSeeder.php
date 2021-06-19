@@ -15,7 +15,7 @@ class RestaurantSeeder extends Seeder
         
        factory(Restaurant::class, 20)->create()
        ->each(function($restaurant){
-            $category = Category::inRandomOrder()->limit(1,2)->get();
+            $category = Category::inRandomOrder()->limit(rand(1,3))->get();
             $restaurant -> categories()->attach($category);
             $restaurant->save();
        });
