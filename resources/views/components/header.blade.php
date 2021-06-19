@@ -29,7 +29,7 @@
                </li>
 
                <li>
-                    <a href="">
+                    <a href="{{route('faq')}}">
                          FAQ
                     </a>
                </li>
