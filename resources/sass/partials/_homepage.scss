@@ -136,12 +136,12 @@ body {
                     width: 500px;   
                     border-radius: 10px;
                     border: 1px solid #F5B436;
-                    background-color: #F5B436;
+                    background-color: $green;
                     transition: all 0.5s linear;
 
                     &:hover {
                          box-shadow: 5px 10px 3px rgb(51, 50, 50);
-                         border: 1px solid black;
+                         border-color: black;
                          margin-top: 10px;
                          margin-bottom: 30px;      
                     }
@@ -161,14 +161,15 @@ body {
                          padding: 10px 20px;
                          margin: 10px;
                          border-radius: 10px;
-                         border: 1px solid black;
+                         border: 1px solid $green;
                          background-color: $green;
-                         transition: 0.5s linear;   
+                         transition: all 0.5s linear;   
 
                          &:hover {
                               box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                              border-color: black;
                               margin-top: 0;
-                              margin-bottom: 10px;      
+                              margin-bottom: 20px;      
                          }
                     }
                }
@@ -289,17 +290,21 @@ body {
                               }
                               
                               button {   
-                                   align-self: center; 
+                                   align-self: center;
+                                   margin: 10px 0; 
                                    justify-self: end;     
                                    padding: 10px 20px; 
                                    width: fit-content;          
                                    background-color: $green;
-                                   border: 1px solid black;
+                                   border: 1px solid $green;
                                    border-radius: 10px;
-                                   transition: box-shadow 0.5s linear;      
+                                   transition: all 0.5s linear;      
 
                                    &:hover {
                                         box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                                        border-color: black;
+                                        margin-top: 0;
+                                        margin-bottom: 20px;
                                    }
 
                                    a {
