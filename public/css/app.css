@@ -144,7 +144,7 @@ body #homepage .map .text button {
   background-color: #EEE7D7;
   margin: 20px 0;
   padding: 20px;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 10px;
   transition: all 0.5s linear;
 }
@@ -155,6 +155,7 @@ body #homepage .map .text button:hover {
   box-shadow: 5px 10px 3px #333232;
   border: 1px solid black;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 body #homepage .jumbotron .text button a,
@@ -245,6 +246,7 @@ body #homepage #categories input:hover {
   box-shadow: 5px 10px 3px #333232;
   border: 1px solid black;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 body #homepage #categories .typeOfFoods {
@@ -263,11 +265,13 @@ body #homepage #categories .typeOfFoods li {
   border-radius: 10px;
   border: 1px solid black;
   background-color: #8fbc8f;
-  transition: box-shadow 0.5s linear;
+  transition: 0.5s linear;
 }
 
 body #homepage #categories .typeOfFoods li:hover {
   box-shadow: 5px 10px 3px #333232;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 body #homepage #categories .restaurants {
@@ -349,15 +353,18 @@ body #homepage .work ul li:hover {
   box-shadow: 20px 20px 3px #333232;
 }
 
-body #homepage .work ul li div {
-  width: 100%;
+body #homepage .work ul li div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-grow: 1;
 }
 
-body #homepage .work ul li div img {
-  width: 100%;
-  height: 350px;
+body #homepage .work ul li div.bg {
+  min-height: 300px;
   border-radius: 20px;
   border: 1px solid black;
+  overflow: hidden;
 }
 
 body #homepage .work ul li div h3 {
@@ -370,6 +377,7 @@ body #homepage .work ul li div h3 {
 
 body #homepage .work ul li div .left {
   text-align: left;
+  flex-grow: 1;
 }
 
 body #homepage .work ul li div .left p {
@@ -380,7 +388,12 @@ body #homepage .work ul li div .left p {
 }
 
 body #homepage .work ul li div button {
+  align-self: center;
+  justify-self: end;
   padding: 10px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #8fbc8f;
   border: 1px solid black;
   border-radius: 10px;
@@ -397,6 +410,24 @@ body #homepage .work ul li div button a {
   color: black;
 }
 
+body #homepage .work ul li .bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body #homepage .work ul li .bg.rider {
+  background-image: url(/images/rider.jpg?960225b221286ff16329104e0e08d208);
+}
+
+body #homepage .work ul li .bg.ristorante {
+  background-image: url(/images/ristorante.jpg?cf5cf820aa67d1fe6a17f5545a29be32);
+}
+
+body #homepage .work ul li .bg.work {
+  background-image: url(/images/work.webp?75b966108d6a40286f49c8c2d927dcde);
+}
+
 footer {
   padding: 70px 8%;
   background-color: black;
@@ -404,23 +435,22 @@ footer {
 
 footer .footer-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
 }
 
 footer .footer-list ul {
-  height: 432px;
   background-color: #474646;
   flex-basis: calc(100% / 4 - 20px);
   padding: 40px;
   border-radius: 20px;
   color: white;
-  border: 1px solid #474646;
+  border: 2px solid #474646;
   transition: border 0.5s linear;
 }
 
 footer .footer-list ul:hover {
-  border: 2px solid #F5B436;
+  border-color: #F5B436;
 }
 
 footer .footer-list ul li {
