@@ -157,7 +157,7 @@ body {
                          font-family: 'Baloo 2', cursive;
                          font-size: 18px;
                          padding: 10px 20px;
-                         margin: 0 10px;
+                         margin: 10px;
                          border-radius: 10px;
                          border: 1px solid black;
                          background-color: $green;
@@ -229,7 +229,7 @@ body {
                ul {
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
+                    align-items: stretch;
 
                     li {
                          flex-basis: calc(100% / 3 - 30px);
@@ -247,7 +247,6 @@ body {
                          }
 
                          div {
-                              height: 50%;
                               width: 100%;
 
 
@@ -300,3 +299,4 @@ body {
           }
      }
 }
+
