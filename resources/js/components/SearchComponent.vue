@@ -1,11 +1,15 @@
 <template>
      <section id="categories">
-          <h2>Cosa mangerai oggi?</h2>
+          <h2>Cosa vuoi mangiare?</h2>
           <input v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
           <ul class="typeOfFoods">
                <li v-model ="categoryInput" v-for="category in categories" :value="category.name" @click="getCategory(category.name)"> 
                     {{ category.name }}
                </li>
+          </ul>
+
+          <ul>
+               <li v-for=""></li>
           </ul>
           
           <!-- Ciclare solo 6 ristoranti  -->

@@ -161,6 +161,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
@@ -723,7 +727,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { attrs: { id: "categories" } }, [
-    _c("h2", [_vm._v("Cosa mangerai oggi?")]),
+    _c("h2", [_vm._v("Cosa vuoi mangiare?")]),
     _vm._v(" "),
     _c("input", {
       directives: [
@@ -780,6 +784,8 @@ var render = function() {
       0
     ),
     _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
     _vm.restaurantInput == ""
       ? _c(
           "ul",
@@ -811,7 +817,14 @@ var render = function() {
         )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", [_c("li")])
+  }
+]
 render._withStripped = true
 
 
