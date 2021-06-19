@@ -238,13 +238,13 @@ body #homepage #categories input {
   width: 500px;
   border-radius: 10px;
   border: 1px solid #F5B436;
-  background-color: #F5B436;
+  background-color: #8fbc8f;
   transition: all 0.5s linear;
 }
 
 body #homepage #categories input:hover {
   box-shadow: 5px 10px 3px #333232;
-  border: 1px solid black;
+  border-color: black;
   margin-top: 10px;
   margin-bottom: 30px;
 }
@@ -263,15 +263,16 @@ body #homepage #categories .typeOfFoods li {
   padding: 10px 20px;
   margin: 10px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid #8fbc8f;
   background-color: #8fbc8f;
-  transition: 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 body #homepage #categories .typeOfFoods li:hover {
   box-shadow: 5px 10px 3px #333232;
+  border-color: black;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 body #homepage #categories .restaurants {
@@ -389,19 +390,23 @@ body #homepage .work ul li div .left p {
 
 body #homepage .work ul li div button {
   align-self: center;
+  margin: 10px 0;
   justify-self: end;
   padding: 10px 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   background-color: #8fbc8f;
-  border: 1px solid black;
+  border: 1px solid #8fbc8f;
   border-radius: 10px;
-  transition: box-shadow 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 body #homepage .work ul li div button:hover {
   box-shadow: 5px 10px 3px #333232;
+  border-color: black;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 body #homepage .work ul li div button a {
