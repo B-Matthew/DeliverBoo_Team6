@@ -78,7 +78,7 @@ header nav ul li:hover {
 
 header nav ul li a {
   font-family: "Baloo 2", cursive;
-  font-size: 18px;
+  font-size: 20px;
   color: black;
 }
 
@@ -249,8 +249,7 @@ body #homepage #categories input {
   border-radius: 10px;
   margin: 10px;
   transition: all 0.5s linear;
-  height: 70px;
-  width: 500px;
+  width: 30%;
 }
 
 body #homepage #categories input:hover {
@@ -271,7 +270,7 @@ body #homepage #categories .typeOfFoods {
 
 body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
-  font-size: 18px;
+  font-size: 20px;
   background-color: #8fbc8f;
   border: 1px solid #8fbc8f;
   padding: 10px 20px;
@@ -314,7 +313,7 @@ body #homepage #categories .restaurants li h3 {
   background-color: #f8f1ae;
   padding: 10px;
   font-family: "Baloo 2", cursive;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: normal;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -403,7 +402,7 @@ body #homepage .work ul li div .left p {
   width: 100%;
   margin-bottom: 20px;
   font-family: "Baloo 2", cursive;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 body #homepage .work ul li div button {
