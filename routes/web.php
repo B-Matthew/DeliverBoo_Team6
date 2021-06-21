@@ -30,8 +30,8 @@ Route::get('faq' , 'MainController@faq')
 // SEZIONE DASHBOARD
 Route::get('/dashBoard/restaurant', 'HomeController@dashBoard')
 -> name('dashBoard');
-Route::post('/store/restaurant', 'HomeController@store')
-->name('store');
+Route::post('/store/restaurant', 'HomeController@storeRestaurant')
+->name('store-restaurant');
 
 
 Route::get('restaurant/{id}', 'MainController@restaurant')

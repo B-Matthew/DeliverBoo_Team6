@@ -20,13 +20,25 @@ class HomeController extends Controller
     return view('pages.dashBoard', compact('user'));
   }
     
-  public function store(Request $request)
+  public function storeRestaurant(Request $request)
   {
+
+    $validated = $request -> validate ([
+      'name' => 'string|required|min:3',
+      'city' => 'string|required|min:3',
+      'address' => 'string|required|min:3',
+      'telephone' => 'numeric|required|min:5',
+      'pIva' => 'string|required|min:5',
+      'img' => 'nullable|mimes:jpg,bmp,png,jpeg',
+    ]);
+      
+    dd($validated);
     // $validate = $request -> validate($this -> getValidate());
     $resturant = Restaurant::create();  //create($validate)
-    return redirect() -> route('resturant', $resturant -> id);
+    return redirect() -> route('dashBoard');
   }
-
+    
+    
   public function createProduct() 
   {
     return view('pages.createProduct');
@@ -95,3 +107,4 @@ class HomeController extends Controller
 
 
     
+
