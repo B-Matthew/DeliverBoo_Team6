@@ -1,0 +1,168 @@
+#dashboard {
+     display: grid;
+     grid-template-columns: 20% 70% 10%;
+     grid-template-rows: auto 1fr;
+     grid-template-areas: 
+          "welcome welcome welcome"
+          "restaurants create create";
+
+     .welcome {
+          grid-area: welcome;
+          background-color: darkseagreen;
+          padding: 100px 8% 50px 8%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: indie flower, cursive;
+          font-size: 40px;
+
+          h1 {
+               margin-top: 50px;
+          }
+     }
+
+     .restaurants {
+          grid-area: restaurants;
+          background-color: darkseagreen;
+          padding: 50px 8%;
+          @include flex(column, flex-start, flex-start, nowrap);
+
+          h3 {
+               @include indie;
+               margin-bottom: 30px;
+          }
+
+          ul {
+               li {
+                    padding: 10px;
+                    @include baloo;
+
+                    img {
+                         width: auto;
+                         height: 100px;
+                         vertical-align: middle;
+                         margin: 0 10px;
+                    }
+               }
+          }
+     }
+
+     .create {
+          grid-area: create;
+          padding: 50px 8% 0 0;
+          @include flex(column, flex-start, center, nowrap);
+          background-color: $green;
+
+          h2 {
+               @include indie;
+          }
+
+          form {
+               width: 80%;
+               margin:30px 0;
+               fieldset {
+                    @include flex(row, space-between, center, wrap);
+                    border: 3px solid #F5B436;
+                    padding: 20px;
+                    border-radius: 10px;
+
+                    legend {
+                         @include indie;
+                         padding: 20px;
+                    }
+
+                    div {
+                         flex-basis: calc(100% / 3 - 20px);
+
+                         ::placeholder {
+                              @include baloo;
+                              color: black;
+                         }
+
+                         label, input {
+                              margin: 20px 50px 20px 0;
+                              font-size: 20px;
+     
+     
+                              h4 {
+                                   @include baloo;
+                                   font-weight: normal;
+                              }
+     
+                         }
+
+                         input {
+                              width: 100%;
+                              padding: 10px 20px;
+                              background-color: #F5B436;
+                              border: 1px solid black;
+                              border-radius: 10px;
+                              transition: box-shadow 0.5s linear;
+     
+                              &:hover {
+                                   box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                              }
+                         }                         
+                    }
+
+                    .button {
+                         flex-basis: 100%;
+                         text-align: center;
+
+                         button{
+                         @include baloo;
+                         @include buttonDesign($yellow);
+                         }
+                    }
+
+                    ul {
+                         flex-basis: 100%;
+                         @include flex(row, space-between, center, wrap);
+                         margin-bottom: 20px;
+
+                         li {
+                              flex-basis: calc(100% / 5 - 20px);
+                              @include flex(row, flex-start, center, nowrap);
+
+                              label {
+                                   @include baloo;
+                              }
+
+                              input {
+                                   -webkit-appearance: none;
+                                   background-color: $yellow;
+                                   border: 1px solid $yellow;
+                                   padding: 10px;
+                                   border-radius: 5px;
+                                   margin: 0 10px;
+                                   transition: all 0.3s linear;
+                                   position: relative;
+
+                                   &:hover {
+                                        border-color: black;     
+                                   }
+
+                                   &:checked {
+                                        background-color: $yellow;
+                                        border:1px solid black;
+                                   }
+
+                                   &:checked:after {
+                                        content: '\2714';
+                                        font-size: 20px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        color: black;
+                                   }
+                              }
+                         }
+                    }
+
+                    
+               }
+          }
+
+     }
+} 
