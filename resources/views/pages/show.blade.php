@@ -4,27 +4,27 @@
       <ul>
         @foreach ($restaurants as $restaurant)
           <li>
-           <a href="{{ route('restaurant', $restaurant -> id) }}">
+           {{-- <a href="{{ route('restaurant', $restaurant -> id) }}">
              Name:{{ $restaurant -> name }}
              Address:{{ $restaurant -> address }}
              Telephone:{{ $restaurant -> telephone }}
-           </a>
+           </a> --}}
            <a href="{{ route('edit', $restaurant -> id) }}">
              &#9998;
            </a>
            <a href="{{ route('destroyRestaurant', $restaurant -> id) }}">
              &#10060;
            </a>
-           @foreach ($products as $product)
+           @foreach ($antipasti as $antipasto)
              <li>
-               {{ $product -> name }} -->
-              <a href="{{ route('product', $product -> id) }}">
-                Ingredients:{{ $product -> ingredients }}
-                Description:{{ $product -> description }}
-                Type:{{ $product -> type }}
-                Price:{{ $product -> price }}
-                Availability:{{ $product -> availability }}
-              </a>
+               {{ $antipasto -> name }} 
+              {{-- <a href="{{ route('antipasto', $antipasto -> id) }}">
+                Ingredients:{{ $antipasto -> ingredients }}
+                Description:{{ $antipasto -> description }}
+                Type:{{ $antipasto -> type }}
+                Price:{{ $antipasto -> price }}
+                Availability:{{ $antipasto -> availability }}
+              </a> --}}
               {{-- <a href="{{ route('editProduct', $product -> id) }}">
                 &#9998;
               </a>
