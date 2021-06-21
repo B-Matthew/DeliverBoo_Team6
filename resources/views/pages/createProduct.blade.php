@@ -4,8 +4,8 @@
    <div class="">
      <h1>Nuovo Piatto</h1>
    </div>
+   
    <form method="POST" action="{{ route('storeProduct') }}">
-
      @csrf
      @method('POST')
      <div class="">
