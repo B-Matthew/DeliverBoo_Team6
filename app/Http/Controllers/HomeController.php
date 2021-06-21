@@ -48,6 +48,10 @@ class HomeController extends Controller
     return redirect() -> route('dashBoard');
   }
 
+  public function myProduct() {
+     return view('pages.myProducts');
+  }
+
   public function createProduct() 
   {
     return view('pages.createProduct');

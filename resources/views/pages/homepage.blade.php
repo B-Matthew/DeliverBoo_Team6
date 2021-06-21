@@ -29,11 +29,17 @@
                <h2>Operativi su tutto il territorio nazionale.</h2>
           </div>
      </section>
-
-     <search-component :restaurants="{{$restaurants}}" :categories="{{$categories}}"></search-component>
+     
+         
+     <search-component :restaurants="{{$restaurants}}" :categories="{{$categories}}" :route="'/client/restaurant/'">
+          
+     </search-component>
+     
 
      <section class="work">
+          
           <h2>Lavora con DeliverBoo</h2>
+          
           <ul>
                <li>
                     <div class="bg rider">

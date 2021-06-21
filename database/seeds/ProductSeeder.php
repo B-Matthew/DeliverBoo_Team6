@@ -164,7 +164,7 @@ class ProductSeeder extends Seeder
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
                 'availability'  => 1,
-                'restaurant_id' => 2,
+                'restaurant_id' => 4,
             ],
             [
                 'name' => 'Ravioloni ripieni di polpo e burrata',
@@ -173,7 +173,7 @@ class ProductSeeder extends Seeder
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
                 'availability'  => 1,
-                'restaurant_id' => 1,
+                'restaurant_id' => 4,
             ],
             [
                 'name' => 'Chicken Burger',
@@ -182,7 +182,7 @@ class ProductSeeder extends Seeder
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
                 'availability'  => 1,
-                'restaurant_id' => 19,
+                'restaurant_id' => 4,
             ],
             [
                 'name' => 'Branzino alla mediterranea',
@@ -191,7 +191,7 @@ class ProductSeeder extends Seeder
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
                 'availability'  => 1,
-                'restaurant_id' => 20,
+                'restaurant_id' => 4,
             ],
         ];
 

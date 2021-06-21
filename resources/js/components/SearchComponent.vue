@@ -8,27 +8,29 @@
                </li>
           </ul>
 
-          <ul>
-               <li v-for=""></li>
-          </ul>
+          
           
           <!-- Ciclare solo 6 ristoranti  -->
           <ul v-if="restaurantInput == '' " class="restaurants">
                <li v-for="(restaurant, index) in restaurants" v-if="index < 6">
-                    <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
-                    <h3>
-                         <a href="">
+                         <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
+                    <a :href="route + restaurant.id">
+                         <h3>
+                             
                               {{restaurant.name}}
-                         </a>
-                    </h3>
+                              
+                         </h3>
+                    </a> 
                </li>
           </ul>
-
+          
           <!-- Ciclare tutti i ristoranti filtrati per nome -->
           <ul v-else class="restaurants">
                <li v-for="restaurant in filter()">
+                    <a :href="route + restaurant.id">
                     <!-- <img src="{{asset('../../storage/app/public/img/rider.jpg')}}" alt=""> -->
-                    <h3>{{restaurant.name}}</h3>      
+                         <h3>{{restaurant.name}}</h3>      
+                    </a>
                </li>
           </ul>         
      </section>            
@@ -44,7 +46,7 @@
                    'categoryInput': 'all',
               }
           },
-          props: ['restaurants','categories'],
+          props: ['restaurants','categories','route'],
 
           methods: {
                filter: function() {
@@ -64,3 +66,13 @@
         }
      } 
 </script>
+              
+                   
+                    
+              
+                         
+                    
+                    
+               
+                         
+                         

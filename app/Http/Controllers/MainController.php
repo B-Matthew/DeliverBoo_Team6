@@ -26,15 +26,22 @@ class MainController extends Controller
     // Pagina Menu ristorante
   public function clientRestaurant($id) {
 
-    $restaurants = Restaurant::findOrFail($id);
-      $antipasti = Product::orderBy('type')->get();
-                
-      return view('pages.show', compact(
-        'restaurants',
-        'antipasti',
-      ));
+    $restaurant = Restaurant::findOrFail($id);
+    
+    $antipasti= Product::WHERE('restaurant_id' ,'=' , $restaurant->id)->where('type', 'LIKE', 'antipasto')->get();
+    
+    $primi= Product::WHERE('restaurant_id' ,'=' , $restaurant->id)->where('type', 'LIKE', 'primo')->get();
+    
+    $secondi= Product::WHERE('restaurant_id' ,'=' , $restaurant->id)->where('type', 'LIKE', 'secondo')->get();
+                              
+    return view('pages.homeRestaurant', compact(
+      'restaurant',
+      'antipasti',
+      'primi',
+      'secondi'
+    ));
   }
-   
+    
   // Pagina Info web
   public function infoWebPage() {
 
@@ -47,6 +54,17 @@ class MainController extends Controller
     return view('pages.faq');
   }
 
+  public function product($id) {
+    $product = Product::findOrFail($id);
+    return view('pages.product', compact(
+        'product'
+    ));
+  }
+}
+
+  
+
+  
   
                 
       
@@ -54,15 +72,11 @@ class MainController extends Controller
       
         
     
-  public function product($id) {
-    $product = Product::findOrFail($id);
-    return view('pages.product', compact(
-        'product'
-    ));
-  }
+  
+  
+      
 
-  
 
-  
-}
-  
+      
+                
+   
