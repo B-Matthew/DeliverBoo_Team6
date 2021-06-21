@@ -165,6 +165,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
@@ -173,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
       'categoryInput': 'all'
     };
   },
-  props: ['restaurants', 'categories'],
+  props: ['restaurants', 'categories', 'route'],
   methods: {
     filter: function filter() {
       var _this = this;
@@ -784,8 +786,6 @@ var render = function() {
       0
     ),
     _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
     _vm.restaurantInput == ""
       ? _c(
           "ul",
@@ -793,12 +793,12 @@ var render = function() {
           _vm._l(_vm.restaurants, function(restaurant, index) {
             return index < 6
               ? _c("li", [
-                  _c("h3", [
-                    _c("a", { attrs: { href: "" } }, [
+                  _c("a", { attrs: { href: _vm.route + restaurant.id } }, [
+                    _c("h3", [
                       _vm._v(
-                        "\n                         " +
+                        "\n                        \n                         " +
                           _vm._s(restaurant.name) +
-                          "\n                    "
+                          "\n                         \n                    "
                       )
                     ])
                   ])
@@ -811,20 +811,17 @@ var render = function() {
           "ul",
           { staticClass: "restaurants" },
           _vm._l(_vm.filter(), function(restaurant) {
-            return _c("li", [_c("h3", [_vm._v(_vm._s(restaurant.name))])])
+            return _c("li", [
+              _c("a", { attrs: { href: _vm.route + restaurant.id } }, [
+                _c("h3", [_vm._v(_vm._s(restaurant.name))])
+              ])
+            ])
           }),
           0
         )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", [_c("li")])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -13241,8 +13238,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\nunzio\boolean\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\nunzio\boolean\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

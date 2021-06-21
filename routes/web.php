@@ -40,7 +40,11 @@ Route::post('/store/restaurant', 'HomeController@storeRestaurant')
 Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
         ->name('clientRestaurant');
 
+// SEZIONE MYFOODS
 
+Route::get('/myProduct' , 'HomeController@myProduct')
+        ->name('myProduct');
+        
 Route::get('product/{id}', 'MainController@product')
 ->name('product');
 

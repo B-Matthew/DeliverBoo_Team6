@@ -62,6 +62,27 @@
 
             <a href="">vai al pagamento</a>   
         </div>
+        <div class="show_div">
+      <ul>
+        
+          <li>
+            {{$restaurant -> name}}
+           <h1>Antipasti:</h1>
+           @foreach ($antipasti as $antipasto)
+               {{$antipasto -> name}} <br>
+           @endforeach
+           <h1>Primi:</h1>
+            @foreach ($primi as $primo)
+               {{$primo -> name}} <br>
+           @endforeach
+           <h1>Secondi:</h1>
+            @foreach ($secondi as $secondi)
+               {{$secondi -> name}} <br>
+           @endforeach
 
+          </li>
+        </ul>
+        </div>
+        
     </main>
 @endsection
