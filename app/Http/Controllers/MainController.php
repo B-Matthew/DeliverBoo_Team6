@@ -23,21 +23,36 @@ class MainController extends Controller
       return view('pages.homepage', compact('categories' , 'restaurants'));
     }
 
-    
     // Pagina Menu ristorante
-  public function clientRestaurant() {
+  public function clientRestaurant($id) {
 
-    return view('pages.homeRestaurant');
-  }
-
-  public function show() {
-      $restaurants = Restaurant::all();
-      $products = Product::all();
+    $restaurants = Restaurant::findOrFail($id);
+      $antipasti = Product::orderBy('type')->get();
+                
       return view('pages.show', compact(
         'restaurants',
-        'products'
+        'antipasti',
       ));
-    }
+  }
+   
+  // Pagina Info web
+  public function infoWebPage() {
+
+    return view('pages.infoWebPage');
+  }
+
+  // Pagina Faq
+  public function faq() {
+
+    return view('pages.faq');
+  }
+
+  
+                
+      
+      
+      
+        
     
   public function product($id) {
     $product = Product::findOrFail($id);
@@ -48,14 +63,6 @@ class MainController extends Controller
 
   
 
-  public function infoWebPage() {
-
-    return view('pages.infoWebPage');
-  }
-
-  public function faq() {
-
-    return view('pages.faq');
-  }
+  
 }
   

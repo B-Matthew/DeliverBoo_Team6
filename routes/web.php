@@ -34,16 +34,13 @@ Route::post('/store/restaurant', 'HomeController@storeRestaurant')
 ->name('store-restaurant');
 
 // SEZIONE MENU RESTAURANT
-
-Route::get('/client/restaurant', 'MainController@clientRestaurant')
+Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
         ->name('clientRestaurant');
 
-Route::get('restaurant/{id}', 'MainController@restaurant')
-->name('restaurant');
+
 Route::get('product/{id}', 'MainController@product')
 ->name('product');
-Route::get('show', 'MainController@show')
-->name('show');
+
 
 Route::get('/createProduct/product', 'HomeController@createProduct')
 -> name('createProduct');
@@ -66,5 +63,6 @@ Route::get('/restaurant/destroyRestaurant/{id}', 'HomeController@destroyRestaura
 
 
 
+        
 
 
