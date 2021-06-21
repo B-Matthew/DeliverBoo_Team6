@@ -27,13 +27,13 @@
           <!-- Ciclare tutti i ristoranti filtrati per nome -->
           <ul v-else class="restaurants">
                <li v-for="restaurant in filter()">
-                    <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
-                    <h3>{{restaurant.name}}</h3>
+                    <!-- <img src="{{asset('../../storage/app/public/img/rider.jpg')}}" alt=""> -->
+                    <h3>{{restaurant.name}}</h3>      
                </li>
-          </ul>
-     </section>
-     
-</template>
+          </ul>         
+     </section>            
+           
+</template>   
 
 <script>
     export default {

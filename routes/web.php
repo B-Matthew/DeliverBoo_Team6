@@ -1,3 +1,6 @@
+
+
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -14,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
-
+   
 // HOMEPAGE
 Route::get('/', 'MainController@homepage')
         ->name('homepage');
