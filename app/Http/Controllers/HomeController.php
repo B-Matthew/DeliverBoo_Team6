@@ -5,6 +5,7 @@ use App\Restaurant;
 use App\Category;
 use App\Product;
 use Auth;
+use App\Http\Requests\RestaurantRequest;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,35 +22,29 @@ class HomeController extends Controller
     return view('pages.dashBoard', compact('user','categories'));
   }
     
-  public function storeRestaurant(Request $request)
+  public function storeRestaurant(RestaurantRequest $request)
   {
+    
+   if($request->hasFile('img')){
+     $img = $request -> file('img');
+     $imgExt = $img -> getClientOriginalExtension();
+     $imgNew = time() . '_restaurtant-img.' .$imgExt;
+     $folder = '/restaurant-img/';
+     $imgFile = $img -> storeAs($folder , $imgNew, 'public');
+    }else {
+      $imgNew = 'carne3.png';
+    }
 
-    $validated = $request -> validate ([
-      'name' => 'string|required|min:3',
-      'address' => 'string|required|min:3',
-      'city' => 'string|required|min:3',
-      'telephone' => 'numeric|required|min:5',
-      'pIva' => 'string|required|min:5',
-      'img' => 'nullable|mimes:jpg,bmp,png,jpeg',
-    ]);
-     
-    // if($request->hasFile('img')){
-    //   $img = $request -> file('img');
-    //   dd(' cè immagine');
-    //  }else {
-
-    //   dd('non cè immagine');
-    // }
-
-    $restaurant = Restaurant::make($validated);
-
-    $userCurrent = Auth::user()->id;
-    $restaurant -> user()->associate($userCurrent);
-    $restaurant -> save();
-
+    $data = $request->all();
+    $data['user_id'] = Auth::id();
+    $restaurant = new Restaurant();
+    $restaurant->fill($data);
+    $restaurant -> img = $imgNew;
+    $restaurant->save();
+    
     $restaurant -> categories()->attach($request -> get('category_id'));
     $restaurant->save();
-
+ 
     return redirect() -> route('dashBoard');
   }
 
@@ -71,6 +66,7 @@ class HomeController extends Controller
         "availability" => $request->get("availability"),
         "restaurant_id" => $request->get("restaurant_id"),
     ]);
+    
     $product->save();
     return redirect() -> route('product', $product -> id);
   }
@@ -129,3 +125,9 @@ class HomeController extends Controller
     
     
     
+
+    
+
+     
+    
+
