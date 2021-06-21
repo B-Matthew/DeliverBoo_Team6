@@ -15,6 +15,12 @@
                </li>
 
                <li>
+                    <a href="{{route('clientRestaurant')}}">
+                         home Rest
+                    </a>
+               </li>
+
+               <li>
                     <a href="{{route('infoWebPage')}}">
                          Chi siamo
                     </a>

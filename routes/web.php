@@ -33,6 +33,10 @@ Route::get('/dashBoard/restaurant', 'HomeController@dashBoard')
 Route::post('/store/restaurant', 'HomeController@storeRestaurant')
 ->name('store-restaurant');
 
+// SEZIONE MENU RESTAURANT
+
+Route::get('/client/restaurant', 'MainController@clientRestaurant')
+        ->name('clientRestaurant');
 
 Route::get('restaurant/{id}', 'MainController@restaurant')
 ->name('restaurant');

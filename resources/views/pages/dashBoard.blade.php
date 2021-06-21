@@ -11,8 +11,8 @@
           <ul>
                @foreach ($user -> restaurants as $u)
                <li>
-                    <img src="{{asset('storage/img/carne3.png')}}" alt="">
-                    <span>{{$u -> name}}</span>
+                    <img src="{{asset('storage/restaurant-img/' . $u -> img)}}" alt="">
+                    <span><a href="#">{{$u -> name}}</a></span>
                </li>
                @endforeach
           </ul>
