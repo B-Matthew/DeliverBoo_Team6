@@ -36,7 +36,7 @@
 
                <li>
                     @auth
-                        <a href="{{ url('/') }}">{{Auth::user() -> name}}</a>
+                        <a href="{{ route('dashBoard') }}">{{Auth::user() -> name}}</a>
                     <li>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                     </li>
