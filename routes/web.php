@@ -53,8 +53,7 @@ Route::post('/restaurant/update/{id}', 'HomeController@update')
 
 Route::get('/restaurant/destroyRestaurant/{id}', 'HomeController@destroyRestaurant')
 ->name('destroyRestaurant');
-Route::post('/restaurant/store', 'HomeController@storeRestaurateur')
-->name('storeRestaurant');
+
 
 
 

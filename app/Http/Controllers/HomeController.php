@@ -17,7 +17,8 @@ class HomeController extends Controller
   public function dashBoard() 
   {
     $user = Auth::user();
-    return view('pages.dashBoard', compact('user'));
+    $categories = Category::all();
+    return view('pages.dashBoard', compact('user','categories'));
   }
     
   public function storeRestaurant(Request $request)
@@ -25,20 +26,33 @@ class HomeController extends Controller
 
     $validated = $request -> validate ([
       'name' => 'string|required|min:3',
-      'city' => 'string|required|min:3',
       'address' => 'string|required|min:3',
+      'city' => 'string|required|min:3',
       'telephone' => 'numeric|required|min:5',
       'pIva' => 'string|required|min:5',
       'img' => 'nullable|mimes:jpg,bmp,png,jpeg',
     ]);
-      
-    dd($validated);
-    // $validate = $request -> validate($this -> getValidate());
-    $resturant = Restaurant::create();  //create($validate)
+     
+    // if($request->hasFile('img')){
+    //   $img = $request -> file('img');
+    //   dd(' cè immagine');
+    //  }else {
+
+    //   dd('non cè immagine');
+    // }
+
+    $restaurant = Restaurant::make($validated);
+
+    $userCurrent = Auth::user()->id;
+    $restaurant -> user()->associate($userCurrent);
+    $restaurant -> save();
+
+    $restaurant -> categories()->attach($request -> get('category_id'));
+    $restaurant->save();
+
     return redirect() -> route('dashBoard');
   }
-    
-    
+
   public function createProduct() 
   {
     return view('pages.createProduct');
@@ -99,6 +113,7 @@ class HomeController extends Controller
 
   
 
+    
 
 
 
@@ -108,3 +123,9 @@ class HomeController extends Controller
 
     
 
+    
+    
+
+    
+    
+    
