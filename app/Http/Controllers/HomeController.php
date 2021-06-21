@@ -8,31 +8,30 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function __construct() {
+  public function __construct() 
+  {
+    $this->middleware('auth');
+  }
 
-      $this->middleware('auth');
-    }
-
-    // public function loggedPage() {
-
-    //   return view('pages.loggedIn');
-    // }
-
-    public function create() {
-    return view('pages.create');
-    }
-
-    public function createProduct() {
-    return view('pages.createProduct');
-    }
-
-    public function store(Request $request){
+  public function dashBooard() 
+  {
+    return view('pages.dashBoard');
+  }
+    
+  public function store(Request $request)
+  {
     // $validate = $request -> validate($this -> getValidate());
     $resturant = Restaurant::create();  //create($validate)
     return redirect() -> route('resturant', $resturant -> id);
-    }
+  }
 
-    public function storeProduct(Request $request){
+  public function createProduct() 
+  {
+    return view('pages.createProduct');
+  }
+
+  public function storeProduct(Request $request)
+  {
     // $validate = $request -> validate($this -> getValidate());
     // $product = Product::create();  //create($validate)
     $product = new Product([
@@ -44,12 +43,12 @@ class HomeController extends Controller
         "availability" => $request->get("availability"),
         "restaurant_id" => $request->get("restaurant_id"),
     ]);
-
     $product->save();
     return redirect() -> route('product', $product -> id);
-    }
+  }
 
-    public function edit($id){
+  public function edit($id)
+  {
     $resturant = Restaurant::findOrFail($id);
     $product = Product::all();
     $category=Category::all();
@@ -58,22 +57,39 @@ class HomeController extends Controller
       'product',
       'category'
     ));
-    }
+  }
 
-    public function update(Request $request, $id){
-      // $validate = $request -> validate($this -> getValidate());
-      $resturant = Restaurant::findOrFail($id);
-      $resturant -> update(); //update($validate)
-      $resturant -> category() -> associate($request -> category_id);
-      $resturant -> save();
-      $resturant -> products() -> sync($request -> product_id);
-      return redirect() -> route('resturant');
-    }
+  public function update(Request $request, $id)
+  {
+    // $validate = $request -> validate($this -> getValidate());
+    $resturant = Restaurant::findOrFail($id);
+    $resturant -> update(); //update($validate)
+    $resturant -> category() -> associate($request -> category_id);
+    $resturant -> save();
+    $resturant -> products() -> sync($request -> product_id);
+    return redirect() -> route('resturant');
+  }
 
-    public function destroyRestaurant($id){
+  public function destroyRestaurant($id)
+  {
     $resturant = Restaurant::findOrFail($id);
     $resturant -> deleted = true;
     $resturant -> save();
     return redirect() -> route('resturant');
-    }
+  }
 }
+
+
+
+
+
+  
+
+
+
+
+
+    
+
+
+    
