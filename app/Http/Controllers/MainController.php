@@ -54,13 +54,8 @@ class MainController extends Controller
     return view('pages.faq');
   }
 
-  public function product($id) {
-    $product = Product::findOrFail($id);
-    return view('pages.product', compact(
-        'product'
-    ));
-  }
 }
+  
 
   
 

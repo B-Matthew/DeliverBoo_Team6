@@ -9,10 +9,10 @@
      <section class="restaurants">
           <h3>I tuoi ristoranti</h3>
           <ul>
-               @foreach ($user -> restaurants as $u)
+               @foreach ($user -> restaurants as $restaurant)
                <li>
-                    <img src="{{asset('storage/restaurant-img/' . $u -> img)}}" alt="">
-                    <span><a href="{{route('myProduct')}}">{{$u -> name}}</a></span>
+                    <img src="{{asset('storage/restaurant-img/' . $restaurant -> img)}}" alt="">
+                    <span><a href="{{route('myProduct' , $restaurant -> id)}}">{{$restaurant -> name}}</a></span>
                </li>
                @endforeach
           </ul>

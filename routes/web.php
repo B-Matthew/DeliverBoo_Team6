@@ -42,11 +42,13 @@ Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
 
 // SEZIONE MYFOODS
 
-Route::get('/myProduct' , 'HomeController@myProduct')
+Route::get('/myProduct/{id}' , 'HomeController@myProduct')
         ->name('myProduct');
         
-Route::get('product/{id}', 'MainController@product')
-->name('product');
+
+
+
+
 
 
 Route::get('/createProduct/product', 'HomeController@createProduct')

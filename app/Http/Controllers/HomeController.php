@@ -15,41 +15,47 @@ class HomeController extends Controller
     $this->middleware('auth');
   }
 
+  // Dashboard del ristoratore
   public function dashBoard() 
   {
     $user = Auth::user();
     $categories = Category::all();
     return view('pages.dashBoard', compact('user','categories'));
   }
-    
+  
+  // Aggiunta ristorante nella dashboard
   public function storeRestaurant(RestaurantRequest $request)
   {
+    if($request->hasFile('img')){
+      $img = $request -> file('img');
+      $imgExt = $img -> getClientOriginalExtension();
+      $imgNew = time() . '_restaurtant-img.' .$imgExt;
+      $folder = '/restaurant-img/';
+      $imgFile = $img -> storeAs($folder , $imgNew, 'public');
+     }else {
+       $imgNew = 'carne3.png';
+     }
     
-   if($request->hasFile('img')){
-     $img = $request -> file('img');
-     $imgExt = $img -> getClientOriginalExtension();
-     $imgNew = time() . '_restaurtant-img.' .$imgExt;
-     $folder = '/restaurant-img/';
-     $imgFile = $img -> storeAs($folder , $imgNew, 'public');
-    }else {
-      $imgNew = 'carne3.png';
-    }
+     $data = $request->all();
+     $data['user_id'] = Auth::id();
+     $restaurant = new Restaurant();
+     $restaurant->fill($data);
+     $restaurant -> img = $imgNew;
+     $restaurant->save();
+     
+     $restaurant -> categories()->attach($request -> get('category_id'));
+     $restaurant->save();
+  
+     return redirect() -> route('dashBoard');
+   }
 
-    $data = $request->all();
-    $data['user_id'] = Auth::id();
-    $restaurant = new Restaurant();
-    $restaurant->fill($data);
-    $restaurant -> img = $imgNew;
-    $restaurant->save();
+  //  Pagina prodotti del ristoranti
+  public function myProduct($id) 
+  {
     
-    $restaurant -> categories()->attach($request -> get('category_id'));
-    $restaurant->save();
- 
-    return redirect() -> route('dashBoard');
-  }
+    $restaurant = Restaurant::findOrFail($id);
 
-  public function myProduct() {
-     return view('pages.myProducts');
+    return view('pages.myProducts', compact('restaurant'));
   }
 
   public function createProduct() 
@@ -105,6 +111,7 @@ class HomeController extends Controller
     $resturant -> save();
     return redirect() -> route('resturant');
   }
+
 }
 
 
