@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Restaurant;
 use App\Category;
 use App\Product;
+use Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,9 +14,10 @@ class HomeController extends Controller
     $this->middleware('auth');
   }
 
-  public function dashBooard() 
+  public function dashBoard() 
   {
-    return view('pages.dashBoard');
+    $user = Auth::user();
+    return view('pages.dashBoard', compact('user'));
   }
     
   public function store(Request $request)
