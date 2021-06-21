@@ -22,7 +22,7 @@
 
                <li>
 
-                 <a href="{{ route('create') }}">
+                 <a href="{{ route('dashBoard') }}">
                    Create Restaurant
                  </a>
 

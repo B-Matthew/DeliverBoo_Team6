@@ -5,28 +5,21 @@
      <h1>Nuovo Ristorante</h1>
    </div>
 
-   <div class="show_div">
-      <ul>
-        <li>
-          <h1>Name: {{ $restaurant -> name }}</h1>
-        </li>
-        <li>
-          Address: [{{ $restaurant -> address }}]
-        </li>
-        <li>
-          Telephone: {{ $restaurant -> telephone }}
-        </li>
-        <a href="{{ route('edit', $restaurant -> id) }}">
-          &#9998;
-        </a>
-        <a href="{{ route('destroyRestaurant', $restaurant -> id) }}">
-          &#10060;
-        </a>
-     </ul>
-    </div>
-   <form method="POST" action="{{ route('store') }}">
+   <h1>Benvenuto {{$user->name}} ID : {{$user->id}}</h1>
+   <h2>I Tuoi Ristoranti:</h2>
+   <ul>
+     @foreach ($user -> restaurants as $u)
+     <li>
+       {{$u -> name}}
+     </li>
+     @endforeach
+         
+   </ul>
+   
 
-     @csrf
+   {{-- <form method="POST" action="{{ route('store') }}"> --}}
+
+     {{-- @csrf
      @method('POST')
 
      <div class="">
@@ -49,5 +42,5 @@
       </div>
       <button type="submit" class="">Submit</button>
    </form>
- </div>
+ </div> --}}
 @endsection
