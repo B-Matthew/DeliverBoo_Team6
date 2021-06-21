@@ -15,12 +15,24 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('welcome', function () {
-    return view('welcome');
-});
+// HOMEPAGE
+Route::get('/', 'MainController@homepage')
+        ->name('homepage');
 
-Route::get('/logged', 'HomeController@loggedPage')
-->name('logged');
+// CHI SIAMO
+Route::get('info', 'MainController@infoWebPage')
+        ->name('infoWebPage');
+
+// FAQ
+Route::get('faq' , 'MainController@faq')
+        ->name('faq');
+
+// SEZIONE DASHBOARD
+Route::get('/dashBoard/restaurant', 'HomeController@dashBoard')
+-> name('dashBoard');
+Route::post('/store/restaurant', 'HomeController@store')
+->name('store');
+
 
 Route::get('restaurant/{id}', 'MainController@restaurant')
 ->name('restaurant');
@@ -28,11 +40,6 @@ Route::get('product/{id}', 'MainController@product')
 ->name('product');
 Route::get('show', 'MainController@show')
 ->name('show');
-
-Route::get('/create/restaurant', 'HomeController@create')
--> name('create');
-Route::post('/store/restaurant', 'HomeController@store')
-->name('store');
 
 Route::get('/createProduct/product', 'HomeController@createProduct')
 -> name('createProduct');
@@ -51,15 +58,10 @@ Route::post('/restaurant/store', 'HomeController@storeRestaurateur')
 
 
 
-// HOMEPAGE
-Route::get('/', 'MainController@homepage')
-        ->name('homepage');
 
-// CHI SIAMO
-Route::get('info', 'MainController@infoWebPage')
-        ->name('infoWebPage');
 
-// FAQ
 
-Route::get('faq' , 'MainController@faq')
-        ->name('faq');
+
+
+
+

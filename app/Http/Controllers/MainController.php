@@ -22,13 +22,7 @@ class MainController extends Controller
         'products'
       ));
     }
-
-  public function restaurant($id) {
-    $restaurant = Restaurant::findOrFail($id);
-    return view('pages.restaurant', compact(
-        'restaurant'
-    ));
-  }
+    
   public function product($id) {
     $product = Product::findOrFail($id);
     return view('pages.product', compact(
@@ -54,3 +48,4 @@ class MainController extends Controller
     return view('pages.faq');
   }
 }
+  
