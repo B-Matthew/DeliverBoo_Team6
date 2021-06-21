@@ -5,6 +5,8 @@ use App\Restaurant;
 use App\Category;
 use App\Product;
 use Auth;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\RestaurantRequest;
 use Illuminate\Http\Request;
 
@@ -17,7 +19,7 @@ class HomeController extends Controller
 
   // Dashboard del ristoratore
   public function dashBoard() 
-  {
+  { 
     $user = Auth::user();
     $categories = Category::all();
     return view('pages.dashBoard', compact('user','categories'));
@@ -52,17 +54,27 @@ class HomeController extends Controller
   //  Pagina prodotti del ristoranti
   public function myProduct($id) 
   {
-    
-    $restaurant = Restaurant::findOrFail($id);
+    // Decripting dell'url
+    $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
+    // Controllo sull'user loggato
+    if (! Gate::allows('userRoute', $restaurant)) {
+            abort(403);
+        }
 
-    return view('pages.myProducts', compact('restaurant'));
-  }
+        return view('pages.myProducts', compact('restaurant'));
+      }
 
-  public function createProduct() 
+  // Funzione per view per creare piatto
+  public function createProduct($id) 
   {
-    return view('pages.createProduct');
-  }
+    $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
+    if (! Gate::allows('userRoute', $restaurant)) {
+            abort(403);
+      }
+      return view('pages.createProduct');
+  } 
 
+  // Funzione per creare piatto
   public function storeProduct(Request $request)
   {
     // $validate = $request -> validate($this -> getValidate());
@@ -81,18 +93,15 @@ class HomeController extends Controller
     return redirect() -> route('product', $product -> id);
   }
 
-  public function edit($id)
+  // Funzione per view per editare il piatto
+  public function editProduct($id)
   {
-    $resturant = Restaurant::findOrFail($id);
-    $product = Product::all();
-    $category=Category::all();
-    return view('pages.edit', compact(
-      'resturant',
-      'product',
-      'category'
-    ));
+    $product = Product::findOrFail(Crypt::decrypt($id));
+    
+    return view('pages.editProduct', compact('product',));
   }
-
+      
+// Funzione per editare il piatto
   public function update(Request $request, $id)
   {
     // $validate = $request -> validate($this -> getValidate());
@@ -113,6 +122,9 @@ class HomeController extends Controller
   }
 
 }
+
+
+
 
 
 

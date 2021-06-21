@@ -29,14 +29,6 @@
                </li>
 
                <li>
-
-                 <a href="{{ route('createProduct') }}">
-                   Create Product
-                 </a>
-
-               </li>
-
-               <li>
                     <a href="{{route('faq')}}">
                          FAQ
                     </a>
@@ -67,4 +59,6 @@
 
 </header>
                
+
+              
 

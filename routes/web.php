@@ -40,26 +40,28 @@ Route::post('/store/restaurant', 'HomeController@storeRestaurant')
 Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
         ->name('clientRestaurant');
 
+        
 // SEZIONE MYFOODS
-
 Route::get('/myProduct/{id}' , 'HomeController@myProduct')
         ->name('myProduct');
-        
 
-
-
-
-
-
-Route::get('/createProduct/product', 'HomeController@createProduct')
+// SEZIONE ADD PRODUCT
+Route::get('/createProduct/{id}', 'HomeController@createProduct')
 -> name('createProduct');
 Route::post('/storeProduct/product', 'HomeController@storeProduct')
 ->name('storeProduct');
 
-Route::get('/restaurant/edit/{id}', 'HomeController@edit')
-->name('edit');
+// SEZIONE EDIT PRODUCT
+Route::get('/restaurant/editProduct/{id}', 'HomeController@editProduct')
+->name('editProduct');
 Route::post('/restaurant/update/{id}', 'HomeController@update')
 ->name('update');
+
+
+
+
+
+
 
 Route::get('/restaurant/destroyRestaurant/{id}', 'HomeController@destroyRestaurant')
 ->name('destroyRestaurant');
