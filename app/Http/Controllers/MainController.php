@@ -14,6 +14,22 @@ class MainController extends Controller
     ];
   }
 
+  // Pagina Homepage
+  public function homepage() {
+
+      $categories = Category::all();
+      $restaurants = Restaurant::all();
+
+      return view('pages.homepage', compact('categories' , 'restaurants'));
+    }
+
+    
+    // Pagina Menu ristorante
+  public function clientRestaurant() {
+
+    return view('pages.homeRestaurant');
+  }
+
   public function show() {
       $restaurants = Restaurant::all();
       $products = Product::all();
@@ -30,13 +46,7 @@ class MainController extends Controller
     ));
   }
 
-  public function homepage() {
-
-    $categories = Category::all();
-    $restaurants = Restaurant::all();
-
-    return view('pages.homepage', compact('categories' , 'restaurants'));
-  }
+  
 
   public function infoWebPage() {
 
