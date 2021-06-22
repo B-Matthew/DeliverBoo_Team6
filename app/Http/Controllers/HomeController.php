@@ -32,7 +32,7 @@ class HomeController extends Controller
     $data = $request->all();
     
     if(!empty($data['img'])){
-      $img = $data -> file('img');
+      $img = $data['img'];
       $imgExt = $img -> getClientOriginalExtension();
       $imgNew = time() . '_restaurtant-img.' .$imgExt;
       $folder = '/restaurant-img/';
