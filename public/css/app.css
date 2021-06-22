@@ -1031,9 +1031,9 @@ footer .links h5 {
   background-attachment: fixed;
   width: auto;
   max-height: 700px;
-  padding: 10% 0;
+  padding: 15% 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
@@ -1043,14 +1043,21 @@ footer .links h5 {
   font-family: "Indie Flower", cursive;
   font-size: 40px;
   letter-spacing: 2px;
-  font-size: 80px;
+  font-size: 4.5vw;
+  padding: 15px 0;
+}
+
+#home-restaurant .jumbotron div {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 1.3vw;
 }
 
 #home-restaurant .menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   padding: 5% 8%;
 }
@@ -1136,7 +1143,12 @@ footer .links h5 {
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   border: 1px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  transition: all 0.5s linear;
+}
+
+#home-restaurant .menu .container-menu .products div ul:hover {
+  box-shadow: 10px 20px 7px #333232;
 }
 
 #home-restaurant .menu .container-menu .products div ul li {
@@ -1146,19 +1158,48 @@ footer .links h5 {
   align-items: center;
   flex-wrap: nowrap;
   padding: 10px 20px 10px 5px;
+  border-bottom: 3px solid #8fbc8f;
+}
+
+#home-restaurant .menu .container-menu .products div ul li h3 {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 23px;
+}
+
+#home-restaurant .menu .container-menu .products div ul li h5 {
+  font-weight: normal;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#home-restaurant .menu .container-menu .products div ul li p {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 17px;
 }
 
 #home-restaurant .menu .container-menu .products div ul li h4 {
-  margin-left: 10px;
+  font-weight: normal;
 }
 
 #home-restaurant .menu .container-menu .products div ul li h4 i {
-  color: #3e3eec;
+  color: black;
+}
+
+#home-restaurant .menu .container-menu .products div ul li i {
+  color: #8fbc8f;
 }
 
 #home-restaurant .menu .container-menu .products div ul li img {
   width: 100px;
   height: auto;
+  vertical-align: super;
+}
+
+#home-restaurant .menu .container-menu .products .image {
+  text-align: center;
 }
 
 #home-restaurant .menu .carrello {
