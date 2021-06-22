@@ -1,13 +1,176 @@
 #home-restaurant {
     @include baloo;
-    padding: 100px 8%;
+    // padding: 100px 8%;
     background-color: $green;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     color: rgb(21, 22, 22);
 
-    .container-menu {
-        width: 50%;
+    .jumbotron {
+        background-image: url(../img/ristorante-background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: auto;
+        max-height: 700px;
+        padding: 10% 0;
+        @include flex(row, center, center, nowrap);
+
+        h1 {
+           @include indie;
+           font-size: 80px;
+        }
+    }
+
+    .menu {
+        @include flex(row, space-between, center, nowrap);
+        padding: 5% 8%;
+
+        .aside-menu {
+            flex-basis: 20%;
+
+            h2 {
+                @include indie;
+                margin: 10px 0;
+            }
+            ul {
+                li {
+                    @include baloo;
+                    padding: 10px 0 10px 20px;
+                    border-left: 4px solid $yellow;
+
+                    div {
+                        flex-basis: calc(50% - 20px);
+                    }
+    
+                }
+            }
+        }
+
+        .container-menu {
+            flex-basis: calc(40% - 50px);
+
+            .box-restaurant {
+                border: 3px solid $yellow;
+                padding: 0 30px 10px;
+                border-radius: 10px;
+                text-align: center;
+        
+                legend {
+                    padding: 0 20px;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+        
+                .copertina {
+                    height: 200px;
+        
+                    img {
+                        height: 100%;
+                        border-radius: 10px;
+        
+                    }
+                }
+        
+                div {
+        
+                    * {
+                        padding: 20px 0;
+                    }
+        
+        
+                    button {
+                        padding: 10px 25px;
+                        border-radius: 5px;
+                        background-color: $yellow;
+                    }
+        
+                    &:last-child {
+                        display: flex;
+                        text-align: center;   
+                    }
+                }
+            }
+
+            .products {
+
+                div {
+                    h2 {
+                        @include indie;
+                        border: 1px solid black;
+                        background-color: $yellow;
+                        padding: 0 20px;
+                        border-top-left-radius: 25px;
+                        border-top-right-radius: 25px;
+                    }
+        
+                    ul {
+                        padding: 0 20px;
+                        background-color: $cream;
+                        border-bottom-left-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        border: 1px solid black;
+                        margin-bottom: 20px;
+        
+                        li {
+                            @include flex(row, space-between, center, nowrap);
+                            padding: 10px 20px 10px 5px;
+
+                            h4 {
+                                margin-left: 10px;
+
+                                i {
+                                    // margin-left: 10px;
+                                    color: rgb(62, 62, 236);
+                                }
+                            }
+
+                            img {
+                                width: 100px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .carrello {
+            flex-basis: 30%;
+            padding: 20px;
+            border: 3px solid $yellow;
+
+            legend {
+                padding: 20px;
+                @include indie;
+            }
+
+            ul {
+                
+                li {
+                    @include baloo;
+                }
+            }
+
+            h3 {
+                @include indie;
+                font-weight: normal;
+                padding: 40px 0;
+            }
+
+            div {
+                text-align: center;
+
+                button {
+                    @include buttonDesign($yellow);
+
+                    a {
+                        @include baloo;
+                    }
+                }
+            }
+        }
     }
 
     a {
@@ -15,89 +178,10 @@
         color: black;
     }
 
-    .aside-menu {
-
-        ul {
-            li {
-                padding-left: 20px;
-                border-left: 4px solid $gold;
-
-            }
-        }
-    }
-
-    .box-restaurant {
-        border: 3px solid $gold;
-        padding: 0 30px 10px;
-        border-radius: 10px;
-        text-align: center;
-
-        legend {
-            padding: 0 20px;
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .copertina {
-            height: 200px;
-
-            img {
-                height: 100%;
-                border-radius: 10px;
-
-            }
-        }
-
-        div {
-
-            * {
-                padding: 20px 0;
-            }
-
-
-            button {
-                padding: 10px 25px;
-                border-radius: 5px;
-                background-color: $gold;
-            }
-
-            &:last-child {
-                display: flex;
-                text-align: center;   
-            }
-        }
-
-
-
-    }
-
     .aside-menu,
     .carrello {
         position: sticky;
         position: -webkit-sticky;
-        top: 0;
-        transition: 1.5s;
-    }
-
-    .menu {
-
-        div {
-
-            ul {
-
-                li {
-
-                    padding: 10px 20px 10px 5px;
-                    border: 2px solid $gold;
-                    border-radius: 5px;
-   
-                    i {
-                        margin-left: 20px;
-                        color: rgb(62, 62, 236);
-                    }
-                }
-            }
-        }
+        top: 100px;
     }
 }   
