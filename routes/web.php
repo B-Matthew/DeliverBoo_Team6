@@ -48,14 +48,14 @@ Route::get('/myProduct/{id}' , 'HomeController@myProduct')
 // SEZIONE ADD PRODUCT
 Route::get('/createProduct/{id}', 'HomeController@createProduct')
 -> name('createProduct');
-Route::post('/storeProduct/product', 'HomeController@storeProduct')
+Route::post('/storeProduct/product/{id}', 'HomeController@storeProduct')
 ->name('storeProduct');
 
 // SEZIONE EDIT PRODUCT
-Route::get('/restaurant/editProduct/{id}', 'HomeController@editProduct')
+Route::get('/product/editProduct/{id}', 'HomeController@editProduct')
 ->name('editProduct');
-Route::post('/restaurant/update/{id}', 'HomeController@update')
-->name('update');
+Route::post('/restaurant/update/', 'HomeController@updateProduct')
+->name('updateProduct');
 
 
 
