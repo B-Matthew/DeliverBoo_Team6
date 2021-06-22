@@ -35,34 +35,44 @@
 
 @mixin form {
 
-    border: 3px solid #F5B436;
-    padding: 40px;
-    border-radius: 10px;
+    flex-basis: 50%;
 
-    legend {
-        @include indie;
-        padding: 20px;
-    }
-
-    label,   
-    input {
-        @include baloo;
-        margin: 20px;
-    }
-
-    input {
-        width: 100%;
-        height: 40px;
-        padding: 20px;
-        background-color: #F5B436;
-        border: 1px solid black;
+    fieldset {
+        border: 3px solid #F5B436;
+        padding: 40px;
         border-radius: 10px;
-        transition: box-shadow 0.5s linear;
 
-        &:hover {
-            box-shadow: 5px 10px 3px rgb(51, 50, 50);
+        legend {
+            @include indie;
+            padding: 20px;
         }
 
-    }
+        label,
+        input {
+            @include baloo;   
+            margin: 20px 0;
+        }
 
+        input { 
+            width: 100%;   
+            height: 40px;   
+            padding: 20px 10px; 
+            background-color: #F5B436;
+            border: 1px solid black;
+            border-radius: 10px;
+            outline: none;   
+            transition: box-shadow 0.5s linear;
+
+            &:hover {
+                box-shadow: 5px 10px 3px rgb(51, 50, 50);
+            }
+        }
+
+        button {
+            @include baloo;   
+            @include buttonDesign($yellow);
+        }
+    }
 }
+
+   
