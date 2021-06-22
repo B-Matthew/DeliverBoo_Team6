@@ -1029,6 +1029,87 @@ footer .links h5 {
   color: black;
 }
 
+#home-restaurant {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  padding: 100px 8%;
+  background-color: #8fbc8f;
+  display: flex;
+  justify-content: space-between;
+  color: #151616;
+}
+
+#home-restaurant .container-menu {
+  width: 50%;
+}
+
+#home-restaurant a {
+  text-decoration: none;
+  color: black;
+}
+
+#home-restaurant .aside-menu ul li {
+  padding-left: 20px;
+  border-left: 4px solid #dfba42;
+}
+
+#home-restaurant .box-restaurant {
+  border: 3px solid #dfba42;
+  padding: 0 30px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#home-restaurant .box-restaurant legend {
+  padding: 0 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#home-restaurant .box-restaurant .copertina {
+  height: 200px;
+}
+
+#home-restaurant .box-restaurant .copertina img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+#home-restaurant .box-restaurant div * {
+  padding: 20px 0;
+}
+
+#home-restaurant .box-restaurant div button {
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: #dfba42;
+}
+
+#home-restaurant .box-restaurant div:last-child {
+  display: flex;
+  text-align: center;
+}
+
+#home-restaurant .aside-menu,
+#home-restaurant .carrello {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  transition: 1.5s;
+}
+
+#home-restaurant .menu div ul li {
+  padding: 10px 20px 10px 5px;
+  border: 2px solid #dfba42;
+  border-radius: 5px;
+}
+
+#home-restaurant .menu div ul li i {
+  margin-left: 20px;
+  color: #3e3eec;
+}
+
 @media (max-width: 1600px) and (min-width: 1200px) {
   body #homepage #categories .restaurants li {
     flex-basis: calc(50% - 40px);
