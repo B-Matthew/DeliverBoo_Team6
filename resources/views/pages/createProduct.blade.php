@@ -5,7 +5,7 @@
      <h1>Nuovo Piatto</h1>
    
    
-   <form method="POST" action="{{ route('storeProduct') }}">
+   <form method="POST" action="{{ route('storeProduct', $restaurant -> id) }}">
      @csrf
      @method('POST')
      <div class="">
@@ -22,26 +22,24 @@
      </div>
       <div class="">
           <label class="" for="type"><h4>Type</h4></label>
-          <div class="">
-            <input type="text" class="" id="type" name="type">
-          </div>
+          <select name="type" id="">
+            <option value="Antipasto">Antipasto</option>
+            <option value="Primo">Primo</option>
+            <option value="Secondo">Secondo</option>
+            <option value="Dolce">Dolce</option>
+          </select>
       </div>
       <div class="">
           <label class="" for="price"><h4>Price</h4></label>
           <div class="">
-            <input type="text" class="" id="price" name="price">
+            <input step=".01" type="number" class="" id="price" name="price">
           </div>
       </div>
-      <div class="">
-          <label class="" for="availability"><h4>Availability</h4></label>
-          <div class="">
-            <input type="text" class="" id="availability" name="availability">
-          </div>
-      </div>
+      
       <div class="">
           <label class="" for="description"><h4>Description</h4></label>
           <div class="">
-            <input type="text" class="" id="description" name="description">
+            <textarea id="description" name="description" id="" cols="30" rows="10"></textarea>
           </div>
       </div>
       <button type="submit" class="">Submit</button>
@@ -49,6 +47,7 @@
 
   </div>
   @endsection
+            
 
     
       

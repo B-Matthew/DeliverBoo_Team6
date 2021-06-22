@@ -30,6 +30,8 @@ class RestaurantRequest extends FormRequest
             'telephone' => 'numeric|required|min:5',
             'pIva' => 'string|required|min:5',
             'img' => 'nullable|mimes:jpg,bmp,png,jpeg',
+            'categories' => 'required|array',
+            'categories.*' => 'required|distinct',
         ];
     }
 }

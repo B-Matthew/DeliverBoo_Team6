@@ -8,6 +8,7 @@ use Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\RestaurantRequest;
+use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,8 +29,10 @@ class HomeController extends Controller
   // Aggiunta ristorante nella dashboard
   public function storeRestaurant(RestaurantRequest $request)
   {
-    if($request->hasFile('img')){
-      $img = $request -> file('img');
+    $data = $request->all();
+    
+    if(!empty($data['img'])){
+      $img = $data -> file('img');
       $imgExt = $img -> getClientOriginalExtension();
       $imgNew = time() . '_restaurtant-img.' .$imgExt;
       $folder = '/restaurant-img/';
@@ -38,20 +41,19 @@ class HomeController extends Controller
        $imgNew = 'carne3.png';
      }
     
-     $data = $request->all();
      $data['user_id'] = Auth::id();
      $restaurant = new Restaurant();
      $restaurant->fill($data);
      $restaurant -> img = $imgNew;
      $restaurant->save();
      
-     $restaurant -> categories()->attach($request -> get('category_id'));
+     $restaurant -> categories() -> sync($data['categories']);
      $restaurant->save();
   
      return redirect() -> route('dashBoard');
    }
 
-  //  Pagina prodotti del ristoranti
+  //  Pagina prodotti del ristorante
   public function myProduct($id) 
   {
     // Decripting dell'url
@@ -61,8 +63,8 @@ class HomeController extends Controller
             abort(403);
         }
 
-        return view('pages.myProducts', compact('restaurant'));
-      }
+    return view('pages.myProducts', compact('restaurant'));
+  }
 
   // Funzione per view per creare piatto
   public function createProduct($id) 
@@ -71,38 +73,33 @@ class HomeController extends Controller
     if (! Gate::allows('userRoute', $restaurant)) {
             abort(403);
       }
-      return view('pages.createProduct');
+    return view('pages.createProduct', compact('restaurant'));
   } 
 
   // Funzione per creare piatto
-  public function storeProduct(Request $request)
+  public function storeProduct(ProductRequest $request, $id)
   {
-    // $validate = $request -> validate($this -> getValidate());
-    // $product = Product::create();  //create($validate)
-    $product = new Product([
-        "name" => $request->get("name"),
-        "ingredients" => $request->get("ingredients"),
-        "description" => $request->get("description"),
-        "type" => $request->get("type"),
-        "price" => $request->get("price"),
-        "availability" => $request->get("availability"),
-        "restaurant_id" => $request->get("restaurant_id"),
-    ]);
+    $data = $request->all();
+    $restaurant = Restaurant::findOrFail($id);
     
-    $product->save();
-    return redirect() -> route('product', $product -> id);
+    $product = new Product();
+    $product-> fill($data);
+    $product -> restaurant() -> associate($restaurant -> id);
+    $product-> save();
+    
+    return redirect() -> route('myProduct', encrypt($restaurant -> id));
   }
-
+    
   // Funzione per view per editare il piatto
   public function editProduct($id)
   {
     $product = Product::findOrFail(Crypt::decrypt($id));
-    
     return view('pages.editProduct', compact('product',));
   }
-      
-// Funzione per editare il piatto
-  public function update(Request $request, $id)
+    
+    
+  // Funzione per editare il piatto da sistemare
+  public function updateProduct()
   {
     // $validate = $request -> validate($this -> getValidate());
     $resturant = Restaurant::findOrFail($id);
@@ -112,7 +109,7 @@ class HomeController extends Controller
     $resturant -> products() -> sync($request -> product_id);
     return redirect() -> route('resturant');
   }
-
+  
   public function destroyRestaurant($id)
   {
     $resturant = Restaurant::findOrFail($id);
@@ -120,8 +117,11 @@ class HomeController extends Controller
     $resturant -> save();
     return redirect() -> route('resturant');
   }
-
+  
 }
+    
+      
+
 
 
 
