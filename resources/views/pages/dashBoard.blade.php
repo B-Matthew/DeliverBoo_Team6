@@ -71,7 +71,7 @@
                     <ul>
                          @foreach ($categories as $category)
                          <li>
-                              <input type="checkbox" name="category_id[]" value="{{$category -> id}}">
+                              <input type="checkbox" name="categories[]" value="{{$category -> id}}">
                               <label for="category">{{$category->name}}</label>
                          </li>
                          @endforeach

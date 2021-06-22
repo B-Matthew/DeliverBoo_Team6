@@ -33,12 +33,15 @@ class MainController extends Controller
     $primi= Product::WHERE('restaurant_id' ,'=' , $restaurant->id)->where('type', 'LIKE', 'primo')->get();
     
     $secondi= Product::WHERE('restaurant_id' ,'=' , $restaurant->id)->where('type', 'LIKE', 'secondo')->get();
+
+    $dolci = Product::WHERE('restaurant_id' ,'=' , $restaurant->id)->where('type', 'LIKE', 'dolce')->get();
                               
     return view('pages.homeRestaurant', compact(
       'restaurant',
       'antipasti',
       'primi',
-      'secondi'
+      'secondi',
+      'dolci',
     ));
   }
     
