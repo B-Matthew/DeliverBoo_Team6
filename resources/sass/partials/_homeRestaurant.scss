@@ -13,17 +13,24 @@
         background-attachment: fixed;
         width: auto;
         max-height: 700px;
-        padding: 10% 0;
-        @include flex(row, center, center, nowrap);
+        padding: 15% 0;
+        @include flex(column, center, center, nowrap);
 
         h1 {
            @include indie;
-           font-size: 80px;
+           font-size: 4.5vw;
+           padding: 15px 0;
+        }
+
+        div {
+            @include baloo;
+            font-size: 1.3vw;
+            // padding: 10px 0;
         }
     }
 
     .menu {
-        @include flex(row, space-between, center, nowrap);
+        @include flex(row, space-between, flex-start, nowrap);
         padding: 5% 8%;
 
         .aside-menu {
@@ -111,27 +118,57 @@
                         border-bottom-left-radius: 25px;
                         border-bottom-right-radius: 25px;
                         border: 1px solid black;
-                        margin-bottom: 20px;
+                        margin-bottom: 40px;
+                        transition: all 0.5s linear;
+
+                        &:hover {
+                            box-shadow: 10px 20px 7px rgb(51, 50, 50);
+                        }
         
                         li {
                             @include flex(row, space-between, center, nowrap);
                             padding: 10px 20px 10px 5px;
+                            border-bottom: 3px solid $green;
+
+                            h3 {
+                                @include baloo;
+                                font-size: 23px;
+                            }
+
+                            h5{
+                                font-weight: normal;
+                                @include baloo;
+                                margin: 10px 0;
+                            }
+
+                            p {
+                                @include baloo;
+                                font-size: 17px;
+                            }
 
                             h4 {
-                                margin-left: 10px;
+                                font-weight: normal;
 
                                 i {
-                                    // margin-left: 10px;
-                                    color: rgb(62, 62, 236);
+                                    color: black;
                                 }
+                            }
+
+                            i {
+                                color: $green;
                             }
 
                             img {
                                 width: 100px;
                                 height: auto;
+                                vertical-align: super;
                             }
                         }
                     }
+                }
+
+                .image {
+                    text-align: center;
                 }
             }
         }

@@ -4,6 +4,22 @@
 
     <section class="jumbotron">
         <h1>{{ $restaurant -> name }}</h1>
+        <div>   
+            <i class="far fa-star"></i>   
+            <i class="far fa-star"></i>   
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>   
+            <span>recensioni?</span>
+        </div>
+        <div>
+            @foreach($restaurant -> categories as $category)
+                <span> {{ $category -> name }} </span>
+            @endforeach   
+        </div>      
+        <div>
+            <p>{{ $restaurant -> address }}</p>
+        </div>
     </section>
 
     <section class="menu">
@@ -41,7 +57,7 @@
         <div class="container-menu">   
 
             {{-- parte di copertina del ristorante --}}
-            <fieldset class="box-restaurant">
+            {{-- <fieldset class="box-restaurant">
                 <legend>{{ strtoupper($restaurant -> name) }}</legend>      
     
                 <div class="copertina">
@@ -69,7 +85,7 @@
                     <button>menu</button>
                     <button>info</button>
                 </div>
-            </fieldset>   
+            </fieldset>    --}}
             
             {{-- parte del menu sottostante la copertina --}}
             <div class="products">
@@ -82,15 +98,16 @@
                                 <div>
                                     <h3>{{ $antipasto -> name }}</h3> 
                                     <h5>{{ $antipasto -> ingredients }}</h5> 
-                                    <p>{{ $antipasto -> description }}</p>  
+                                    <p>{{ $antipasto -> description }}</p>
+                                    <i class="fas fa-plus"></i>  
                                 </div>   
     
-                                <div>
-                                    <i class="fas fa-plus"></i> 
-                                    <h3> 
+                                <div class="image">
+                                    <img src="{{ asset('storage/img/antipasti.png') }}" alt=""> 
+                                    <h4> 
                                         {{ $antipasto -> price }}    
                                         <i class="fas fa-euro-sign"></i>
-                                    </h3>          
+                                    </h4>          
                                 </div>
                             </li>            
                             @endforeach
@@ -108,7 +125,7 @@
                                     <i class="fas fa-plus"></i> 
                                 </div>
                                 
-                                <div>
+                                <div class="image">
                                     <img src="{{ asset('storage/img/primi.png') }}" alt="">
                                     <h4> 
                                         {{ $primo -> price }}    
@@ -127,15 +144,16 @@
                                 <div>
                                     <h3>{{ $secondo -> name }}</h3> 
                                     <h5>{{ $secondo -> ingredients }}</h5> 
-                                    <p>{{ $secondo -> description }}</p>  
+                                    <p>{{ $secondo -> description }}</p>
+                                    <i class="fas fa-plus"></i> 
                                 </div>   
     
-                                <div>
-                                    <i class="fas fa-plus"></i> 
-                                    <h3> 
+                                <div class="image">
+                                    <img src="{{ asset('storage/img/secondi.png') }}" alt="">
+                                    <h4> 
                                         {{ $secondo -> price }}    
                                         <i class="fas fa-euro-sign"></i>
-                                    </h3>          
+                                    </h4>          
                                 </div>
                             </li>       
                         @endforeach   
