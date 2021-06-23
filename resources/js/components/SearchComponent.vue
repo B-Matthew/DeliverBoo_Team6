@@ -59,7 +59,7 @@
 <script>
     export default {
         name: 'SearchComponent',
-         data: function() {
+         data: function() {   
               return{
                    'restaurantInput': '',
                    'categoryId': false,
@@ -100,15 +100,11 @@
                     return filteredCategory;
                },
           },
-
-                    
-
-                    
-          mounted() {
-               console.log(this.restaurants);
-               console.log(this.categories);
-               console.log(this.categoryRestaurant);         
-                }
+        
+        mounted() {
+            console.log(this.restaurants);
+            console.log(this.categories);
+        }
      } 
 </script>
                     
