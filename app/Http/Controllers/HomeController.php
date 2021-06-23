@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Restaurant;
 use App\Category;
 use App\Product;
+use App\Order;
 use Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Gate;
@@ -23,7 +24,7 @@ class HomeController extends Controller
   { 
     $user = Auth::user();
     $categories = Category::all();
-    return view('pages.dashBoard', compact('user','categories'));
+    return view('pages.Admin.dashBoard', compact('user','categories'));
   }
   
   // Aggiunta ristorante nella dashboard
@@ -63,7 +64,7 @@ class HomeController extends Controller
             abort(403);
         }
 
-    return view('pages.myProducts', compact('restaurant'));
+    return view('pages.Admin.myProducts', compact('restaurant'));
   }
 
   // Funzione per view per creare piatto
@@ -73,7 +74,7 @@ class HomeController extends Controller
     if (! Gate::allows('userRoute', $restaurant)) {
             abort(403);
       }
-    return view('pages.createProduct', compact('restaurant'));
+    return view('pages.Admin.createProduct', compact('restaurant'));
   } 
 
   // Funzione per creare piatto
@@ -94,31 +95,35 @@ class HomeController extends Controller
   public function editProduct($id)
   {
     $product = Product::findOrFail(Crypt::decrypt($id));
-    return view('pages.editProduct', compact('product',));
+    return view('pages.Admin.editProduct', compact('product'));
   }
-    
     
   // Funzione per editare il piatto da sistemare
-  public function updateProduct()
+  public function updateProduct(ProductRequest $request, $id)
   {
-    // $validate = $request -> validate($this -> getValidate());
-    $resturant = Restaurant::findOrFail($id);
-    $resturant -> update(); //update($validate)
-    $resturant -> category() -> associate($request -> category_id);
-    $resturant -> save();
-    $resturant -> products() -> sync($request -> product_id);
-    return redirect() -> route('resturant');
+    $data = $request->all();
+    $product = Product::findOrFail($id);
+    $restaurant = $product -> restaurant_id;
+    $product -> update($data);
+    return redirect() -> route('myProduct', encrypt($restaurant));
   }
-  
-  public function destroyRestaurant($id)
+
+  //  Funzione per cancellare i prodotti 
+  public function deleteProduct($id)
   {
-    $resturant = Restaurant::findOrFail($id);
-    $resturant -> deleted = true;
-    $resturant -> save();
-    return redirect() -> route('resturant');
+    $product = Product::findOrFail($id);
+    $restaurant = $product -> restaurant_id;
+    $product->delete();
+    return redirect() -> route('myProduct', encrypt($restaurant));
   }
-  
 }
+    
+  
+
+  
+    
+    
+  
     
       
 

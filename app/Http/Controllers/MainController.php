@@ -19,7 +19,6 @@ class MainController extends Controller
 
       $categories = Category::all();
       $restaurants = Restaurant::all();
-
       return view('pages.homepage', compact('categories' , 'restaurants'));
     }
 
@@ -36,7 +35,7 @@ class MainController extends Controller
 
     $dolci = Product::WHERE('restaurant_id' ,'=' , $restaurant->id)->where('type', 'LIKE', 'dolce')->get();
                               
-    return view('pages.homeRestaurant', compact(
+    return view('pages.Client.homeRestaurant', compact(
       'restaurant',
       'antipasti',
       'primi',
@@ -48,13 +47,13 @@ class MainController extends Controller
   // Pagina Info web
   public function infoWebPage() {
 
-    return view('pages.infoWebPage');
+    return view('pages.Client.infoWebPage');
   }
 
   // Pagina Faq
   public function faq() {
 
-    return view('pages.faq');
+    return view('pages.Client.faq');
   }
 
 }
@@ -78,3 +77,4 @@ class MainController extends Controller
       
                 
    
+

@@ -24,7 +24,7 @@
                 <h4>Type</h4>
             </label>
             <select required name="type" id="type-food">         
-                <option value=""></option>         
+                <option selected value="">Scegli il tipo</option>         
                 <option value="Antipasto">Antipasto</option>
                 <option value="Primo">Primo</option>   
                 <option value="Secondo">Secondo</option>
