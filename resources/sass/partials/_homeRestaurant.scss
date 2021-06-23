@@ -20,12 +20,13 @@
            @include indie;
            font-size: 4.5vw;
            padding: 15px 0;
+           color: $red;
         }
 
         div {
             @include baloo;
             font-size: 1.3vw;
-            // padding: 10px 0;
+            color: $blue;
         }
     }
 
@@ -35,11 +36,13 @@
 
         .aside-menu {
             flex-basis: 20%;
+            color: $blue;
 
             h2 {
                 @include indie;
                 margin: 10px 0;
             }
+
             ul {
                 li {
                     @include baloo;
@@ -110,10 +113,11 @@
                         padding: 0 20px;
                         border-top-left-radius: 25px;
                         border-top-right-radius: 25px;
+                        color: $blue;
                     }
         
                     ul {
-                        padding: 0 20px;
+                        padding: 20px;
                         background-color: $cream;
                         border-bottom-left-radius: 25px;
                         border-bottom-right-radius: 25px;
@@ -128,11 +132,13 @@
                         li {
                             @include flex(row, space-between, center, nowrap);
                             padding: 10px 20px 10px 5px;
-                            border-bottom: 3px solid $green;
+                            border-bottom: 2px solid $red;
+                            color: $blue;
 
                             h3 {
                                 @include baloo;
                                 font-size: 23px;
+                                font-weight: normal;
                             }
 
                             h5{
@@ -149,13 +155,13 @@
                             h4 {
                                 font-weight: normal;
 
-                                i {
-                                    color: black;
-                                }
+                                // i {
+                                //     color: black;
+                                // }
                             }
 
                             i {
-                                color: $green;
+                                color: $blue;
                             }
 
                             img {
@@ -175,32 +181,51 @@
 
         .carrello {
             flex-basis: 30%;
-            padding: 20px;
             border: 3px solid $cream;
+            background-color: $blue;
+            border-radius: 25px;
+            padding-bottom: 20px;
 
-            legend {
-                padding: 20px;
+            h2 {
+                padding: 0 20px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 25px;
+                border-bottom: 3px solid $cream;
                 @include indie;
+                background-color: $yellow;
+            }
+
+            ul, h3, span {
+                color: $cream;
+                padding: 20px 0;
             }
 
             ul {
-                
+
                 li {
                     @include baloo;
+
+                    span {
+                        padding: 0 20px;
+                    }
                 }
+            }
+
+            span {
+                padding: 0 20px;
             }
 
             h3 {
                 @include indie;
                 font-weight: normal;
-                padding: 40px 0;
+                padding: 40px 20px;
             }
 
             div {
                 text-align: center;
 
                 button {
-                    @include buttonDesign($yellow);
+                    @include theButtonDesign($yellow, $blue, $red);
 
                     a {
                         @include baloo;

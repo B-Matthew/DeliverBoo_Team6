@@ -14,7 +14,7 @@
           <h1>Su DeliverBoo sono disponibili tutti i ristoranti come al solito?</h1>
           <p>Il governo italiano ha ordinato la chiusura al pubblico di tutti i ristoranti, i bar e le caffetterie, i quali possono proseguire la propria attività offrendo esclusivamente un servizio di consegna. Se un ristorante desidera tenere aperta la propria cucina e preparare piatti da consegnare ai clienti può sempre farlo tramite DeliverBoo, ma è una scelta che deve prendere il ristorante stesso. </p>
           <h1>Cos'è DeliverBoo?</h1>
-          <p>La missione di Deliveroo è quella di trasformare il mondo del cibo a domicilio. Collaboriamo con i migliori ristoranti della città - dalle gemme locali alle grandi catene nazionali - per portarti dove vuoi i tuoi piatti preferiti. Con centinaia di ristoranti e rider esperti, ti consegniamo il tuo ordine il più velocemente possibile.</p>
+          <p>La missione di DeliverBoo è quella di trasformare il mondo del cibo a domicilio. Collaboriamo con i migliori ristoranti della città - dalle gemme locali alle grandi catene nazionali - per portarti dove vuoi i tuoi piatti preferiti. Con centinaia di ristoranti e rider esperti, ti consegniamo il tuo ordine il più velocemente possibile.</p>
      </section>
      
 </main>

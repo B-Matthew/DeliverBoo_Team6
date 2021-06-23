@@ -13,6 +13,7 @@ body {
           .jumbotron, .delivery, .map {
                @include flex(row, space-between, center,  nowrap);
                height: 100vh;
+               color: $blue;
 
                .attach, .text {
                     flex-basis: calc(50% - 20px);
@@ -32,11 +33,17 @@ body {
                     }
 
                     button {
-                         @include buttonDesign($cream);
+                         @include theButtonDesign($cream, $cream, $red);
+
+
+                         &:hover {
+                              background-color: $yellow;
+                              border-color: $blue;
+                         }
 
                          a {
                               @include baloo;
-                              color: black;
+                              color: $blue;
                          }
                     }
                }
@@ -82,22 +89,23 @@ body {
           }
 
           #categories {
-               background-color: $green;
+               background-color: $greenPastel;
                text-align: center;
                padding: 40px 8%;
 
                h2 {
                     @include indie;
                     margin-bottom: 20px;
+                    color: $blue;
                }
 
                ::placeholder {
-                    color: black;
+                    color: $cream;
                }
 
                input {
                     @include baloo;
-                    @include buttonDesign($yellow);
+                    @include theButtonDesign($blue,$yellow, $yellow);
                     width: 30%;
                }
 
@@ -108,7 +116,16 @@ body {
 
                     li {
                          @include baloo;
-                         @include buttonDesign($yellow);
+                         color: $cream;
+                         background-color: $blue;
+                         padding: 10px 20px;
+                         border-radius: 10px;
+                         border: 2px solid transparent;
+                         margin: 10px;
+
+                         &:active {
+                              border: 2px solid $yellow;
+                         }
                          
                     }
                }
@@ -120,18 +137,17 @@ body {
                     li {
                          flex-basis: calc(100% / 3 - 40px);
                          margin: 20px;
-                         height: 300px;
                          border-radius: 20px;
                          border: 1px solid black;
                          background-color: $cream;
                          transition: all 0.5s linear;
 
                          &:hover {
-                              box-shadow: 20px 20px 3px rgb(51, 50, 50);
+                              box-shadow: 20px 20px 3px black;
                          }
 
                          a {
-                              color: black;
+                              color: $blue;
 
                               h3 {
                                    background-color: $yellow;
@@ -142,42 +158,50 @@ body {
                                    border-top-right-radius: 20px;
                                    border-bottom: 1px solid black;
                               }
+
+                              div {
+                                   height: 308px;
+                                   width: 100%;
+                                   padding: 5px;
+                              }
                          }
 
                          img {
                               width: 100%;
                               height: 100%;
-                              opacity: 0;
-                              border-radius: 10px;
+                              border-bottom-left-radius: 20px;
+                              border-bottom-right-radius: 20px;
                          }
                     }
                }
           }
 
           .work {
-               background-color: $cream;
+               background-color: $greenPastel;
                padding: 40px 8% 70px 8%;
                text-align: center;
 
                h2 {
                     @include indie;
                     margin-bottom: 20px;
+                    color: $blue;
                }
 
                ul {
                     @include flex(row, space-between, stretch, nowrap);
+                    color: $cream;
 
                     li {
                          @include flex(column, flex-start, auto, nowrap);
                          flex-basis: calc(100% / 3 - 30px);
-                         background-color: $yellow;
+                         background-color: $blue;
                          padding: 10px 10px 40px;
                          border-radius: 20px;
-                         border: 1px solid black;
+                         border: 1px solid $cream;
                          transition: box-shadow 0.5s linear;    
 
                          &:hover {
-                              box-shadow: 20px 20px 3px rgb(51, 50, 50);
+                              box-shadow: 20px 20px 3px black;
                          }
 
                          div {
@@ -217,7 +241,7 @@ body {
                               }
                               
                               button {
-                                   @include buttonDesign($green);
+                                   @include theButtonDesign($yellow, $blue, $red);
                                    width: fit-content;
                                    align-self: center;
                                    justify-self: end;               

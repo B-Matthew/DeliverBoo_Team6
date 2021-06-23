@@ -23,9 +23,9 @@ header aside div {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #f8f1ae;
+  background-color: #25385f;
   padding: 20px;
-  border: 1px solid black;
+  border: 3px solid #EEE7D7;
   border-bottom-left-radius: 45px;
   border-bottom-right-radius: 45px;
   z-index: 99;
@@ -35,14 +35,14 @@ header aside div {
 header aside div:hover {
   margin-top: 10px;
   border-radius: 10px;
-  box-shadow: 5px 10px 3px #333232;
+  box-shadow: 5px 10px 3px #25385f;
 }
 
 header aside div a {
   font-family: "Monoton", cursive;
   font-size: 30px;
   font-weight: normal;
-  color: black;
+  color: #EEE7D7;
 }
 
 header nav {
@@ -64,10 +64,10 @@ header nav ul li {
   align-items: center;
   flex-wrap: nowrap;
   padding: 10px 20px;
-  background-color: #f8f1ae;
+  background-color: #25385f;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  border: 1px solid black;
+  border: 2px solid #EEE7D7;
   z-index: 99;
   transition: all 0.5s ease-in-out;
 }
@@ -75,13 +75,13 @@ header nav ul li {
 header nav ul li:hover {
   margin-top: 10px;
   border-radius: 10px;
-  box-shadow: 5px 10px 3px #333232;
+  box-shadow: 5px 10px 3px #25385f;
 }
 
 header nav ul li a {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  color: black;
+  color: #EEE7D7;
 }
 
 * {
@@ -101,6 +101,7 @@ body #homepage .map {
   align-items: center;
   flex-wrap: nowrap;
   height: 100vh;
+  color: #25385f;
 }
 
 body #homepage .jumbotron .attach,
@@ -152,10 +153,17 @@ body #homepage .map .text button {
 body #homepage .jumbotron .text button:hover,
 body #homepage .delivery .text button:hover,
 body #homepage .map .text button:hover {
-  box-shadow: 5px 10px 3px #333232;
-  border-color: black;
+  box-shadow: 5px 10px 3px #d24448;
+  border-color: #EEE7D7;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+body #homepage .jumbotron .text button:hover,
+body #homepage .delivery .text button:hover,
+body #homepage .map .text button:hover {
+  background-color: #F5B436;
+  border-color: #25385f;
 }
 
 body #homepage .jumbotron .text button a,
@@ -163,7 +171,7 @@ body #homepage .delivery .text button a,
 body #homepage .map .text button a {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  color: black;
+  color: #25385f;
 }
 
 body #homepage .jumbotron {
@@ -206,7 +214,7 @@ body #homepage .map .attach {
 }
 
 body #homepage #categories {
-  background-color: #8fbc8f;
+  background-color: #9dc09d;
   text-align: center;
   padding: 40px 8%;
 }
@@ -216,25 +224,26 @@ body #homepage #categories h2 {
   font-size: 40px;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  color: #25385f;
 }
 
 body #homepage #categories ::-moz-placeholder {
-  color: black;
+  color: #EEE7D7;
 }
 
 body #homepage #categories :-ms-input-placeholder {
-  color: black;
+  color: #EEE7D7;
 }
 
 body #homepage #categories ::placeholder {
-  color: black;
+  color: #EEE7D7;
 }
 
 body #homepage #categories input {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  background-color: #F5B436;
-  border: 1px solid #F5B436;
+  background-color: #25385f;
+  border: 1px solid #25385f;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 10px;
@@ -243,8 +252,8 @@ body #homepage #categories input {
 }
 
 body #homepage #categories input:hover {
-  box-shadow: 5px 10px 3px #333232;
-  border-color: black;
+  box-shadow: 5px 10px 3px #F5B436;
+  border-color: #F5B436;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -261,19 +270,16 @@ body #homepage #categories .typeOfFoods {
 body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  background-color: #F5B436;
-  border: 1px solid #F5B436;
+  color: #EEE7D7;
+  background-color: #25385f;
   padding: 10px 20px;
   border-radius: 10px;
+  border: 2px solid transparent;
   margin: 10px;
-  transition: all 0.5s linear;
 }
 
-body #homepage #categories .typeOfFoods li:hover {
-  box-shadow: 5px 10px 3px #333232;
-  border-color: black;
-  margin-top: 0;
-  margin-bottom: 20px;
+body #homepage #categories .typeOfFoods li:active {
+  border: 2px solid #F5B436;
 }
 
 body #homepage #categories .restaurants {
@@ -288,7 +294,6 @@ body #homepage #categories .restaurants {
 body #homepage #categories .restaurants li {
   flex-basis: calc(100% / 3 - 40px);
   margin: 20px;
-  height: 300px;
   border-radius: 20px;
   border: 1px solid black;
   background-color: #EEE7D7;
@@ -296,11 +301,11 @@ body #homepage #categories .restaurants li {
 }
 
 body #homepage #categories .restaurants li:hover {
-  box-shadow: 20px 20px 3px #333232;
+  box-shadow: 20px 20px 3px black;
 }
 
 body #homepage #categories .restaurants li a {
-  color: black;
+  color: #25385f;
 }
 
 body #homepage #categories .restaurants li a h3 {
@@ -314,15 +319,21 @@ body #homepage #categories .restaurants li a h3 {
   border-bottom: 1px solid black;
 }
 
+body #homepage #categories .restaurants li a div {
+  height: 308px;
+  width: 100%;
+  padding: 5px;
+}
+
 body #homepage #categories .restaurants li img {
   width: 100%;
   height: 100%;
-  opacity: 0;
-  border-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 body #homepage .work {
-  background-color: #EEE7D7;
+  background-color: #9dc09d;
   padding: 40px 8% 70px 8%;
   text-align: center;
 }
@@ -332,6 +343,7 @@ body #homepage .work h2 {
   font-size: 40px;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  color: #25385f;
 }
 
 body #homepage .work ul {
@@ -340,6 +352,7 @@ body #homepage .work ul {
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: nowrap;
+  color: #EEE7D7;
 }
 
 body #homepage .work ul li {
@@ -349,15 +362,15 @@ body #homepage .work ul li {
   align-items: auto;
   flex-wrap: nowrap;
   flex-basis: calc(100% / 3 - 30px);
-  background-color: #F5B436;
+  background-color: #25385f;
   padding: 10px 10px 40px;
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid #EEE7D7;
   transition: box-shadow 0.5s linear;
 }
 
 body #homepage .work ul li:hover {
-  box-shadow: 20px 20px 3px #333232;
+  box-shadow: 20px 20px 3px black;
 }
 
 body #homepage .work ul li div:last-child {
@@ -396,8 +409,8 @@ body #homepage .work ul li div .left p {
 }
 
 body #homepage .work ul li div button {
-  background-color: #8fbc8f;
-  border: 1px solid #8fbc8f;
+  background-color: #F5B436;
+  border: 1px solid #F5B436;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 10px;
@@ -410,8 +423,8 @@ body #homepage .work ul li div button {
 }
 
 body #homepage .work ul li div button:hover {
-  box-shadow: 5px 10px 3px #333232;
-  border-color: black;
+  box-shadow: 5px 10px 3px #d24448;
+  border-color: #25385f;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -478,13 +491,13 @@ footer .footer-list ul li:first-child {
 footer .footer-list ul li:first-child strong {
   font-family: "Indie Flower", cursive;
   font-size: 25px;
-  color: whitesmoke;
+  color: #EEE7D7;
 }
 
 footer .footer-list ul li a {
   font-family: "Baloo 2", cursive;
   font-size: 16px;
-  color: white;
+  color: #EEE7D7;
 }
 
 footer .footer-list ul li a img {
@@ -511,7 +524,7 @@ footer .links ul li {
 }
 
 footer .links ul li a {
-  color: white;
+  color: #EEE7D7;
   padding: 10px;
 }
 
@@ -523,7 +536,7 @@ footer .links h5 {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   flex-basis: 15%;
-  color: white;
+  color: #EEE7D7;
   font-weight: normal;
 }
 
@@ -684,39 +697,47 @@ footer .links h5 {
 #chi-siamo .banner div {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  width: 100%;
-  height: auto;
-  padding: 200px 0 200px 8%;
   background-image: url(/images/chisiamo.jpg?c567151a06037446c48e690f9b386b44);
-  background-size: 100% 70%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  width: auto;
+  max-height: 700px;
+  padding: 15% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 #chi-siamo .banner div h1 {
   font-family: "Indie Flower", cursive;
   font-size: 40px;
   letter-spacing: 2px;
-  margin-top: 30px;
+  font-size: 4.5vw;
+  padding: 15px 0;
+  color: #d24448;
 }
 
 #chi-siamo .text {
   padding: 30px 20%;
-  background-color: #8fbc8f;
+  background-color: #9dc09d;
 }
 
 #chi-siamo .text p {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   margin-bottom: 30px;
+  color: #25385f;
 }
 
 #chi-siamo .box {
   padding: 30px 20% 100px 20%;
-  background-color: #8fbc8f;
+  background-color: #9dc09d;
 }
 
 #chi-siamo .box ul {
@@ -736,11 +757,12 @@ footer .links h5 {
   border-radius: 10px;
   margin: 10px;
   transition: all 0.5s linear;
+  color: #25385f;
 }
 
 #chi-siamo .box ul li:hover {
-  box-shadow: 5px 10px 3px #333232;
-  border-color: black;
+  box-shadow: 5px 10px 3px #d24448;
+  border-color: #25385f;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -784,19 +806,21 @@ footer .links h5 {
 
 #faq .text {
   padding: 30px 20%;
-  background-color: darkseagreen;
+  background-color: #9dc09d;
 }
 
 #faq .text h1 {
   font-family: "Indie Flower", cursive;
   font-size: 40px;
   letter-spacing: 2px;
+  color: #d24448;
 }
 
 #faq .text p {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   margin: 15px 0 30px 0;
+  color: #25385f;
 }
 
 #dashboard {
@@ -1045,12 +1069,14 @@ footer .links h5 {
   letter-spacing: 2px;
   font-size: 4.5vw;
   padding: 15px 0;
+  color: #d24448;
 }
 
 #home-restaurant .jumbotron div {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 1.3vw;
+  color: #25385f;
 }
 
 #home-restaurant .menu {
@@ -1064,6 +1090,7 @@ footer .links h5 {
 
 #home-restaurant .menu .aside-menu {
   flex-basis: 20%;
+  color: #25385f;
 }
 
 #home-restaurant .menu .aside-menu h2 {
@@ -1135,10 +1162,11 @@ footer .links h5 {
   padding: 0 20px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  color: #25385f;
 }
 
 #home-restaurant .menu .container-menu .products div ul {
-  padding: 0 20px;
+  padding: 20px;
   background-color: #EEE7D7;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -1158,13 +1186,15 @@ footer .links h5 {
   align-items: center;
   flex-wrap: nowrap;
   padding: 10px 20px 10px 5px;
-  border-bottom: 3px solid #8fbc8f;
+  border-bottom: 2px solid #d24448;
+  color: #25385f;
 }
 
 #home-restaurant .menu .container-menu .products div ul li h3 {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 23px;
+  font-weight: normal;
 }
 
 #home-restaurant .menu .container-menu .products div ul li h5 {
@@ -1184,12 +1214,8 @@ footer .links h5 {
   font-weight: normal;
 }
 
-#home-restaurant .menu .container-menu .products div ul li h4 i {
-  color: black;
-}
-
 #home-restaurant .menu .container-menu .products div ul li i {
-  color: #8fbc8f;
+  color: #25385f;
 }
 
 #home-restaurant .menu .container-menu .products div ul li img {
@@ -1204,15 +1230,28 @@ footer .links h5 {
 
 #home-restaurant .menu .carrello {
   flex-basis: 30%;
-  padding: 20px;
   border: 3px solid #EEE7D7;
+  background-color: #25385f;
+  border-radius: 25px;
+  padding-bottom: 20px;
 }
 
-#home-restaurant .menu .carrello legend {
-  padding: 20px;
+#home-restaurant .menu .carrello h2 {
+  padding: 0 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 25px;
+  border-bottom: 3px solid #EEE7D7;
   font-family: "Indie Flower", cursive;
   font-size: 40px;
   letter-spacing: 2px;
+  background-color: #F5B436;
+}
+
+#home-restaurant .menu .carrello ul,
+#home-restaurant .menu .carrello h3,
+#home-restaurant .menu .carrello span {
+  color: #EEE7D7;
+  padding: 20px 0;
 }
 
 #home-restaurant .menu .carrello ul li {
@@ -1220,12 +1259,20 @@ footer .links h5 {
   font-size: 20px;
 }
 
+#home-restaurant .menu .carrello ul li span {
+  padding: 0 20px;
+}
+
+#home-restaurant .menu .carrello span {
+  padding: 0 20px;
+}
+
 #home-restaurant .menu .carrello h3 {
   font-family: "Indie Flower", cursive;
   font-size: 40px;
   letter-spacing: 2px;
   font-weight: normal;
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 #home-restaurant .menu .carrello div {
@@ -1242,8 +1289,8 @@ footer .links h5 {
 }
 
 #home-restaurant .menu .carrello div button:hover {
-  box-shadow: 5px 10px 3px #333232;
-  border-color: black;
+  box-shadow: 5px 10px 3px #d24448;
+  border-color: #25385f;
   margin-top: 0;
   margin-bottom: 20px;
 }

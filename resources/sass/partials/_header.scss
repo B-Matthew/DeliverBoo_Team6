@@ -11,9 +11,9 @@ header {
 
           div {
                @include flex(row, center, center, nowrap);
-               background-color: $yellowPastel;
+               background-color: $blue;
                padding: 20px;
-               border: 1px solid black;
+               border: 3px solid $cream;
                border-bottom-left-radius: 45px;
                border-bottom-right-radius: 45px;
                z-index: 99;
@@ -22,14 +22,14 @@ header {
                &:hover {
                     margin-top: 10px;
                     border-radius: 10px;
-                    box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                    box-shadow: 5px 10px 3px $blue;
                }
 
                a {
                     font-family: 'Monoton', cursive;
                     font-size: 30px;
                     font-weight: normal;
-                    color: black;
+                    color:$cream;
                }
           }
 
@@ -44,22 +44,22 @@ header {
                li {
                     @include flex(row, center, center, nowrap);
                     padding: 10px 20px;
-                    background-color: $yellowPastel;
+                    background-color: $blue;
                     border-bottom-left-radius: 30px;
                     border-bottom-right-radius: 30px;
-                    border: 1px solid black;
+                    border: 2px solid $cream;
                     z-index: 99;
                     transition: all 0.5s ease-in-out;
 
                     &:hover {
                          margin-top: 10px;
                          border-radius: 10px;
-                         box-shadow: 5px 10px 3px rgb(51, 50, 50);
+                         box-shadow: 5px 10px 3px $blue;
                     }
 
                     a {
                          @include baloo;
-                         color: black;
+                         color: $cream;
                     }
                }
           }
