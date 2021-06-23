@@ -25,6 +25,22 @@
     }
 }
 
+@mixin theButtonDesign($color, $border,$shadow) {
+    background-color: $color;
+    border: 1px solid $color;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.5s linear;
+
+    &:hover {
+        box-shadow: 5px 10px 3px $shadow;
+        border-color: $border;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
 @mixin flex($direction, $content, $item, $wrap) {
     display: flex;
     flex-direction: $direction;

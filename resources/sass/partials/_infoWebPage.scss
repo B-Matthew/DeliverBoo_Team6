@@ -2,35 +2,39 @@
      .banner {
 
           div {
-               @include flex(row, flex-start, center,  nowrap);
-               width: 100%;
-               height: auto;
-               padding: 200px 0 200px 8%;
+               @include flex(row, center, center,  nowrap);
                background-image: url(../img/chisiamo.jpg);
-               background-size: 100% 70%;
+               background-size: contain;
                background-repeat: no-repeat;
                background-attachment: fixed;
+               width: auto;
+               max-height: 700px;
+               padding: 15% 0;
+               @include flex(column, center, center, nowrap);
 
                h1 {
                     @include indie;
-                    margin-top: 30px;
+                    font-size: 4.5vw;
+                    padding: 15px 0;
+                    color: $red;
                }
           }
      }
 
      .text {
           padding: 30px 20%;
-          background-color: $green;
+          background-color: $greenPastel;
 
           p {
                @include baloo;
                margin-bottom: 30px;
+               color: $blue;
           }
      }
 
      .box {
           padding: 30px 20% 100px 20%;
-          background-color: $green;
+          background-color: $greenPastel;
 
           ul {
                @include flex(row, space-around, center,  nowrap);
@@ -38,7 +42,8 @@
                li {
                     flex-basis: calc(30% - 20px);
                     text-align: center;
-                    @include buttonDesign($yellow);
+                    @include theButtonDesign($yellow, $blue, $red);
+                    color: $blue;
 
                     h2, h5 {
                          font-weight: normal;

@@ -162,8 +162,8 @@
             </div>
         </div>
 
-        <fieldset class="carrello">
-            <legend>il tuo carrello</legend>   
+        <div class="carrello">
+            <h2>il tuo carrello</h2>   
             <ul>
                 <li>
                     <span>nome piatto"aggiunto"</span>
@@ -187,7 +187,7 @@
                     <a href="#">vai al pagamento</a>
                 </button>      
             </div>   
-        </fieldset>
+        </div>
         
     </section>
     

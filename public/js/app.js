@@ -167,12 +167,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
     return {
       'restaurantInput': '',
-      'categoryInput': 'all'
+      'categoryInput': 'all',
+      'image': "../../../storage/img/sushi.jpg"
     };
   },
   props: ['restaurants', 'categories', 'route'],
@@ -796,10 +801,14 @@ var render = function() {
                   _c("a", { attrs: { href: _vm.route + restaurant.id } }, [
                     _c("h3", [
                       _vm._v(
-                        "\n                        \n                         " +
+                        "\n                         " +
                           _vm._s(restaurant.name) +
-                          "\n                         \n                    "
+                          "                              \n                    "
                       )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("img", { attrs: { src: _vm.image, alt: "" } })
                     ])
                   ])
                 ])
@@ -813,7 +822,9 @@ var render = function() {
           _vm._l(_vm.filter(), function(restaurant) {
             return _c("li", [
               _c("a", { attrs: { href: _vm.route + restaurant.id } }, [
-                _c("h3", [_vm._v(_vm._s(restaurant.name))])
+                _c("h3", [_vm._v(_vm._s(restaurant.name))]),
+                _vm._v(" "),
+                _c("div", [_c("img", { attrs: { src: _vm.image, alt: "" } })])
               ])
             ])
           }),
@@ -13238,8 +13249,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

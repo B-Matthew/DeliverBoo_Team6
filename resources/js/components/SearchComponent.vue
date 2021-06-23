@@ -16,10 +16,11 @@
                          <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
                     <a :href="route + restaurant.id">
                          <h3>
-                             
-                              {{restaurant.name}}
-                              
+                              {{restaurant.name}}                              
                          </h3>
+                         <div>
+                              <img :src="image" alt=""> 
+                         </div>
                     </a> 
                </li>
           </ul>
@@ -29,7 +30,10 @@
                <li v-for="restaurant in filter()">
                     <a :href="route + restaurant.id">
                     <!-- <img src="{{asset('../../storage/app/public/img/rider.jpg')}}" alt=""> -->
-                         <h3>{{restaurant.name}}</h3>      
+                         <h3>{{restaurant.name}}</h3>
+                         <div>
+                              <img :src="image" alt=""> 
+                         </div>      
                     </a>
                </li>
           </ul>         
@@ -44,6 +48,7 @@
               return{
                    'restaurantInput': '',
                    'categoryInput': 'all',
+                   'image': "../../../storage/img/sushi.jpg",
               }
           },
           props: ['restaurants','categories','route'],
