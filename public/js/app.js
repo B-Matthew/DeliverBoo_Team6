@@ -171,12 +171,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
     return {
       'restaurantInput': '',
-      'categoryInput': 'all',
+      'categoryId': false,
+      'typeOfFoods': [],
       'image': "../../../storage/img/sushi.jpg"
     };
   },
@@ -190,9 +192,8 @@ __webpack_require__.r(__webpack_exports__);
       });
       return filteredRestaurants;
     },
-    getCategory: function getCategory(categoryName) {
-      this.categoryInput = categoryName;
-      console.log(this.categoryInput);
+    getCategoryId: function getCategoryId() {
+      console.log(this.typeOfFoods);
     }
   },
   mounted: function mounted() {
@@ -734,7 +735,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { attrs: { id: "categories" } }, [
-    _c("h2", [_vm._v("Cosa vuoi mangiare?")]),
+    _c("h2", { on: { click: _vm.getCategoryId } }, [
+      _vm._v("Cosa vuoi mangiare?")
+    ]),
     _vm._v(" "),
     _c("input", {
       directives: [
@@ -745,6 +748,7 @@ var render = function() {
           expression: "restaurantInput"
         }
       ],
+      staticClass: "searchbar",
       attrs: { text: "", placeholder: "Ricerca ristorante. . ." },
       domProps: { value: _vm.restaurantInput },
       on: {
@@ -763,28 +767,57 @@ var render = function() {
     _c(
       "ul",
       { staticClass: "typeOfFoods" },
-      _vm._l(_vm.categories, function(category) {
+      _vm._l(_vm.categories, function(category, index) {
         return _c(
           "li",
           {
-            attrs: { value: category.name },
-            on: {
-              click: function($event) {
-                return _vm.getCategory(category.name)
-              }
-            },
-            model: {
-              value: _vm.categoryInput,
-              callback: function($$v) {
-                _vm.categoryInput = $$v
-              },
-              expression: "categoryInput"
-            }
+            class: _vm.typeOfFoods.includes(category.id)
+              ? "checkbox-active"
+              : "",
+            attrs: { value: category.name }
           },
           [
-            _vm._v(
-              " \n               " + _vm._s(category.name) + "\n          "
-            )
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.typeOfFoods,
+                  expression: "typeOfFoods"
+                }
+              ],
+              staticClass: "checkbox",
+              attrs: { type: "checkbox" },
+              domProps: {
+                value: category.id,
+                checked: Array.isArray(_vm.typeOfFoods)
+                  ? _vm._i(_vm.typeOfFoods, category.id) > -1
+                  : _vm.typeOfFoods
+              },
+              on: {
+                change: function($event) {
+                  var $$a = _vm.typeOfFoods,
+                    $$el = $event.target,
+                    $$c = $$el.checked ? true : false
+                  if (Array.isArray($$a)) {
+                    var $$v = category.id,
+                      $$i = _vm._i($$a, $$v)
+                    if ($$el.checked) {
+                      $$i < 0 && (_vm.typeOfFoods = $$a.concat([$$v]))
+                    } else {
+                      $$i > -1 &&
+                        (_vm.typeOfFoods = $$a
+                          .slice(0, $$i)
+                          .concat($$a.slice($$i + 1)))
+                    }
+                  } else {
+                    _vm.typeOfFoods = $$c
+                  }
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(category.name))])
           ]
         )
       }),

@@ -103,7 +103,7 @@ body {
                     color: $cream;
                }
 
-               input {
+               .searchbar {
                     @include baloo;
                     @include theButtonDesign($blue,$yellow, $yellow);
                     width: 30%;
@@ -114,6 +114,10 @@ body {
                     @include flex(row, center, center, wrap);
                     padding: 20px 0;
 
+                    .checkbox-active{
+                         border: 2px solid $yellow;
+                    }
+
                     li {
                          @include baloo;
                          color: $cream;
@@ -122,9 +126,15 @@ body {
                          border-radius: 10px;
                          border: 2px solid transparent;
                          margin: 10px;
+                         @include flex(row, space-between, center, nowrap);
 
-                         &:active {
-                              border: 2px solid $yellow;
+                         .checkbox {
+                              @include checkbox;
+                              flex-basis: 10%;
+                         }
+
+                         span {
+                              flex-basis: 90%;
                          }
                          
                     }

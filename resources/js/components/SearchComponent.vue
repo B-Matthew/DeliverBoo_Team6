@@ -1,10 +1,11 @@
 <template>
      <section id="categories">
-          <h2>Cosa vuoi mangiare?</h2>
-          <input v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
+          <h2 @click="getCategoryId">Cosa vuoi mangiare?</h2>
+          <input class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
           <ul class="typeOfFoods">
-               <li v-model ="categoryInput" v-for="category in categories" :value="category.name" @click="getCategory(category.name)"> 
-                    {{ category.name }}
+               <li :class="(typeOfFoods.includes(category.id)) ? 'checkbox-active' : '' " v-for="(category, index) in categories" :value="category.name"> 
+                   <input  v-model="typeOfFoods" class="checkbox" type="checkbox" :value="category.id">
+                   <span>{{category.name}}</span>
                </li>
           </ul>
 
@@ -47,7 +48,8 @@
          data: function() {
               return{
                    'restaurantInput': '',
-                   'categoryInput': 'all',
+                   'categoryId': false,
+                   'typeOfFoods': [],
                    'image': "../../../storage/img/sushi.jpg",
               }
           },
@@ -59,16 +61,15 @@
                     return filteredRestaurants;
                },
 
-               getCategory: function(categoryName) {
-                    this.categoryInput = categoryName;
-                    console.log(this.categoryInput);
+               getCategoryId: function() {
+                    console.log(this.typeOfFoods);
                }
           },
         
-        mounted() {
-            console.log(this.restaurants);
-            console.log(this.categories);
-        }
+          mounted() {
+               console.log(this.restaurants);
+               console.log(this.categories);
+          }
      } 
 </script>
               
