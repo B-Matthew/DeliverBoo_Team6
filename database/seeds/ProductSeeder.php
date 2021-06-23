@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Ricetta classica della cucina',
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 18,
             ],
             [
@@ -28,7 +28,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Uramaki di salmone classico',
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 17,
             ],
             [
@@ -37,7 +37,7 @@ class ProductSeeder extends Seeder
                 'description' => 'La regina delle pizze',
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 16,
             ],
             [
@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Hamburger di Fassona con cheddar e salsa a piacere, contorno di patatine country',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 15,
             ],
             [
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Tacos tradizionali messicane',
                 'type' => 'Antipasto',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 14,
             ],
             [
@@ -64,7 +64,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Pollo al curry con riso bianco',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 13,
             ],
             [
@@ -73,7 +73,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Lasagna alla bolognese classica',
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 12,
             ],
             [
@@ -82,7 +82,7 @@ class ProductSeeder extends Seeder
                 'description' => "piatto indiano diffuso e amato in tutta l'India, è un antipasto croccante e sfizioso.",
                 'type' => 'Antipasto',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 11,
             ],
             [
@@ -91,7 +91,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Il nostro panino della casa',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 10,
             ],
             [
@@ -100,7 +100,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Pizza estiva con Bufala e Pomodorini , un classico della cucina italiana' ,
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 9,
             ],
             [
@@ -109,7 +109,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Tonno in crosta di pistacchi con contorno di verdure grigliate',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 8,
             ],
             [
@@ -118,7 +118,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Tartar di salmone tagliata al coltello su un letto di guacamole',
                 'type' => 'Antipasto',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 7,
             ],
             [
@@ -127,7 +127,7 @@ class ProductSeeder extends Seeder
                 'description' => 'I nostri salumi e formaggi a KM 0 accompagnate da maramellate miste',
                 'type' => 'Antipasto',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 6,
             ],
             [
@@ -136,7 +136,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Un primo piatto per adulti e bambini',
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 5,
             ],
             [
@@ -145,7 +145,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Melanzane alla parmigiana come da ricetta casalinga',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 4,
             ],
             [
@@ -154,7 +154,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Spiedini di agnello alla greca con contorno di patate e salsa allo yogurt greco',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 3,
             ],
             [
@@ -163,7 +163,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Cotoletta di maiale con contorno di patatine fritte',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 4,
             ],
             [
@@ -172,7 +172,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Ravioli fatti in casa con ripieno di polpo e burrata DOP',
                 'type' => 'Primo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 4,
             ],
             [
@@ -181,7 +181,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Hamburger di pollo con formaggio Cheddar e contorno di patatine',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 4,
             ],
             [
@@ -190,7 +190,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Branzino sfumato al vino bianco con pomodorini ed olive taggiasche, contorno di verdure miste',
                 'type' => 'Secondo',
                 'price' => mt_rand(1 * 2, 40 * 2) / 2,
-                'availability'  => 1,
+                'availability'  => true,
                 'restaurant_id' => 4,
             ],
         ];

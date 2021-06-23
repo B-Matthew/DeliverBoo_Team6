@@ -18,53 +18,58 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
    
-// HOMEPAGE
+// ROUTE HOMEPAGE
 Route::get('/', 'MainController@homepage')
         ->name('homepage');
 
-// CHI SIAMO
+// ROUTE 'CHI SIAMO'
 Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
-// FAQ
+// ROUTE FAQ
 Route::get('faq' , 'MainController@faq')
         ->name('faq');
 
-// SEZIONE DASHBOARD
+// ROUTE DASHBOARD
 Route::get('/dashBoard/restaurant', 'HomeController@dashBoard')
 -> name('dashBoard');
 Route::post('/store/restaurant', 'HomeController@storeRestaurant')
 ->name('store-restaurant');
 
-// SEZIONE MENU RESTAURANT
+// ROUTE MENU RESTAURANT
 Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
         ->name('clientRestaurant');
 
         
-// SEZIONE MYFOODS
+// ROUTE DEI PRODUCT DEL RISTORANTE
 Route::get('/myProduct/{id}' , 'HomeController@myProduct')
         ->name('myProduct');
 
-// SEZIONE ADD PRODUCT
-Route::get('/createProduct/{id}', 'HomeController@createProduct')
--> name('createProduct');
-Route::post('/storeProduct/product/{id}', 'HomeController@storeProduct')
-->name('storeProduct');
+// ROUTE AGGIUNGI PRODUCT
+Route::get('/product/create/{id}', 'HomeController@createProduct')
+        -> name('createProduct');
+Route::post('/product/store/{id}', 'HomeController@storeProduct')
+        ->name('storeProduct');
 
-// SEZIONE EDIT PRODUCT
-Route::get('/product/editProduct/{id}', 'HomeController@editProduct')
-->name('editProduct');
-Route::post('/restaurant/update/', 'HomeController@updateProduct')
-->name('updateProduct');
+// ROUTE EDIT PRODUCT
+Route::get('/product/edit/{id}', 'HomeController@editProduct')
+        ->name('editProduct');
+Route::post('/product/update/{id}', 'HomeController@updateProduct')
+        ->name('updateProduct');
+
+// ROUTE DELETE PRODUCT
+Route::get('/product/delete/{id}' , 'HomeController@deleteProduct')
+        ->name('deleteProduct');
 
 
 
-
-
-
-
+        
 Route::get('/restaurant/destroyRestaurant/{id}', 'HomeController@destroyRestaurant')
-->name('destroyRestaurant');
+        ->name('destroyRestaurant');
+
+
+
+
 
 
 

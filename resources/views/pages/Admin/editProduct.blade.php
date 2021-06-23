@@ -3,7 +3,7 @@
 
 <div id="editProduct">
 
-  <form method="POST" action="{{ route('updateProduct') }}">
+  <form method="POST" action="{{ route('updateProduct', $product -> id) }}">
     @csrf
     @method('POST')
 
@@ -23,13 +23,13 @@
         <label class="" for="type">
             <h4>Type</h4>
         </label>
-        <select name="type" id="type-food" selected="{{ $product -> type }}">
+        <select required name="type" id="type-food">
+            <option selected value="">Scegli il tipo</option>
             <option value="Antipasto">Antipasto</option>
             <option value="Primo">Primo</option>
             <option value="Secondo">Secondo</option>
             <option value="Dolce">Dolce</option>
         </select>
-
         <label class="" for="price">
             <h4>Price</h4>
         </label>
@@ -38,14 +38,15 @@
         <label class="" for="description">
             <h4>Description</h4>
         </label>
-        <textarea id="description" name="description" id="" cols="30" rows="10"></textarea value="{{ $product -> description }}">
+        <textarea id="description" name="description" id="" cols="30" rows="10">{{ $product -> description }}</textarea >
 
         <button type="submit" class="">Submit</button>
     </fieldset>
   </form>
-           
 </div>     
 @endsection   
+           
+
 
 
 

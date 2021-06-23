@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->decimal('price');
             $table->boolean('availability')->default(1);
             $table->bigInteger('restaurant_id')->unsigned()->index();
-
+            
             $table->timestamps();
         });
     }
@@ -38,3 +38,4 @@ class CreateProductsTable extends Migration
         Schema::dropIfExists('products');
     }
 }
+

@@ -28,9 +28,9 @@ class ProductRequest extends FormRequest
             "ingredients" => 'required|string|min:3' ,
             "type" => 'required|string',
             "price" => 'required|numeric',
-            // "availability" => ,
-            // "restaurant_id" => ,
             "description" => 'nullable|string|min:10',
         ];
     }
 }
+            
+
