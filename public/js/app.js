@@ -172,6 +172,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
@@ -182,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
       'image': "../../../storage/img/sushi.jpg"
     };
   },
-  props: ['restaurants', 'categories', 'route'],
+  props: ['restaurants', 'categories', 'route', 'categoryRestaurant'],
   methods: {
     filter: function filter() {
       var _this = this;
@@ -194,11 +208,32 @@ __webpack_require__.r(__webpack_exports__);
     },
     getCategoryId: function getCategoryId() {
       console.log(this.typeOfFoods);
+    },
+    categoryFilter: function categoryFilter() {
+      var filteredCategory = [];
+      var restaurant = [];
+      var category_id;
+      var restaurant_id;
+
+      for (var i = 0; i < this.categoryRestaurant.length; i++) {
+        var element = this.categoryRestaurant[i];
+        category_id = element.category_id;
+        restaurant_id = element.id;
+
+        if (this.typeOfFoods.includes(category_id) && !restaurant.includes(restaurant_id)) {
+          filteredCategory.push(element);
+          restaurant.push(restaurant_id);
+        }
+      }
+
+      console.log(filteredCategory);
+      return filteredCategory;
     }
   },
   mounted: function mounted() {
     console.log(this.restaurants);
     console.log(this.categories);
+    console.log(this.categoryRestaurant);
   }
 });
 
@@ -824,7 +859,7 @@ var render = function() {
       0
     ),
     _vm._v(" "),
-    _vm.restaurantInput == ""
+    _vm.restaurantInput == "" && _vm.typeOfFoods.length == 0
       ? _c(
           "ul",
           { staticClass: "restaurants" },
@@ -846,6 +881,27 @@ var render = function() {
                   ])
                 ])
               : _vm._e()
+          }),
+          0
+        )
+      : _vm.restaurantInput == "" && _vm.typeOfFoods.length != 0
+      ? _c(
+          "ul",
+          { staticClass: "restaurants" },
+          _vm._l(_vm.categoryFilter(), function(restaurant, index) {
+            return _c("li", [
+              _c("a", { attrs: { href: _vm.route + restaurant.id } }, [
+                _c("h3", [
+                  _vm._v(
+                    "\n                         " +
+                      _vm._s(restaurant.name) +
+                      "                              \n                    "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [_c("img", { attrs: { src: _vm.image, alt: "" } })])
+              ])
+            ])
           }),
           0
         )
@@ -13282,8 +13338,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
