@@ -239,7 +239,7 @@ body #homepage #categories ::placeholder {
   color: #EEE7D7;
 }
 
-body #homepage #categories input {
+body #homepage #categories .searchbar {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   background-color: #25385f;
@@ -251,7 +251,7 @@ body #homepage #categories input {
   width: 30%;
 }
 
-body #homepage #categories input:hover {
+body #homepage #categories .searchbar:hover {
   box-shadow: 5px 10px 3px #F5B436;
   border-color: #F5B436;
   margin-top: 0;
@@ -267,6 +267,10 @@ body #homepage #categories .typeOfFoods {
   padding: 20px 0;
 }
 
+body #homepage #categories .typeOfFoods .checkbox-active {
+  border: 2px solid #F5B436;
+}
+
 body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
@@ -276,10 +280,46 @@ body #homepage #categories .typeOfFoods li {
   border-radius: 10px;
   border: 2px solid transparent;
   margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
-body #homepage #categories .typeOfFoods li:active {
-  border: 2px solid #F5B436;
+body #homepage #categories .typeOfFoods li .checkbox {
+  -webkit-appearance: none;
+  background-color: #F5B436;
+  border: 1px solid #F5B436;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  flex-basis: 10%;
+}
+
+body #homepage #categories .typeOfFoods li .checkbox:hover {
+  border-color: black;
+}
+
+body #homepage #categories .typeOfFoods li .checkbox:checked {
+  background-color: #F5B436;
+  border: 1px solid black;
+}
+
+body #homepage #categories .typeOfFoods li .checkbox:checked:after {
+  content: "\2714";
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d24448;
+}
+
+body #homepage #categories .typeOfFoods li span {
+  flex-basis: 90%;
 }
 
 body #homepage #categories .restaurants {
