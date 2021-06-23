@@ -184,7 +184,7 @@
     
             <div>
                 <button>
-                    <a href="#">vai al pagamento</a>
+                    <a href="{{route('checkout')}}">vai al pagamento</a>
                 </button>      
             </div>   
         </fieldset>

@@ -30,17 +30,17 @@ Route::get('info', 'MainController@infoWebPage')
 Route::get('faq' , 'MainController@faq')
         ->name('faq');
 
+// ROUTE MENU RESTAURANT
+Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
+->name('clientRestaurant');
+        
+
 // ROUTE DASHBOARD
 Route::get('/dashBoard/restaurant', 'HomeController@dashBoard')
 -> name('dashBoard');
 Route::post('/store/restaurant', 'HomeController@storeRestaurant')
 ->name('store-restaurant');
 
-// ROUTE MENU RESTAURANT
-Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
-        ->name('clientRestaurant');
-
-        
 // ROUTE DEI PRODUCT DEL RISTORANTE
 Route::get('/myProduct/{id}' , 'HomeController@myProduct')
         ->name('myProduct');
@@ -61,11 +61,14 @@ Route::post('/product/update/{id}', 'HomeController@updateProduct')
 Route::get('/product/delete/{id}' , 'HomeController@deleteProduct')
         ->name('deleteProduct');
 
-
+// ROUTE CHECKOUT
+Route::get('/client/checkout' , 'MainController@checkout')
+        ->name('checkout');
+Route::post('/client/payment' , 'MainController@payment')
+        ->name('payment');
 
         
-Route::get('/restaurant/destroyRestaurant/{id}', 'HomeController@destroyRestaurant')
-        ->name('destroyRestaurant');
+
 
 
 
