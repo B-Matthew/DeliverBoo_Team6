@@ -6,6 +6,7 @@ use App\Category;
 use App\Product;
 use Braintree;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -20,7 +21,19 @@ class MainController extends Controller
 
       $categories = Category::all();
       $restaurants = Restaurant::all();
-      return view('pages.homepage', compact('categories' , 'restaurants'));
+      
+      // SELECT * FROM categories 
+      //  JOIN category_restaurant 
+      //  ON  category_restaurant=categories.id
+      //   JOIN restaurants 
+      // ON restaurants.id = category_restaurant.restaurant_id
+
+      $filterJson = DB::table('categories')
+                    ->join('category_restaurant' , 'category_restaurant.category_id' , '=' , 'categories.id')
+                    ->join('restaurants' ,'restaurants.id' ,'=' , 'category_restaurant.restaurant_id')
+                    ->get();
+                  
+      return view('pages.homepage', compact('categories' , 'restaurants','filterJson'));
     }
 
     // Pagina Menu ristorante

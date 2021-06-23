@@ -31,7 +31,7 @@
      </section>
      
          
-     <search-component :restaurants="{{$restaurants}}" :categories="{{$categories}}" :route="'/client/restaurant/'">
+     <search-component :category-restaurant="{{$filterJson}}" :restaurants="{{$restaurants}}" :categories="{{$categories}}" :route="'/client/restaurant/'">
           
      </search-component>
      

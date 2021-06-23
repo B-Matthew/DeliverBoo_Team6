@@ -3,7 +3,7 @@
           <h2 @click="getCategoryId">Cosa vuoi mangiare?</h2>
           <input class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
           <ul class="typeOfFoods">
-               <li :class="(typeOfFoods.includes(category.id)) ? 'checkbox-active' : '' " v-for="(category, index) in categories" :value="category.name"> 
+               <li :class="(typeOfFoods.includes(category.id)) ? 'checkbox-active' : ''" v-for="(category, index) in categories" :value="category.name"> 
                    <input  v-model="typeOfFoods" class="checkbox" type="checkbox" :value="category.id">
                    <span>{{category.name}}</span>
                </li>
@@ -12,8 +12,22 @@
           
           
           <!-- Ciclare solo 6 ristoranti  -->
-          <ul v-if="restaurantInput == '' " class="restaurants">
+          <ul v-if="restaurantInput == '' && typeOfFoods.length == 0" class="restaurants">
                <li v-for="(restaurant, index) in restaurants" v-if="index < 6">
+                         <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
+                    <a :href="route + restaurant.id">
+                         <h3>
+                              {{restaurant.name}}                              
+                         </h3>
+                         <div>
+                              <img :src="image" alt=""> 
+                         </div>
+                    </a> 
+               </li>
+          </ul>
+
+          <ul v-else-if="restaurantInput == '' && typeOfFoods.length != 0" class="restaurants">
+               <li v-for="(restaurant, index) in categoryFilter()" >
                          <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
                     <a :href="route + restaurant.id">
                          <h3>
@@ -53,7 +67,7 @@
                    'image': "../../../storage/img/sushi.jpg",
               }
           },
-          props: ['restaurants','categories','route'],
+          props: ['restaurants','categories','route','categoryRestaurant'],
 
           methods: {
                filter: function() {
@@ -63,15 +77,43 @@
 
                getCategoryId: function() {
                     console.log(this.typeOfFoods);
-               }
+               },
+
+               categoryFilter: function() {
+                    const filteredCategory = [];
+                    const restaurant = [];
+                    let category_id;
+                    let restaurant_id;
+                    
+                    for (let i = 0; i < this.categoryRestaurant.length; i++) {
+                         const element = this.categoryRestaurant[i];
+                         category_id = element.category_id;
+                         restaurant_id = element.id;
+
+                         if (this.typeOfFoods.includes(category_id) && !restaurant.includes(restaurant_id)) {
+                              filteredCategory.push(element);
+                              restaurant.push(restaurant_id);
+                         }
+                    }
+                              
+                    console.log(filteredCategory);
+                    return filteredCategory;
+               },
           },
-        
+
+                    
+
+                    
           mounted() {
                console.log(this.restaurants);
                console.log(this.categories);
-          }
+               console.log(this.categoryRestaurant);         
+                }
      } 
 </script>
+                    
+                         
+        
               
                    
                     
