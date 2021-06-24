@@ -1516,6 +1516,138 @@ footer .links h5 {
   outline: none;
 }
 
+#my-product {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  background-color: #9dc09d;
+  color: #151616;
+}
+
+#my-product .jumbotron {
+  background-image: url(/images/ristorante-background.jpg?541743586d26ca703fa49f1fdf22c2eb);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: auto;
+  max-height: 700px;
+  padding: 15% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#my-product .jumbotron h1 {
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-size: 4.5vw;
+  padding: 15px 0;
+  color: #d24448;
+}
+
+#my-product .jumbotron div {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 1.3vw;
+  color: #25385f;
+}
+
+#my-product .container-menu {
+  padding: 40px 0;
+  width: 80%;
+  margin: auto;
+}
+
+#my-product .container-menu > div {
+  text-align: center;
+}
+
+#my-product .container-menu > div > a {
+  padding: 10px 20px;
+  background-color: #25385f;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: aliceblue;
+  display: inline-block;
+  margin: 40px auto;
+}
+
+#my-product .container-menu > div > a:focus {
+  border-color: #ffc244;
+}
+
+#my-product .container-menu .products div .head-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 1px solid black;
+  background-color: #ffc244;
+  padding: 10px 30px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+#my-product .container-menu .products div .head-product h2 {
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #25385f;
+}
+
+#my-product .container-menu .products div .head-product .fa-check-circle {
+  color: #238623;
+}
+
+#my-product .container-menu .products div .head-product .fa-times-circle {
+  color: #d24448;
+}
+
+#my-product .container-menu .products div ul {
+  padding: 20px;
+  background-color: #EEE7D7;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  transition: all 0.5s linear;
+}
+
+#my-product .container-menu .products div ul:hover {
+  box-shadow: 10px 20px 7px #333232;
+}
+
+#my-product .container-menu .products div ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 20px 10px 5px;
+  border-bottom: 2px solid #d24448;
+  color: #25385f;
+}
+
+#my-product .container-menu .products div ul li > div {
+  margin: 0 20px;
+}
+
+#my-product .container-menu .products div ul li > div:nth-child(2) {
+  max-width: 50%;
+  flex-grow: 1;
+}
+
+#my-product .container-menu .products div ul li h4,
+#my-product .container-menu .products div ul li label {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 23px;
+  font-weight: normal;
+}
+
 @media (max-width: 1600px) and (min-width: 1200px) {
   body #homepage #categories .restaurants li {
     flex-basis: calc(50% - 40px);
