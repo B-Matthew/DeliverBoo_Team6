@@ -1,8 +1,8 @@
 <template>
      <section id="categories">
           <h2 @click="getCategoryId">Cosa vuoi mangiare?</h2>
-          <input class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
-          <ul class="typeOfFoods">
+          <input v-if="typeOfFoods.length == 0 " class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
+          <ul v-if="restaurantInput == '' " class="typeOfFoods">
                <li :class="(typeOfFoods.includes(category.id)) ? 'checkbox-active' : ''" v-for="(category, index) in categories" :value="category.name"> 
                    <input  v-model="typeOfFoods" class="checkbox" type="checkbox" :value="category.id">
                    <span>{{category.name}}</span>
