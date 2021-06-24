@@ -56,38 +56,7 @@
 
         <div class="container-menu">   
 
-            {{-- parte di copertina del ristorante --}}
-            {{-- <fieldset class="box-restaurant">
-                <legend>{{ strtoupper($restaurant -> name) }}</legend>      
-    
-                <div class="copertina">
-                    <img src="{{ asset('storage/restaurant-img/' . $restaurant -> img) }}" alt="">
-                </div>   
-                
-                <div>   
-                    <i class="far fa-star"></i>   
-                    <i class="far fa-star"></i>   
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>   
-                    <span>recensioni?</span>
-                </div>   
-       
-                
-                <div>
-                    @foreach($restaurant -> categories as $category)
-                        <span> {{ $category -> name }} </span>
-                    @endforeach
-                    <p>{{ $restaurant -> address }}</p>   
-                </div>   
-    
-                <div>      
-                    <button>menu</button>
-                    <button>info</button>
-                </div>
-            </fieldset>    --}}
-            
-            {{-- parte del menu sottostante la copertina --}}
+           
             <div class="products">
                 <div>
                     <h2>Antipasti</h2>
@@ -137,7 +106,7 @@
                     </ul>
        
                     <h2>Secondi</h2>
-    
+       
                     <ul>
                         @foreach($secondi as $secondo)
                            <li>   

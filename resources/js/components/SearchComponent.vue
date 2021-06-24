@@ -16,10 +16,10 @@
                <li v-for="(restaurant, index) in restaurants" v-if="index < 6">
                          <!-- <img src="{{asset('storage/img/sushi.jpg')}}" alt=""> -->
                     <a :href="route + restaurant.id">
-                         <h3>
+                         <h3>   
                               {{restaurant.name}}                              
                          </h3>
-                         <div>
+                         <div>   
                               <img :src="image" alt=""> 
                          </div>
                     </a> 
