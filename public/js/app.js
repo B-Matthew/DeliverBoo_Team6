@@ -773,90 +773,94 @@ var render = function() {
       _vm._v("Cosa vuoi mangiare?")
     ]),
     _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.restaurantInput,
-          expression: "restaurantInput"
-        }
-      ],
-      staticClass: "searchbar",
-      attrs: { text: "", placeholder: "Ricerca ristorante. . ." },
-      domProps: { value: _vm.restaurantInput },
-      on: {
-        keyup: function($event) {
-          return _vm.filter()
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.restaurantInput = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c(
-      "ul",
-      { staticClass: "typeOfFoods" },
-      _vm._l(_vm.categories, function(category, index) {
-        return _c(
-          "li",
-          {
-            class: _vm.typeOfFoods.includes(category.id)
-              ? "checkbox-active"
-              : "",
-            attrs: { value: category.name }
-          },
-          [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.typeOfFoods,
-                  expression: "typeOfFoods"
-                }
-              ],
-              staticClass: "checkbox",
-              attrs: { type: "checkbox" },
-              domProps: {
-                value: category.id,
-                checked: Array.isArray(_vm.typeOfFoods)
-                  ? _vm._i(_vm.typeOfFoods, category.id) > -1
-                  : _vm.typeOfFoods
-              },
-              on: {
-                change: function($event) {
-                  var $$a = _vm.typeOfFoods,
-                    $$el = $event.target,
-                    $$c = $$el.checked ? true : false
-                  if (Array.isArray($$a)) {
-                    var $$v = category.id,
-                      $$i = _vm._i($$a, $$v)
-                    if ($$el.checked) {
-                      $$i < 0 && (_vm.typeOfFoods = $$a.concat([$$v]))
-                    } else {
-                      $$i > -1 &&
-                        (_vm.typeOfFoods = $$a
-                          .slice(0, $$i)
-                          .concat($$a.slice($$i + 1)))
-                    }
-                  } else {
-                    _vm.typeOfFoods = $$c
-                  }
-                }
+    _vm.typeOfFoods.length == 0
+      ? _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.restaurantInput,
+              expression: "restaurantInput"
+            }
+          ],
+          staticClass: "searchbar",
+          attrs: { text: "", placeholder: "Ricerca ristorante. . ." },
+          domProps: { value: _vm.restaurantInput },
+          on: {
+            keyup: function($event) {
+              return _vm.filter()
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
               }
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v(_vm._s(category.name))])
-          ]
+              _vm.restaurantInput = $event.target.value
+            }
+          }
+        })
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.restaurantInput == ""
+      ? _c(
+          "ul",
+          { staticClass: "typeOfFoods" },
+          _vm._l(_vm.categories, function(category, index) {
+            return _c(
+              "li",
+              {
+                class: _vm.typeOfFoods.includes(category.id)
+                  ? "checkbox-active"
+                  : "",
+                attrs: { value: category.name }
+              },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.typeOfFoods,
+                      expression: "typeOfFoods"
+                    }
+                  ],
+                  staticClass: "checkbox",
+                  attrs: { type: "checkbox" },
+                  domProps: {
+                    value: category.id,
+                    checked: Array.isArray(_vm.typeOfFoods)
+                      ? _vm._i(_vm.typeOfFoods, category.id) > -1
+                      : _vm.typeOfFoods
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.typeOfFoods,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = category.id,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.typeOfFoods = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.typeOfFoods = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.typeOfFoods = $$c
+                      }
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", [_vm._v(_vm._s(category.name))])
+              ]
+            )
+          }),
+          0
         )
-      }),
-      0
-    ),
+      : _vm._e(),
     _vm._v(" "),
     _vm.restaurantInput == "" && _vm.typeOfFoods.length == 0
       ? _c(
