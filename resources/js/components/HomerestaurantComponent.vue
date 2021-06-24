@@ -139,7 +139,7 @@
     
             <div>
                 <button>
-                    <a :href="checkout">vai al pagamento</a>
+                    <a :href="checkout + totale">vai al pagamento</a>
                 </button>      
             </div>   
         </div>

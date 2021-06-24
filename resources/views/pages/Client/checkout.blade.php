@@ -21,10 +21,19 @@
         <form method="post" id="payment-form" action="{{route('payment')}}">
             @csrf
             <section>
+                <label for="name">Nome</label>
+                <input type="text">
+                <label for="lastname">Cognome</label>
+                <input type="text">
+                <label for="address">Indirizzo</label>
+                <input type="text">
+                <label for="email">E-mail</label>
+                <input type="text">
+                <br>
                 <label for="amount">
                     <span class="input-label">Amount</span>
                     <div class="input-wrapper amount-wrapper">
-                        <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="10">
+                        <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="{{$totale}}" readonly>
                     </div>
                 </label>
 
@@ -35,6 +44,7 @@
             <button class="button" type="submit"><span>Test Transaction</span></button>
         </form>
     </main>
+                
             
     <script src="https://js.braintreegateway.com/web/dropin/1.30.0/js/dropin.min.js"></script>
     <script>

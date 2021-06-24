@@ -25,7 +25,7 @@
     <homerestaurant-component 
     :antipasti="{{$antipasti}}" 
     :primi="{{$primi}}" :secondi="{{$secondi}}" 
-    :checkout="'{{route('checkout')}}'" 
+    :checkout="'/client/checkout/'" 
     :dolci="{{$dolci}}">
     
     </homerestaurant-component>

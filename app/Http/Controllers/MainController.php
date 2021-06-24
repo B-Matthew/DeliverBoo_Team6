@@ -71,8 +71,8 @@ class MainController extends Controller
   }
 
   //Pagina Checkout
-  public function checkout() {
-
+  public function checkout($id) {
+    $totale = $id;
     $gateway = new Braintree\Gateway([
     'environment' => config('services.braintree.environment'),
     'merchantId' => config('services.braintree.merchantId'),
@@ -81,7 +81,7 @@ class MainController extends Controller
     ]);
 
     $token = $gateway -> ClientToken() -> generate();
-    return view('pages.Client.checkout', compact('token'));
+    return view('pages.Client.checkout', compact('token','totale'));
   }
 
   public function payment(Request $request) {

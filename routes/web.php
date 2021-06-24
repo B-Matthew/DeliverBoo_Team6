@@ -62,7 +62,7 @@ Route::get('/product/delete/{id}' , 'HomeController@deleteProduct')
         ->name('deleteProduct');
 
 // ROUTE CHECKOUT
-Route::get('/client/checkout' , 'MainController@checkout')
+Route::get('/client/checkout/{id}' , 'MainController@checkout')
         ->name('checkout');
 Route::post('/client/payment' , 'MainController@payment')
         ->name('payment');
