@@ -66,9 +66,16 @@ Route::get('/client/checkout/{id}' , 'MainController@checkout')
         ->name('checkout');
 Route::post('/client/payment' , 'MainController@payment')
         ->name('payment');
-
         
+// ROUTE DELETE RESTAURANT
+Route::get('/restaurant/delete/{id}' ,'HomeController@deleteRestaurant')
+        ->name('deleteRestaurant');
 
+// ROUTE EDIT RESTAURANT
+Route::get('/restaurant/edit/{id}' , 'HomeController@editRestaurant')
+        ->name('editRestaurant');
+Route::post('/restaurant/update/{id}', 'HomeController@updateRestaurant')
+        ->name('updateRestaurant');
 
 
 
