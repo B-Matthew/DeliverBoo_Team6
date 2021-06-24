@@ -1631,6 +1631,17 @@ footer .links h5 {
   color: #25385f;
 }
 
+#my-product .container-menu .products div ul li:last-child {
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#my-product .container-menu .products div ul li:last-child div a {
+  margin: 0 20px;
+  color: #25385f;
+}
+
 #my-product .container-menu .products div ul li > div {
   margin: 0 20px;
 }

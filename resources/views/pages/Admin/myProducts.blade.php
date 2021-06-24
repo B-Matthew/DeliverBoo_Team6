@@ -18,6 +18,7 @@
         </div>
 
     </section>
+    
     <div class="container-menu">
 
         <div>
@@ -39,9 +40,9 @@
                         @endif
                     </div>
 
-                    <ul>   
-                        <div>
-                            <li>
+                    <ul>
+                      <li>
+                              
                                 <div>
                                     <label for="ingredienti">INGREDIENTI</label>
                                     <h4>{{ $product -> ingredients }}</h4>
@@ -60,18 +61,22 @@
                                     <h4>{{ $product -> type }}</h4>
                                 </div>
 
-                        </div>
-                        <div>
+                              </li>
+
+                              <li>
+
+                                <div>
                             <a
                                 href="{{ route('editProduct' , encrypt($product -> id)) }}">
-                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-edit">  MODIFICA IL TUP PIATTO  </i>
                             </a>
-
+     
                             <a href="{{ route('deleteProduct', $product -> id) }}">
-                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-trash-alt">  CANCELLA IL TUO PIATTO </i>
                             </a>
-                        </div>
-                        </li>
+                        </div>   
+                              </li>
+                              
                     </ul>
                 </div>
             @endforeach
