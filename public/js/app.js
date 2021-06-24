@@ -119,6 +119,194 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomerestaurantComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HomerestaurantComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      'antipastoImg': "../../../storage/img/antipasti.png",
+      'primoImg': "../../../storage/img/primi.png",
+      'secondoImg': "../../../storage/img/secondi.png",
+      'totale': 0,
+      'carrello': []
+    };
+  },
+  props: ['antipasti', 'primi', 'secondi', 'dolci', 'checkout'],
+  methods: {
+    addProduct: function addProduct(nomeProdotto, prezzoProdotto) {
+      var currentProduct = {
+        'prodotto': '',
+        'prezzo': 0
+      };
+      currentProduct.prodotto = nomeProdotto;
+      currentProduct.prezzo = parseFloat(prezzoProdotto);
+      this.totale += currentProduct.prezzo;
+      this.carrello.push(currentProduct);
+    }
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SearchComponent.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SearchComponent.vue?vue&type=script&lang=js& ***!
@@ -747,6 +935,295 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomerestaurantComponent.vue?vue&type=template&id=185615e6&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HomerestaurantComponent.vue?vue&type=template&id=185615e6& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("section", { staticClass: "menu" }, [
+    _c("div", { staticClass: "aside-menu" }, [
+      _c("h2", [_vm._v("Antipasti")]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        _vm._l(_vm.antipasti, function(antipasto) {
+          return _c("li", [
+            _vm._v(
+              "\n                     " +
+                _vm._s(antipasto.name) +
+                "   \n                "
+            )
+          ])
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c("h2", [_vm._v("Primi")]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        _vm._l(_vm.primi, function(primo) {
+          return _c("li", [
+            _vm._v(
+              "\n                     " +
+                _vm._s(primo.name) +
+                "\n                "
+            )
+          ])
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c("h2", [_vm._v("Secondi")]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        _vm._l(_vm.secondi, function(secondo) {
+          return _c("li", [
+            _vm._v(
+              "\n                " + _vm._s(secondo.name) + "   \n           "
+            )
+          ])
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c("h2", [_vm._v("Dolce")]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        _vm._l(_vm.dolci, function(dolce) {
+          return _c("li", [
+            _vm._v(
+              "\n                     " +
+                _vm._s(dolce.name) +
+                "   \n                "
+            )
+          ])
+        }),
+        0
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container-menu" }, [
+      _c("div", { staticClass: "products" }, [
+        _c("div", [
+          _c("h2", [_vm._v("Antipasti")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.antipasti, function(antipasto) {
+              return _c("li", [
+                _c("div", [
+                  _c("h3", { attrs: { value: antipasto.name } }, [
+                    _vm._v(_vm._s(antipasto.name))
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(antipasto.ingredients))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(antipasto.description))]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fas fa-plus",
+                    on: {
+                      click: function($event) {
+                        return _vm.addProduct(antipasto.name, antipasto.price)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "image" }, [
+                  _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
+                  _vm._v(" "),
+                  _c("h4", [
+                    _vm._v(
+                      " \n                               " +
+                        _vm._s(antipasto.price) +
+                        "    \n                               "
+                    ),
+                    _c("i", { staticClass: "fas fa-euro-sign" })
+                  ])
+                ])
+              ])
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Primi")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.primi, function(primo) {
+              return _c("li", [
+                _c("div", [
+                  _c("h3", [_vm._v(_vm._s(primo.name))]),
+                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(primo.ingredients))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(primo.description))]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fas fa-plus",
+                    on: {
+                      click: function($event) {
+                        return _vm.addProduct(primo.name, primo.price)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "image" }, [
+                  _c("img", { attrs: { src: _vm.primoImg, alt: "" } }),
+                  _vm._v(" "),
+                  _c("h4", [
+                    _vm._v(
+                      " \n                               " +
+                        _vm._s(primo.price) +
+                        "    \n                               "
+                    ),
+                    _c("i", { staticClass: "fas fa-euro-sign" })
+                  ])
+                ])
+              ])
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Secondi")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.secondi, function(secondo) {
+              return _c("li", [
+                _c("div", [
+                  _c("h3", [_vm._v(_vm._s(secondo.name))]),
+                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(secondo.ingredients))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(secondo.description))]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fas fa-plus",
+                    on: {
+                      click: function($event) {
+                        return _vm.addProduct(secondo.name, secondo.price)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "image" }, [
+                  _c("img", { attrs: { src: _vm.secondoImg, alt: "" } }),
+                  _vm._v(" "),
+                  _c("h4", [
+                    _vm._v(
+                      " \n                               " +
+                        _vm._s(secondo.price) +
+                        "    \n                               "
+                    ),
+                    _c("i", { staticClass: "fas fa-euro-sign" })
+                  ])
+                ])
+              ])
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Dolce")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.dolci, function(dolce) {
+              return _c("li", [
+                _c("div", [
+                  _c("h3", [_vm._v(_vm._s(dolce.name))]),
+                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(dolce.ingredients))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(dolce.description))]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fas fa-plus",
+                    on: {
+                      click: function($event) {
+                        return _vm.addProduct(dolce.name, dolce.price)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "image" }, [
+                  _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
+                  _vm._v(" "),
+                  _c("h4", [
+                    _vm._v(
+                      " \n                               " +
+                        _vm._s(dolce.price) +
+                        "    \n                               "
+                    ),
+                    _c("i", { staticClass: "fas fa-euro-sign" })
+                  ])
+                ])
+              ])
+            }),
+            0
+          )
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "carrello" },
+      [
+        _c("h2", [_vm._v("Il tuo carrello")]),
+        _vm._v(" "),
+        _vm._l(_vm.carrello, function(ordine) {
+          return _c("ul", [
+            _c("li", [
+              _c("span", [_vm._v(_vm._s(ordine.prodotto))]),
+              _vm._v(" "),
+              _c("span", [_vm._v(_vm._s(ordine.prezzo))])
+            ])
+          ])
+        }),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Totale")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(_vm._s(_vm.totale))]),
+        _vm._v(" "),
+        _c("i", { staticClass: "fas fa-euro-sign" }),
+        _vm._v(" "),
+        _c("div", [
+          _c("button", [
+            _c("a", { attrs: { href: _vm.checkout } }, [
+              _vm._v("vai al pagamento")
+            ])
+          ])
+        ])
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -13118,6 +13595,7 @@ module.exports = g;
 
 var map = {
 	"./components/ExampleComponent.vue": "./resources/js/components/ExampleComponent.vue",
+	"./components/HomerestaurantComponent.vue": "./resources/js/components/HomerestaurantComponent.vue",
 	"./components/SearchComponent.vue": "./resources/js/components/SearchComponent.vue"
 };
 
@@ -13249,6 +13727,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/HomerestaurantComponent.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/HomerestaurantComponent.vue ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _HomerestaurantComponent_vue_vue_type_template_id_185615e6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomerestaurantComponent.vue?vue&type=template&id=185615e6& */ "./resources/js/components/HomerestaurantComponent.vue?vue&type=template&id=185615e6&");
+/* harmony import */ var _HomerestaurantComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomerestaurantComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/HomerestaurantComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _HomerestaurantComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _HomerestaurantComponent_vue_vue_type_template_id_185615e6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _HomerestaurantComponent_vue_vue_type_template_id_185615e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/HomerestaurantComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/HomerestaurantComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/HomerestaurantComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomerestaurantComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./HomerestaurantComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomerestaurantComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomerestaurantComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/HomerestaurantComponent.vue?vue&type=template&id=185615e6&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/HomerestaurantComponent.vue?vue&type=template&id=185615e6& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomerestaurantComponent_vue_vue_type_template_id_185615e6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./HomerestaurantComponent.vue?vue&type=template&id=185615e6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomerestaurantComponent.vue?vue&type=template&id=185615e6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomerestaurantComponent_vue_vue_type_template_id_185615e6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomerestaurantComponent_vue_vue_type_template_id_185615e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
