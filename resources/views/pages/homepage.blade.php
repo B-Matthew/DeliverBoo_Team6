@@ -88,7 +88,6 @@
                     </div>
                </li>
           </ul>
-          <div class="footer-wave"></div>
      </section>
 
 </main>

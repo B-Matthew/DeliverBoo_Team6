@@ -1,6 +1,16 @@
 footer {
      background-color: #1d1d1d;
      padding: 70px 8% 0 8%;
+     position: relative;
+
+     .footer-wave {
+          position: absolute;
+          width: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+          top: -100px;
+          left: -5px;
+     }
 
      .footer-list {
           @include flex(row, space-between, stretch, nowrap);
