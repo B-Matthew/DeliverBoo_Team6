@@ -4,6 +4,12 @@
     letter-spacing: 2px;
 }
 
+@mixin itim {
+    font-family: 'Itim', cursive;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
 @mixin baloo {
     font-family: 'Baloo 2', cursive;
     font-size: 20px;

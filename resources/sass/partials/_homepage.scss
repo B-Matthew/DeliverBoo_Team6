@@ -4,6 +4,7 @@
      box-sizing: border-box;
      list-style-type: none;
      text-decoration: none;
+     outline: none;
 }
    
 body {
@@ -94,7 +95,7 @@ body {
                padding: 40px 8%;
 
                h2 {
-                    @include indie;
+                    @include itim;
                     margin-bottom: 20px;
                     color: $blue;
                }
@@ -106,6 +107,7 @@ body {
                .searchbar {
                     @include baloo;
                     @include theButtonDesign($blue,$yellow, $yellow);
+                    color: $cream;
                     width: 30%;
                }
 
@@ -149,7 +151,7 @@ body {
                          margin: 20px;
                          border-radius: 20px;
                          border: 1px solid black;
-                         background-color: $cream;
+                         background-color: $blue;
                          transition: all 0.5s linear;
 
                          &:hover {
@@ -233,7 +235,7 @@ body {
                               
 
                               h3 {
-                                   @include indie;
+                                   @include itim;
                                    width: 100%;
                                    font-weight: normal;
                                    margin: 20px 0;

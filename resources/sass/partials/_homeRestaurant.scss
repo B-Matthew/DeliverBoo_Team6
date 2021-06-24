@@ -17,7 +17,7 @@
         @include flex(column, center, center, nowrap);
 
         h1 {
-           @include indie;
+           @include itim;
            font-size: 4.5vw;
            padding: 15px 0;
            color: $red;
@@ -39,7 +39,7 @@
             color: $blue;
 
             h2 {
-                @include indie;
+                @include itim;
                 margin: 10px 0;
             }
 
@@ -107,7 +107,7 @@
 
                 div {
                     h2 {
-                        @include indie;
+                        @include itim;
                         border: 1px solid black;
                         background-color: $yellow;
                         padding: 0 20px;
@@ -191,7 +191,7 @@
                 border-top-left-radius: 20px;
                 border-top-right-radius: 25px;
                 border-bottom: 3px solid $cream;
-                @include indie;
+                @include itim;
                 background-color: $yellow;
             }
 
@@ -216,7 +216,7 @@
             }
 
             h3 {
-                @include indie;
+                @include itim;
                 font-weight: normal;
                 padding: 40px 20px;
             }
