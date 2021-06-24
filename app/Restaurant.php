@@ -13,6 +13,7 @@ class Restaurant extends Model
         'telephone',
         'pIva',
         'img',
+        'deleted',
         'user_id',
     ];
 

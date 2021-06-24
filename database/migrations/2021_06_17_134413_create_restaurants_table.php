@@ -22,6 +22,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('telephone');
             $table->string('pIva');
             $table->string('img') -> nullable();
+            $table->boolean('deleted')->default(0);
             $table->bigInteger('user_id') -> unsigned() -> index();
 
             $table->timestamps();

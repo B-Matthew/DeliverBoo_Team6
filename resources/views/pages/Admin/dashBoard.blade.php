@@ -10,14 +10,18 @@
           <h3>I tuoi ristoranti</h3>
           <ul>
                @foreach ($user -> restaurants as $restaurant)
+               @if (!$restaurant -> deleted)
                <li>
                     <img src="{{asset('storage/restaurant-img/' . $restaurant -> img)}}" alt="">
                     <span><a href="{{route('myProduct' , encrypt($restaurant -> id))}}">{{$restaurant -> name}}</a></span>
+                    <a href="{{route('deleteRestaurant', $restaurant -> id)}}"><i class="fas fa-trash-alt"></i></a>
+                    <a href="{{route('editRestaurant' , encrypt($restaurant -> id))}}"><i class="fas fa-edit"></i></a>
                </li>
+               @endif
                @endforeach
           </ul>
      </section>
-
+                   
      <section class="create">
           <h2>Hai una nuova attività?</h2>
       

@@ -27,7 +27,7 @@ class RestaurantRequest extends FormRequest
             'name' => 'string|required|min:3',
             'address' => 'string|required|min:3',
             'city' => 'string|required|min:3',
-            'telephone' => 'numeric|required|min:5',
+            'telephone' => 'string|required|min:5',
             'pIva' => 'string|required|min:5',
             'img' => 'nullable|mimes:jpg,bmp,png,jpeg',
             'categories' => 'required|array',

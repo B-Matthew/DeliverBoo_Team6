@@ -14,6 +14,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393467932251',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 2,
         ],
         [
@@ -23,6 +24,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393438659751',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 3,
         ],
         [
@@ -32,6 +34,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393498375653',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 3,
         ],
         [
@@ -41,6 +44,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393433487623',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 4,
         ],
         [
@@ -50,6 +54,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393409826574',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 4,
         ],
         [
@@ -59,6 +64,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393469486756',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 1,
         ],
         [
@@ -68,6 +74,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+3934756473641',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 3,
         ],
         [
@@ -77,6 +84,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393352346656',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 2,
         ],
         [
@@ -86,6 +94,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393423396012',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 2,
         ],
         [
@@ -95,6 +104,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393469454756',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 1,
         ],
         [
@@ -104,6 +114,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393469423059',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 4,
         ],
         [
@@ -113,6 +124,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+39394758172',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 2,
         ],
         [
@@ -122,6 +134,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393947258172',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 3,
         ],
         [
@@ -131,6 +144,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+39334948391',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 4,
         ],
         [
@@ -140,6 +154,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+39334912391',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 1,
         ],
         [
@@ -149,6 +164,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+39334386391',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 2,
         ],
         [
@@ -158,6 +174,8 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393343863921',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
+         'deleted'  => false,
          'user_id' => 3,
         ],
         [
@@ -167,16 +185,18 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393343604934',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 1,
         ],
         [
-         'name' => 'Saloon Del Panino',
-         'address' => 'Via Nunzio, 10',
-         'city' => 'Salerno',
-         'telephone' => '+393654504934',
-         'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
-         'user_id' => 1 ,
+            'name' => 'Saloon Del Panino',
+            'address' => 'Via Nunzio, 10',
+            'city' => 'Salerno',
+            'telephone' => '+393654504934',
+            'pIva' => rand(100000000, 999999999),
+            'img'  => 'carne3.png',
+            'deleted'  => false,
+            'user_id' => 1 ,
         ],
         [
          'name' => "Pork'n roll",
@@ -185,6 +205,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'telephone' => '+393309897434',
          'pIva' => rand(100000000, 999999999),
          'img'  => 'carne3.png',
+         'deleted'  => false,
          'user_id' => 2,
         ],
     ];
