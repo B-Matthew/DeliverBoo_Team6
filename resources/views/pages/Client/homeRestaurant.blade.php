@@ -163,7 +163,7 @@
         </div>
 
         <div class="carrello">
-            <h2>il tuo carrello</h2>   
+            <h2>Il tuo carrello</h2>   
             <ul>
                 <li>
                     <span>nome piatto"aggiunto"</span>
@@ -179,7 +179,7 @@
                 </li>
             </ul>
     
-            <h3>totale</h3>
+            <h3>Totale</h3>
             <span>prezzo</span>
     
             <div>
