@@ -129,13 +129,18 @@
             <ul v-for ="ordine in carrello">
                 <li>
                     <span>{{ordine.prodotto}}</span>
-                    <span>{{ordine.prezzo}}</span>
+                    <div>
+                         <span>{{ordine.prezzo}} </span>
+                         <i class="fas fa-euro-sign"></i>
+                    </div>
                 </li>
             </ul>
     
             <h3>Totale</h3>
-            <span>{{totale}}</span>
-            <i class="fas fa-euro-sign"></i>
+            <div class="totalePrezzo">
+               <span>{{totale}}</span>
+               <i class="fas fa-euro-sign"></i>
+            </div>
     
             <div>
                 <button>

@@ -1277,7 +1277,7 @@ footer .links h5 {
   border: 3px solid #EEE7D7;
   background-color: #25385f;
   border-radius: 25px;
-  padding-bottom: 20px;
+  padding-bottom: 0 20px;
 }
 
 #home-restaurant .menu .carrello h2 {
@@ -1295,20 +1295,20 @@ footer .links h5 {
 #home-restaurant .menu .carrello h3,
 #home-restaurant .menu .carrello span {
   color: #EEE7D7;
-  padding: 20px 0;
+}
+
+#home-restaurant .menu .carrello ul {
+  padding: 20px 20px 0 20px;
 }
 
 #home-restaurant .menu .carrello ul li {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-}
-
-#home-restaurant .menu .carrello ul li span {
-  padding: 0 20px;
-}
-
-#home-restaurant .menu .carrello span {
-  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 #home-restaurant .menu .carrello h3 {
@@ -1321,6 +1321,7 @@ footer .links h5 {
 
 #home-restaurant .menu .carrello div {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #home-restaurant .menu .carrello div button {
@@ -1358,6 +1359,133 @@ footer .links h5 {
   position: sticky;
   position: -webkit-sticky;
   top: 100px;
+}
+
+#checkout {
+  background-color: #9dc09d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 100px 8%;
+}
+
+#checkout section {
+  flex-basis: 50%;
+}
+
+#checkout section form {
+  flex-basis: 50%;
+}
+
+#checkout section form fieldset {
+  border: 3px solid #F5B436;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#checkout section form fieldset legend {
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+#checkout section form fieldset label,
+#checkout section form fieldset input {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px;
+}
+
+#checkout section form fieldset input {
+  width: 100%;
+  height: 40px;
+  padding: 20px;
+  background-color: #F5B436;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: box-shadow 0.5s linear;
+}
+
+#checkout section form fieldset input:hover {
+  box-shadow: 5px 10px 3px #333232;
+}
+
+#checkout section form fieldset button {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  background-color: #ffc244;
+  border: 1px solid #ffc244;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.5s linear;
+}
+
+#checkout section form fieldset button:hover {
+  box-shadow: 5px 10px 3px #d24448;
+  border-color: #25385f;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#checkout section form .bt-drop-in-wrapper {
+  background-color: #ffc244;
+  border-radius: 25px;
+}
+
+#checkout section form .braintree-sheet {
+  background-color: #25385f;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#checkout section form .braintree-sheet__header {
+  border-color: #ffc244;
+}
+
+#checkout section form .braintree-sheet__text {
+  color: #EEE7D7;
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+#checkout section form .braintree-form__label {
+  color: #EEE7D7;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 20px;
+}
+
+#checkout section form ::-moz-placeholder {
+  color: #25385f;
+}
+
+#checkout section form :-ms-input-placeholder {
+  color: #25385f;
+}
+
+#checkout section form ::placeholder {
+  color: #25385f;
+}
+
+#checkout section form .braintree-form__field {
+  background-color: #EEE7D7;
+  border-radius: 10px;
+}
+
+#checkout section form .braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field {
+  border-radius: 10px;
+  border: 2px solid #ffc244;
+}
+
+#checkout section form .braintree-upper-container:before {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 #createProduct {

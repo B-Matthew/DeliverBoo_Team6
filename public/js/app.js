@@ -277,6 +277,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1200,16 +1205,22 @@ var render = function() {
             _c("li", [
               _c("span", [_vm._v(_vm._s(ordine.prodotto))]),
               _vm._v(" "),
-              _c("span", [_vm._v(_vm._s(ordine.prezzo))])
+              _c("div", [
+                _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")]),
+                _vm._v(" "),
+                _c("i", { staticClass: "fas fa-euro-sign" })
+              ])
             ])
           ])
         }),
         _vm._v(" "),
         _c("h3", [_vm._v("Totale")]),
         _vm._v(" "),
-        _c("span", [_vm._v(_vm._s(_vm.totale))]),
-        _vm._v(" "),
-        _c("i", { staticClass: "fas fa-euro-sign" }),
+        _c("div", { staticClass: "totalePrezzo" }, [
+          _c("span", [_vm._v(_vm._s(_vm.totale))]),
+          _vm._v(" "),
+          _c("i", { staticClass: "fas fa-euro-sign" })
+        ]),
         _vm._v(" "),
         _c("div", [
           _c("button", [
@@ -13888,8 +13899,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
