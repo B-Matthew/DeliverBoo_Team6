@@ -51,13 +51,14 @@
                             </div>
                         </label>                  
                     </div>
+                </fieldset>
                 
-                
+                <fieldset class="payment-card">
                     <div class="bt-drop-in-wrapper">
                         <div id="bt-dropin"></div>
                     </div>
                     <button class="button" type="submit"><span>Test Transaction</span></button>
-                </fieldset>  
+                </fieldset>
             </form>
         </section>
     </main>

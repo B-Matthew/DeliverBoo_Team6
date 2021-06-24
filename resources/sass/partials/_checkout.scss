@@ -1,15 +1,14 @@
 #checkout {
      background-color: $greenPastel;
-     @include flex(row, center, center, nowrap);
      padding: 100px 8%;
 
      section {
-          flex-basis: 50%;
 
           form {
-               flex-basis: 50%;
+               @include flex(row, space-between, center, nowrap);
 
                fieldset {
+                    flex-basis: calc(50% - 30px);
                     border: 3px solid #F5B436;
                     padding: 40px;
                     border-radius: 10px;
@@ -42,6 +41,11 @@
                          @include baloo;
                          @include theButtonDesign($yellow, $blue, $red);
                     }
+               }
+
+               .payment-card {
+                    border-color: transparent;
+                    text-align: center;
                }
 
                .bt-drop-in-wrapper {

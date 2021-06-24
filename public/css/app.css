@@ -1363,23 +1363,19 @@ footer .links h5 {
 
 #checkout {
   background-color: #9dc09d;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
   padding: 100px 8%;
 }
 
-#checkout section {
-  flex-basis: 50%;
-}
-
 #checkout section form {
-  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 #checkout section form fieldset {
+  flex-basis: calc(50% - 30px);
   border: 3px solid #F5B436;
   padding: 40px;
   border-radius: 10px;
@@ -1429,6 +1425,11 @@ footer .links h5 {
   border-color: #25385f;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+#checkout section form .payment-card {
+  border-color: transparent;
+  text-align: center;
 }
 
 #checkout section form .bt-drop-in-wrapper {
