@@ -1344,6 +1344,10 @@ footer .links h5 {
   font-size: 20px;
 }
 
+#home-restaurant .menu .carrello i {
+  color: #EEE7D7;
+}
+
 #home-restaurant a {
   text-decoration: none;
   color: black;
