@@ -1,6 +1,6 @@
 footer {
-     background-color: black;
-     padding: 70px 8%;
+     background-color: #1d1d1d;
+     padding: 70px 8% 0 8%;
 
      .footer-list {
           @include flex(row, space-between, stretch, nowrap);
