@@ -30,7 +30,8 @@ class AddForeignKeys extends Migration
 
             $table->foreign('product_id' , 'productOrder')
                 ->references('id')
-                ->on('products');
+                ->on('products')
+                ->onDelete('cascade');
         });
 
         Schema::table('products', function (Blueprint $table) {
