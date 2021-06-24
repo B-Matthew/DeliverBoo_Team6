@@ -37,6 +37,7 @@
      
 
      <section class="work">
+          <div class="wave"></div>
           
           <h2>Lavora con DeliverBoo</h2>
           
@@ -87,6 +88,7 @@
                     </div>
                </li>
           </ul>
+          <div class="footer-wave"></div>
      </section>
 
 </main>
