@@ -48,7 +48,7 @@ header aside div a {
 header nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: nowrap;
 }

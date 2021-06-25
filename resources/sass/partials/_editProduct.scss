@@ -2,6 +2,7 @@
    
     background-color: darkseagreen;
     padding: 100px 8%;
+    
 
     @include flex(row, center, center, nowrap);
 
@@ -17,6 +18,7 @@
             border-radius: 10px;
             padding: 5px 10px;
             outline: none;
+            
         }   
    
    

@@ -11,17 +11,17 @@
         <legend>Modifica Il Tuo Piatto</legend>
 
         <label class="" for="name">
-            <h4>Name</h4>
+            <h4>Nome</h4>
         </label>
         <input type="text" class="" id="name" name="name" value="{{ $product -> name }}">
 
         <label class="" for="ingredients">
-            <h4>Ingredients</h4>
+            <h4>Ingredienti</h4>
         </label>
         <input type="text" class="" id="ingredients" name="ingredients" value="{{ $product -> ingredients }}">
 
         <label class="" for="type">
-            <h4>Type</h4>
+            <h4>Tipo di piatto</h4>
         </label>
         <select required name="type" id="type-food">
             <option selected value="">Scegli il tipo</option>
@@ -31,16 +31,16 @@
             <option value="Dolce">Dolce</option>
         </select>
         <label class="" for="price">
-            <h4>Price</h4>
+            <h4>Prezzo</h4>
         </label>
         <input step=".01" type="number" class="" id="price" name="price" value="{{ $product -> price }}">
 
         <label class="" for="description">
-            <h4>Description</h4>
+            <h4>Descrizione</h4>
         </label>
         <textarea id="description" name="description" id="" cols="30" rows="10">{{ $product -> description }}</textarea >
 
-        <button type="submit" class="">Submit</button>
+        <button type="submit" class="">Aggiorna</button>
     </fieldset>
   </form>
 </div>     
