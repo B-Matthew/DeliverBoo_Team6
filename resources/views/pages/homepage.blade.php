@@ -47,7 +47,7 @@
           <ul>
                <li>
                     <div class="bg rider">
-                         
+                         <img src="{{asset('storage/img/riderPink.png')}}" alt="">
                     </div>
    
                     <div>
@@ -63,7 +63,7 @@
    
                <li>
                     <div class="bg ristorante">
-                         
+                         <img src="{{asset('storage/img/ristorante.png')}}" alt="">
                     </div>
                     <div>
                          <h3>Ristorante</h3>
@@ -77,8 +77,8 @@
                </li>
 
                <li>
-                    <div class="bg work">   
-                        
+                    <div class="bg">   
+                         <img src="{{asset('storage/img/lavora.png')}}" alt="">
                     </div>
                     <div>
                          <h3>Lavora con noi</h3>

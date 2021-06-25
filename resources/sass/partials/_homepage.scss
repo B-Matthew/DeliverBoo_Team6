@@ -13,13 +13,16 @@ body {
 
           .jumbotron, .delivery, .map {
                @include flex(row, space-between, center,  nowrap);
-               height: 100vh;
+               // height: 100vh;
                color: $blue;
+               
 
                .attach {
                     flex-basis: 40%;
+                    padding: 14% 0;
                     height: 100%;
                     width: auto;
+                    margin: 0 50px;
                }
 
                .text {
@@ -52,7 +55,7 @@ body {
 
           .jumbotron {
                background-color: $yellow;
-               padding: 100px 8%;
+               padding: 200px 8% 0 8%;
 
                .attach {
                    background-image: url(../img/donut.png);
@@ -237,28 +240,29 @@ body {
                ul {
                     @include flex(row, space-between, stretch, nowrap);
                     color: $blue;
-                    padding: 100px 8%;
+                    padding: 100px 10%;
 
                     li {
                          @include flex(column, flex-start, auto, nowrap);
                          flex-basis: calc(100% / 3 - 30px);
                          background-color: #f6f6f6;
-                         padding: 10px 10px 40px;
+                         padding: 20px 20px 40px;
                          border-radius: 20px;
-                         border: 1px solid $blue;
+                         border: 2px solid $blue;
                          transition: box-shadow 0.5s linear;    
 
                          &:hover {
-                              box-shadow: 20px 20px 3px black;
+                              box-shadow: 20px 20px 3px $blue;
                          }
 
                          div {
-                                   
+                    
                               &:last-child{
                                    display: flex;
                                    flex-direction: column;
                                    align-content: center;   
-                                   flex-grow: 1;   
+                                   flex-grow: 1;
+                                   padding: 0 15px;   
                               }   
                                  
                               &.bg{      
@@ -297,24 +301,29 @@ body {
 
                                    a {
                                         @include baloo;
-                                        color: black;
+                                        color: $blue;
                                    }
                               }
                          }
 
                          .bg{
-                              background-size: cover;  
-                              background-repeat: no-repeat; 
-                              background-position: center;    
-                              &.rider{
-                                   background-image: url('../img/rider.jpg');       
-                              }          
-                              &.ristorante{
-                                   background-image: url('../img/ristorante.jpg');
+                              background-color: $blue;  
+
+                              img {
+                                   width: auto;
+                                   max-height: 300px;
                               }
-                              &.work{
-                                   background-image: url('../storage/img/work.webp');   
-                              }
+                              // background-repeat: no-repeat; 
+                              // background-position: center;    
+                              // &.rider{
+                              //      background-image: url('../img/rider.jpg');       
+                              // }          
+                              // &.ristorante{
+                              //      background-image: url('../img/ristorante.jpg');
+                              // }
+                              // &.work{
+                              //      background-image: url('../storage/img/work.webp');   
+                              // }
                          }   
                     }      
                }   
