@@ -1,7 +1,7 @@
 @extends('layouts.main-layout')
 @section('content')
 
-<main id="my-product">
+<main id="my-product">   
 
 
     <section class="jumbotron">
@@ -18,6 +18,7 @@
         </div>
 
     </section>
+
     <div class="container-menu">
 
         <div>
@@ -39,39 +40,43 @@
                         @endif
                     </div>
 
-                    <ul>   
-                        <div>
-                            <li>
-                                <div>
-                                    <label for="ingredienti">INGREDIENTI</label>
-                                    <h4>{{ $product -> ingredients }}</h4>
-                                </div>
-                                <div>
-                                    <label for="descrizione">DESCRIZIONE</label>
-                                    <h4>{{ $product -> description }}</h4>
-                                </div>
+                    <ul>
+                        <li>
 
-                                <div>
-                                    <label for="prezzo">PREZZO</label>
-                                    <h4>{{ $product -> price }}</h4>
-                                </div>
-                                <div>
-                                    <label for="tipo">TIPO</label>
-                                    <h4>{{ $product -> type }}</h4>
-                                </div>
+                            <div>
+                                <label for="ingredienti">INGREDIENTI</label>
+                                <h4>{{ $product -> ingredients }}</h4>
+                            </div>
+                            <div>
+                                <label for="descrizione">DESCRIZIONE</label>
+                                <h4>{{ $product -> description }}</h4>
+                            </div>
 
-                        </div>
-                        <div>
-                            <a
-                                href="{{ route('editProduct' , encrypt($product -> id)) }}">
-                                <i class="fas fa-edit"></i>
-                            </a>
+                            <div>
+                                <label for="prezzo">PREZZO</label>
+                                <h4>{{ $product -> price }}</h4>
+                            </div>
+                            <div>
+                                <label for="tipo">TIPO</label>
+                                <h4>{{ $product -> type }}</h4>
+                            </div>
 
-                            <a href="{{ route('deleteProduct', $product -> id) }}">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
-                        </div>
                         </li>
+
+                        <li>
+
+                            <div>
+                                <a
+                                    href="{{ route('editProduct' , encrypt($product -> id)) }}">
+                                    <i class="fas fa-edit"> MODIFICA IL TUP PIATTO </i>
+                                </a>
+
+                                <a href="{{ route('deleteProduct', $product -> id) }}">
+                                    <i class="fas fa-trash-alt"> CANCELLA IL TUO PIATTO </i>
+                                </a>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             @endforeach

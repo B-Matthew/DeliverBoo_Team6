@@ -101,6 +101,19 @@
                         border-bottom: 2px solid $red;
                         color: $blue;
 
+                        &:last-child{
+                            border: none;
+                            justify-content: center;      
+                            align-items: center;   
+                            div{
+                                a{
+                                    margin: 0 20px; 
+                                    color:$blue;   
+                                }
+                            }
+                              
+                        }   
+
                         >div {
    
                             margin: 0 20px;

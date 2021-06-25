@@ -45,14 +45,10 @@ header aside div a {
   color: #EEE7D7;
 }
 
-header nav {
-  flex-basis: 70%;
-}
-
 header nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
   align-items: flex-start;
   flex-wrap: nowrap;
 }
@@ -64,6 +60,7 @@ header nav ul li {
   align-items: center;
   flex-wrap: nowrap;
   padding: 10px 20px;
+  margin-left: 20px;
   background-color: #25385f;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -983,19 +980,22 @@ footer .links h5 {
 }
 
 #dashboard .create form fieldset div label,
-#dashboard .create form fieldset div input {
+#dashboard .create form fieldset div input,
+#dashboard .create form fieldset div #myfilebutton {
   margin: 20px 50px 20px 0;
   font-size: 20px;
 }
 
 #dashboard .create form fieldset div label h4,
-#dashboard .create form fieldset div input h4 {
+#dashboard .create form fieldset div input h4,
+#dashboard .create form fieldset div #myfilebutton h4 {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-weight: normal;
 }
 
-#dashboard .create form fieldset div input {
+#dashboard .create form fieldset div input,
+#dashboard .create form fieldset div #myfilebutton {
   width: 100%;
   padding: 10px 20px;
   background-color: #F5B436;
@@ -1004,8 +1004,13 @@ footer .links h5 {
   transition: box-shadow 0.5s linear;
 }
 
-#dashboard .create form fieldset div input:hover {
+#dashboard .create form fieldset div input:hover,
+#dashboard .create form fieldset div #myfilebutton:hover {
   box-shadow: 5px 10px 3px #333232;
+}
+
+#dashboard .create form fieldset div #myfilebutton {
+  margin-top: 0;
 }
 
 #dashboard .create form fieldset .button {
@@ -1388,13 +1393,16 @@ footer .links h5 {
 }
 
 #createProduct form fieldset label,
-#createProduct form fieldset input {
+#createProduct form fieldset input,
+#createProduct form fieldset #myfilebutton {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   margin: 20px 0;
+  cursor: pointer;
 }
 
-#createProduct form fieldset input {
+#createProduct form fieldset input,
+#createProduct form fieldset #myfilebutton {
   width: 100%;
   height: 40px;
   padding: 20px 10px;
@@ -1405,7 +1413,8 @@ footer .links h5 {
   transition: box-shadow 0.5s linear;
 }
 
-#createProduct form fieldset input:hover {
+#createProduct form fieldset input:hover,
+#createProduct form fieldset #myfilebutton:hover {
   box-shadow: 5px 10px 3px #333232;
 }
 
@@ -1418,6 +1427,7 @@ footer .links h5 {
   border-radius: 10px;
   margin: 10px;
   transition: all 0.5s linear;
+  cursor: pointer;
 }
 
 #createProduct form fieldset button:hover {
@@ -1466,13 +1476,16 @@ footer .links h5 {
 }
 
 #editProduct form fieldset label,
-#editProduct form fieldset input {
+#editProduct form fieldset input,
+#editProduct form fieldset #myfilebutton {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   margin: 20px 0;
+  cursor: pointer;
 }
 
-#editProduct form fieldset input {
+#editProduct form fieldset input,
+#editProduct form fieldset #myfilebutton {
   width: 100%;
   height: 40px;
   padding: 20px 10px;
@@ -1483,7 +1496,8 @@ footer .links h5 {
   transition: box-shadow 0.5s linear;
 }
 
-#editProduct form fieldset input:hover {
+#editProduct form fieldset input:hover,
+#editProduct form fieldset #myfilebutton:hover {
   box-shadow: 5px 10px 3px #333232;
 }
 
@@ -1496,6 +1510,7 @@ footer .links h5 {
   border-radius: 10px;
   margin: 10px;
   transition: all 0.5s linear;
+  cursor: pointer;
 }
 
 #editProduct form fieldset button:hover {
@@ -1631,6 +1646,17 @@ footer .links h5 {
   color: #25385f;
 }
 
+#my-product .container-menu .products div ul li:last-child {
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#my-product .container-menu .products div ul li:last-child div a {
+  margin: 0 20px;
+  color: #25385f;
+}
+
 #my-product .container-menu .products div ul li > div {
   margin: 0 20px;
 }
@@ -1646,6 +1672,100 @@ footer .links h5 {
   font-size: 20px;
   font-size: 23px;
   font-weight: normal;
+}
+
+#edit-restaurant {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #8fbc8f;
+  padding: 100px 0;
+}
+
+#edit-restaurant form {
+  flex-basis: 50%;
+}
+
+#edit-restaurant form fieldset {
+  border: 3px solid #F5B436;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#edit-restaurant form fieldset legend {
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+#edit-restaurant form fieldset label,
+#edit-restaurant form fieldset input,
+#edit-restaurant form fieldset #myfilebutton {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+#edit-restaurant form fieldset input,
+#edit-restaurant form fieldset #myfilebutton {
+  width: 100%;
+  height: 40px;
+  padding: 20px 10px;
+  background-color: #F5B436;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow 0.5s linear;
+}
+
+#edit-restaurant form fieldset input:hover,
+#edit-restaurant form fieldset #myfilebutton:hover {
+  box-shadow: 5px 10px 3px #333232;
+}
+
+#edit-restaurant form fieldset button {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  background-color: #ffc244;
+  border: 1px solid #ffc244;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+#edit-restaurant form fieldset button:hover {
+  box-shadow: 5px 10px 3px #333232;
+  border-color: black;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#edit-restaurant form fieldset #myfilebutton {
+  display: block;
+  padding: 5px 10px;
+}
+
+#edit-restaurant form fieldset ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#edit-restaurant form fieldset ul li {
+  display: flex;
+  flex-basis: 25%;
+}
+
+#edit-restaurant form fieldset ul li input {
+  width: 15px;
 }
 
 @media (max-width: 1600px) and (min-width: 1200px) {

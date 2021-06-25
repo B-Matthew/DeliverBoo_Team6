@@ -1,7 +1,7 @@
 @extends('layouts.main-layout')
 @section('content')
 
-<div id="editProduct">
+<div id="editProduct">   
 
   <form method="POST" action="{{ route('updateProduct', $product -> id) }}">
     @csrf
