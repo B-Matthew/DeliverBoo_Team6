@@ -33,10 +33,15 @@
                     <div class="head-product">
                         <h2>{{ $product -> name }}</h2>
                         @if($product -> availability)
-                            <i class="fas fa-check-circle"> DISPONIBILE </i>
+                        <div>
+                            <i class="fas fa-check-circle">  </i>
+                            DISPONIBILE
+                         </div>   
                         @else
-                            <i class="fas fa-times-circle"> NON DISPONIBILE </i>
-
+                        <div>
+                            <i class="fas fa-times-circle"> </i>
+                            NON DISPONIBILE 
+                        </div>   
                         @endif
                     </div>
 
@@ -54,7 +59,7 @@
 
                             <div>
                                 <label for="prezzo">PREZZO</label>
-                                <h4>{{ $product -> price }}</h4>
+                                <h4>{{ $product -> price }} €</h4>
                             </div>
                             <div>
                                 <label for="tipo">TIPO</label>
@@ -68,11 +73,13 @@
                             <div>
                                 <a
                                     href="{{ route('editProduct' , encrypt($product -> id)) }}">
-                                    <i class="fas fa-edit"> MODIFICA IL TUP PIATTO </i>
+                                    <i class="fas fa-edit"></i>
+                                    Modifica il tuo piatto
                                 </a>
 
                                 <a href="{{ route('deleteProduct', $product -> id) }}">
-                                    <i class="fas fa-trash-alt"> CANCELLA IL TUO PIATTO </i>
+                                    <i class="fas fa-trash-alt"></i>
+                                    Cancella il tuo piatto 
                                 </a>
                             </div>
                         </li>
@@ -85,3 +92,4 @@
 
 </main>
 @endsection
+

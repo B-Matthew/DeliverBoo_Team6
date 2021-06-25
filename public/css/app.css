@@ -962,6 +962,7 @@ footer .links h5 {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
+  padding-bottom: 200px;
 }
 
 #dashboard .restaurants h3 {
@@ -993,6 +994,7 @@ footer .links h5 {
   align-items: center;
   flex-wrap: nowrap;
   background-color: #8fbc8f;
+  padding-bottom: 200px;
 }
 
 #dashboard .create h2 {
@@ -1565,6 +1567,7 @@ footer .links h5 {
 #createProduct {
   background-color: darkseagreen;
   padding: 100px 8%;
+  padding-bottom: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1648,6 +1651,7 @@ footer .links h5 {
 #editProduct {
   background-color: darkseagreen;
   padding: 100px 8%;
+  padding-bottom: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1770,6 +1774,7 @@ footer .links h5 {
   padding: 40px 0;
   width: 80%;
   margin: auto;
+  padding-bottom: 200px;
 }
 
 #my-product .container-menu > div {
@@ -1879,6 +1884,7 @@ footer .links h5 {
   flex-wrap: nowrap;
   background-color: #8fbc8f;
   padding: 100px 0;
+  padding-bottom: 200px;
 }
 
 #edit-restaurant form {

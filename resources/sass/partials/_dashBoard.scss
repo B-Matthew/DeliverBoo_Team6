@@ -5,6 +5,7 @@
      grid-template-areas: 
           "welcome welcome welcome"
           "restaurants create create";
+      
 
      .welcome {
           grid-area: welcome;
@@ -26,6 +27,7 @@
           background-color: darkseagreen;
           padding: 50px 8%;
           @include flex(column, flex-start, flex-start, nowrap);
+          padding-bottom: 200px;  
 
           h3 {
                @include indie;
@@ -52,6 +54,7 @@
           padding: 50px 8% 0 0;
           @include flex(column, flex-start, center, nowrap);
           background-color: $green;
+          padding-bottom: 200px;    
 
           h2 {
                @include indie;
