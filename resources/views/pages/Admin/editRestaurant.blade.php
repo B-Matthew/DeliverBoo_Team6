@@ -26,11 +26,11 @@
                 <ul>
                     @foreach ($categories as $category)
                     <li>   
-                        <input id="category" class="checkbox-effect checkbox-effect-4" type="checkbox" name="categories[]" value="{{$category -> id}}">
+                        <input id="category" type="checkbox" name="categories[]" value="{{$category -> id}}">
                         <label for="category">{{$category->name}}</label>
                     </li>      
                     @endforeach
-                </ul>      
+                </ul>         
                 <button type="submit">Update</button>
             </fieldset>
         </form>

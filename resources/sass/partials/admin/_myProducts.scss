@@ -1,12 +1,10 @@
 #my-product {
     @include baloo;
-    // padding: 100px 8%;
     background-color: $greenPastel;
-    // display: flex;
-    // justify-content: space-between;   
     color: rgb(21, 22, 22);
 
     .jumbotron {
+        @include flex(column, center, center, nowrap);
         background-image: url(../img/ristorante-background.jpg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -14,7 +12,6 @@
         width: auto;
         max-height: 700px;
         padding: 15% 0;
-        @include flex(column, center, center, nowrap);
 
         h1 {
             @include itim;
@@ -36,12 +33,25 @@
         margin: auto;
         padding-bottom: 200px;
 
+        
+          
+        h4,
+        label,   
+        span{
+            font-family: 'baloo',   
+            cursive;
+            letter-spacing: 2px;
+            font-size: 20px;   
+            font-weight: normal;
+        }
+
         >div {
 
             text-align: center;
 
             >a {
 
+                @include baloo;
                 padding: 10px 20px;
                 background-color: $blue;
                 border: 1px solid transparent;
@@ -55,7 +65,7 @@
                 }
             }
         }
-   
+
         .products {
 
             div {
@@ -72,13 +82,16 @@
                         color: $blue;
                     }
 
-                    .fa-check-circle {
+                    .active {
                         color: rgb(35, 134, 35);
                     }
 
-                    .fa-times-circle {
+                    .not-active {
                         color: $red;
                     }
+
+
+
 
                 }
 
@@ -95,45 +108,47 @@
                     &:hover {
                         box-shadow: 10px 20px 7px rgb(51, 50, 50);
                     }
-                   
+
                     li {
-                        @include flex(row, flex-end, center, nowrap);
                         padding: 10px 20px 10px 5px;
                         border-bottom: 2px solid $red;
                         color: $blue;
-                        &:last-child{
+
+                        &:first-child {
+                            display: grid;
+                            grid-template-columns: 20% auto 10% 10%;
+                            grid-template-rows: auto;
+                            column-gap: 15px;
+                            word-break: break-all;
+                        }
+
+                        &:last-child {
+                            padding: 30px 0 10px;
                             border: none;
-                            justify-content: center;      
-                            align-items: center;   
-                            div{
-                                a{
-                                    margin: 0 20px; 
-                                    color:$blue;   
+                            justify-content: center;
+                            align-items: center;
+
+                            div {   
+                                a {
+                                    @include baloo;
+                                    background-color: $yellow;
+                                    border: 1px solid $blue;
+                                    padding: 10px 20px;
+                                    border-radius: 10px;
+                                    margin: 20px;
+                                    color: $blue;
+                                    transition: 1s;
+
+                                    &:hover {
+                                        background-color: $yellowPastel;
+                                    }
+
                                 }
                             }
-                              
-                        }   
 
-                        
-
-                        >div {
-   
-                            margin: 0 20px;
-
-                            
-                            &:nth-child(2) {
-                                max-width: 50%;   
-                                flex-grow: 1;         
-                                
-                            }   
                         }
-                              
-                        h4,
-                        label {
-                            @include baloo;
-                            font-size: 23px;
-                            font-weight: normal;
-                        }
+
+
                     }
 
 
@@ -142,6 +157,3 @@
         }
     }
 }
-
-                               
-
