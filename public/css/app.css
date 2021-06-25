@@ -103,17 +103,9 @@ body #homepage .map {
 }
 
 body #homepage .jumbotron .attach,
-body #homepage .jumbotron .text,
-body #homepage .delivery .attach,
-body #homepage .delivery .text,
-body #homepage .map .attach,
-body #homepage .map .text {
-  flex-basis: calc(50% - 20px);
-}
-
-body #homepage .jumbotron .attach,
 body #homepage .delivery .attach,
 body #homepage .map .attach {
+  flex-basis: 40%;
   height: 100%;
   width: auto;
 }
@@ -127,14 +119,15 @@ body #homepage .map .text {
   align-items: center;
   flex-wrap: nowrap;
   text-align: center;
+  flex-basis: 60%;
 }
 
 body #homepage .jumbotron .text h2,
 body #homepage .delivery .text h2,
 body #homepage .map .text h2 {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Rammetto One", cursive;
+  font-size: 3vw;
+  text-transform: uppercase;
 }
 
 body #homepage .jumbotron .text button,
@@ -174,15 +167,15 @@ body #homepage .map .text button a {
 
 body #homepage .jumbotron {
   background-color: #ffc244;
-  padding: 100px 8% 0 0;
+  padding: 100px 8%;
 }
 
 body #homepage .jumbotron .attach {
-  background-image: url(/images/carne3.png?bb551793b9c3d22c73dad6d6d2ea9973);
+  background-image: url(/images/donut.png?321ecd7718fb1035814db3f9e888a836);
+  border-radius: 20px;
   background-repeat: no-repeat;
-  background-size: 40% auto;
+  background-size: 100% auto;
   background-position: 2% 50%;
-  background-attachment: fixed;
 }
 
 body #homepage .delivery {
@@ -214,7 +207,49 @@ body #homepage .map .attach {
 body #homepage #categories {
   background-color: #9dc09d;
   text-align: center;
-  padding: 40px 8%;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+body #homepage #categories .container {
+  position: relative;
+  background: #ffc244;
+  height: 20vh;
+  z-index: -1;
+}
+
+body #homepage #categories .container .wave {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  background: #ffc244;
+  bottom: 0;
+  z-index: -1;
+}
+
+body #homepage #categories .container .wave::before,
+body #homepage #categories .container .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+body #homepage #categories .container .wave::before {
+  width: 55%;
+  height: 100%;
+  background-color: #ffc244;
+  right: -1.5%;
+  top: 40%;
+}
+
+body #homepage #categories .container .wave::after {
+  width: 55%;
+  height: 109%;
+  background-color: #9dc09d;
+  left: -1.5%;
+  top: 60%;
 }
 
 body #homepage #categories h2 {
@@ -223,6 +258,7 @@ body #homepage #categories h2 {
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: #25385f;
+  margin-top: 10%;
 }
 
 body #homepage #categories ::-moz-placeholder {
@@ -263,7 +299,7 @@ body #homepage #categories .typeOfFoods {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 20px 8%;
 }
 
 body #homepage #categories .typeOfFoods li {
@@ -334,7 +370,7 @@ body #homepage #categories .restaurants {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 30px 0;
+  padding: 30px 8%;
 }
 
 body #homepage #categories .restaurants li {
