@@ -60,7 +60,8 @@ class MainController extends Controller
     
   // Pagina Info web
   public function infoWebPage() {
-
+    
+    
     return view('pages.Client.infoWebPage');
   }
 
@@ -120,7 +121,15 @@ class MainController extends Controller
         return back()->withErrors('Si è verificato un errore: ' .$result -> message);
     }
   }
-}
+
+  public function submit(Request $request) 
+  {
+    
+    dd($request);
+  }
+
+  
+ }
 
     
   

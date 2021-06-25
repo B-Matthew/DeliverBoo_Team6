@@ -45,7 +45,7 @@
                                    <h3 :value="antipasto.name">{{ antipasto.name }}</h3> 
                                    <h5>{{ antipasto.ingredients }}</h5> 
                                    <p>{{ antipasto.description }}</p>
-                                   <i @click="addProduct(antipasto.name, antipasto.price)" class="fas fa-plus"></i>  
+                                   <i @click="addProduct(antipasto.name, antipasto.price,antipasto.id)" class="fas fa-plus"></i>  
                               </div>   
 
                               <div class="image">
@@ -66,7 +66,7 @@
                                    <h3>{{ primo.name }}</h3> 
                                    <h5>{{ primo.ingredients }}</h5> 
                                    <p>{{ primo.description }}</p>
-                                   <i @click="addProduct(primo.name, primo.price)"class="fas fa-plus"></i> 
+                                   <i @click="addProduct(primo.name, primo.price,primo.id)"class="fas fa-plus"></i> 
                               </div>
                               
                               <div class="image">
@@ -87,7 +87,7 @@
                                    <h3>{{ secondo.name }}</h3> 
                                    <h5>{{ secondo.ingredients }}</h5> 
                                    <p>{{ secondo.description }}</p>
-                                   <i @click="addProduct(secondo.name, secondo.price)" class="fas fa-plus"></i> 
+                                   <i @click="addProduct(secondo.name, secondo.price,secondo.id)" class="fas fa-plus"></i> 
                               </div>   
 
                               <div class="image">
@@ -108,7 +108,7 @@
                                    <h3>{{ dolce.name }}</h3> 
                                    <h5>{{ dolce.ingredients }}</h5> 
                                    <p>{{ dolce.description }}</p>
-                                   <i @click="addProduct(dolce.name, dolce.price)" class="fas fa-plus"></i>  
+                                   <i @click="addProduct(dolce.name, dolce.price,dolce.id)" class="fas fa-plus"></i>  
                               </div>   
 
                               <div class="image">
@@ -125,10 +125,13 @@
         </div>
 
         <div class="carrello">
+             <form method="post" :action="routeSubmit">
+            <input type="hidden" name="_token" v-bind:value="csrf">   
             <h2>Il tuo carrello</h2>   
             <ul v-for ="ordine in carrello">
                 <li>
                     <span>{{ordine.prodotto}}</span>
+                    <input type="text" name="product_id[]" v-model="ordine.id">
                     <div>
                          <span>{{ordine.prezzo}} </span>
                          <i class="fas fa-euro-sign"></i>
@@ -138,15 +141,15 @@
     
             <h3>Totale</h3>
             <div class="totalePrezzo">
+               <input type="text" name="price" v-model="totale">
                <span>{{totale}}</span>
                <i class="fas fa-euro-sign"></i>
             </div>
     
             <div>
-                <button>
-                    <a :href="checkout + totale">vai al pagamento</a>
-                </button>      
+                <button type="submit">Vai al pagamento</button>  
             </div>   
+            </form>
         </div>
         
     </section>
@@ -161,25 +164,32 @@
                    'secondoImg': "../../../storage/img/secondi.png",
                    'totale': 0,
                    'carrello': [],
+                   'inputs' : {},
+                   'errors' : {},
               }
           },
-          props: ['antipasti','primi','secondi','dolci','checkout'],
+          props: ['antipasti','primi','secondi','dolci','checkout','routeSubmit','csrf'],
 
           methods: {
                
-               addProduct: function(nomeProdotto, prezzoProdotto) {
+               addProduct: function(nomeProdotto, prezzoProdotto, idProdotto) {
                     let currentProduct = {
                         'prodotto': '',
                          'prezzo' : 0,
+                         'id' :0,
                      };
                     currentProduct.prodotto = nomeProdotto;
                     currentProduct.prezzo = parseFloat(prezzoProdotto);
+                    currentProduct.id = parseInt(idProdotto);
                     this.totale += currentProduct.prezzo;
                     this.carrello.push(currentProduct);
-               }
+               },
           },
         mounted() {
             console.log('Component mounted.')
         }
     }
 </script>
+
+               
+               

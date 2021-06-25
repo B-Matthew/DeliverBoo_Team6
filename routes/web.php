@@ -23,7 +23,7 @@ Route::get('/', 'MainController@homepage')
         ->name('homepage');
 
 // ROUTE 'CHI SIAMO'
-Route::get('info', 'MainController@infoWebPage')
+Route::get('info/', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
 // ROUTE FAQ
@@ -77,7 +77,8 @@ Route::get('/restaurant/edit/{id}' , 'HomeController@editRestaurant')
 Route::post('/restaurant/update/{id}', 'HomeController@updateRestaurant')
         ->name('updateRestaurant');
 
-
+Route::post('/submit', 'MainController@submit')
+        ->name('submit');
 
 
 

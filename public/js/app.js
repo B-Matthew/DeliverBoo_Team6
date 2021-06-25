@@ -282,6 +282,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -289,18 +292,22 @@ __webpack_require__.r(__webpack_exports__);
       'primoImg': "../../../storage/img/primi.png",
       'secondoImg': "../../../storage/img/secondi.png",
       'totale': 0,
-      'carrello': []
+      'carrello': [],
+      'inputs': {},
+      'errors': {}
     };
   },
-  props: ['antipasti', 'primi', 'secondi', 'dolci', 'checkout'],
+  props: ['antipasti', 'primi', 'secondi', 'dolci', 'checkout', 'routeSubmit', 'csrf'],
   methods: {
-    addProduct: function addProduct(nomeProdotto, prezzoProdotto) {
+    addProduct: function addProduct(nomeProdotto, prezzoProdotto, idProdotto) {
       var currentProduct = {
         'prodotto': '',
-        'prezzo': 0
+        'prezzo': 0,
+        'id': 0
       };
       currentProduct.prodotto = nomeProdotto;
       currentProduct.prezzo = parseFloat(prezzoProdotto);
+      currentProduct.id = parseInt(idProdotto);
       this.totale += currentProduct.prezzo;
       this.carrello.push(currentProduct);
     }
@@ -1048,7 +1055,11 @@ var render = function() {
                     staticClass: "fas fa-plus",
                     on: {
                       click: function($event) {
-                        return _vm.addProduct(antipasto.name, antipasto.price)
+                        return _vm.addProduct(
+                          antipasto.name,
+                          antipasto.price,
+                          antipasto.id
+                        )
                       }
                     }
                   })
@@ -1088,7 +1099,7 @@ var render = function() {
                     staticClass: "fas fa-plus",
                     on: {
                       click: function($event) {
-                        return _vm.addProduct(primo.name, primo.price)
+                        return _vm.addProduct(primo.name, primo.price, primo.id)
                       }
                     }
                   })
@@ -1128,7 +1139,11 @@ var render = function() {
                     staticClass: "fas fa-plus",
                     on: {
                       click: function($event) {
-                        return _vm.addProduct(secondo.name, secondo.price)
+                        return _vm.addProduct(
+                          secondo.name,
+                          secondo.price,
+                          secondo.id
+                        )
                       }
                     }
                   })
@@ -1168,7 +1183,7 @@ var render = function() {
                     staticClass: "fas fa-plus",
                     on: {
                       click: function($event) {
-                        return _vm.addProduct(dolce.name, dolce.price)
+                        return _vm.addProduct(dolce.name, dolce.price, dolce.id)
                       }
                     }
                   })
@@ -1194,47 +1209,99 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "carrello" },
-      [
-        _c("h2", [_vm._v("Il tuo carrello")]),
-        _vm._v(" "),
-        _vm._l(_vm.carrello, function(ordine) {
-          return _c("ul", [
-            _c("li", [
-              _c("span", [_vm._v(_vm._s(ordine.prodotto))]),
-              _vm._v(" "),
-              _c("div", [
-                _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")]),
+    _c("div", { staticClass: "carrello" }, [
+      _c(
+        "form",
+        { attrs: { method: "post", action: _vm.routeSubmit } },
+        [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrf }
+          }),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Il tuo carrello")]),
+          _vm._v(" "),
+          _vm._l(_vm.carrello, function(ordine) {
+            return _c("ul", [
+              _c("li", [
+                _c("span", [_vm._v(_vm._s(ordine.prodotto))]),
                 _vm._v(" "),
-                _c("i", { staticClass: "fas fa-euro-sign" })
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: ordine.id,
+                      expression: "ordine.id"
+                    }
+                  ],
+                  attrs: { type: "text", name: "product_id[]" },
+                  domProps: { value: ordine.id },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(ordine, "id", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")]),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "fas fa-euro-sign" })
+                ])
               ])
             ])
-          ])
-        }),
-        _vm._v(" "),
-        _c("h3", [_vm._v("Totale")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "totalePrezzo" }, [
-          _c("span", [_vm._v(_vm._s(_vm.totale))]),
+          }),
           _vm._v(" "),
-          _c("i", { staticClass: "fas fa-euro-sign" })
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("button", [
-            _c("a", { attrs: { href: _vm.checkout + _vm.totale } }, [
-              _vm._v("vai al pagamento")
-            ])
-          ])
-        ])
-      ],
-      2
-    )
+          _c("h3", [_vm._v("Totale")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "totalePrezzo" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.totale,
+                  expression: "totale"
+                }
+              ],
+              attrs: { type: "text", name: "price" },
+              domProps: { value: _vm.totale },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.totale = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.totale))]),
+            _vm._v(" "),
+            _c("i", { staticClass: "fas fa-euro-sign" })
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ],
+        2
+      )
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("button", { attrs: { type: "submit" } }, [_vm._v("Vai al pagamento")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -13899,8 +13966,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

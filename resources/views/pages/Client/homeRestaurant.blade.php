@@ -26,7 +26,9 @@
     :antipasti="{{$antipasti}}" 
     :primi="{{$primi}}" :secondi="{{$secondi}}" 
     :checkout="'/client/checkout/'" 
-    :dolci="{{$dolci}}">
+    :dolci="{{$dolci}}"
+    route-submit="{{route('submit')}}"
+    csrf="{{csrf_token()}}">
     
     </homerestaurant-component>
     
