@@ -205,7 +205,7 @@ body #homepage .map .attach {
 }
 
 body #homepage #categories {
-  background-color: #9dc09d;
+  background-color: #f6f6f6;
   text-align: center;
   position: relative;
   z-index: 0;
@@ -247,7 +247,7 @@ body #homepage #categories .container .wave::before {
 body #homepage #categories .container .wave::after {
   width: 55%;
   height: 109%;
-  background-color: #9dc09d;
+  background-color: #f6f6f6;
   left: -1.5%;
   top: 60%;
 }
@@ -256,21 +256,21 @@ body #homepage #categories h2 {
   font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   color: #25385f;
   margin-top: 10%;
 }
 
 body #homepage #categories ::-moz-placeholder {
-  color: #EEE7D7;
+  color: #f6f6f6;
 }
 
 body #homepage #categories :-ms-input-placeholder {
-  color: #EEE7D7;
+  color: #f6f6f6;
 }
 
 body #homepage #categories ::placeholder {
-  color: #EEE7D7;
+  color: #f6f6f6;
 }
 
 body #homepage #categories .searchbar {
@@ -282,7 +282,7 @@ body #homepage #categories .searchbar {
   border-radius: 10px;
   margin: 10px;
   transition: all 0.5s linear;
-  color: #EEE7D7;
+  color: #f6f6f6;
   width: 30%;
 }
 
@@ -299,13 +299,13 @@ body #homepage #categories .typeOfFoods {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px 8%;
+  padding: 100px 8%;
 }
 
 body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  margin: 10px;
+  margin: 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -325,7 +325,7 @@ body #homepage #categories .typeOfFoods li div {
 body #homepage #categories .typeOfFoods li div .checkbox {
   -webkit-appearance: none;
   background-color: #ffc244;
-  border: 1px solid #ffc244;
+  border: 3px solid #9dc09d;
   padding: 10px;
   border-radius: 5px;
   margin: 0 10px;
@@ -336,12 +336,12 @@ body #homepage #categories .typeOfFoods li div .checkbox {
 }
 
 body #homepage #categories .typeOfFoods li div .checkbox:hover {
-  border-color: black;
+  border-color: #9dc09d;
 }
 
 body #homepage #categories .typeOfFoods li div .checkbox:checked {
   background-color: #ffc244;
-  border: 1px solid black;
+  border-color: #d24448;
 }
 
 body #homepage #categories .typeOfFoods li div .checkbox:checked:after {
@@ -370,15 +370,15 @@ body #homepage #categories .restaurants {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 30px 8%;
+  padding: 30px 10%;
 }
 
 body #homepage #categories .restaurants li {
   flex-basis: calc(100% / 3 - 40px);
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid black;
-  background-color: #25385f;
+  border: 3px solid #25385f;
+  background-color: #ffc244;
   transition: all 0.5s linear;
 }
 
@@ -387,11 +387,11 @@ body #homepage #categories .restaurants li:hover {
 }
 
 body #homepage #categories .restaurants li a {
-  color: #25385f;
+  color: #EEE7D7;
 }
 
 body #homepage #categories .restaurants li a h3 {
-  background-color: #ffc244;
+  background-color: #25385f;
   padding: 10px;
   font-family: "Baloo 2", cursive;
   font-size: 20px;
@@ -404,18 +404,17 @@ body #homepage #categories .restaurants li a h3 {
 body #homepage #categories .restaurants li a div {
   height: 308px;
   width: 100%;
-  padding: 5px;
+  padding: 10px;
 }
 
 body #homepage #categories .restaurants li img {
   width: 100%;
   height: 100%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
 }
 
 body #homepage .work {
-  background-color: #ffc244;
+  background-color: #9dc09d;
   padding-bottom: 150px;
   text-align: center;
   position: relative;
@@ -425,7 +424,7 @@ body #homepage .work {
 
 body #homepage .work .container {
   position: relative;
-  background: #9dc09d;
+  background: #f6f6f6;
   height: 20vh;
   z-index: -1;
 }
@@ -434,7 +433,7 @@ body #homepage .work .container .wave {
   position: absolute;
   height: 250px;
   width: 100%;
-  background: #9dc09d;
+  background: #f6f6f6;
   bottom: 0;
   z-index: -1;
 }
@@ -450,7 +449,7 @@ body #homepage .work .container .wave::after {
 body #homepage .work .container .wave::before {
   width: 55%;
   height: 100%;
-  background-color: #9dc09d;
+  background-color: #f6f6f6;
   right: -1.5%;
   top: 40%;
 }
@@ -458,17 +457,17 @@ body #homepage .work .container .wave::before {
 body #homepage .work .container .wave::after {
   width: 55%;
   height: 109%;
-  background-color: #ffc244;
+  background-color: #9dc09d;
   left: -1.5%;
   top: 60%;
 }
 
 body #homepage .work h2 {
-  font-family: "Indie Flower", cursive;
+  font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
   margin: 10% 0 20px 0;
-  color: #25385f;
+  color: #f6f6f6;
 }
 
 body #homepage .work ul {
@@ -477,7 +476,7 @@ body #homepage .work ul {
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: nowrap;
-  color: #EEE7D7;
+  color: #25385f;
   padding: 100px 8%;
 }
 
@@ -488,10 +487,10 @@ body #homepage .work ul li {
   align-items: auto;
   flex-wrap: nowrap;
   flex-basis: calc(100% / 3 - 30px);
-  background-color: #25385f;
+  background-color: #f6f6f6;
   padding: 10px 10px 40px;
   border-radius: 20px;
-  border: 1px solid #EEE7D7;
+  border: 1px solid #25385f;
   transition: box-shadow 0.5s linear;
 }
 
@@ -546,6 +545,7 @@ body #homepage .work ul li div button {
   width: fit-content;
   align-self: center;
   justify-self: end;
+  border: 1px solid #25385f;
 }
 
 body #homepage .work ul li div button:hover {
@@ -632,13 +632,13 @@ footer .footer-list ul li:first-child {
 footer .footer-list ul li:first-child strong {
   font-family: "itim", cursive;
   font-size: 25px;
-  color: #EEE7D7;
+  color: #f6f6f6;
 }
 
 footer .footer-list ul li a {
   font-family: "Baloo 2", cursive;
   font-size: 16px;
-  color: #EEE7D7;
+  color: #f6f6f6;
 }
 
 footer .footer-list ul li a img {
