@@ -32,7 +32,7 @@
 
     .menu {
         @include flex(row, space-between, flex-start, nowrap);
-        padding: 5% 8%;
+        padding: 5% 8% 200px 8%;
 
         .aside-menu {
             flex-basis: 20%;

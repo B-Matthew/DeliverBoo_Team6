@@ -6,6 +6,7 @@
 
           form {
                @include flex(row, space-between, center, nowrap);
+               margin-bottom: 200px;
 
                fieldset {
                     flex-basis: calc(50% - 30px);

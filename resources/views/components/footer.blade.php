@@ -1,5 +1,8 @@
 <footer>
-     <img class="footer-wave" src="{{asset('storage/img/footer-wave.svg')}}" alt="">
+     <div class="footer-wave">
+          <img src="{{asset('storage/img/footer-wave.svg')}}" alt="">
+     </div>
+     
      <section class="footer-list">
           
           <ul>
