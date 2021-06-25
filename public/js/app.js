@@ -1235,7 +1235,7 @@ var render = function() {
                       expression: "ordine.id"
                     }
                   ],
-                  attrs: { type: "text", name: "product_id[]" },
+                  attrs: { type: "hidden", name: "product_id[]" },
                   domProps: { value: ordine.id },
                   on: {
                     input: function($event) {
@@ -1268,7 +1268,7 @@ var render = function() {
                   expression: "totale"
                 }
               ],
-              attrs: { type: "text", name: "price" },
+              attrs: { type: "hidden", name: "price" },
               domProps: { value: _vm.totale },
               on: {
                 input: function($event) {

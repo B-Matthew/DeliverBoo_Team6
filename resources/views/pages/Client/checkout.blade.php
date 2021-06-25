@@ -19,35 +19,35 @@
                 </div>
             @endif
 
-            <form method="post" id="payment-form" action="{{route('payment')}}">
+            <form method="post" id="payment-form" action="{{route('payment', $order->id)}}">
                 @csrf
                 <fieldset>
                     <legend>Pagamento</legend>
                     <div>
                         <label for="name">Nome</label>
-                        <input id="name" type="text" required autocomplete="name" autofocus>                    
+                        <input id="name" name="name" type="text" required autocomplete="name" autofocus>                    
                     </div>
     
                     <div>
                         <label for="lastname">Cognome</label>
-                        <input id="lastname" type="text" required autocomplete="lastname" autofocus>                    
+                        <input id="lastname" name="lastname" type="text" required autocomplete="lastname" autofocus>                    
                     </div>
                     
                     <div>
                         <label for="address">indirizzo</label>
-                        <input id="address" type="text" required autocomplete="address" autofocus>                    
+                        <input id="address" name="address" type="text" required autocomplete="address" autofocus>                    
                     </div>
     
                     <div>
                         <label for="email">Email</label>
-                        <input id="name" type="email" required autocomplete="email" autofocus>                    
+                        <input id="name" name="email" type="email" required autocomplete="email" autofocus>                    
                     </div>
             
                     <div>
                         <label for="amount">
                             <span class="input-label">Amount</span>
                             <div class="input-wrapper amount-wrapper">
-                                <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="{{$totale}}" readonly>
+                                <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" readonly value="{{$order->price}}">
                             </div>
                         </label>                  
                     </div>

@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 use App\Restaurant;
 use App\Category;
 use App\Product;
+use App\Order;
 use Braintree;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
@@ -73,19 +76,19 @@ class MainController extends Controller
 
   //Pagina Checkout
   public function checkout($id) {
-    $totale = $id;
+    
     $gateway = new Braintree\Gateway([
     'environment' => config('services.braintree.environment'),
     'merchantId' => config('services.braintree.merchantId'),
     'publicKey' => config('services.braintree.publicKey'),
     'privateKey' => config('services.braintree.privateKey')
     ]);
-
+    $order = Order::findOrFail(Crypt::decrypt($id));
     $token = $gateway -> ClientToken() -> generate();
-    return view('pages.Client.checkout', compact('token','totale'));
+    return view('pages.Client.checkout', compact('token','order'));
   }
 
-  public function payment(Request $request) {
+  public function payment(Request $request, $id) {
 
     $gateway = new Braintree\Gateway([
     'environment' => config('services.braintree.environment'),
@@ -93,7 +96,14 @@ class MainController extends Controller
     'publicKey' => config('services.braintree.publicKey'),
     'privateKey' => config('services.braintree.privateKey')
     ]);
-    
+
+    $data = $request -> validate([
+      'name' => 'string|required|min:3',
+      'lastname' => 'string|required|min:3',
+      'address' => 'string|required|min:3',
+      'email' => 'string|required|min:3',
+    ]);
+      
     
     $amount = $request -> amount;
     
@@ -107,8 +117,12 @@ class MainController extends Controller
     
     if ($result -> success) {
         $transaction = $result->transaction;
-        // header("Location: " . $baseUrl . "transaction.php?id=" . $transaction->id);
-        return back()->with('success_message','Transazione eseguita. L ID della transazione è: ' .$transaction -> id);
+
+        $order = Order::findOrFail($id);
+        $order -> confirmed = true;
+        $order -> update($data);
+        
+        return redirect() -> route('transaction', encrypt($transaction -> id));
     } else {
         $errorString = "";
 
@@ -116,20 +130,37 @@ class MainController extends Controller
             $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
         }
 
-        // $_SESSION["errors"] = $errorString;
-        // header("Location: " . $baseUrl . "index.php");
         return back()->withErrors('Si è verificato un errore: ' .$result -> message);
     }
   }
-
+       
   public function submit(Request $request) 
   {
+    $data = $request -> validate([
+      'price' => 'required',
+      'product_id' => 'required|array',
+      'product_id.*' => 'required',
+    ]);
+      
+    $order = new Order();
+    $order->fill($data);
+    $order->save();
+    $order -> products() -> sync($data['product_id']);
+    $order->save();
     
-    dd($request);
+    return redirect() -> route('checkout', encrypt($order-> id));
   }
+   
+  public function transaction($id) {
+    
+    $transaction = Crypt::decrypt($id);
+    return view('pages.Client.transaction',compact('transaction'));
+  }
+}
+    
+
 
   
- }
 
     
   
@@ -152,4 +183,9 @@ class MainController extends Controller
       
                 
    
+
+      
+
+
+    
 
