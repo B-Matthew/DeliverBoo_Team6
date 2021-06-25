@@ -215,8 +215,8 @@ body #homepage .map .attach {
 }
 
 body #homepage #categories {
-  background: #FFF5DA;
-  background: linear-gradient(180deg, #FFF5DA 74%, white 92%);
+  background: #9dc09d;
+  background: linear-gradient(180deg, #9dc09d 74%, white 92%);
   text-align: center;
   padding: 40px 8%;
 }
@@ -270,27 +270,27 @@ body #homepage #categories .typeOfFoods {
   padding: 20px 0;
 }
 
-body #homepage #categories .typeOfFoods .checkbox-active {
-  border: 2px solid #ffc244;
-}
-
 body #homepage #categories .typeOfFoods li {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  color: #EEE7D7;
-  background-color: #25385f;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid transparent;
   margin: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 }
 
-body #homepage #categories .typeOfFoods li .checkbox {
+body #homepage #categories .typeOfFoods li img {
+  width: 50%;
+  height: auto;
+}
+
+body #homepage #categories .typeOfFoods li div {
+  padding: 10px;
+}
+
+body #homepage #categories .typeOfFoods li div .checkbox {
   -webkit-appearance: none;
   background-color: #ffc244;
   border: 1px solid #ffc244;
@@ -300,18 +300,19 @@ body #homepage #categories .typeOfFoods li .checkbox {
   transition: all 0.3s linear;
   position: relative;
   flex-basis: 10%;
+  vertical-align: middle;
 }
 
-body #homepage #categories .typeOfFoods li .checkbox:hover {
+body #homepage #categories .typeOfFoods li div .checkbox:hover {
   border-color: black;
 }
 
-body #homepage #categories .typeOfFoods li .checkbox:checked {
+body #homepage #categories .typeOfFoods li div .checkbox:checked {
   background-color: #ffc244;
   border: 1px solid black;
 }
 
-body #homepage #categories .typeOfFoods li .checkbox:checked:after {
+body #homepage #categories .typeOfFoods li div .checkbox:checked:after {
   content: "\2714";
   font-size: 20px;
   position: absolute;
@@ -321,8 +322,14 @@ body #homepage #categories .typeOfFoods li .checkbox:checked:after {
   color: #d24448;
 }
 
-body #homepage #categories .typeOfFoods li span {
+body #homepage #categories .typeOfFoods li div span {
   flex-basis: 90%;
+  transition: color 0.5s linear;
+  color: #25385f;
+}
+
+body #homepage #categories .typeOfFoods li div .checkbox-active {
+  color: #d24448;
 }
 
 body #homepage #categories .restaurants {
@@ -511,16 +518,20 @@ body #homepage .work ul li .bg.work {
 
 footer {
   background-color: #1d1d1d;
-  padding: 70px 8% 0 8%;
-  position: relative;
+  padding: 70 8% 0 8%;
 }
 
 footer .footer-wave {
-  position: absolute;
+  width: 100%;
+  position: relative;
+}
+
+footer .footer-wave img {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  top: -100px;
+  position: absolute;
+  bottom: -2px;
   left: -5px;
 }
 
@@ -530,6 +541,7 @@ footer .footer-list {
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: nowrap;
+  padding: 30px 8%;
 }
 
 footer .footer-list ul {
@@ -703,11 +715,12 @@ footer .links h5 {
   flex-wrap: nowrap;
   background-color: darkseagreen;
   height: 100vh;
-  padding: 100px 8%;
+  padding: 200px 8%;
 }
 
 #register section form {
   flex-basis: 50%;
+  margin-bottom: 100px;
 }
 
 #register section form fieldset {
@@ -804,7 +817,7 @@ footer .links h5 {
 }
 
 #chi-siamo .box {
-  padding: 30px 20% 100px 20%;
+  padding: 30px 20% 200px 20%;
   background-color: #9dc09d;
 }
 
@@ -873,7 +886,7 @@ footer .links h5 {
 }
 
 #faq .text {
-  padding: 30px 20%;
+  padding: 50px 20% 200px 20%;
   background-color: #9dc09d;
 }
 
@@ -1153,7 +1166,7 @@ footer .links h5 {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding: 5% 8%;
+  padding: 5% 8% 200px 8%;
 }
 
 #home-restaurant .menu .aside-menu {
@@ -1396,6 +1409,7 @@ footer .links h5 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  margin-bottom: 200px;
 }
 
 #checkout section form fieldset {

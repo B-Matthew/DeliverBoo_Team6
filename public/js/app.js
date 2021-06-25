@@ -379,6 +379,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
@@ -386,7 +389,7 @@ __webpack_require__.r(__webpack_exports__);
       'restaurantInput': '',
       'categoryId': false,
       'typeOfFoods': [],
-      'image': "../../../storage/img/sushi.jpg"
+      'categoryImage': "../../../storage/img/"
     };
   },
   props: ['restaurants', 'categories', 'route', 'categoryRestaurant'],
@@ -1293,15 +1296,15 @@ var render = function() {
           "ul",
           { staticClass: "typeOfFoods" },
           _vm._l(_vm.categories, function(category, index) {
-            return _c(
-              "li",
-              {
-                class: _vm.typeOfFoods.includes(category.id)
-                  ? "checkbox-active"
-                  : "",
-                attrs: { value: category.name }
-              },
-              [
+            return _c("li", { attrs: { value: category.name } }, [
+              _c("img", {
+                attrs: {
+                  src: _vm.categoryImage + category.name + ".png",
+                  alt: ""
+                }
+              }),
+              _vm._v(" "),
+              _c("div", [
                 _c("input", {
                   directives: [
                     {
@@ -1342,9 +1345,17 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("span", [_vm._v(_vm._s(category.name))])
-              ]
-            )
+                _c(
+                  "span",
+                  {
+                    class: _vm.typeOfFoods.includes(category.id)
+                      ? "checkbox-active"
+                      : ""
+                  },
+                  [_vm._v(_vm._s(category.name))]
+                )
+              ])
+            ])
           }),
           0
         )
@@ -1367,7 +1378,12 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", [
-                      _c("img", { attrs: { src: _vm.image, alt: "" } })
+                      _c("img", {
+                        attrs: {
+                          src: _vm.categoryImage + restaurant.name + ".jpg",
+                          alt: ""
+                        }
+                      })
                     ])
                   ])
                 ])
@@ -1390,7 +1406,14 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _c("div", [_c("img", { attrs: { src: _vm.image, alt: "" } })])
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src: _vm.categoryImage + restaurant.name + ".jpg",
+                      alt: ""
+                    }
+                  })
+                ])
               ])
             ])
           }),
@@ -1404,7 +1427,14 @@ var render = function() {
               _c("a", { attrs: { href: _vm.route + restaurant.id } }, [
                 _c("h3", [_vm._v(_vm._s(restaurant.name))]),
                 _vm._v(" "),
-                _c("div", [_c("img", { attrs: { src: _vm.image, alt: "" } })])
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src: _vm.categoryImage + restaurant.name + ".jpg",
+                      alt: ""
+                    }
+                  })
+                ])
               ])
             ])
           }),

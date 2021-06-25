@@ -3,9 +3,12 @@
           <h2 @click="getCategoryId">Cosa vuoi mangiare?</h2>
           <input v-if="typeOfFoods.length == 0 " class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
           <ul v-if="restaurantInput == '' " class="typeOfFoods">
-               <li :class="(typeOfFoods.includes(category.id)) ? 'checkbox-active' : ''" v-for="(category, index) in categories" :value="category.name"> 
-                   <input  v-model="typeOfFoods" class="checkbox" type="checkbox" :value="category.id">
-                   <span>{{category.name}}</span>
+               <li v-for="(category, index) in categories" :value="category.name"> 
+                    <img :src="categoryImage + category.name + '.png' " alt="">
+                    <div>
+                         <input  v-model="typeOfFoods" class="checkbox" type="checkbox" :value="category.id">
+                         <span :class="(typeOfFoods.includes(category.id)) ? 'checkbox-active' : '' ">{{category.name}}</span>
+                    </div>
                </li>
           </ul>
 
@@ -20,7 +23,7 @@
                               {{restaurant.name}}                              
                          </h3>
                          <div>   
-                              <img :src="image" alt=""> 
+                              <img :src="categoryImage + restaurant.name + '.jpg' " alt="">
                          </div>
                     </a> 
                </li>
@@ -34,7 +37,7 @@
                               {{restaurant.name}}                              
                          </h3>
                          <div>
-                              <img :src="image" alt=""> 
+                              <img :src="categoryImage + restaurant.name + '.jpg' " alt="">
                          </div>
                     </a> 
                </li>
@@ -44,10 +47,10 @@
           <ul v-else class="restaurants">
                <li v-for="restaurant in filter()">
                     <a :href="route + restaurant.id">
-                    <!-- <img src="{{asset('../../storage/app/public/img/rider.jpg')}}" alt=""> -->
                          <h3>{{restaurant.name}}</h3>
                          <div>
-                              <img :src="image" alt=""> 
+                              <!-- <img :src="image" alt="">  -->
+                              <img :src="categoryImage + restaurant.name + '.jpg' " alt="">
                          </div>      
                     </a>
                </li>
@@ -64,7 +67,7 @@
                    'restaurantInput': '',
                    'categoryId': false,
                    'typeOfFoods': [],
-                   'image': "../../../storage/img/sushi.jpg",
+                   'categoryImage': "../../../storage/img/"
               }
           },
           props: ['restaurants','categories','route','categoryRestaurant'],
