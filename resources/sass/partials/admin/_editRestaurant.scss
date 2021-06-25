@@ -18,14 +18,19 @@
 
             ul {
                 @include flex(row, flex-start, center, wrap);   
-    
-                li{    
-                        
-                    display: flex;
-                    flex-basis: 25%;      
-                    input{   
-
-                        width:15px;   
+                
+                li{               
+                
+                    @include flex(row, flex-start, center, nowrap);
+                    margin-bottom: 20px;   
+                    flex-basis: 20%;   
+                    #category{   
+                        @include checkbox; 
+                        width: fit-content; 
+                        height: fit-content;       
+                    }   
+                    label{
+                        white-space: nowrap;   
                     }
                     
                 }   

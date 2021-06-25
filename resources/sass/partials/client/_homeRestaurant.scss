@@ -1,11 +1,8 @@
 #home-restaurant {
     @include baloo;
-    // padding: 100px 8%;
     background-color: $greenPastel;
-    // display: flex;
-    // justify-content: space-between;
     color: rgb(21, 22, 22);
-
+   
     .jumbotron {
         background-image: url(../img/ristorante-background.jpg);
         background-size: contain;
@@ -17,10 +14,10 @@
         @include flex(column, center, center, nowrap);
 
         h1 {
-           @include itim;
-           font-size: 4.5vw;
-           padding: 15px 0;
-           color: $red;
+            @include itim;
+            font-size: 4.5vw;
+            padding: 15px 0;
+            color: $red;
         }
 
         div {
@@ -52,7 +49,7 @@
                     div {
                         flex-basis: calc(50% - 20px);
                     }
-    
+
                 }
             }
         }
@@ -65,40 +62,40 @@
                 padding: 0 30px 10px;
                 border-radius: 10px;
                 text-align: center;
-        
+
                 legend {
                     padding: 0 20px;
                     text-align: center;
                     font-size: 30px;
                     font-weight: bold;
                 }
-        
+
                 .copertina {
                     height: 200px;
-        
+
                     img {
                         height: 100%;
                         border-radius: 10px;
-        
+
                     }
                 }
-        
+
                 div {
-        
+
                     * {
                         padding: 20px 0;
                     }
-        
-        
+
+
                     button {
                         padding: 10px 25px;
                         border-radius: 5px;
                         background-color: $yellow;
                     }
-        
+
                     &:last-child {
                         display: flex;
-                        text-align: center;   
+                        text-align: center;
                     }
                 }
             }
@@ -115,7 +112,7 @@
                         border-top-right-radius: 25px;
                         color: $blue;
                     }
-        
+
                     ul {
                         padding: 20px;
                         background-color: $cream;
@@ -128,7 +125,7 @@
                         &:hover {
                             box-shadow: 10px 20px 7px rgb(51, 50, 50);
                         }
-        
+
                         li {
                             @include flex(row, space-between, center, nowrap);
                             padding: 10px 20px 10px 5px;
@@ -141,7 +138,7 @@
                                 font-weight: normal;
                             }
 
-                            h5{
+                            h5 {
                                 font-weight: normal;
                                 @include baloo;
                                 margin: 10px 0;
@@ -150,14 +147,11 @@
                             p {
                                 @include baloo;
                                 font-size: 17px;
+                                word-break: break-all;
                             }
 
                             h4 {
                                 font-weight: normal;
-
-                                // i {
-                                //     color: black;
-                                // }
                             }
 
                             i {
@@ -195,7 +189,9 @@
                 background-color: $yellow;
             }
 
-            ul, h3, span {
+            ul,
+            h3,
+            span {
                 color: $cream;
             }
 
@@ -244,4 +240,4 @@
         position: -webkit-sticky;
         top: 100px;
     }
-}   
+}

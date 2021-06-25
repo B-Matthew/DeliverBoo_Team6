@@ -33,14 +33,14 @@
                     <div class="head-product">
                         <h2>{{ $product -> name }}</h2>
                         @if($product -> availability)
-                        <div>
-                            <i class="fas fa-check-circle">  </i>
-                            DISPONIBILE
+                        <div class="active">
+                            <i class="fas fa-check-circle"></i>
+                            <span> DISPONIBILE</span>
                          </div>   
                         @else
-                        <div>
+                        <div class="not-active">   
                             <i class="fas fa-times-circle"> </i>
-                            NON DISPONIBILE 
+                            <span>NON DISPONIBILE</span>    
                         </div>   
                         @endif
                     </div>
@@ -73,16 +73,14 @@
                             <div>
                                 <a
                                     href="{{ route('editProduct' , encrypt($product -> id)) }}">
-                                    <i class="fas fa-edit"></i>
                                     Modifica il tuo piatto
                                 </a>
 
-                                <a href="{{ route('deleteProduct', $product -> id) }}">
-                                    <i class="fas fa-trash-alt"></i>
+                                <a href="{{ route('deleteProduct', $product -> id) }}">   
                                     Cancella il tuo piatto 
                                 </a>
                             </div>
-                        </li>
+                        </li>   
 
                     </ul>
                 </div>
