@@ -2015,7 +2015,7 @@ footer .links h5 {
 #edit-restaurant form fieldset ul li #category {
   -webkit-appearance: none;
   background-color: #ffc244;
-  border: 1px solid #ffc244;
+  border: 3px solid #9dc09d;
   padding: 10px;
   border-radius: 5px;
   margin: 0 10px;
@@ -2030,12 +2030,12 @@ footer .links h5 {
 }
 
 #edit-restaurant form fieldset ul li #category:hover {
-  border-color: black;
+  border-color: #9dc09d;
 }
 
 #edit-restaurant form fieldset ul li #category:checked {
   background-color: #ffc244;
-  border: 1px solid black;
+  border-color: #d24448;
 }
 
 #edit-restaurant form fieldset ul li #category:checked:after {
