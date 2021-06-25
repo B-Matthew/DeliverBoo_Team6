@@ -23,7 +23,7 @@ Route::get('/', 'MainController@homepage')
         ->name('homepage');
 
 // ROUTE 'CHI SIAMO'
-Route::get('info/', 'MainController@infoWebPage')
+Route::get('info', 'MainController@infoWebPage')
         ->name('infoWebPage');
 
 // ROUTE FAQ
