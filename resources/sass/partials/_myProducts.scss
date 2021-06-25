@@ -34,6 +34,7 @@
         padding: 40px 0;
         width: 80%;
         margin: auto;
+        padding-bottom: 200px;
 
         >div {
 
@@ -94,13 +95,12 @@
                     &:hover {
                         box-shadow: 10px 20px 7px rgb(51, 50, 50);
                     }
-
+                   
                     li {
                         @include flex(row, flex-end, center, nowrap);
                         padding: 10px 20px 10px 5px;
                         border-bottom: 2px solid $red;
                         color: $blue;
-
                         &:last-child{
                             border: none;
                             justify-content: center;      
@@ -114,6 +114,8 @@
                               
                         }   
 
+                        
+
                         >div {
    
                             margin: 0 20px;
@@ -124,11 +126,8 @@
                                 flex-grow: 1;         
                                 
                             }   
-                              
-
-                               
                         }
-
+                              
                         h4,
                         label {
                             @include baloo;
@@ -143,3 +142,6 @@
         }
     }
 }
+
+                               
+
