@@ -131,7 +131,7 @@
             <ul v-for ="ordine in carrello">
                 <li>
                     <span>{{ordine.prodotto}}</span>
-                    <input type="text" name="product_id[]" v-model="ordine.id">
+                    <input type="hidden" name="product_id[]" v-model="ordine.id">
                     <div>
                          <span>{{ordine.prezzo}} </span>
                          <i class="fas fa-euro-sign"></i>
@@ -141,7 +141,7 @@
     
             <h3>Totale</h3>
             <div class="totalePrezzo">
-               <input type="text" name="price" v-model="totale">
+               <input type="hidden" name="price" v-model="totale">
                <span>{{totale}}</span>
                <i class="fas fa-euro-sign"></i>
             </div>

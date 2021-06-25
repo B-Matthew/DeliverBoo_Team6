@@ -16,10 +16,12 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->string('lastname');
-            $table->string('address');
-            $table->string('email');
+            $table->string('name')-> nullable()->default('unknown');
+            $table->string('lastname')-> nullable()->default('unknown');
+            $table->string('address')-> nullable()->default('unknown');
+            $table->string('email')-> nullable()->default('unknown');
+            $table->string('price');
+            $table->boolean('confirmed')->default(false);
 
             $table->timestamps();
         });
