@@ -39,7 +39,7 @@ header {
           // flex-basis: 70%;   
                
           ul {
-               @include flex(row, end, flex-start, nowrap);   
+               @include flex(row, flex-end, flex-start, nowrap);   
                
                li {
                     @include flex(row, center, center, nowrap);
