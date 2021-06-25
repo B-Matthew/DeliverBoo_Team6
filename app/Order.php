@@ -10,7 +10,9 @@ class Order extends Model
             'name',
             'lastname',
             'address',
-            'email'
+            'email',
+            'price',
+            'confirmed',
         ];
 
     public function products() {
