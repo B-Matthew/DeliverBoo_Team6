@@ -1,48 +1,66 @@
 @extends('layouts.main-layout')
 @section('content')
-    <main style="padding-top: 200px; margin: auto; width:70%;">
-        @if (session('success_message'))
-            <div>
-                {{session('success_message')}}
-            </div>
-        @endif
+    <main id="checkout">
+        <section>
 
-        @if (count($errors) > 0)
-            <div>
-                <ul>
-                    @foreach ($errors -> all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
-        <h2>Form Pagamento: </h2>
-        <form method="post" id="payment-form" action="{{route('payment')}}">
-            @csrf
-            <section>
-                <label for="name">Nome</label>
-                <input type="text">
-                <label for="lastname">Cognome</label>
-                <input type="text">
-                <label for="address">Indirizzo</label>
-                <input type="text">
-                <label for="email">E-mail</label>
-                <input type="text">
-                <br>
-                <label for="amount">
-                    <span class="input-label">Amount</span>
-                    <div class="input-wrapper amount-wrapper">
-                        <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="{{$totale}}" readonly>
-                    </div>
-                </label>
-
-                <div class="bt-drop-in-wrapper">
-                    <div id="bt-dropin"></div>
+            @if (session('success_message'))
+                <div>
+                    {{session('success_message')}}
                 </div>
-            </section>
-            <button class="button" type="submit"><span>Test Transaction</span></button>
-        </form>
+            @endif
+
+            @if (count($errors) > 0)
+                <div>
+                    <ul>
+                        @foreach ($errors -> all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form method="post" id="payment-form" action="{{route('payment', $order->id)}}">
+                @csrf
+                <fieldset>
+                    <legend>Pagamento</legend>
+                    <div>
+                        <label for="name">Nome</label>
+                        <input id="name" name="name" type="text" required autocomplete="name" autofocus>                    
+                    </div>
+    
+                    <div>
+                        <label for="lastname">Cognome</label>
+                        <input id="lastname" name="lastname" type="text" required autocomplete="lastname" autofocus>                    
+                    </div>
+                    
+                    <div>
+                        <label for="address">indirizzo</label>
+                        <input id="address" name="address" type="text" required autocomplete="address" autofocus>                    
+                    </div>
+    
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="name" name="email" type="email" required autocomplete="email" autofocus>                    
+                    </div>
+            
+                    <div>
+                        <label for="amount">
+                            <span class="input-label">Amount</span>
+                            <div class="input-wrapper amount-wrapper">
+                                <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" readonly value="{{$order->price}}">
+                            </div>
+                        </label>                  
+                    </div>
+                </fieldset>
+                
+                <fieldset class="payment-card">
+                    <div class="bt-drop-in-wrapper">
+                        <div id="bt-dropin"></div>
+                    </div>
+                    <button class="button" type="submit"><span>Test Transaction</span></button>
+                </fieldset>
+            </form>
+        </section>
     </main>
                 
             

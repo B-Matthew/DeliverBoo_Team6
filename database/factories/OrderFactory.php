@@ -12,5 +12,6 @@ $factory->define(Order::class, function (Faker $faker) {
         'lastname' => $faker -> lastname,
         'address' => $faker -> streetAddress,
         'email' => $faker -> freeEmail, 
+        'price' => $faker -> randomFloat(2, 1, 100 ),
     ];
 });

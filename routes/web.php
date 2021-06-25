@@ -64,7 +64,7 @@ Route::get('/product/delete/{id}' , 'HomeController@deleteProduct')
 // ROUTE CHECKOUT
 Route::get('/client/checkout/{id}' , 'MainController@checkout')
         ->name('checkout');
-Route::post('/client/payment' , 'MainController@payment')
+Route::post('/client/payment/{id}' , 'MainController@payment')
         ->name('payment');
         
 // ROUTE DELETE RESTAURANT
@@ -77,8 +77,13 @@ Route::get('/restaurant/edit/{id}' , 'HomeController@editRestaurant')
 Route::post('/restaurant/update/{id}', 'HomeController@updateRestaurant')
         ->name('updateRestaurant');
 
+// ROUTE FORM CARRELLO
+Route::post('/submit', 'MainController@submit')
+        ->name('submit');
 
-
+// ROUTE TRANSAZIONE ESEGUITA
+Route::get('transaction/{id}', 'MainController@transaction')
+        ->name('transaction');
 
 
 
