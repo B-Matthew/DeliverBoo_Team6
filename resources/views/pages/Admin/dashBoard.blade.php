@@ -65,14 +65,15 @@
                          <input type="text" class="" id="pIva" name="pIva" placeholder="Inserisci la partita Iva..">
                     </div>
 
-                    <div>
+                    <div class="myfile">   
                          <label class="" for="img">
                               <h4>Immagine del tuo ristorante</h4>
-                         </label>
-                         <input type="file" name="img">
+                         </label>   
+                         <input id="my-file" type="file" name="img" style="display: none" style="position: absolute">    
+                         <a id="myfilebutton" onclick="document.getElementById('my-file').click()" style="display: block">Scegli qui il tuo file</a>
                     </div>
 
-                    <ul>
+                    <ul>   
                          @foreach ($categories as $category)
                          <li>
                               <input type="checkbox" name="categories[]" value="{{$category -> id}}">

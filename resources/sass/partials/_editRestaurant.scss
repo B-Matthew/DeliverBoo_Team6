@@ -1,0 +1,38 @@
+#edit-restaurant {
+
+    @include flex(row, center, center, nowrap);
+    background-color: $green;
+    padding: 100px 0;   
+
+    form {
+        @include form;
+
+        fieldset{
+
+            #myfilebutton{
+                display: block;     
+                padding: 5px 10px;     
+                    
+            }      
+
+            ul {
+                @include flex(row, flex-start, center, wrap);   
+    
+                li{    
+                        
+                    display: flex;
+                    flex-basis: 25%;      
+                    input{   
+
+                        width:15px;   
+                    }
+                    
+                }   
+                   
+    
+            }   
+        }
+
+    }   
+   
+}

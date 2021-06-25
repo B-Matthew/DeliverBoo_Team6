@@ -79,7 +79,7 @@
                               color: black;
                          }
 
-                         label, input {
+                         label, input, #myfilebutton {   
                               margin: 20px 50px 20px 0;
                               font-size: 20px;
      
@@ -91,7 +91,7 @@
      
                          }
 
-                         input {
+                         input, #myfilebutton {      
                               width: 100%;
                               padding: 10px 20px;
                               background-color: #F5B436;
@@ -102,7 +102,12 @@
                               &:hover {
                                    box-shadow: 5px 10px 3px rgb(51, 50, 50);
                               }
-                         }                         
+                         }  
+                         #myfilebutton{   
+                              margin-top: 0;   
+                         }   
+                         
+                        
                     }
 
                     .button {

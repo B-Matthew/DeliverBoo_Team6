@@ -8,7 +8,7 @@ header {
 
      aside {
           flex-basis: 10%;
-
+                
           div {
                @include flex(row, center, center, nowrap);
                background-color: $blue;
@@ -36,20 +36,21 @@ header {
      }
 
      nav {
-          flex-basis: 70%;
-
+          // flex-basis: 70%;   
+               
           ul {
-               @include flex(row, space-between, flex-start, nowrap);
+               @include flex(row, end, flex-start, nowrap);   
                
                li {
                     @include flex(row, center, center, nowrap);
                     padding: 10px 20px;
+                    margin-left: 20px;   
                     background-color: $blue;
                     border-bottom-left-radius: 30px;
                     border-bottom-right-radius: 30px;
                     border: 2px solid $cream;
                     z-index: 99;
-                    transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;   
 
                     &:hover {
                          margin-top: 10px;

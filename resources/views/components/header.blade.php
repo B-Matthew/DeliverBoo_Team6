@@ -8,24 +8,11 @@
 
      <nav>
           <ul>
-               <li>
-                    <a href="">
-                         Contatti
-                    </a>
-               </li>
 
                <li>
                     <a href="{{route('infoWebPage')}}">
                          Chi siamo
                     </a>
-               </li>
-
-               <li>
-
-                 <a href="{{ route('dashBoard') }}">
-                   Create Restaurant
-                 </a>
-
                </li>
 
                <li>
@@ -62,3 +49,4 @@
 
               
 
+   
