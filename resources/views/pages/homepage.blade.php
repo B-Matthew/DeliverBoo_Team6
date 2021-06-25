@@ -37,7 +37,10 @@
      
 
      <section class="work">
-          <div class="wave"></div>
+          {{-- <div class="wave"></div> --}}
+          <section class="container">
+               <div class="wave"></div>
+             </section>
           
           <h2>Lavora con DeliverBoo</h2>
           

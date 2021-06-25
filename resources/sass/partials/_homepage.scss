@@ -90,8 +90,9 @@ body {
           }
 
           #categories {
-               background: $greenPastel;
-               background: linear-gradient(180deg, $greenPastel 74%, rgba(255,255,255,1) 92%);
+               background-color: $greenPastel;
+               // background: $greenPastel;
+               // background: linear-gradient(180deg, $greenPastel 74%, rgba(255,255,255,1) 92%);
                text-align: center;
                padding: 40px 8%;
 
@@ -196,26 +197,34 @@ body {
           }
 
           .work {
-               background-color: $greenlight;
+               background-color: $yellow;
                padding-bottom: 150px;
                text-align: center;
                position: relative;
+               z-index: 0;
+               overflow: hidden;
                
-               .wave {
-                    background-image: url('../img/onda.png');
-                    width: 100%;
-                    background-size: contain;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-color:$greenlight;
-                    text-align: center;
-                    padding: 10% 0;
+               // .wave {
+               //      background-image: url('../img/onda.png');
+               //      width: 100%;
+               //      background-size: contain;
+               //      background-size: contain;
+               //      background-repeat: no-repeat;
+               //      background-color:$greenlight;
+               //      text-align: center;
+               //      filter: invert(66%) sepia(66%) saturate(451%) hue-rotate(351deg) brightness(108%) contrast(101%);
+               //      padding: 10% 0;
+               // }
+
+               .container {
+                    @include wave($greenPastel, $yellow);                    
                }
           
 
                h2 {
                     @include indie;
-                    margin-bottom: 20px;
+                    margin: 10% 0 20px 0;
+                    // margin-bottom: 20px;
                     color: $blue;
                }
 

@@ -130,4 +130,44 @@
     }
 }
 
+@mixin wave($background-top, $background-bottom) {
+    position: relative;
+    background: $background-top;
+    height: 20vh;
+    z-index: -1;
+
+    .wave {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            background: $background-top;
+            bottom: 0;
+            z-index: -1;
+    }
+        
+    .wave::before, .wave::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50% 100%;
+    }
+        
+    .wave::before {
+        width: 55%;
+        height: 100%;
+        background-color: $background-top;
+        right: -1.5%;
+        top: 40%;
+
+    }
+
+    .wave::after {
+        width: 55%;
+        height: 109%;
+        background-color: $background-bottom;
+        left: -1.5%;
+        top: 60%;
+    }
+}
+
    
