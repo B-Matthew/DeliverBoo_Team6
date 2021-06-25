@@ -5,7 +5,7 @@
           </div>
           
           <h2 @click="getCategoryId">Cosa vuoi mangiare?</h2>
-          <input v-if="typeOfFoods.length == 0 " class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
+          <input v-if="typeOfFoods.length == 0 " class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Inserisci nome ristorante. . .">
           <ul v-if="restaurantInput == '' " class="typeOfFoods">
                <li v-for="(category, index) in categories" :value="category.name"> 
                     <img :src="categoryImage + category.name + '.png' " alt="">
