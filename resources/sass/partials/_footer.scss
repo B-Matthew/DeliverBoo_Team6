@@ -4,7 +4,6 @@ footer {
 
      .footer-wave {
           width: 100%;
-          // height: 68px;
           position: relative;
 
           img {
@@ -44,7 +43,7 @@ footer {
                          strong {                        
                               font-family: 'itim', cursive;
                               font-size: 25px;
-                              color: $cream;                 
+                              color: $whitePastel;                 
                          }
                          
                     }
@@ -52,8 +51,7 @@ footer {
                     a {
                          font-family: 'Baloo 2', cursive;
                          font-size: 16px;
-                         color: $cream;
-
+                         color: $whitePastel;
                          img {
                               width: 60%;
                               height: auto;

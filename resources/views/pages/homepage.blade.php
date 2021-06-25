@@ -4,13 +4,13 @@
 <main id="homepage">
 
      <section class="jumbotron">
-          <div class="attach"></div>
           <div class="text">
                <h2>I tuoi piatti preferiti, a domicilio.</h2>
           </div>
+          <div class="attach"></div>
      </section>
 
-     <section class="delivery">
+     {{-- <section class="delivery">
           <div class="attach"></div>
           <div class="text">
                <h2>Non hai tempo di uscire?</h2>
@@ -28,7 +28,7 @@
           <div class="text">
                <h2>Operativi su tutto il territorio nazionale.</h2>
           </div>
-     </section>
+     </section> --}}
      
          
      <search-component :category-restaurant="{{$filterJson}}" :restaurants="{{$restaurants}}" :categories="{{$categories}}" :route="'/client/restaurant/'">
@@ -38,9 +38,9 @@
 
      <section class="work">
           {{-- <div class="wave"></div> --}}
-          <section class="container">
+          <div class="container">
                <div class="wave"></div>
-             </section>
+             </div>
           
           <h2>Lavora con DeliverBoo</h2>
           

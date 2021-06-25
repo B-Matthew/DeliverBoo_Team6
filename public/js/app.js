@@ -389,6 +389,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SearchComponent',
   data: function data() {
@@ -1327,6 +1331,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { attrs: { id: "categories" } }, [
+    _vm._m(0),
+    _vm._v(" "),
     _c("h2", { on: { click: _vm.getCategoryId } }, [
       _vm._v("Cosa vuoi mangiare?")
     ]),
@@ -1342,7 +1348,7 @@ var render = function() {
             }
           ],
           staticClass: "searchbar",
-          attrs: { text: "", placeholder: "Ricerca ristorante. . ." },
+          attrs: { text: "", placeholder: "Inserisci nome ristorante. . ." },
           domProps: { value: _vm.restaurantInput },
           on: {
             keyup: function($event) {
@@ -1509,7 +1515,16 @@ var render = function() {
         )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "wave" })
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -13996,8 +14011,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
