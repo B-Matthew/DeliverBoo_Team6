@@ -1,5 +1,9 @@
 <template>
      <section id="categories">
+          <div class="container">
+               <div class="wave"></div>
+          </div>
+          
           <h2 @click="getCategoryId">Cosa vuoi mangiare?</h2>
           <input v-if="typeOfFoods.length == 0 " class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Ricerca ristorante. . .">
           <ul v-if="restaurantInput == '' " class="typeOfFoods">
