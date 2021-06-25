@@ -18,7 +18,7 @@ footer {
 
      .footer-list {
           @include flex(row, space-between, stretch, nowrap);
-          padding: 30px 8%;
+          padding: 30px 10%;
 
           ul {   
                flex-basis: calc(100% / 4 - 20px);
@@ -64,7 +64,7 @@ footer {
 
      .links {
           @include flex(row, space-between, center, nowrap);
-          padding: 40px;
+          padding: 40px 10%;
 
           ul {
                flex-basis: 85%;
@@ -73,7 +73,7 @@ footer {
                     display: inline-block;
 
                     a {
-                         color: $cream;
+                         color: $whitePastel;
                          padding: 10px;
      
                          i {
@@ -87,7 +87,7 @@ footer {
                @include itim;
                font-size: 20px;
                flex-basis: 15%;
-               color: $cream;
+               color: $whitePastel;
                font-weight: normal;
           }
      }
