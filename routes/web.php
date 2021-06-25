@@ -77,7 +77,8 @@ Route::get('/restaurant/edit/{id}' , 'HomeController@editRestaurant')
 Route::post('/restaurant/update/{id}', 'HomeController@updateRestaurant')
         ->name('updateRestaurant');
 
-
+Route::post('/submit', 'MainController@submit')
+        ->name('submit');
 
 
 
