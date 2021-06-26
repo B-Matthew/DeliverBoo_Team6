@@ -1044,42 +1044,129 @@ footer .links h5 {
 }
 
 #faq .banner {
+  background-color: #ecc513;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #EEE7D7;
-  width: 100%;
-  height: 500px;
-}
-
-#faq .banner div {
-  flex-basis: auto;
-  height: 100%;
-}
-
-#faq .banner div img {
+  background-image: url(/images/bannerFaq.jpg?4b063bead612a91e273e6908b6a4aa3c);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: auto;
-  height: 100%;
+  padding: 15% 0;
 }
 
-#faq .text {
-  padding: 50px 20% 200px 20%;
+#faq .banner h1 {
+  font-family: "Rammetto One", cursive;
+  text-transform: uppercase;
+  font-size: 3.5vw;
+  padding: 15px 0;
+  color: #25385f;
+}
+
+#faq .delivery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   background-color: #9dc09d;
+  padding: 200px 8% 0 8%;
+  color: #d24448;
 }
 
-#faq .text h1 {
-  font-family: "Indie Flower", cursive;
+#faq .delivery .attach {
+  flex-basis: 40%;
+  padding: 20% 0 25% 0;
+  height: 100%;
+  width: auto;
+  background-image: url(/images/food-delivery-vector-4428252-removebg-preview.png?0fe3819efc9d02124db1e2e4d252bf96);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 2% 50%;
+}
+
+#faq .delivery .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  flex-basis: 60%;
+}
+
+#faq .delivery .text h2 {
+  font-family: "Rammetto One", cursive;
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+
+#faq .faq {
+  background-color: #f6f6f6;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#faq .faq .container {
+  position: relative;
+  background: #9dc09d;
+  height: 20vh;
+  z-index: -1;
+}
+
+#faq .faq .container .wave {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  background: #9dc09d;
+  bottom: 0;
+  z-index: -1;
+}
+
+#faq .faq .container .wave::before,
+#faq .faq .container .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+#faq .faq .container .wave::before {
+  width: 55%;
+  height: 100%;
+  background-color: #9dc09d;
+  right: -1.5%;
+  top: 40%;
+}
+
+#faq .faq .container .wave::after {
+  width: 55%;
+  height: 109%;
+  background-color: #f6f6f6;
+  left: -1.5%;
+  top: 60%;
+}
+
+#faq .faq .text-box {
+  padding: 20%;
+}
+
+#faq .faq .text-box h1 {
+  font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
   color: #d24448;
 }
 
-#faq .text p {
+#faq .faq .text-box p {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  margin: 15px 0 30px 0;
+  margin: 15px 0 50px 0;
   color: #25385f;
 }
 
