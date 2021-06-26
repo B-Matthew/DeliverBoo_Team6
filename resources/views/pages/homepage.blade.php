@@ -9,43 +9,24 @@
           </div>
           <div class="attach"></div>
      </section>
-
-     {{-- <section class="delivery">
-          <div class="attach"></div>
-          <div class="text">
-               <h2>Non hai tempo di uscire?</h2>
-               <h2>Ci pensa DeliverBoo.</h2>
-               <button>
-                    <a href="#categories">
-                         Ordina subito
-                    </a>
-               </button>
-          </div>
-     </section>
-
-     <section class="map">
-          <div class="attach"></div>
-          <div class="text">
-               <h2>Operativi su tutto il territorio nazionale.</h2>
-          </div>
-     </section> --}}
-     
-         
+    
      <search-component :category-restaurant="{{$filterJson}}" :restaurants="{{$restaurants}}" :categories="{{$categories}}" :route="'/client/restaurant/'">
           
      </search-component>
      
 
      <section class="work">
-          {{-- <div class="wave"></div> --}}
+
           <div class="container">
                <div class="wave"></div>
-             </div>
+          </div>
           
           <h2>Lavora con DeliverBoo</h2>
           
           <ul>
+
                <li>
+
                     <div class="bg rider">
                          <img src="{{asset('storage/img/riderPink.png')}}" alt="">
                     </div>
@@ -59,12 +40,15 @@
                               <a href="">Unisciti a noi</a>
                          </button>      
                     </div>   
+
                </li>
    
                <li>
+
                     <div class="bg ristorante">
                          <img src="{{asset('storage/img/ristorante.png')}}" alt="">
                     </div>
+
                     <div>
                          <h3>Ristorante</h3>
                          <div class="left">
@@ -74,12 +58,15 @@
                               <a href="">Collabora con noi</a>   
                          </button>   
                     </div>   
+
                </li>
 
                <li>
+
                     <div class="bg">   
-                         <img src="{{asset('storage/img/lavora.png')}}" alt="">
+                         <img src="{{asset('storage/img/lavoro.png')}}" alt="">
                     </div>
+
                     <div>
                          <h3>Lavora con noi</h3>
                          <div class="left">
@@ -89,10 +76,12 @@
                               <a href="">Lavora con noi</a>
                          </button>
                     </div>
-               </li>
-          </ul>
-     </section>
 
+               </li>
+
+          </ul>
+
+     </section>
 </main>
     
 @endsection
