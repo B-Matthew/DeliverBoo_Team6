@@ -832,7 +832,7 @@ footer .links h5 {
 
 #chi-siamo .banner div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
@@ -843,28 +843,108 @@ footer .links h5 {
   width: auto;
   max-height: 700px;
   padding: 15% 0;
+}
+
+#chi-siamo .banner div h1 {
+  font-family: "Rammetto One", cursive;
+  text-transform: uppercase;
+  font-size: 3.5vw;
+  padding: 15px 0;
+  color: #25385f;
+}
+
+#chi-siamo .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #8ab6cf;
+  padding: 200px 8% 0 8%;
+  color: #f6f6f6;
+}
+
+#chi-siamo .map .attach {
+  flex-basis: 40%;
+  padding: 25% 0;
+  height: 100%;
+  width: auto;
+  margin: 0 50px;
+  background-image: url(/images/verde-italia-icona-mappa-cartoon-htmdm2-removebg-preview.png?0008584f0430e65802add4f576288120);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 2% 50%;
+}
+
+#chi-siamo .map .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  text-align: center;
+  flex-basis: 60%;
 }
 
-#chi-siamo .banner div h1 {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
-  font-size: 4.5vw;
-  padding: 15px 0;
-  color: #d24448;
+#chi-siamo .map .text h2 {
+  font-family: "Rammetto One", cursive;
+  font-size: 3vw;
+  text-transform: uppercase;
 }
 
-#chi-siamo .text {
-  padding: 30px 20%;
-  background-color: #9dc09d;
+#chi-siamo .we {
+  background-color: #f6f6f6;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
 
-#chi-siamo .text p {
+#chi-siamo .we .container {
+  position: relative;
+  background: #8ab6cf;
+  height: 20vh;
+  z-index: -1;
+}
+
+#chi-siamo .we .container .wave {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  background: #8ab6cf;
+  bottom: 0;
+  z-index: -1;
+}
+
+#chi-siamo .we .container .wave::before,
+#chi-siamo .we .container .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+#chi-siamo .we .container .wave::before {
+  width: 55%;
+  height: 100%;
+  background-color: #8ab6cf;
+  right: -1.5%;
+  top: 40%;
+}
+
+#chi-siamo .we .container .wave::after {
+  width: 55%;
+  height: 109%;
+  background-color: #f6f6f6;
+  left: -1.5%;
+  top: 60%;
+}
+
+#chi-siamo .we .text-box {
+  padding: 200px 10%;
+}
+
+#chi-siamo .we .text-box p {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   margin-bottom: 30px;
@@ -872,8 +952,50 @@ footer .links h5 {
 }
 
 #chi-siamo .box {
-  padding: 30px 20% 200px 20%;
   background-color: #9dc09d;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#chi-siamo .box .container {
+  position: relative;
+  background: #f6f6f6;
+  height: 20vh;
+  z-index: -1;
+}
+
+#chi-siamo .box .container .wave {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  background: #f6f6f6;
+  bottom: 0;
+  z-index: -1;
+}
+
+#chi-siamo .box .container .wave::before,
+#chi-siamo .box .container .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+#chi-siamo .box .container .wave::before {
+  width: 55%;
+  height: 100%;
+  background-color: #f6f6f6;
+  right: -1.5%;
+  top: 40%;
+}
+
+#chi-siamo .box .container .wave::after {
+  width: 55%;
+  height: 109%;
+  background-color: #9dc09d;
+  left: -1.5%;
+  top: 60%;
 }
 
 #chi-siamo .box ul {
@@ -882,6 +1004,7 @@ footer .links h5 {
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
+  padding: 20%;
 }
 
 #chi-siamo .box ul li {
@@ -894,6 +1017,7 @@ footer .links h5 {
   margin: 10px;
   transition: all 0.5s linear;
   color: #25385f;
+  border: 2px solid #25385f;
 }
 
 #chi-siamo .box ul li:hover {
@@ -909,7 +1033,7 @@ footer .links h5 {
 }
 
 #chi-siamo .box ul li h2 {
-  font-family: "Indie Flower", cursive;
+  font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
 }
