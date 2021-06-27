@@ -294,6 +294,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1085,12 +1091,12 @@ var render = function() {
                   _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
                   _vm._v(" "),
                   _c("h4", [
+                    _c("i", { staticClass: "fas fa-euro-sign" }),
                     _vm._v(
-                      " \n                               " +
+                      "\n                                    " +
                         _vm._s(antipasto.price) +
                         "    \n                               "
-                    ),
-                    _c("i", { staticClass: "fas fa-euro-sign" })
+                    )
                   ])
                 ])
               ])
@@ -1127,12 +1133,12 @@ var render = function() {
                   _c("img", { attrs: { src: _vm.primoImg, alt: "" } }),
                   _vm._v(" "),
                   _c("h4", [
+                    _c("i", { staticClass: "fas fa-euro-sign" }),
                     _vm._v(
-                      " \n                               " +
+                      "\n                                    " +
                         _vm._s(primo.price) +
                         "    \n                               "
-                    ),
-                    _c("i", { staticClass: "fas fa-euro-sign" })
+                    )
                   ])
                 ])
               ])
@@ -1173,12 +1179,12 @@ var render = function() {
                   _c("img", { attrs: { src: _vm.secondoImg, alt: "" } }),
                   _vm._v(" "),
                   _c("h4", [
+                    _c("i", { staticClass: "fas fa-euro-sign" }),
                     _vm._v(
-                      " \n                               " +
+                      "\n                                    " +
                         _vm._s(secondo.price) +
                         "    \n                               "
-                    ),
-                    _c("i", { staticClass: "fas fa-euro-sign" })
+                    )
                   ])
                 ])
               ])
@@ -1278,36 +1284,42 @@ var render = function() {
             ])
           }),
           _vm._v(" "),
-          _c("h3", [_vm._v("Totale")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "totalePrezzo" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.totale,
-                  expression: "totale"
-                }
-              ],
-              attrs: { type: "hidden", name: "price" },
-              domProps: { value: _vm.totale },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.totale = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v(_vm._s(_vm.totale))]),
-            _vm._v(" "),
-            _c("i", { staticClass: "fas fa-euro-sign" })
-          ]),
-          _vm._v(" "),
-          _vm._m(0)
+          _vm.carrello.length != 0
+            ? _c("div", [
+                _c("h3", [_vm._v("Totale")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "totalePrezzo" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.totale,
+                        expression: "totale"
+                      }
+                    ],
+                    attrs: { type: "hidden", name: "price" },
+                    domProps: { value: _vm.totale },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.totale = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v(_vm._s(_vm.totale))]),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "fas fa-euro-sign" })
+                ]),
+                _vm._v(" "),
+                _vm._m(0)
+              ])
+            : _c("div", { staticClass: "no-products" }, [
+                _c("h3", [_vm._v("Il tuo carrello è ancora vuoto.")])
+              ])
         ],
         2
       )
