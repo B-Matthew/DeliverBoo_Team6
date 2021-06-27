@@ -285,6 +285,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1087,8 +1096,10 @@ var render = function() {
               ])
             }),
             0
-          ),
-          _vm._v(" "),
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", [
           _c("h2", [_vm._v("Primi")]),
           _vm._v(" "),
           _c(
@@ -1127,8 +1138,10 @@ var render = function() {
               ])
             }),
             0
-          ),
-          _vm._v(" "),
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", [
           _c("h2", [_vm._v("Secondi")]),
           _vm._v(" "),
           _c(
@@ -1171,8 +1184,10 @@ var render = function() {
               ])
             }),
             0
-          ),
-          _vm._v(" "),
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", [
           _c("h2", [_vm._v("Dolce")]),
           _vm._v(" "),
           _c(

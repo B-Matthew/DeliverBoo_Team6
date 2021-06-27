@@ -1,6 +1,6 @@
 #home-restaurant {
     @include baloo;
-    background-color: $greenPastel;
+    background-color: $whitePastel;
     color: rgb(21, 22, 22);
    
     .jumbotron {
@@ -37,6 +37,7 @@
 
             h2 {
                 @include itim;
+                font-size: 35px;
                 margin: 10px 0;
             }
 
@@ -102,11 +103,14 @@
 
             .products {
 
-                div {
+                & > div {
+                    @include neomorphism;
+                    padding: 10px 0;
+                    margin-bottom: 40px;
                     h2 {
                         @include itim;
-                        border: 1px solid black;
-                        background-color: $yellow;
+                        margin-left:20px;
+                        margin-top: 20px;
                         padding: 0 20px;
                         border-top-left-radius: 25px;
                         border-top-right-radius: 25px;
@@ -114,22 +118,18 @@
                     }
 
                     ul {
-                        padding: 20px;
-                        background-color: $cream;
+                        padding: 30px;
                         border-bottom-left-radius: 25px;
                         border-bottom-right-radius: 25px;
-                        border: 1px solid black;
                         margin-bottom: 40px;
                         transition: all 0.5s linear;
 
-                        &:hover {
-                            box-shadow: 10px 20px 7px rgb(51, 50, 50);
-                        }
-
                         li {
+                            @include neomorphism;
                             @include flex(row, space-between, center, nowrap);
-                            padding: 10px 20px 10px 5px;
-                            border-bottom: 2px solid $red;
+                            padding: 10px 20px 10px 20px;
+                            margin-bottom: 30px;
+                            // border-bottom: 2px solid $red;
                             color: $blue;
 
                             h3 {
