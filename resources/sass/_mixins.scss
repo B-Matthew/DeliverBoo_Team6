@@ -33,7 +33,7 @@
 
 @mixin theButtonDesign($color, $border,$shadow) {
     background-color: $color;
-    border: 1px solid $color;
+    border: 2px solid $border;
     padding: 10px 20px;
     border-radius: 10px;
     margin: 10px;
@@ -58,20 +58,17 @@
 @mixin checkbox {
     -webkit-appearance: none;
     background-color: $yellow;
-    border: 3px solid $greenPastel;
+    border: 2px solid $blue;
     padding: 10px;
     border-radius: 5px;
     margin: 0 10px;
     transition: all 0.3s linear;
     position: relative;
 
-    &:hover {
-        border-color: $greenPastel;     
-    }
-
     &:checked {
         background-color: $yellow;
-        border-color: $red;
+        // border-color: $red;
+        border: 3px solid $red;
     }
 
     &:checked:after {
@@ -214,6 +211,20 @@
             left: -1.5%;
             top: 60%;
         }    
+    }
+}
+
+@mixin neomorphism {
+    border-radius: 10px;
+    background: $whitePastel;
+    box-shadow:  5px 5px 10px #cdcdcd,
+                -5px -5px 10px #ffffff;
+    transition: all 0.5s linear;
+    
+
+    &:hover {
+        box-shadow:  12px -12px 24px #bdbdbd,
+                    -12px 12px 24px #ffffff;
     }
 }
 

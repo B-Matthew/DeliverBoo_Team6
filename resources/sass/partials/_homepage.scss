@@ -11,10 +11,11 @@ body {
      
     #homepage  {
 
-          .jumbotron, .delivery, .map {
+          .jumbotron {
                @include flex(row, space-between, center,  nowrap);
-               // height: 100vh;
                color: $blue;
+               background-color: $yellow;
+               padding: 200px 8% 0 8%;
                
 
                .attach {
@@ -23,6 +24,11 @@ body {
                     height: 100%;
                     width: auto;
                     margin: 0 50px;
+                    background-image: url(../img/donut.png);
+                    border-radius: 20px;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    background-position: 2% 50%;
                }
 
                .text {
@@ -53,57 +59,9 @@ body {
                }
           }
 
-          .jumbotron {
-               background-color: $yellow;
-               padding: 200px 8% 0 8%;
-
-               .attach {
-                   background-image: url(../img/donut.png);
-                   border-radius: 20px;
-                   background-repeat: no-repeat;
-                   background-size: 100% auto;
-                   background-position: 2% 50%;
-               //     background-attachment: fixed;
-               }
-          }
-
-          .delivery {
-               background-color: $cream;
-               padding: 0 8% 0 0;
-
-               .attach {
-                   background-image: url(../img/food-delivery-vector-4428252-removebg-preview.png);
-                   background-repeat: no-repeat;
-                   background-size: 40% auto;
-                   background-position: 0 30%;
-                   background-attachment: fixed;
-               }
-          }
-
-          .map {
-               background-color: $azurePastel;
-               padding: 0 8% 0 0;
-
-               .attach {
-                   background-image: url(../img/verde-italia-icona-mappa-cartoon-htmdm2-removebg-preview.png);
-                   background-repeat: no-repeat;
-                   background-size: 30% auto;
-                   background-position: 2% 50%;
-                   background-attachment: fixed;
-               }
-          }
-
           #categories {
-               background-color: #f6f6f6;
                text-align: center;
-               // padding: 40px 8%;
-               position: relative;
-               z-index: 0;
-               overflow: hidden;
-
-               .container {
-                    @include wave($yellow, #f6f6f6);
-               }
+               @include theWave($yellow, $whitePastel);
 
                h2 {
                     @include itim;
@@ -129,9 +87,9 @@ body {
                     padding: 100px 8%;
 
                     li {
+                         @include flex(column, space-between, center, nowrap);
                          @include baloo;
                          margin: 20px 10px;
-                         @include flex(column, space-between, center, nowrap);
 
                          img {
                               width: 50%;
@@ -165,76 +123,47 @@ body {
                     padding: 30px 10%;
 
                     li {
-                         flex-basis: calc(100% / 3 - 40px);
-                         margin: 20px;
-                         border-radius: 20px;
-                         border: 3px solid $blue;
-                         background-color: $yellow;
-                         transition: all 0.5s linear;
-
-                         &:hover {
-                              box-shadow: 20px 20px 3px black;
-                         }
+                         flex-basis: 370px;
+                         margin: 30px;
+                         @include neomorphism;
 
                          a {
-                              color: $cream;
+                              color: $blue;
 
                               h3 {
-                                   background-color: $blue;
                                    padding: 10px;
                                    @include baloo;
                                    font-weight: normal;
-                                   border-top-left-radius: 20px;
-                                   border-top-right-radius: 20px;
                                    border-bottom: 1px solid black;
                               }
 
-                              div {
-                                   height: 308px;
+                              div {                                  
+                                   height: 160px;
                                    width: 100%;
-                                   padding: 10px;
                               }
                          }
 
                          img {
                               width: 100%;
                               height: 100%;
-                              border-radius: 20px;
+                              border-bottom-left-radius: 10px;
+                              border-bottom-right-radius: 10px;
+                              padding: 10px;
                          }
                     }
                }
           }
 
           .work {
-               background-color: $greenPastel;
                padding-bottom: 150px;
                text-align: center;
-               position: relative;
-               z-index: 0;
-               overflow: hidden;
-               
-               // .wave {
-               //      background-image: url('../img/onda.png');
-               //      width: 100%;
-               //      background-size: contain;
-               //      background-size: contain;
-               //      background-repeat: no-repeat;
-               //      background-color:$greenlight;
-               //      text-align: center;
-               //      filter: invert(66%) sepia(66%) saturate(451%) hue-rotate(351deg) brightness(108%) contrast(101%);
-               //      padding: 10% 0;
-               // }
-
-               .container {
-                    @include wave(#f6f6f6, $greenPastel);                    
-               }
+               @include theWave($whitePastel, $bluelight);
           
 
                h2 {
                     @include itim;
                     margin: 10% 0 20px 0;
-                    // margin-bottom: 20px;
-                    color: $whitePastel;
+                    color: $blue;
                }
 
                ul {
@@ -245,7 +174,7 @@ body {
                     li {
                          @include flex(column, flex-start, auto, nowrap);
                          flex-basis: calc(100% / 3 - 30px);
-                         background-color: #f6f6f6;
+                         background-color: $whitePastel;
                          padding: 20px 20px 40px;
                          border-radius: 20px;
                          border: 2px solid $blue;
@@ -269,7 +198,7 @@ body {
                                    
                                    min-height: 300px;      
                                    border-radius: 20px;
-                                   border: 1px solid black;   
+                                   border: 1px solid $whitePastel;   
                                    overflow: hidden;      
                               } 
                               
@@ -296,8 +225,7 @@ body {
                                    @include theButtonDesign($yellow, $blue, $red);
                                    width: fit-content;
                                    align-self: center;
-                                   justify-self: end;
-                                   border: 1px solid $blue;          
+                                   justify-self: end;        
 
                                    a {
                                         @include baloo;
@@ -313,31 +241,10 @@ body {
                                    width: auto;
                                    max-height: 300px;
                               }
-                              // background-repeat: no-repeat; 
-                              // background-position: center;    
-                              // &.rider{
-                              //      background-image: url('../img/rider.jpg');       
-                              // }          
-                              // &.ristorante{
-                              //      background-image: url('../img/ristorante.jpg');
-                              // }
-                              // &.work{
-                              //      background-image: url('../storage/img/work.webp');   
-                              // }
                          }   
                     }      
                }   
           }
-          
-          // .footer-wave {
-          //      background-image: url('../img/footer-wave.svg');
-          //      width: 100%;
-          //      height: 100px;
-          //      background-size: cover;
-          //      background-repeat: no-repeat;
-          //      background-color:$greenlight;
-          //      text-align: center;            
-          // }
      }   
 }   
 
