@@ -29,7 +29,7 @@
 
     .menu {
         @include flex(row, space-between, flex-start, nowrap);
-        padding: 5% 8% 200px 8%;
+        padding: 10% 2% 20% 2%;
 
         .aside-menu {
             flex-basis: 20%;
@@ -174,7 +174,7 @@
         }
 
         .carrello {
-            flex-basis: 30%;
+            flex-basis: 25%;
             border: 3px solid $cream;
             background-color: $blue;
             border-radius: 25px;
