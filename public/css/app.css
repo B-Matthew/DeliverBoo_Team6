@@ -1443,7 +1443,7 @@ footer .links h5 {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding: 5% 8% 200px 8%;
+  padding: 10% 2% 20% 2%;
 }
 
 #home-restaurant .menu .aside-menu {
@@ -1588,7 +1588,7 @@ footer .links h5 {
 }
 
 #home-restaurant .menu .carrello {
-  flex-basis: 30%;
+  flex-basis: 25%;
   border: 3px solid #EEE7D7;
   background-color: #25385f;
   border-radius: 25px;
