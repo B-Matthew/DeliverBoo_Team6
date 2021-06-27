@@ -11,9 +11,10 @@ header {
                 
           div {
                @include flex(row, center, center, nowrap);
-               background-color: $blue;
+               background-color: $yellow;
                padding: 20px;
-               border: 3px solid $cream;
+               border: 3px solid $blue;
+               border-top: 3px solid transparent;
                border-bottom-left-radius: 45px;
                border-bottom-right-radius: 45px;
                z-index: 99;
@@ -22,6 +23,7 @@ header {
                &:hover {
                     margin-top: 10px;
                     border-radius: 10px;
+                    border-top: 3px solid $blue;
                     box-shadow: 5px 10px 3px $blue;
                }
 
@@ -29,7 +31,7 @@ header {
                     font-family: 'Monoton', cursive;
                     font-size: 30px;
                     font-weight: normal;
-                    color:$cream;
+                    color:$blue
                }
           }
 
@@ -45,22 +47,24 @@ header {
                     @include flex(row, center, center, nowrap);
                     padding: 10px 20px;
                     margin-left: 20px;   
-                    background-color: $blue;
+                    background-color: $yellow;
                     border-bottom-left-radius: 30px;
                     border-bottom-right-radius: 30px;
-                    border: 2px solid $cream;
+                    border: 2px solid $blue;
+                    border-top: 3px solid transparent;
                     z-index: 99;
                     transition: all 0.5s ease-in-out;   
 
                     &:hover {
                          margin-top: 10px;
                          border-radius: 10px;
+                         border-top: 3px solid $blue;
                          box-shadow: 5px 10px 3px $blue;
                     }
 
                     a {
                          @include baloo;
-                         color: $cream;
+                         color: $blue;
                     }
                }
           }

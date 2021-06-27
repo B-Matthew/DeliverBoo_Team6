@@ -27,7 +27,7 @@
                               {{restaurant.name}}                              
                          </h3>
                          <div>   
-                              <img :src="categoryImage + restaurant.name + '.jpg' " alt="">
+                              <img :src="categoryImage + restaurant.name + '.jpeg' " alt="">
                          </div>
                     </a> 
                </li>
@@ -41,7 +41,7 @@
                               {{restaurant.name}}                              
                          </h3>
                          <div>
-                              <img :src="categoryImage + restaurant.name + '.jpg' " alt="">
+                              <img :src="categoryImage + restaurant.name + '.jpeg' " alt="">
                          </div>
                     </a> 
                </li>
@@ -54,7 +54,7 @@
                          <h3>{{restaurant.name}}</h3>
                          <div>
                               <!-- <img :src="image" alt="">  -->
-                              <img :src="categoryImage + restaurant.name + '.jpg' " alt="">
+                              <img :src="categoryImage + restaurant.name + '.jpeg' " alt="">
                          </div>      
                     </a>
                </li>

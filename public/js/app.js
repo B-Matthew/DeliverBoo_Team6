@@ -1453,7 +1453,7 @@ var render = function() {
                     _c("div", [
                       _c("img", {
                         attrs: {
-                          src: _vm.categoryImage + restaurant.name + ".jpg",
+                          src: _vm.categoryImage + restaurant.name + ".jpeg",
                           alt: ""
                         }
                       })
@@ -1482,7 +1482,7 @@ var render = function() {
                 _c("div", [
                   _c("img", {
                     attrs: {
-                      src: _vm.categoryImage + restaurant.name + ".jpg",
+                      src: _vm.categoryImage + restaurant.name + ".jpeg",
                       alt: ""
                     }
                   })
@@ -1503,7 +1503,7 @@ var render = function() {
                 _c("div", [
                   _c("img", {
                     attrs: {
-                      src: _vm.categoryImage + restaurant.name + ".jpg",
+                      src: _vm.categoryImage + restaurant.name + ".jpeg",
                       alt: ""
                     }
                   })
