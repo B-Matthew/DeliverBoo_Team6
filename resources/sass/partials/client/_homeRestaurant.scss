@@ -107,8 +107,10 @@
                     @include neomorphism;
                     padding: 10px 0;
                     margin-bottom: 40px;
+
                     h2 {
                         @include itim;
+                        font-size: 35px;
                         margin-left:20px;
                         margin-top: 20px;
                         padding: 0 20px;
@@ -134,28 +136,42 @@
 
                             h3 {
                                 @include baloo;
-                                font-size: 23px;
-                                font-weight: normal;
+                                font-size: 20px;
                             }
 
                             h5 {
                                 font-weight: normal;
                                 @include baloo;
+                                font-size: 18px;
                                 margin: 10px 0;
                             }
 
                             p {
                                 @include baloo;
-                                font-size: 17px;
+                                font-size: 18px;
                                 word-break: break-all;
                             }
 
-                            h4 {
+                            h4 {                                
+                                border-radius: 10px;
                                 font-weight: normal;
                             }
 
-                            i {
+                            .fa-plus {
                                 color: $blue;
+                                border-radius: 50%;
+                                padding: 10px;
+                                margin: 10px 0;
+                                background-color:$bluelight;
+                                transition: all 0.5s linear;
+
+                                &:hover {
+                                    transform: scale(1.2);
+                                }
+                            }
+
+                            .fa-euro-sign {
+                                font-size: 17px;
                             }
 
                             img {
@@ -174,25 +190,39 @@
         }
 
         .carrello {
+            padding: 20px 0;
+            text-align: center;
             flex-basis: 25%;
-            border: 3px solid $cream;
-            background-color: $blue;
+            // border: 3px solid $blue;
+            // background-color: $yellow;
+            @include neomorphism;
             border-radius: 25px;
             padding-bottom: 0 20px;
 
             h2 {
-                padding: 0 20px;
+                padding: 0 20px 10px 0;
+                color: $blue;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 25px;
-                border-bottom: 3px solid $cream;
+                border-bottom: 1px solid $blue;
                 @include itim;
-                background-color: $yellow;
+                font-size: 35px;
+                // background-color: $bluelight;
+            }
+
+            .no-products {
+                padding: 20px;
+                
+                h3 {
+                    @include baloo;
+                    font-size: 20px;
+                }
             }
 
             ul,
             h3,
             span {
-                color: $cream;
+                color: $blue;
             }
 
             ul {
@@ -206,6 +236,7 @@
 
             h3 {
                 @include itim;
+                font-size: 35px;
                 font-weight: normal;
                 padding: 40px 20px;
             }
@@ -215,7 +246,8 @@
                 margin-bottom: 20px;
 
                 button {
-                    @include theButtonDesign($yellow, $blue, $red);
+                    @include theButtonDesign($bluelight, $bluelight, $red);
+                    font-size: 20px;
 
                     a {
                         @include baloo;
@@ -224,7 +256,7 @@
             }
 
             i {
-                color: $cream;
+                color: $blue;
             }
         }
     }

@@ -51,8 +51,8 @@
                               <div class="image">
                                    <img :src="antipastoImg" alt=""> 
                                    <h4> 
-                                   {{ antipasto.price }}    
-                                   <i class="fas fa-euro-sign"></i>
+                                        <i class="fas fa-euro-sign"></i>
+                                        {{ antipasto.price }}    
                                    </h4>          
                               </div>
                          </li>            
@@ -75,8 +75,8 @@
                               <div class="image">
                                    <img :src="primoImg" alt=""> 
                                    <h4> 
-                                   {{ primo.price }}    
-                                   <i class="fas fa-euro-sign"></i>
+                                        <i class="fas fa-euro-sign"></i>
+                                        {{ primo.price }}    
                                    </h4>      
                               </div>
                          </li>       
@@ -99,8 +99,8 @@
                               <div class="image">
                                    <img :src="secondoImg" alt=""> 
                                    <h4> 
-                                   {{ secondo.price }}    
-                                   <i class="fas fa-euro-sign"></i>
+                                        <i class="fas fa-euro-sign"></i>
+                                        {{ secondo.price }}    
                                    </h4>          
                               </div>
                          </li>       
@@ -148,16 +148,22 @@
                 </li>
             </ul>
     
-            <h3>Totale</h3>
-            <div class="totalePrezzo">
-               <input type="hidden" name="price" v-model="totale">
-               <span>{{totale}}</span>
-               <i class="fas fa-euro-sign"></i>
+          <div v-if="carrello.length != 0">
+                 <h3>Totale</h3>
+               <div class="totalePrezzo">
+                    <input type="hidden" name="price" v-model="totale">
+                    <span>{{totale}}</span>
+                    <i class="fas fa-euro-sign"></i>
+               </div>
+               <div>
+                <button type="submit">Vai al pagamento</button>  
+               </div>   
+            </div>
+
+            <div class="no-products" v-else>
+                 <h3>Il tuo carrello è ancora vuoto.</h3>
             </div>
     
-            <div>
-                <button type="submit">Vai al pagamento</button>  
-            </div>   
             </form>
         </div>
         
