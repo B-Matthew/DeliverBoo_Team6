@@ -228,4 +228,26 @@
     }
 }
 
+@mixin neomorphismIn {
+    border-radius: 10px;
+    background: $whitePastel;
+    box-shadow: inset 5px 5px 10px #cdcdcd,
+                inset -5px -5px 10px #ffffff;
+    transition: all 0.5s linear;
+}
+
+@mixin addRemove {
+    color: $blue;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color:$bluelight;
+    transition: all 0.5s linear;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
    

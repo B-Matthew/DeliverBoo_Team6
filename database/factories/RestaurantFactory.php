@@ -16,6 +16,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'img'  => 'carne3.png',
          'deleted'  => false,
          'user_id' => 2,
+
         ],
         [
          'name' => 'King Arthur',
