@@ -300,6 +300,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -308,6 +321,7 @@ __webpack_require__.r(__webpack_exports__);
       'secondoImg': "../../../storage/img/secondi.png",
       'totale': 0,
       'carrello': [],
+      'carrelloBackup': [],
       'inputs': {},
       'errors': {}
     };
@@ -318,13 +332,51 @@ __webpack_require__.r(__webpack_exports__);
       var currentProduct = {
         'prodotto': '',
         'prezzo': 0,
-        'id': 0
+        'id': 0,
+        'quantita': 0,
+        'prezzoBase': 0
       };
       currentProduct.prodotto = nomeProdotto;
       currentProduct.prezzo = parseFloat(prezzoProdotto);
+      currentProduct.prezzoBase = parseFloat(prezzoProdotto);
       currentProduct.id = parseInt(idProdotto);
-      this.totale += currentProduct.prezzo;
-      this.carrello.push(currentProduct);
+      currentProduct.quantita++;
+      var count = 0;
+
+      if (this.carrello.length != 0) {
+        for (var j = 0; j < this.carrello.length; j++) {
+          if (this.carrello[j].id == currentProduct.id) {
+            this.carrello[j].quantita++;
+            this.carrello[j].prezzo += this.carrello[j].prezzoBase;
+            this.totale += this.carrello[j].prezzoBase;
+          } else {
+            count++;
+          }
+        }
+
+        if (count == this.carrello.length) {
+          this.totale += currentProduct.prezzo;
+          this.carrello.push(currentProduct);
+        }
+      } else {
+        this.carrello.push(currentProduct);
+        this.totale += currentProduct.prezzo;
+      }
+    },
+    removeProduct: function removeProduct(index) {
+      if (this.carrello[index].quantita > 1) {
+        this.carrello[index].quantita--;
+        this.carrello[index].prezzo -= this.carrello[index].prezzoBase;
+        this.totale -= this.carrello[index].prezzoBase;
+      } else {
+        this.totale -= this.carrello[index].prezzo;
+        this.carrello.splice(index, 1);
+      }
+    },
+    increaseProduct: function increaseProduct(index) {
+      this.carrello[index].quantita++;
+      this.carrello[index].prezzo += this.carrello[index].prezzoBase;
+      this.totale += this.carrello[index].prezzoBase;
     }
   },
   mounted: function mounted() {
@@ -999,9 +1051,9 @@ var render = function() {
         _vm._l(_vm.antipasti, function(antipasto) {
           return _c("li", [
             _vm._v(
-              "\n                     " +
+              "\n                    " +
                 _vm._s(antipasto.name) +
-                "   \n                "
+                "   \n               "
             )
           ])
         }),
@@ -1015,9 +1067,9 @@ var render = function() {
         _vm._l(_vm.primi, function(primo) {
           return _c("li", [
             _vm._v(
-              "\n                     " +
+              "\n                    " +
                 _vm._s(primo.name) +
-                "\n                "
+                "\n               "
             )
           ])
         }),
@@ -1031,7 +1083,9 @@ var render = function() {
         _vm._l(_vm.secondi, function(secondo) {
           return _c("li", [
             _vm._v(
-              "\n                " + _vm._s(secondo.name) + "   \n           "
+              "\n                    " +
+                _vm._s(secondo.name) +
+                "   \n               "
             )
           ])
         }),
@@ -1045,9 +1099,9 @@ var render = function() {
         _vm._l(_vm.dolci, function(dolce) {
           return _c("li", [
             _vm._v(
-              "\n                     " +
+              "\n                    " +
                 _vm._s(dolce.name) +
-                "   \n                "
+                "   \n               "
             )
           ])
         }),
@@ -1093,9 +1147,9 @@ var render = function() {
                   _c("h4", [
                     _c("i", { staticClass: "fas fa-euro-sign" }),
                     _vm._v(
-                      "\n                                    " +
+                      "\n                                        " +
                         _vm._s(antipasto.price) +
-                        "    \n                               "
+                        "    \n                                   "
                     )
                   ])
                 ])
@@ -1135,9 +1189,9 @@ var render = function() {
                   _c("h4", [
                     _c("i", { staticClass: "fas fa-euro-sign" }),
                     _vm._v(
-                      "\n                                    " +
+                      "\n                                        " +
                         _vm._s(primo.price) +
-                        "    \n                               "
+                        "    \n                                   "
                     )
                   ])
                 ])
@@ -1181,9 +1235,9 @@ var render = function() {
                   _c("h4", [
                     _c("i", { staticClass: "fas fa-euro-sign" }),
                     _vm._v(
-                      "\n                                    " +
+                      "\n                                        " +
                         _vm._s(secondo.price) +
-                        "    \n                               "
+                        "    \n                                   "
                     )
                   ])
                 ])
@@ -1222,9 +1276,9 @@ var render = function() {
                   _vm._v(" "),
                   _c("h4", [
                     _vm._v(
-                      " \n                               " +
+                      " \n                                   " +
                         _vm._s(dolce.price) +
-                        "    \n                               "
+                        "    \n                                   "
                     ),
                     _c("i", { staticClass: "fas fa-euro-sign" })
                   ])
@@ -1249,36 +1303,62 @@ var render = function() {
           _vm._v(" "),
           _c("h2", [_vm._v("Il tuo carrello")]),
           _vm._v(" "),
-          _vm._l(_vm.carrello, function(ordine) {
+          _vm._l(_vm.carrello, function(ordine, index) {
             return _c("ul", [
               _c("li", [
-                _c("span", [_vm._v(_vm._s(ordine.prodotto))]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: ordine.id,
-                      expression: "ordine.id"
-                    }
-                  ],
-                  attrs: { type: "hidden", name: "product_id[]" },
-                  domProps: { value: ordine.id },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                _c("div", [
+                  _c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fas fa-minus",
+                    on: {
+                      click: function($event) {
+                        return _vm.removeProduct(index)
                       }
-                      _vm.$set(ordine, "id", $event.target.value)
                     }
-                  }
-                }),
+                  })
+                ]),
                 _vm._v(" "),
                 _c("div", [
-                  _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")]),
+                  _c("h5", [_vm._v(_vm._s(ordine.prodotto))]),
                   _vm._v(" "),
-                  _c("i", { staticClass: "fas fa-euro-sign" })
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: ordine.id,
+                        expression: "ordine.id"
+                      }
+                    ],
+                    attrs: { type: "hidden", name: "product_id[]" },
+                    domProps: { value: ordine.id },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(ordine, "id", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("div", [
+                    _c("i", { staticClass: "fas fa-euro-sign" }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")])
+                  ]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fas fa-plus",
+                    on: {
+                      click: function($event) {
+                        return _vm.increaseProduct(index)
+                      }
+                    }
+                  })
                 ])
               ])
             ])
@@ -1310,9 +1390,9 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
-                  _c("span", [_vm._v(_vm._s(_vm.totale))]),
+                  _c("i", { staticClass: "fas fa-euro-sign" }),
                   _vm._v(" "),
-                  _c("i", { staticClass: "fas fa-euro-sign" })
+                  _c("span", [_vm._v(_vm._s(_vm.totale))])
                 ]),
                 _vm._v(" "),
                 _vm._m(0)

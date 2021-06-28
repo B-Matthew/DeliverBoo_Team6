@@ -1542,6 +1542,7 @@ footer .links h5 {
 #home-restaurant .menu .container-menu .products > div ul li .fa-plus {
   color: #25385f;
   border-radius: 50%;
+  font-size: 15px;
   padding: 10px;
   margin: 10px 0;
   background-color: #e9ebf8;
@@ -1570,16 +1571,12 @@ footer .links h5 {
   padding: 20px 0;
   text-align: center;
   flex-basis: 25%;
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
-  transition: all 0.5s linear;
   border-radius: 25px;
   padding-bottom: 0 20px;
 }
 
-#home-restaurant .menu .carrello:hover {
-  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
+#home-restaurant .menu .carrello .fa-euro-sign {
+  font-size: 17px;
 }
 
 #home-restaurant .menu .carrello h2 {
@@ -1624,33 +1621,79 @@ footer .links h5 {
   flex-wrap: nowrap;
 }
 
+#home-restaurant .menu .carrello ul li div {
+  text-align: center;
+}
+
+#home-restaurant .menu .carrello ul li div h5 {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+#home-restaurant .menu .carrello ul li div .fa-minus {
+  color: #25385f;
+  border-radius: 50%;
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #e9ebf8;
+  transition: all 0.5s linear;
+}
+
+#home-restaurant .menu .carrello ul li div .fa-minus:hover {
+  transform: scale(1.2);
+}
+
+#home-restaurant .menu .carrello ul li div .fa-plus {
+  color: #25385f;
+  border-radius: 50%;
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #e9ebf8;
+  transition: all 0.5s linear;
+}
+
+#home-restaurant .menu .carrello ul li div .fa-plus:hover {
+  transform: scale(1.2);
+}
+
+#home-restaurant .menu .carrello ul li div:last-child {
+  text-align: right;
+}
+
 #home-restaurant .menu .carrello h3 {
   font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
   font-size: 35px;
   font-weight: normal;
-  padding: 40px 20px;
+  padding: 40px 0 10px 0;
+}
+
+#home-restaurant .menu .carrello .totalePrezzo {
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
 #home-restaurant .menu .carrello div {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 #home-restaurant .menu .carrello div button {
-  background-color: #e9ebf8;
-  border: 2px solid #e9ebf8;
+  background-color: #ffc244;
+  border: 2px solid #25385f;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 10px;
   transition: all 0.5s linear;
+  color: #25385f;
   font-size: 20px;
 }
 
 #home-restaurant .menu .carrello div button:hover {
   box-shadow: 5px 10px 3px #d24448;
-  border-color: #e9ebf8;
+  border-color: #25385f;
   margin-top: 0;
   margin-bottom: 20px;
 }
