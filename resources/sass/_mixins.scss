@@ -68,7 +68,7 @@
     &:checked {
         background-color: $yellow;
         // border-color: $red;
-        border: 3px solid $red;
+        border: 2px solid $red;
     }
 
     &:checked:after {
@@ -85,9 +85,12 @@
 @mixin form {
 
     flex-basis: 50%;
+    padding: 0 40px 40px;
+    @include neomorphism;
 
     fieldset {
-        border: 3px solid #F5B436;
+        border: 3px solid $blue;
+        background-color: $bluelight;
         padding: 40px;
         border-radius: 10px;
 
@@ -99,8 +102,9 @@
         label,
         input,
         #myfilebutton {      
-            @include baloo;   
-            margin: 20px 0;  
+            @include baloo;
+            margin: 20px;
+            color: $blue;
             cursor: pointer;
         }
 

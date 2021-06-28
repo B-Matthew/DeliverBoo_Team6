@@ -21,9 +21,9 @@
      .delivery {
 
           @include flex(row, space-between, center,  nowrap);
-          background-color: $greenPastel;
+          background-color: $bluelight;
           padding: 200px 8% 0 8%;
-          color: $red;
+          color: $blue;
 
           .attach {
                flex-basis: 40%;
@@ -51,14 +51,14 @@
      }
 
      .faq {
-          @include theWave($greenPastel, $whitePastel);
+          @include theWave($bluelight, $whitePastel);
 
           .text-box {
                padding: 20%;
 
                h1 {
                     @include itim;
-                    color: $red;
+                    color: $blue;
                }
      
                p {
