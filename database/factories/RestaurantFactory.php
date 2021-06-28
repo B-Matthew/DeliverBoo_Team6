@@ -5,7 +5,8 @@
 use App\Restaurant;
 use Faker\Generator as Faker;
 
-$factory->define(Restaurant::class, function (Faker $faker) {
+$autoIncrement = autoIncrement();
+$factory->define(Restaurant::class, function (Faker $faker) use ($autoIncrement) {
     $restaurants = [
         [
          'name' => 'Old Wild West',
@@ -210,8 +211,9 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'user_id' => 2,
         ],
     ];
-    
-    $index = $faker -> unique() -> numberBetween(0,19);
+    $autoIncrement -> next();
+    $index = $autoIncrement -> current();
+    // $index = $faker -> unique() -> numberBetween(0,19);
     $restaurant = $restaurants[$index];
     return [
 
@@ -224,4 +226,9 @@ $factory->define(Restaurant::class, function (Faker $faker) {
         'user_id' => $restaurant['user_id'],
     ];
 });
+function autoIncrement() {
+    for ($i = -1; $i < 20; $i++) {
+         yield $i;
+     }
+}
         
