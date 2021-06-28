@@ -29,10 +29,12 @@
 
     .menu {
         @include flex(row, space-between, flex-start, nowrap);
-        padding: 10% 2% 20% 2%;
+        padding: 10% 3% 20% 3%;
+
 
         .aside-menu {
-            flex-basis: 20%;
+            flex-basis: 25%;
+            // flex-basis: calc( 100% / 3 - 10px);
             color: $blue;
 
             h2 {
@@ -44,8 +46,9 @@
             ul {
                 li {
                     @include baloo;
-                    padding: 10px 0 10px 20px;
-                    border-left: 4px solid $yellow;
+                    padding: 10px  0 10px 20px;
+                    border-left: 3px solid $yellow;
+                    font-size: 18px;
 
                     div {
                         flex-basis: calc(50% - 20px);
@@ -56,7 +59,8 @@
         }
 
         .container-menu {
-            flex-basis: calc(40% - 50px);
+            flex-basis: calc(50% - 150px);
+            // flex-basis: calc( 100% / 3 - 50px);
 
             .box-restaurant {
                 border: 3px solid $yellow;
@@ -183,6 +187,7 @@
         .carrello {
             padding: 20px 0;
             text-align: center;
+            // flex-basis: 25%;
             flex-basis: 25%;
             // border: 3px solid $blue;
             // background-color: $yellow;

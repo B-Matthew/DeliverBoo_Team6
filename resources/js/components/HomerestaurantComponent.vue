@@ -3,28 +3,28 @@
 
           <div class="aside-menu">
 
-               <h2>Antipasti</h2>   
+               <!-- <h2>Antipasti</h2>    -->
                <ul>
                     <li v-for="antipasto in antipasti">
                          {{ antipasto.name }}   
                     </li>
                </ul>   
        
-               <h2>Primi</h2>
+               <!-- <h2>Primi</h2> -->
                <ul>
                     <li v-for="primo in primi">
                          {{ primo.name }}
                     </li>
                </ul>
     
-               <h2>Secondi</h2>
+               <!-- <h2>Secondi</h2> -->
                <ul>
                     <li v-for="secondo in secondi">
                          {{ secondo.name }}   
                     </li>                
                </ul>
 
-               <h2>Dolce</h2>   
+               <!-- <h2>Dolce</h2>    -->
                <ul>
                     <li v-for="dolce in dolci">
                          {{ dolce.name }}   

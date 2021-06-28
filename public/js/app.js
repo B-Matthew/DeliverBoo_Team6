@@ -1044,8 +1044,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "menu" }, [
     _c("div", { staticClass: "aside-menu" }, [
-      _c("h2", [_vm._v("Antipasti")]),
-      _vm._v(" "),
       _c(
         "ul",
         _vm._l(_vm.antipasti, function(antipasto) {
@@ -1059,8 +1057,6 @@ var render = function() {
         }),
         0
       ),
-      _vm._v(" "),
-      _c("h2", [_vm._v("Primi")]),
       _vm._v(" "),
       _c(
         "ul",
@@ -1076,8 +1072,6 @@ var render = function() {
         0
       ),
       _vm._v(" "),
-      _c("h2", [_vm._v("Secondi")]),
-      _vm._v(" "),
       _c(
         "ul",
         _vm._l(_vm.secondi, function(secondo) {
@@ -1091,8 +1085,6 @@ var render = function() {
         }),
         0
       ),
-      _vm._v(" "),
-      _c("h2", [_vm._v("Dolce")]),
       _vm._v(" "),
       _c(
         "ul",
