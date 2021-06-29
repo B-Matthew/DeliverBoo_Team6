@@ -7,6 +7,7 @@ use App\Product;
 use App\Order;
 use Braintree;
 use Illuminate\Http\Request;
+use App\Http\Requests\OrderRequest;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\DB;
@@ -75,7 +76,7 @@ class MainController extends Controller
   }
 
   //Pagina Checkout
-  public function checkout($id) {
+  public function checkout() {
     
     $gateway = new Braintree\Gateway([
     'environment' => config('services.braintree.environment'),
@@ -83,13 +84,13 @@ class MainController extends Controller
     'publicKey' => config('services.braintree.publicKey'),
     'privateKey' => config('services.braintree.privateKey')
     ]);
-    $order = Order::findOrFail(Crypt::decrypt($id));
+    
     $token = $gateway -> ClientToken() -> generate();
-    return view('pages.Client.checkout', compact('token','order'));
+    return view('pages.Client.checkout', compact('token'));
   }
 
-  public function payment(Request $request, $id) {
-
+  public function payment(OrderRequest $request) {
+    
     $gateway = new Braintree\Gateway([
     'environment' => config('services.braintree.environment'),
     'merchantId' => config('services.braintree.merchantId'),
@@ -97,14 +98,8 @@ class MainController extends Controller
     'privateKey' => config('services.braintree.privateKey')
     ]);
 
-    $data = $request -> validate([
-      'name' => 'string|required|min:3',
-      'lastname' => 'string|required|min:3',
-      'address' => 'string|required|min:3',
-      'email' => 'string|required|min:3',
-    ]);
-      
-    
+    $data = $request->all();
+
     $amount = $request -> amount;
     
     $result = $gateway->transaction()->sale([
@@ -118,10 +113,12 @@ class MainController extends Controller
     if ($result -> success) {
         $transaction = $result->transaction;
 
-        $order = Order::findOrFail($id);
-        $order -> confirmed = true;
-        $order -> update($data);
-        
+        $order = new Order();
+        $order->fill($data);
+        $order->save();
+        $order -> products() -> sync($data['product_id']);
+        $order->save();
+    
         return redirect() -> route('transaction', encrypt($transaction -> id));
     } else {
         $errorString = "";
@@ -134,29 +131,14 @@ class MainController extends Controller
     }
   }
        
-  public function submit(Request $request) 
-  {
-    $data = $request -> validate([
-      'price' => 'required',
-      'product_id' => 'required|array',
-      'product_id.*' => 'required',
-    ]);
-      
-    $order = new Order();
-    $order->fill($data);
-    $order->save();
-    $order -> products() -> sync($data['product_id']);
-    $order->save();
-    
-    return redirect() -> route('checkout', encrypt($order-> id));
-  }
-   
   public function transaction($id) {
     
     $transaction = Crypt::decrypt($id);
     return view('pages.Client.transaction',compact('transaction'));
   }
 }
+  
+   
     
 
 
@@ -169,6 +151,9 @@ class MainController extends Controller
 
   
   
+    
+        
+        
                 
       
       
@@ -187,5 +172,7 @@ class MainController extends Controller
       
 
 
+    
+    
     
 

@@ -29,10 +29,10 @@
     <homerestaurant-component 
     :antipasti="{{$antipasti}}" 
     :primi="{{$primi}}" :secondi="{{$secondi}}" 
-    :checkout="'/client/checkout/'" 
+    checkout="{{route('checkout')}}" 
     :dolci="{{$dolci}}"
-    route-submit="{{route('submit')}}"
-    csrf="{{csrf_token()}}">
+    >
+    
     
     </homerestaurant-component>    
 </main>   
