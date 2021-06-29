@@ -33,7 +33,7 @@
     :dolci="{{$dolci}}"
     >
     
-    
-    </homerestaurant-component>    
+</homerestaurant-component>    
 </main>   
 @endsection
+    

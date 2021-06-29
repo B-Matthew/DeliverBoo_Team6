@@ -63,8 +63,8 @@ class HomeController extends Controller
       $restaurant -> categories() -> sync($data['categories']);
       $restaurant -> update($data);
       return redirect() -> route('dashBoard');
-      
     }
+      
       
       
     // Aggiunta ristorante nella dashboard
@@ -75,11 +75,11 @@ class HomeController extends Controller
       if(!empty($data['img'])){
         $img = $data['img'];
         $imgExt = $img -> getClientOriginalExtension();
-        $imgNew = time() . '_restaurtant-img.' .$imgExt;
+        $imgNew = time() . $data['name'] .$imgExt;
         $folder = '/restaurant-img/';
         $imgFile = $img -> storeAs($folder , $imgNew, 'public');
        }else {
-         $imgNew = 'carne3.png';
+         $imgNew = 'Alice Pizza.jpeg';
        }
       
        $data['user_id'] = Auth::id();
