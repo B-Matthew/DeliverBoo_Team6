@@ -47,11 +47,12 @@
                         </div>
 
                         <div>
-                            <a
-                                href="{{ route('myProduct' , encrypt($restaurant -> id)) }}">
+                            
+                            <a href="{{ route('myProduct' , encrypt($restaurant -> id)) }}">
                                 <img src="{{ asset('storage/restaurant-img/' . $restaurant -> img) }}"
                                     alt="">
                             </a>
+                                
                         </div>
                     </li>
                 @endif
