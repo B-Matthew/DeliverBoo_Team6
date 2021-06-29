@@ -84,51 +84,58 @@
 
 @mixin form {
 
-    flex-basis: 50%;
-    padding: 0 40px 40px;
-    @include neomorphism;
+     @include flex(row, center, center, nowrap);
+     background-color: $whitePastel;
+     padding: 10% 8%;
 
-    fieldset {
-        border: 3px solid $blue;
-        background-color: $bluelight;
-        padding: 40px;
-        border-radius: 10px;
+     form {   
+         flex-basis: 50%;
+         padding: 0 40px 40px;
+         @include neomorphism;
 
-        legend {
-            @include indie;
-            padding: 20px;
-        }
+         fieldset {
+             border: 3px solid $blue;
+             background-color: $bluelight;
+             padding: 40px;
+             border-radius: 10px;
 
-        label,
-        input,
-        #myfilebutton {      
-            @include baloo;
-            margin: 20px;
-            color: $blue;
-            cursor: pointer;
-        }
+             legend {
+                 @include itim;
+                 padding: 20px;
+             }
 
-        input, #myfilebutton { 
-            width: 100%;   
-            height: 40px;   
-            padding: 20px 10px; 
-            background-color: #F5B436;
-            border: 1px solid black;
-            border-radius: 10px;
-            outline: none;   
-            transition: box-shadow 0.5s linear;
+             label,
+             input {
+                 @include baloo;
+                 margin: 20px;
+                 color: $blue;
+             }
 
-            &:hover {
-                box-shadow: 5px 10px 3px rgb(51, 50, 50);
-            }
-        }
+             input {
+                 width: 100%;
+                 border-radius: 10px;
+                 padding: 10px 20px;
+                 border: 0;
+                 background-color: $bluelight;
+                 box-shadow: inset 5px 5px 10px #bfc1cb,
+                     inset -5px -5px 10px #ffffff;
+             }
 
-        button {
-            @include baloo;   
-            @include buttonDesign($yellow);
-            cursor: pointer;
-        }
-    }
+             button {
+                 @include baloo;
+                 padding: 10px 20px;
+                 background-color: $yellow;
+                 color: $blue;
+                 border-radius: 10px;
+                 border: 1px solid $blue;
+
+                 &:active {
+                     box-shadow: inset 5px 5px 10px #d19f38,
+                         inset -5px -5px 10px #ffe550;
+                 }
+             }
+         }
+     }
 }
 
 @mixin wave($background-top, $background-bottom) {

@@ -1,18 +1,18 @@
 #dashboard {
-    position: relative;   
+    position: relative;
     display: grid;
-    background-color: $whitePastel;   
-    grid-template-columns: 15% auto 15% ;
+    background-color: $whitePastel;
+    grid-template-columns: 15% auto 15%;
     grid-template-rows: auto 1fr;
     grid-template-areas:
         "welcome welcome welcome"
-        "navbar my-restaurants .";   
-   
+        "navbar my-restaurants .";
+
 
     .welcome {
         grid-area: welcome;
         background-color: $whitePastel;
-        padding: 100px 0 50px;   
+        padding: 100px 0 50px;
         @include flex(row, center, center, nowrap);
         font-family: indie flower, cursive;
         font-size: 40px;
@@ -30,39 +30,41 @@
             position: sticky;
             top: 100px;
 
-               
 
-                >li {
-                     position: relative;
-                     height: 110px;   
 
-                      &:first-child a{
-                          left: -180px;
-                      }
+            >li {
+                position: relative;
+                height: 110px;
 
-                      &:last-child a{   
-                          left: -125px;
-                      }
-                     >a{   
-                         @include flex(row, space-between, center, nowrap);
-                         @include neomorphism;
-                         @include itim;
-                         position: absolute;
-                         top:0;      
-                         font-size: 30px;
-                         padding: 30px 10%; 
-                         border: 1px solid black;
-                         h4 {      
-                             margin-right: 20px;
-                         }
-                        
-                         &:hover{
-                              left: 0;      
-                         }
-                     }
+                &:first-child a {
+                    left: -180px;
+                }
 
-                }      
-            
+                &:last-child a {
+                    left: -125px;
+                }
+
+                >a {
+                    @include flex(row, space-between, center, nowrap);
+                    @include neomorphism;
+                    @include itim;
+                    position: absolute;
+                    top: 0;
+                    font-size: 30px;
+                    padding: 30px 10%;
+                    border: 1px solid black;
+
+                    h4 {
+                        margin-right: 20px;
+                    }
+
+                    &:hover {
+                        left: 0;
+                    }
+                }
+
+            }
+
         }
 
     }
@@ -85,7 +87,7 @@
             @include flex(row, space-between, center, wrap);
             padding: 30px 0;
 
-            li {   
+            li {
                 @include neomorphism;
                 flex-basis: 370px;
                 margin: 30px;
@@ -107,6 +109,10 @@
                         background-color: goldenrod;
                         width: 100%;
 
+                        &:hover {
+                            display: block;
+                        }
+
                         a {
                             @include itim;
                             font-size: 20px;
@@ -114,7 +120,7 @@
                             padding: 10px 20px;
                             background-color: lightseagreen;
                             margin: 0 20px;
-                            
+
                         }
 
                     }
@@ -169,132 +175,140 @@
             }
         }
     }
-
-    // .create {
-    //      grid-area: create;   
-    //      padding: 50px 8% 0 0;
-    //      @include flex(column, flex-start, center, nowrap);
-    //      background-color: $whitePastel;   
-    //      padding-bottom: 200px;    
-
-    //      h2 {
-    //           @include indie;
-    //      }
-
-    //      form {
-    //           width: 80%;
-    //           margin:30px 0;
-    //           fieldset {
-    //                @include flex(row, space-between, center, wrap);
-    //                border: 3px solid #F5B436;
-    //                padding: 20px;
-    //                border-radius: 10px;
-
-    //                legend {
-    //                     @include indie;
-    //                     padding: 20px;
-    //                }
-
-    //                div {
-    //                     flex-basis: calc(100% / 3 - 20px);
-
-    //                     ::placeholder {
-    //                          @include baloo;
-    //                          color: black;
-    //                     }
-
-    //                     label, input, #myfilebutton {   
-    //                          margin: 20px 50px 20px 0;
-    //                          font-size: 20px;
+   
+    .create {
+        grid-area: my-restaurants;
+        @include form;
+        padding: 50px 8% 0 0;
 
 
-    //                          h4 {
-    //                               @include baloo;
-    //                               font-weight: normal;
-    //                          }
+        ul {
 
-    //                     }
+            #myfilebutton {
+                margin: 20px 50px 20px 0;
+                font-size: 20px;
+   
+            }      
+            flex-basis: 100%;
+            @include flex(row, space-between, center, wrap);
+            margin-bottom: 20px;
 
-    //                     input, #myfilebutton {      
-    //                          width: 100%;
-    //                          padding: 10px 20px;
-    //                          background-color: #F5B436;
-    //                          border: 1px solid black;
-    //                          border-radius: 10px;
-    //                          transition: box-shadow 0.5s linear;
+            li {
+                flex-basis: calc(100% / 5 - 20px);
+                @include flex(row, flex-start, center, nowrap);
 
-    //                          &:hover {
-    //                               box-shadow: 5px 10px 3px rgb(51, 50, 50);
-    //                          }
-    //                     }  
-    //                     #myfilebutton{   
-    //                          margin-top: 0;   
-    //                     }   
+                label {
+                    @include baloo;
+                    white-space: nowrap;
+                }
 
+                input {
+                    -webkit-appearance: none;
+                    background-color: $yellow;
+                    border: 1px solid $yellow;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin: 0 10px;
+                    transition: all 0.3s linear;
+                    position: relative;
 
-    //                }
+                    &:hover {
+                        border-color: black;
+                    }
 
-    //                .button {
-    //                     flex-basis: 100%;
-    //                     text-align: center;
+                    &:checked {
+                        background-color: $yellow;
+                        border: 1px solid black;
+                    }
 
-    //                     button{
-    //                     @include baloo;
-    //                     @include buttonDesign($yellow);
-    //                     }
-    //                }
+                    &:checked:after {
+                        content: '\2714';
+                        font-size: 20px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: black;
+                    }
+                }
+            }
+        }
 
-    //                ul {
-    //                     flex-basis: 100%;
-    //                     @include flex(row, space-between, center, wrap);
-    //                     margin-bottom: 20px;
+        //  h2 {
+        //       @include indie;
+        //  }
 
-    //                     li {
-    //                          flex-basis: calc(100% / 5 - 20px);
-    //                          @include flex(row, flex-start, center, nowrap);
+        //  form {
+        //       width: 80%;
+        //       margin:30px 0;
+        //       fieldset {
+        //            @include flex(row, space-between, center, wrap);
+        //            border: 3px solid #F5B436;
+        //            padding: 20px;
+        //            border-radius: 10px;
 
-    //                          label {
-    //                               @include baloo;
-    //                               white-space: nowrap;   
-    //                          }
+        //            legend {
+        //                 @include indie;
+        //                 padding: 20px;
+        //            }
 
-    //                          input {
-    //                               -webkit-appearance: none;
-    //                               background-color: $yellow;
-    //                               border: 1px solid $yellow;
-    //                               padding: 10px;
-    //                               border-radius: 5px;
-    //                               margin: 0 10px;
-    //                               transition: all 0.3s linear;
-    //                               position: relative;
+        //            div {
+        //                 flex-basis: calc(100% / 3 - 20px);
 
-    //                               &:hover {
-    //                                    border-color: black;     
-    //                               }
+        //                 ::placeholder {
+        //                      @include baloo;
+        //                      color: black;
+        //                 }
 
-    //                               &:checked {
-    //                                    background-color: $yellow;
-    //                                    border:1px solid black;
-    //                               }
-
-    //                               &:checked:after {
-    //                                    content: '\2714';
-    //                                    font-size: 20px;
-    //                                    position: absolute;
-    //                                    top: 50%;
-    //                                    left: 50%;
-    //                                    transform: translate(-50%, -50%);
-    //                                    color: black;
-    //                               }
-    //                          }
-    //                     }
-    //                }
+        //                 label, input, #myfilebutton {   
+        //                      margin: 20px 50px 20px 0;
+        //                      font-size: 20px;
 
 
-    //           }
-    //      }
+        //                      h4 {
+        //                           @include baloo;
+        //                           font-weight: normal;
+        //                      }
 
-    // }
+        //                 }
+
+        //                 input, #myfilebutton {      
+        //                      width: 100%;
+        //                      padding: 10px 20px;
+        //                      background-color: #F5B436;
+        //                      border: 1px solid black;
+        //                      border-radius: 10px;
+        //                      transition: box-shadow 0.5s linear;
+
+        //                      &:hover {
+        //                           box-shadow: 5px 10px 3px rgb(51, 50, 50);
+        //                      }
+        //                 }  
+        //                 #myfilebutton{   
+        //                      margin-top: 0;   
+        //                 }   
+
+
+        //            }
+
+        //            .button {
+        //                 flex-basis: 100%;
+        //                 text-align: center;
+
+        //                 button{
+        //                 @include baloo;
+        //                 @include buttonDesign($yellow);
+        //                 }
+        //            }
+
+        //           
+        //            }
+
+
+        //       }
+        //  }
+
+    }
 
 
 
