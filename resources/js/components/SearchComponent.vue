@@ -90,8 +90,9 @@
                          
                          const elem = this.categoryRestaurant[i];
                          const categories = elem.categories;
-                         var category =  categories.split(" ");
+                         var category = categories.split(" ");
                          let flag = 0;
+
                          for (let j = 0; j < category.length; j++) {
                               const item = category[j];
                               
