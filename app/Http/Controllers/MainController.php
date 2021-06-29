@@ -28,15 +28,11 @@ class MainController extends Controller
       $categories = Category::all();
       $restaurants = Restaurant::all();
       
-      // SELECT * FROM categories 
-      //  JOIN category_restaurant 
-      //  ON  category_restaurant=categories.id
-      //   JOIN restaurants 
-      // ON restaurants.id = category_restaurant.restaurant_id
-
-      $filterJson = DB::table('categories')
-                    ->join('category_restaurant' , 'category_restaurant.category_id' , '=' , 'categories.id')
-                    ->join('restaurants' ,'restaurants.id' ,'=' , 'category_restaurant.restaurant_id')
+      $filterJson = DB::table('restaurants')
+                    ->select(DB::raw("restaurants.id,restaurants.img,restaurants.name,GROUP_CONCAT(categories.id SEPARATOR ' ') as categories"))
+                    ->join('category_restaurant' , 'category_restaurant.restaurant_id' , '=' , 'restaurants.id')
+                    ->join('categories' ,'categories.id' ,'=' , 'category_restaurant.category_id')
+                    ->groupBy('restaurants.id') 
                     ->get();
                   
       return view('pages.homepage', compact('categories' , 'restaurants','filterJson'));
@@ -149,6 +145,8 @@ class MainController extends Controller
 
 
   
+      
+
 
     
   

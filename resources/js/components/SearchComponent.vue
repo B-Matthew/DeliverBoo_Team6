@@ -4,7 +4,7 @@
                <div class="wave"></div>
           </div>
           
-          <h2 @click="getCategoryId">Cosa vuoi mangiare?</h2>
+          <h2>Cosa vuoi mangiare?</h2>
           <input v-if="typeOfFoods.length == 0 " class="searchbar" v-model="restaurantInput" @keyup="filter()" text="" placeholder="Inserisci nome ristorante. . .">
           <ul v-if="restaurantInput == '' " class="typeOfFoods">
                <li v-for="(category, index) in categories" :value="category.name"> 
@@ -83,27 +83,25 @@
                     return filteredRestaurants;
                },
 
-               getCategoryId: function() {
-                    console.log(this.typeOfFoods);
-               },
-
                categoryFilter: function() {
                     const filteredCategory = [];
-                    const restaurant = [];
-                    let category_id;
-                    let restaurant_id;
-                    
+                   
                     for (let i = 0; i < this.categoryRestaurant.length; i++) {
                          const element = this.categoryRestaurant[i];
-                         category_id = element.category_id;
-                         restaurant_id = element.id;
-
-                         if (this.typeOfFoods.includes(category_id) && !restaurant.includes(restaurant_id)) {
-                              filteredCategory.push(element);
-                              restaurant.push(restaurant_id);
+                         const categories = element.categories;
+                         var category = categories.split(" ");
+                         
+                         for (let j = 0; j < category.length; j++) {
+                              const item = category[j];
+                              console.log(item);
+                              
+                         if (this.typeOfFoods.includes(item)) {
+                                  filteredCategory.push(element);
+                             }
                          }
                     }
-                              
+                         
+                    console.log(typeof this.typeOfFoods);
                     console.log(filteredCategory);
                     return filteredCategory;
                },
@@ -112,10 +110,12 @@
         mounted() {
             console.log(this.restaurants);
             console.log(this.categories);
-            console.log(this.restaurants);
+            console.log(this.categoryRestaurant);
         }
      } 
 </script>
+                        
+                         
                     
                          
         
@@ -129,3 +129,9 @@
                
                          
                          
+                         
+                         
+                         
+
+                         
+                              
