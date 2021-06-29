@@ -84,30 +84,33 @@
                },
 
                categoryFilter: function() {
-                    const filteredCategory = [];
-                   
+                    let filteredCategory = [];
+                    
                     for (let i = 0; i < this.categoryRestaurant.length; i++) {
-                         const element = this.categoryRestaurant[i];
-                         const categories = element.categories;
-                         var category = categories.split(" ");
                          
+                         const elem = this.categoryRestaurant[i];
+                         const categories = elem.categories;
+                         var category =  categories.split(" ");
+                         let flag = 0;
                          for (let j = 0; j < category.length; j++) {
                               const item = category[j];
-                              console.log(item);
                               
-                         if (this.typeOfFoods.includes(item)) {
-                                  filteredCategory.push(element);
-                             }
+                              for (let k = 0; k < this.typeOfFoods.length; k++) {
+                                   const type = this.typeOfFoods[k];
+                                   if (item == type) {
+                                        flag++;
+                                   }
+                              }
+                              if (flag == this.typeOfFoods.length && !filteredCategory.includes(elem)) {
+                                   filteredCategory.push(elem);
+                              }
                          }
-                    }
-                         
-                    console.log(typeof this.typeOfFoods);
-                    console.log(filteredCategory);
-            console.log(this.typeOfFoods);   
+                    } 
+                             
                     return filteredCategory;
                },
           },
-        
+
         mounted() {
             console.log(this.restaurants);
             console.log(this.categories);
@@ -115,6 +118,19 @@
         }
      }    
 </script>
+                    
+
+        
+                              
+                    
+                    
+                         
+                         
+                         
+                    
+
+                   
+                     
                         
                          
                     

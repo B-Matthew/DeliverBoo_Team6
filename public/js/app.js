@@ -400,8 +400,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 //
 //
 //
@@ -492,23 +490,28 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       var filteredCategory = [];
 
       for (var i = 0; i < this.categoryRestaurant.length; i++) {
-        var element = this.categoryRestaurant[i];
-        var categories = element.categories;
+        var elem = this.categoryRestaurant[i];
+        var categories = elem.categories;
         var category = categories.split(" ");
+        var flag = 0;
 
         for (var j = 0; j < category.length; j++) {
           var item = category[j];
-          console.log(item);
 
-          if (this.typeOfFoods.includes(item)) {
-            filteredCategory.push(element);
+          for (var k = 0; k < this.typeOfFoods.length; k++) {
+            var type = this.typeOfFoods[k];
+
+            if (item == type) {
+              flag++;
+            }
+          }
+
+          if (flag == this.typeOfFoods.length && !filteredCategory.includes(elem)) {
+            filteredCategory.push(elem);
           }
         }
       }
 
-      console.log(_typeof(this.typeOfFoods));
-      console.log(filteredCategory);
-      console.log(this.typeOfFoods);
       return filteredCategory;
     }
   },
