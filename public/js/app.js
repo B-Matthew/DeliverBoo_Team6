@@ -470,7 +470,8 @@ __webpack_require__.r(__webpack_exports__);
       'restaurantInput': '',
       'categoryId': false,
       'typeOfFoods': [],
-      'categoryImage': "../../../storage/img/"
+      'categoryImage': "../../../storage/img/",
+      'restaurantImage': "../../../storage/restaurant-img/"
     };
   },
   props: ['restaurants', 'categories', 'route', 'categoryRestaurant'],
@@ -510,6 +511,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     console.log(this.restaurants);
     console.log(this.categories);
+    console.log(this.restaurants);
   }
 });
 
@@ -1546,7 +1548,7 @@ var render = function() {
                     _c("div", [
                       _c("img", {
                         attrs: {
-                          src: _vm.categoryImage + restaurant.name + ".jpeg",
+                          src: _vm.restaurantImage + restaurant.img,
                           alt: ""
                         }
                       })
@@ -1575,7 +1577,7 @@ var render = function() {
                 _c("div", [
                   _c("img", {
                     attrs: {
-                      src: _vm.categoryImage + restaurant.name + ".jpeg",
+                      src: _vm.restaurantImage + restaurant.img,
                       alt: ""
                     }
                   })
@@ -1596,7 +1598,7 @@ var render = function() {
                 _c("div", [
                   _c("img", {
                     attrs: {
-                      src: _vm.categoryImage + restaurant.name + ".jpeg",
+                      src: _vm.restaurantImage + restaurant.img,
                       alt: ""
                     }
                   })

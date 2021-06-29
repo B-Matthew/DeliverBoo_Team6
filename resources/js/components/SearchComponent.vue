@@ -27,7 +27,7 @@
                               {{restaurant.name}}                              
                          </h3>
                          <div>   
-                              <img :src="categoryImage + restaurant.name + '.jpeg' " alt="">
+                              <img :src="restaurantImage + restaurant.img" alt="">
                          </div>
                     </a> 
                </li>
@@ -41,7 +41,7 @@
                               {{restaurant.name}}                              
                          </h3>
                          <div>
-                              <img :src="categoryImage + restaurant.name + '.jpeg' " alt="">
+                              <img :src="restaurantImage + restaurant.img" alt="">
                          </div>
                     </a> 
                </li>
@@ -54,7 +54,7 @@
                          <h3>{{restaurant.name}}</h3>
                          <div>
                               <!-- <img :src="image" alt="">  -->
-                              <img :src="categoryImage + restaurant.name + '.jpeg' " alt="">
+                              <img :src="restaurantImage + restaurant.img" alt="">
                          </div>      
                     </a>
                </li>
@@ -71,7 +71,8 @@
                    'restaurantInput': '',
                    'categoryId': false,
                    'typeOfFoods': [],
-                   'categoryImage': "../../../storage/img/"
+                   'categoryImage': "../../../storage/img/",
+                   'restaurantImage': "../../../storage/restaurant-img/"
               }
           },
           props: ['restaurants','categories','route','categoryRestaurant'],
@@ -111,6 +112,7 @@
         mounted() {
             console.log(this.restaurants);
             console.log(this.categories);
+            console.log(this.restaurants);
         }
      } 
 </script>
