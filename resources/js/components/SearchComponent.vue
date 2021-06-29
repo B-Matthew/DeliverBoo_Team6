@@ -104,15 +104,15 @@
                     }
                               
                     console.log(filteredCategory);
+            console.log(this.typeOfFoods);   
                     return filteredCategory;
                },
           },
         
         mounted() {
-            console.log(this.restaurants);
-            console.log(this.categories);
+          //   console.log(this.categories);
         }
-     } 
+     }    
 </script>
                     
                          
