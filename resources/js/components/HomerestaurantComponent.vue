@@ -37,8 +37,10 @@
 
                <div class="products">
 
-                    <div>
-                         <h2>Antipasti</h2>    
+                    <div class="singleProduct">
+                         <div>
+                              <h2>Antipasti</h2>
+                         </div> 
                          <ul>
                               <li v-for="antipasto in antipasti">   
 
@@ -138,7 +140,7 @@
 
           <div class="carrello">
                
-                    <h2>Il tuo carrello</h2>   
+                    <h2>Carrello</h2>   
                     <ul v-for ="(ordine, index) in carrello">
                          <li>
                               <div>

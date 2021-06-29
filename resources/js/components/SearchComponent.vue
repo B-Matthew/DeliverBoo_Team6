@@ -103,6 +103,7 @@
                          
                     console.log(typeof this.typeOfFoods);
                     console.log(filteredCategory);
+            console.log(this.typeOfFoods);   
                     return filteredCategory;
                },
           },
@@ -112,7 +113,7 @@
             console.log(this.categories);
             console.log(this.categoryRestaurant);
         }
-     } 
+     }    
 </script>
                         
                          
