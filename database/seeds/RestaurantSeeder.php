@@ -13,12 +13,7 @@ class RestaurantSeeder extends Seeder
     public function run()
     {
         
-        //    factory(Restaurant::class, 20)->create()
-        //    ->each(function($restaurant){
-        //         $category = Category::inRandomOrder()->limit(rand(1,3))->get();
-        //         $restaurant -> categories()->attach($category);
-        //         $restaurant->save();
-        //    });
+        
 
         factory(Restaurant::class, 20)->create() -> each(function($restaurant) {
             $categories = Category::all();
@@ -115,7 +110,7 @@ class RestaurantSeeder extends Seeder
                     $restaurant -> save();
                     break;
 
-                case "Pork'n roll ":
+                case "Pork'n roll":
                     $restaurant -> categories() -> attach($categories[4]);
                     $restaurant -> categories() -> attach($categories[5]);
                     $restaurant -> categories() -> attach($categories[8]);
