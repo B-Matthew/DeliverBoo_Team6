@@ -5,7 +5,8 @@
 use App\Restaurant;
 use Faker\Generator as Faker;
 
-$factory->define(Restaurant::class, function (Faker $faker) {
+$autoIncrement = autoIncrement();
+$factory->define(Restaurant::class, function (Faker $faker) use ($autoIncrement) {
     $restaurants = [
         [
          'name' => 'Old Wild West',
@@ -13,9 +14,10 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Roma',
          'telephone' => '+393467932251',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Old Wild West.jpeg',
          'deleted'  => false,
          'user_id' => 2,
+
         ],
         [
          'name' => 'King Arthur',
@@ -23,7 +25,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Roma',
          'telephone' => '+393438659751',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'King Arthur.jpeg',
          'deleted'  => false,
          'user_id' => 3,
         ],
@@ -33,7 +35,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Milano',
          'telephone' => '+393498375653',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Fantastico.jpeg',
          'deleted'  => false,
          'user_id' => 3,
         ],
@@ -43,7 +45,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Torino',
          'telephone' => '+393433487623',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Cielo.jpeg',
          'deleted'  => false,
          'user_id' => 4,
         ],
@@ -53,7 +55,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Firenze',
          'telephone' => '+393409826574',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'El Pueblo.jpeg',
          'deleted'  => false,
          'user_id' => 4,
         ],
@@ -63,7 +65,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Firenze',
          'telephone' => '+393469486756',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'La Punta Expendio de Agave.jpeg',
          'deleted'  => false,
          'user_id' => 1,
         ],
@@ -73,7 +75,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Milano',
          'telephone' => '+3934756473641',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Ristorante Cracco.jpeg',
          'deleted'  => false,
          'user_id' => 3,
         ],
@@ -83,7 +85,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Novara',
          'telephone' => '+393352346656',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Villa Crespi.jpeg',
          'deleted'  => false,
          'user_id' => 2,
         ],
@@ -93,7 +95,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Roma',
          'telephone' => '+393423396012',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Verde Pistacchio.jpeg',
          'deleted'  => false,
          'user_id' => 2,
         ],
@@ -103,7 +105,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Genova',
          'telephone' => '+393469454756',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Orto Verde Goloso.jpeg',
          'deleted'  => false,
          'user_id' => 1,
         ],
@@ -113,7 +115,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Napoli',
          'telephone' => '+393469423059',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Ilios.jpeg',
          'deleted'  => false,
          'user_id' => 4,
         ],
@@ -123,7 +125,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Roma',
          'telephone' => '+39394758172',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Acropolis.jpeg',
          'deleted'  => false,
          'user_id' => 2,
         ],
@@ -133,7 +135,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Colleverde',
          'telephone' => '+393947258172',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Potter Pizza.jpeg',
          'deleted'  => false,
          'user_id' => 3,
         ],
@@ -143,7 +145,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Potenza',
          'telephone' => '+39334948391',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Alice Pizza.jpeg',
          'deleted'  => false,
          'user_id' => 4,
         ],
@@ -153,7 +155,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Lecco',
          'telephone' => '+39334912391',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Sushi San.jpeg',
          'deleted'  => false,
          'user_id' => 1,
         ],
@@ -163,7 +165,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Como',
          'telephone' => '+39334386391',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Sakura Sushi.jpeg',
          'deleted'  => false,
          'user_id' => 2,
         ],
@@ -173,7 +175,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Venezia',
          'telephone' => '+393343863921',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Kamasutra.jpeg',
          'deleted'  => false,
          'deleted'  => false,
          'user_id' => 3,
@@ -184,7 +186,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Pordenone',
          'telephone' => '+393343604934',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => 'Taj Mahal.jpeg',
          'deleted'  => false,
          'user_id' => 1,
         ],
@@ -194,7 +196,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
             'city' => 'Salerno',
             'telephone' => '+393654504934',
             'pIva' => rand(100000000, 999999999),
-            'img'  => 'carne3.png',
+            'img'  => 'Saloon Del Panino.jpeg',
             'deleted'  => false,
             'user_id' => 1 ,
         ],
@@ -204,13 +206,14 @@ $factory->define(Restaurant::class, function (Faker $faker) {
          'city' => 'Roma',
          'telephone' => '+393309897434',
          'pIva' => rand(100000000, 999999999),
-         'img'  => 'carne3.png',
+         'img'  => "Pork'n roll.jpeg",
          'deleted'  => false,
          'user_id' => 2,
         ],
     ];
-    
-    $index = $faker -> unique() -> numberBetween(0,19);
+    $autoIncrement -> next();
+    $index = $autoIncrement -> current();
+    // $index = $faker -> unique() -> numberBetween(0,19);
     $restaurant = $restaurants[$index];
     return [
 
@@ -223,4 +226,9 @@ $factory->define(Restaurant::class, function (Faker $faker) {
         'user_id' => $restaurant['user_id'],
     ];
 });
+function autoIncrement() {
+    for ($i = -1; $i < 20; $i++) {
+         yield $i;
+     }
+}
         

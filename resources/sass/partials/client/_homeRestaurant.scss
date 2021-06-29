@@ -29,9 +29,11 @@
 
     .menu {
         @include flex(row, space-between, flex-start, nowrap);
-        padding: 10% 2% 20% 2%;
+        padding: 20% 2%;
+
 
         .aside-menu {
+            // flex-basis: calc( 100% / 3 - 10px);
             flex-basis: 20%;
             color: $blue;
 
@@ -44,8 +46,10 @@
             ul {
                 li {
                     @include baloo;
-                    padding: 10px 0 10px 20px;
-                    border-left: 4px solid $yellow;
+                    padding: 10px  0 10px 20px;
+                    border-left: 3px solid $yellow;
+                    font-size: 18px;
+                    letter-spacing: 2px;
 
                     div {
                         flex-basis: calc(50% - 20px);
@@ -56,7 +60,8 @@
         }
 
         .container-menu {
-            flex-basis: calc(40% - 50px);
+            flex-basis: 60%;
+            // flex-basis: calc( 100% / 3 - 50px);
 
             .box-restaurant {
                 border: 3px solid $yellow;
@@ -104,52 +109,51 @@
             .products {
 
                 & > div {
-                    @include neomorphism;
-                    padding: 10px 0;
-                    margin-bottom: 40px;
+                    // @include neomorphism;
+                    margin-bottom: 100px;
+                    text-align: center;
 
                     h2 {
+                        margin-bottom: 30px;
                         @include itim;
                         font-size: 35px;
-                        margin-left:20px;
-                        margin-top: 20px;
-                        padding: 0 20px;
-                        border-top-left-radius: 25px;
-                        border-top-right-radius: 25px;
                         color: $blue;
                     }
 
                     ul {
-                        padding: 30px;
+                        text-align: left;
                         border-bottom-left-radius: 25px;
                         border-bottom-right-radius: 25px;
                         margin-bottom: 40px;
                         transition: all 0.5s linear;
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
 
                         li {
+                            flex-basis: calc(100% / 2 - 50px);
                             @include neomorphism;
                             @include flex(row, space-between, center, nowrap);
-                            padding: 10px 20px 10px 20px;
-                            margin-bottom: 30px;
+                            padding: 20px;
+                            margin: 15px;
                             // border-bottom: 2px solid $red;
                             color: $blue;
 
                             h3 {
                                 @include baloo;
-                                font-size: 20px;
+                                font-size: 18px;
                             }
 
                             h5 {
                                 font-weight: normal;
                                 @include baloo;
-                                font-size: 18px;
+                                font-size: 17px;
                                 margin: 10px 0;
                             }
 
                             p {
                                 @include baloo;
-                                font-size: 18px;
-                                word-break: break-all;
+                                font-size: 17px;
                             }
 
                             h4 {                                
@@ -158,16 +162,7 @@
                             }
 
                             .fa-plus {
-                                color: $blue;
-                                border-radius: 50%;
-                                padding: 10px;
-                                margin: 10px 0;
-                                background-color:$bluelight;
-                                transition: all 0.5s linear;
-
-                                &:hover {
-                                    transform: scale(1.2);
-                                }
+                                @include addRemove;
                             }
 
                             .fa-euro-sign {
@@ -190,14 +185,18 @@
         }
 
         .carrello {
-            padding: 20px 0;
             text-align: center;
-            flex-basis: 25%;
+            // flex-basis: 25%;
+            flex-basis: 20%;
             // border: 3px solid $blue;
             // background-color: $yellow;
-            @include neomorphism;
+            // @include neomorphism;
             border-radius: 25px;
-            padding-bottom: 0 20px;
+            padding: 0 10px;
+
+            .fa-euro-sign {
+                font-size: 17px;
+            }
 
             h2 {
                 padding: 0 20px 10px 0;
@@ -206,7 +205,7 @@
                 border-top-right-radius: 25px;
                 border-bottom: 1px solid $blue;
                 @include itim;
-                font-size: 35px;
+                font-size: 30px;
                 // background-color: $bluelight;
             }
 
@@ -231,23 +230,51 @@
                 li {
                     @include baloo;
                     @include flex(row, space-between, flex-start, nowrap);
+
+                    div {
+                        text-align: center;
+
+                        h5 {
+                            font-weight: normal;
+                            font-size: 18px;
+                        }
+
+                        .fa-minus {
+                            @include addRemove;
+                            padding: 5px;
+                        }
+
+                        .fa-plus {
+                            @include addRemove;
+                            padding: 5px;
+                        }
+                    }
+
+                    div:last-child {
+                        text-align: right;
+                    }                    
                 }
             }
 
             h3 {
                 @include itim;
-                font-size: 35px;
+                font-size: 30px;
                 font-weight: normal;
-                padding: 40px 20px;
+                padding: 40px 0 10px 0;
+            }
+
+            .totalePrezzo {
+                margin-bottom: 40px;
+                font-weight: bold;
             }
 
             div {
                 text-align: center;
-                margin-bottom: 20px;
 
                 button {
-                    @include theButtonDesign($bluelight, $bluelight, $red);
-                    font-size: 20px;
+                    @include theButtonDesign($yellow, $blue, $red);
+                    color: $blue;
+                    font-size: 18px;
 
                     a {
                         @include baloo;

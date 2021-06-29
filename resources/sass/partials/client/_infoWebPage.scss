@@ -25,9 +25,9 @@
      .map {
 
           @include flex(row, space-between, center,  nowrap);
-          background-color: $azure;
+          background-color: $bluelight;
           padding: 200px 8% 0 8%;
-          color: $whitePastel;
+          color: $blue;
 
           .attach {
                flex-basis: 40%;
@@ -57,7 +57,7 @@
      }
 
      .we {
-         @include theWave($azure, $whitePastel);
+         @include theWave($bluelight, $whitePastel);
           .text-box {
                padding: 200px 10%;
 
@@ -70,7 +70,7 @@
      }
 
      .box {
-          @include theWave($whitePastel, $greenPastel);
+          @include theWave($whitePastel, $yellow);
 
           ul {
                @include flex(row, space-around, center,  nowrap);
@@ -79,8 +79,8 @@
                li {
                     flex-basis: calc(30% - 20px);
                     text-align: center;
-                    @include theButtonDesign($yellow, $blue, $red);
-                    color: $blue;
+                    @include theButtonDesign($blue, $bluelight, $red);
+                    color: $whitePastel;
                     border: 2px solid $blue;
 
                     h2, h5 {

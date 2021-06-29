@@ -1,77 +1,85 @@
 #checkout {
-     background-color: $greenPastel;
-     padding: 100px 8%;
+     background-color: $whitePastel;
+     padding: 10% 8%;
 
      section {
 
           form {
                @include flex(row, space-between, center, nowrap);
                margin-bottom: 200px;
+               padding: 0 40px 40px;
+               @include neomorphism;
 
                fieldset {
                     flex-basis: calc(50% - 30px);
-                    border: 3px solid #F5B436;
+                    background-color: $bluelight;
+                    border: 3px solid $blue;
                     padding: 40px;
                     border-radius: 10px;
 
                     legend {
-                         @include indie;
+                         @include itim;
                          padding: 20px;
                     }
 
                     label, input {
                          @include baloo;
                          margin: 20px;
+                         color: $blue;
                     }
 
                     input {
-                         width: 100%;
-                         height: 40px;
-                         padding: 20px;
-                         background-color: #F5B436;
-                         border: 1px solid black;
+                         width: 90%;
                          border-radius: 10px;
-                         transition: box-shadow 0.5s linear;
-
-                         &:hover {
-                              box-shadow: 5px 10px 3px rgb(51, 50, 50);
-                         }
+                         padding: 10px 20px;
+                         border: 0;
+                         background-color: $bluelight;
+                         box-shadow: inset 5px 5px 10px #bfc1cb,
+                                     inset -5px -5px 10px #ffffff;
                     }
 
                     button {
                          @include baloo;
-                         @include theButtonDesign($yellow, $blue, $red);
+                         padding: 10px 20px;
+                         background-color: $yellow;
+                         color: $blue;
+                         border-radius: 10px;
+                         border: 1px solid $blue;
+
+                         &:active {
+                              box-shadow: inset 5px 5px 10px #d19f38,
+                                   inset -5px -5px 10px #ffe550;
+                         }
                     }
                }
 
                .payment-card {
-                    border-color: transparent;
                     text-align: center;
                }
 
                .bt-drop-in-wrapper {
-                    background-color: $yellow;
+                    background-color: $blue;
                     border-radius: 25px;
                }
 
                .braintree-sheet {
-                    background-color: $blue;
+                    background-color: $whitePastel;
                     border-bottom-left-radius: 25px;
                     border-bottom-right-radius: 25px;
                }
 
                .braintree-sheet__header {
-                    border-color: $yellow;
+                    border-color: $blue;
                }
 
                .braintree-sheet__text {
-                    color: $cream;
+                    color: $blue;
                     @include itim;
                     font-size: 20px;
                }
 
                .braintree-form__label {
-                    color: $cream;
+                    color: $blue;
                     @include baloo;
                     font-size: 20px;
                }
@@ -81,13 +89,14 @@
                }
 
                .braintree-form__field {
-                    background-color: $cream;
+                    background-color: $whitePastel;
+                    @include neomorphismIn;
                     border-radius: 10px;
                }
 
                .braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field {
                     border-radius: 10px;
-                    border:2px solid $yellow;
+                    border: 0;
                }
 
                .braintree-upper-container:before {
