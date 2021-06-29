@@ -1,86 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
   width: 100%;
   padding: 0 8%;
   position: fixed;
   z-index: 100;
+  background-color: #ffc244;
+  border-bottom: 1px solid #25385f;
 }
 
-header aside {
-  flex-basis: 10%;
-}
-
-header aside div {
+header ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+header ul li {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #ffc244;
-  padding: 20px;
-  border: 3px solid #25385f;
-  border-top: 3px solid transparent;
-  border-bottom-left-radius: 45px;
-  border-bottom-right-radius: 45px;
-  z-index: 99;
-  transition: all 0.5s ease-in-out;
 }
 
-header aside div:hover {
-  margin-top: 10px;
-  border-radius: 10px;
-  border-top: 3px solid #25385f;
-  box-shadow: 5px 10px 3px #25385f;
-}
-
-header aside div a {
-  font-family: "Monoton", cursive;
-  font-size: 30px;
-  font-weight: normal;
+header ul li .logo {
+  font-family: "Norican", cursive;
+  font-size: 60px;
   color: #25385f;
 }
 
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-
-header nav ul li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding: 10px 20px;
-  margin-left: 20px;
-  background-color: #ffc244;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border: 2px solid #25385f;
-  border-top: 3px solid transparent;
-  z-index: 99;
-  transition: all 0.5s ease-in-out;
-}
-
-header nav ul li:hover {
-  margin-top: 10px;
-  border-radius: 10px;
-  border-top: 3px solid #25385f;
-  box-shadow: 5px 10px 3px #25385f;
-}
-
-header nav ul li a {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
+header ul li a {
+  font-family: "Norican", cursive;
+  font-size: 30px;
+  color: #25385f;
+  letter-spacing: 2px;
   color: #25385f;
 }
 

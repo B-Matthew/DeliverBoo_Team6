@@ -1,72 +1,101 @@
 header {
-     @include flex(row, space-between, flex-start, nowrap);
      width: 100%;
      // height: 80px;
      padding: 0 8%;
      position: fixed;
      z-index: 100;
+     background-color: $yellow;
+     border-bottom: 1px solid $blue;
 
-     aside {
-          flex-basis: 10%;
-                
-          div {
-               @include flex(row, center, center, nowrap);
-               background-color: $yellow;
-               padding: 20px;
-               border: 3px solid $blue;
-               border-top: 3px solid transparent;
-               border-bottom-left-radius: 45px;
-               border-bottom-right-radius: 45px;
-               z-index: 99;
-               transition: all 0.5s ease-in-out;
+     ul {
+          @include flex(row, space-between, center, nowrap);
 
-               &:hover {
-                    margin-top: 10px;
-                    border-radius: 10px;
-                    border-top: 3px solid $blue;
-                    box-shadow: 5px 10px 3px $blue;
+         li {
+          @include flex(column, center, center, nowrap);
+     
+               .logo {
+                    font-family: 'Norican', cursive;
+                    font-size: 60px;
+                    color: $blue;
                }
-
+     
                a {
-                    font-family: 'Monoton', cursive;
+                    // @include itim;
+                    font-family: 'Norican', cursive;
                     font-size: 30px;
-                    font-weight: normal;
-                    color:$blue
+                    color: $blue;
+                    letter-spacing: 2px;
+                    color: $blue;
                }
-          }
+
+
+         }
+
 
      }
 
-     nav {
-          // flex-basis: 70%;   
-               
-          ul {
-               @include flex(row, flex-end, flex-start, nowrap);   
-               
-               li {
-                    @include flex(row, center, center, nowrap);
-                    padding: 10px 20px;
-                    margin-left: 20px;   
-                    background-color: $yellow;
-                    border-bottom-left-radius: 30px;
-                    border-bottom-right-radius: 30px;
-                    border: 2px solid $blue;
-                    border-top: 3px solid transparent;
-                    z-index: 99;
-                    transition: all 0.5s ease-in-out;   
 
-                    &:hover {
-                         margin-top: 10px;
-                         border-radius: 10px;
-                         border-top: 3px solid $blue;
-                         box-shadow: 5px 10px 3px $blue;
-                    }
+     // aside {
+     //      flex-basis: 10%;
+                
+     //      div {
+     //           @include flex(row, center, center, nowrap);
+     //           background-color: $yellow;
+     //           padding: 20px;
+     //           border: 3px solid $blue;
+     //           border-top: 3px solid transparent;
+     //           border-bottom-left-radius: 45px;
+     //           border-bottom-right-radius: 45px;
+     //           z-index: 99;
+     //           transition: all 0.5s ease-in-out;
 
-                    a {
-                         @include baloo;
-                         color: $blue;
-                    }
-               }
-          }
-     }
+     //           &:hover {
+     //                margin-top: 10px;
+     //                border-radius: 10px;
+     //                border-top: 3px solid $blue;
+     //                box-shadow: 5px 10px 3px $blue;
+     //           }
+
+     //           a {
+     //                font-family: 'Monoton', cursive;
+     //                font-size: 30px;
+     //                font-weight: normal;
+     //                color:$blue
+     //           }
+     //      }
+
+     // }
+
+     // nav {
+     //      // flex-basis: 70%;   
+               
+     //      ul {
+     //           @include flex(row, flex-end, flex-start, nowrap);   
+               
+     //           li {
+     //                @include flex(row, center, center, nowrap);
+     //                padding: 10px 20px;
+     //                margin-left: 20px;   
+     //                background-color: $yellow;
+     //                border-bottom-left-radius: 30px;
+     //                border-bottom-right-radius: 30px;
+     //                border: 2px solid $blue;
+     //                border-top: 3px solid transparent;
+     //                z-index: 99;
+     //                transition: all 0.5s ease-in-out;   
+
+     //                &:hover {
+     //                     margin-top: 10px;
+     //                     border-radius: 10px;
+     //                     border-top: 3px solid $blue;
+     //                     box-shadow: 5px 10px 3px $blue;
+     //                }
+
+     //                a {
+     //                     @include baloo;
+     //                     color: $blue;
+     //                }
+     //           }
+     //      }
+     // }
 }
