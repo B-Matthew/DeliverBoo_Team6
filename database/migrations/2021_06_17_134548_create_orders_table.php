@@ -20,8 +20,8 @@ class CreateOrdersTable extends Migration
             $table->string('lastname')-> nullable()->default('unknown');
             $table->string('address')-> nullable()->default('unknown');
             $table->string('email')-> nullable()->default('unknown');
-            $table->string('price');
-            $table->boolean('confirmed')->default(false);
+            $table->string('amount');
+            
 
             $table->timestamps();
         });

@@ -19,7 +19,7 @@
                 </div>
             @endif
 
-            <form method="post" id="payment-form" action="{{route('payment', $order->id)}}">
+            <form id="form" method="post" id="payment-form" action="{{route('payment')}}">
                 @csrf
                 <fieldset>
                     <legend>Pagamento</legend>
@@ -43,14 +43,7 @@
                         <input id="name" name="email" type="email" required autocomplete="email" autofocus>                    
                     </div>
             
-                    <div>
-                        <label for="amount">
-                            <span class="input-label">Amount</span>
-                            <div class="input-wrapper amount-wrapper">
-                                <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" readonly value="{{$order->price}}">
-                            </div>
-                        </label>                  
-                    </div>
+                    <checkout-component></checkout-component>
                 </fieldset>
                 
                 <fieldset class="payment-card">
@@ -79,8 +72,16 @@
             return;
           }
         });
+
+        // var totale = localStorage.getItem('totale');
+        // console.log(totale);
     </script>
+
 @endsection
+        
+
+        
+         
             
 
         

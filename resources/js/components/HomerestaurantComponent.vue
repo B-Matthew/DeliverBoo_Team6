@@ -137,9 +137,7 @@
           </div>
 
           <div class="carrello">
-               <form method="post" :action="routeSubmit">
-
-                    <input type="hidden" name="_token" v-bind:value="csrf">   
+               
                     <h2>Il tuo carrello</h2>   
                     <ul v-for ="(ordine, index) in carrello">
                          <li>
@@ -149,7 +147,6 @@
                               </div>
                               <div>
                                    <h5>{{ordine.prodotto}}</h5>
-                                   <input type="hidden" name="product_id[]" v-model="ordine.id">  
                               </div>
                               <div>
                                    <div>
@@ -160,29 +157,27 @@
                               </div>
                          </li>
                     </ul>
+                                   
     
                     <div v-if="carrello.length != 0">
                          <h3>Totale</h3>
                          <div class="totalePrezzo">
-                              <input type="hidden" name="price" v-model="totale">
                               <i class="fas fa-euro-sign"></i>
                               <span>{{totale}}</span>
                          </div>
                          <div>
-                              <button type="submit">Vai al pagamento</button>  
+                              <a :href="checkout"><button v-on:click="setLocalStorage" type="submit">Vai al pagamento</button></a>  
                          </div>   
                     </div>
 
                     <div class="no-products" v-else>
                          <h3>Il tuo carrello è ancora vuoto.</h3>
                     </div>
-    
-               </form>
           </div>
         
      </section>
 </template>
-
+                              
 <script>
      export default {
           data: function() {   
@@ -197,7 +192,7 @@
                    'errors' : {},
                }
           },
-          props: ['antipasti','primi','secondi','dolci','checkout','routeSubmit','csrf'],
+          props: ['antipasti','primi','secondi','dolci','checkout'],
 
           methods: {
                
@@ -237,6 +232,7 @@
                          this.carrello.push(currentProduct);
                          this.totale += currentProduct.prezzo;
                     }
+                    console.log(this.carrello);
                },
 
                removeProduct: function(index) {
@@ -254,14 +250,29 @@
                     this.carrello[index].quantita++;
                     this.carrello[index].prezzo += this.carrello[index].prezzoBase;
                     this.totale += this.carrello[index].prezzoBase;
+               },
+
+               setLocalStorage: function () {
+                    
+                    localStorage.clear();
+                    localStorage.setItem("totale", this.totale);
+                    localStorage.setItem("prodotti", JSON.stringify(this.carrello));
+                    console.log(localStorage);
                }
           },
-
           mounted() {
             console.log('Component mounted.')
           }
      }
 </script>
 
+                    
+                    
+
+
                
                
+    
+               
+
+                    
