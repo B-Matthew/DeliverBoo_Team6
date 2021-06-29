@@ -398,6 +398,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 //
 //
 //
@@ -484,26 +486,25 @@ __webpack_require__.r(__webpack_exports__);
       });
       return filteredRestaurants;
     },
-    getCategoryId: function getCategoryId() {
-      console.log(this.typeOfFoods);
-    },
     categoryFilter: function categoryFilter() {
       var filteredCategory = [];
-      var restaurant = [];
-      var category_id;
-      var restaurant_id;
 
       for (var i = 0; i < this.categoryRestaurant.length; i++) {
         var element = this.categoryRestaurant[i];
-        category_id = element.category_id;
-        restaurant_id = element.id;
+        var categories = element.categories;
+        var category = categories.split(" ");
 
-        if (this.typeOfFoods.includes(category_id) && !restaurant.includes(restaurant_id)) {
-          filteredCategory.push(element);
-          restaurant.push(restaurant_id);
+        for (var j = 0; j < category.length; j++) {
+          var item = category[j];
+          console.log(item);
+
+          if (this.typeOfFoods.includes(item)) {
+            filteredCategory.push(element);
+          }
         }
       }
 
+      console.log(_typeof(this.typeOfFoods));
       console.log(filteredCategory);
       return filteredCategory;
     }
@@ -511,7 +512,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     console.log(this.restaurants);
     console.log(this.categories);
-    console.log(this.restaurants);
+    console.log(this.categoryRestaurant);
   }
 });
 
@@ -1428,9 +1429,7 @@ var render = function() {
   return _c("section", { attrs: { id: "categories" } }, [
     _vm._m(0),
     _vm._v(" "),
-    _c("h2", { on: { click: _vm.getCategoryId } }, [
-      _vm._v("Cosa vuoi mangiare?")
-    ]),
+    _c("h2", [_vm._v("Cosa vuoi mangiare?")]),
     _vm._v(" "),
     _vm.typeOfFoods.length == 0
       ? _c("input", {

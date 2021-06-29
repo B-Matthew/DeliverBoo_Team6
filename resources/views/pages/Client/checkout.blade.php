@@ -72,9 +72,6 @@
             return;
           }
         });
-
-        // var totale = localStorage.getItem('totale');
-        // console.log(totale);
     </script>
 
 @endsection
