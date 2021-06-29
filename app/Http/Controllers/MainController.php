@@ -5,12 +5,14 @@ use App\Restaurant;
 use App\Category;
 use App\Product;
 use App\Order;
+use App\Mail\OrderConfirmed;
 use Braintree;
 use Illuminate\Http\Request;
 use App\Http\Requests\OrderRequest;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class MainController extends Controller
 {
@@ -118,7 +120,10 @@ class MainController extends Controller
         $order->save();
         $order -> products() -> sync($data['product_id']);
         $order->save();
-    
+        
+        Mail::to('test@gmail.com')->send(new OrderConfirmed($order));
+        Mail::to($order -> email)->send(new OrderConfirmed($order));
+
         return redirect() -> route('transaction', encrypt($transaction -> id));
     } else {
         $errorString = "";
@@ -137,6 +142,7 @@ class MainController extends Controller
     return view('pages.Client.transaction',compact('transaction'));
   }
 }
+    
   
    
     

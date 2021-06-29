@@ -11,14 +11,13 @@ class OrderConfirmed extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $order;
+    
+
+    public function __construct($order)
     {
-        //
+        $this -> order = $order;
+        
     }
 
     /**
@@ -28,6 +27,6 @@ class OrderConfirmed extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('mail.orderConfirmed');
     }
 }
