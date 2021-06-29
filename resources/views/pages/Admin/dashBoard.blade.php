@@ -10,13 +10,13 @@
     <nav class="navbar nav">
         <ul>
             <li>
-                <a href="{{ route('dashBoard') }}">   
+                <a onclick="getRestaurant()" href="#">   
                     <h4>Ristoranti</h4>   
                     <i class="fas fa-utensils"></i>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a onclick="getForm()" href="#">
                     <h4>Nuovo </h4>
                     <i class="far fa-plus-square"></i>
                 </a>
@@ -25,7 +25,7 @@
         </ul>
     </nav>
 
-    <section class="my-restaurants">
+    <section  id="restaurantSection" class="my-restaurants">
         <h3>I TUOI RISTORANTI</h3>
         <ul>
             @foreach($user -> restaurants as $restaurant)
@@ -61,7 +61,7 @@
     </section>
 
 
-    {{-- <section class="create">
+    <section id="createSection" class="create" style="display: none;">
           <h2>Hai una nuova attività?</h2>
       
           <form method="POST" action="{{ route('store-restaurant') }}" enctype="multipart/form-data">
@@ -129,8 +129,32 @@
         </div>
     </fieldset>
     </form>
-    </section> --}}
+    </section>
 
 </main>
 
 @endsection
+
+<script>
+    
+    function getRestaurant() {
+        var restaurantSection = document.getElementById('restaurantSection');
+        var createSection = document.getElementById('createSection');
+
+        createSection.style.display='none';
+        restaurantSection.style.display='block';
+    }
+
+    function getForm() {
+        var restaurantSection = document.getElementById('restaurantSection');
+        var createSection = document.getElementById('createSection');
+
+        createSection.style.display='block';
+        restaurantSection.style.display='none';
+    }
+    
+    
+</script>
+
+
+    
