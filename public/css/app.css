@@ -1103,6 +1103,7 @@ footer .links h5 {
 }
 
 #dashboard {
+  color: #25385f;
   position: relative;
   display: grid;
   background-color: #f1f1f1;
@@ -1354,6 +1355,20 @@ footer .links h5 {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
+#dashboard .create form #myfilebutton {
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+  margin: 20px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #e9ebf8;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
+}
+
 #dashboard .create form fieldset {
   border: 3px solid #25385f;
   background-color: #e9ebf8;
@@ -1399,17 +1414,12 @@ footer .links h5 {
   box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
 }
 
-#dashboard .create #myfilebutton {
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
-  transition: all 0.5s linear;
-  width: 100%;
-  border-radius: 10px;
-  padding: 10px 20px;
-  border: 0;
-  background-color: #e9ebf8;
-  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
+#dashboard .create h2 {
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0 0 50px 0;
 }
 
 #dashboard .create ul {
@@ -1969,27 +1979,16 @@ footer .links h5 {
 }
 
 #createProduct {
-  background-color: darkseagreen;
-  padding: 100px 8%;
-  padding-bottom: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  background-color: #f1f1f1;
+  padding: 10% 8%;
 }
 
 #createProduct form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  background-color: #f1f1f1;
-  padding: 10% 8%;
-}
-
-#createProduct form form {
   flex-basis: 50%;
   padding: 0 40px 40px;
   border-radius: 10px;
@@ -1998,33 +1997,16 @@ footer .links h5 {
   transition: all 0.5s linear;
 }
 
-#createProduct form form:hover {
+#createProduct form:hover {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
-#createProduct form form fieldset {
-  border: 3px solid #25385f;
-  background-color: #e9ebf8;
-  padding: 40px;
+#createProduct form #myfilebutton {
   border-radius: 10px;
-}
-
-#createProduct form form fieldset legend {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
-  padding: 20px;
-}
-
-#createProduct form form fieldset label,
-#createProduct form form fieldset input {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
   margin: 20px;
-  color: #25385f;
-}
-
-#createProduct form form fieldset input {
   width: 100%;
   border-radius: 10px;
   padding: 10px 20px;
@@ -2033,7 +2015,38 @@ footer .links h5 {
   box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
 }
 
-#createProduct form form fieldset button {
+#createProduct form fieldset {
+  border: 3px solid #25385f;
+  background-color: #e9ebf8;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#createProduct form fieldset legend {
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+#createProduct form fieldset label,
+#createProduct form fieldset input {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px;
+  color: #25385f;
+}
+
+#createProduct form fieldset input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #e9ebf8;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
+}
+
+#createProduct form fieldset button {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   padding: 10px 20px;
@@ -2043,33 +2056,26 @@ footer .links h5 {
   border: 1px solid #25385f;
 }
 
-#createProduct form form fieldset button:active {
+#createProduct form fieldset button:active {
   box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
 }
 
-#createProduct form #description,
-#createProduct form #type-food {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  width: 100%;
-  background-color: #ffc244;
+#createProduct #description,
+#createProduct #type-food {
   border-radius: 10px;
-  padding: 5px 10px;
-  outline: none;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+  width: 100%;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #e9ebf8;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
 }
 
 #editProduct {
-  background-color: darkseagreen;
-  padding: 100px 8%;
-  padding-bottom: 200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-#editProduct form {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2079,7 +2085,7 @@ footer .links h5 {
   padding: 10% 8%;
 }
 
-#editProduct form form {
+#editProduct form {
   flex-basis: 50%;
   padding: 0 40px 40px;
   border-radius: 10px;
@@ -2088,33 +2094,16 @@ footer .links h5 {
   transition: all 0.5s linear;
 }
 
-#editProduct form form:hover {
+#editProduct form:hover {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
-#editProduct form form fieldset {
-  border: 3px solid #25385f;
-  background-color: #e9ebf8;
-  padding: 40px;
+#editProduct form #myfilebutton {
   border-radius: 10px;
-}
-
-#editProduct form form fieldset legend {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
-  padding: 20px;
-}
-
-#editProduct form form fieldset label,
-#editProduct form form fieldset input {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
   margin: 20px;
-  color: #25385f;
-}
-
-#editProduct form form fieldset input {
   width: 100%;
   border-radius: 10px;
   padding: 10px 20px;
@@ -2123,7 +2112,38 @@ footer .links h5 {
   box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
 }
 
-#editProduct form form fieldset button {
+#editProduct form fieldset {
+  border: 3px solid #25385f;
+  background-color: #e9ebf8;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#editProduct form fieldset legend {
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+#editProduct form fieldset label,
+#editProduct form fieldset input {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px;
+  color: #25385f;
+}
+
+#editProduct form fieldset input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #e9ebf8;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
+}
+
+#editProduct form fieldset button {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   padding: 10px 20px;
@@ -2133,19 +2153,23 @@ footer .links h5 {
   border: 1px solid #25385f;
 }
 
-#editProduct form form fieldset button:active {
+#editProduct form fieldset button:active {
   box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
 }
 
-#editProduct form #description,
-#editProduct form #type-food {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  width: 100%;
-  background-color: #ffc244;
+#editProduct #description,
+#editProduct #type-food {
   border-radius: 10px;
-  padding: 5px 10px;
-  outline: none;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+  width: 100%;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #e9ebf8;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
 }
 
 #my-product {
@@ -2308,22 +2332,11 @@ footer .links h5 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #8fbc8f;
-  padding: 100px 0;
-  padding-bottom: 200px;
-}
-
-#edit-restaurant form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
   background-color: #f1f1f1;
   padding: 10% 8%;
 }
 
-#edit-restaurant form form {
+#edit-restaurant form {
   flex-basis: 50%;
   padding: 0 40px 40px;
   border-radius: 10px;
@@ -2332,33 +2345,16 @@ footer .links h5 {
   transition: all 0.5s linear;
 }
 
-#edit-restaurant form form:hover {
+#edit-restaurant form:hover {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
-#edit-restaurant form form fieldset {
-  border: 3px solid #25385f;
-  background-color: #e9ebf8;
-  padding: 40px;
+#edit-restaurant form #myfilebutton {
   border-radius: 10px;
-}
-
-#edit-restaurant form form fieldset legend {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
-  padding: 20px;
-}
-
-#edit-restaurant form form fieldset label,
-#edit-restaurant form form fieldset input {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
   margin: 20px;
-  color: #25385f;
-}
-
-#edit-restaurant form form fieldset input {
   width: 100%;
   border-radius: 10px;
   padding: 10px 20px;
@@ -2367,7 +2363,38 @@ footer .links h5 {
   box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
 }
 
-#edit-restaurant form form fieldset button {
+#edit-restaurant form fieldset {
+  border: 3px solid #25385f;
+  background-color: #e9ebf8;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#edit-restaurant form fieldset legend {
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+#edit-restaurant form fieldset label,
+#edit-restaurant form fieldset input {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px;
+  color: #25385f;
+}
+
+#edit-restaurant form fieldset input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #e9ebf8;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
+}
+
+#edit-restaurant form fieldset button {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   padding: 10px 20px;
@@ -2377,66 +2404,63 @@ footer .links h5 {
   border: 1px solid #25385f;
 }
 
-#edit-restaurant form form fieldset button:active {
+#edit-restaurant form fieldset button:active {
   box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
 }
 
-#edit-restaurant form fieldset #myfilebutton {
-  display: block;
-  padding: 5px 10px;
-}
-
-#edit-restaurant form fieldset ul {
+#edit-restaurant ul {
+  flex-basis: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-#edit-restaurant form fieldset ul li {
+#edit-restaurant ul li {
+  flex-basis: calc(100% / 5 - 20px);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 20px;
-  flex-basis: 20%;
 }
 
-#edit-restaurant form fieldset ul li #category {
+#edit-restaurant ul li label {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+#edit-restaurant ul li input {
   -webkit-appearance: none;
   background-color: #ffc244;
-  border: 2px solid #25385f;
+  border: 1px solid #ffc244;
   padding: 10px;
   border-radius: 5px;
   margin: 0 10px;
   transition: all 0.3s linear;
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: auto;
 }
 
-#edit-restaurant form fieldset ul li #category:checked {
+#edit-restaurant ul li input:hover {
+  border-color: black;
+}
+
+#edit-restaurant ul li input:checked {
   background-color: #ffc244;
-  border: 2px solid #d24448;
+  border: 1px solid black;
 }
 
-#edit-restaurant form fieldset ul li #category:checked:after {
+#edit-restaurant ul li input:checked:after {
   content: "\2714";
   font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #d24448;
-}
-
-#edit-restaurant form fieldset ul li label {
-  white-space: nowrap;
+  color: black;
 }
 
