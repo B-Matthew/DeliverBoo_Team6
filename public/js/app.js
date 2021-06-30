@@ -316,6 +316,7 @@ __webpack_require__.r(__webpack_exports__);
       'antipastoImg': "../../../storage/img/antipasti.png",
       'primoImg': "../../../storage/img/primi.png",
       'secondoImg': "../../../storage/img/secondi.png",
+      'dolceImg': "../../../storage/img/dolce.png",
       'totale': 0,
       'carrello': [],
       'carrelloBackup': [],
@@ -1316,7 +1317,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
+                  _c("img", { attrs: { src: _vm.dolceImg, alt: "" } }),
                   _vm._v(" "),
                   _c("h4", [
                     _vm._v(
@@ -14243,8 +14244,6 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 

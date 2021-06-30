@@ -1,6 +1,6 @@
 #my-product {
     @include baloo;
-    background-color: $greenPastel;
+    background-color: $whitePastel;
     color: rgb(21, 22, 22);
 
     .jumbotron {
@@ -17,7 +17,7 @@
             @include itim;
             font-size: 4.5vw;
             padding: 15px 0;
-            color: $red;
+            color: $blue;
         }
 
         div {
@@ -38,11 +38,13 @@
         h4,
         label,   
         span{
-            font-family: 'baloo',   
-            cursive;
-            letter-spacing: 2px;
-            font-size: 20px;   
+            @include baloo;
+            font-size: 17px;   
             font-weight: normal;
+        }
+
+        label {
+            font-weight: bold;
         }
 
         >div {
@@ -56,7 +58,7 @@
                 background-color: $blue;
                 border: 1px solid transparent;
                 border-radius: 10px;
-                color: aliceblue;
+                color: $whitePastel;
                 display: inline-block;
                 margin: 40px auto;
 
@@ -67,18 +69,24 @@
         }
 
         .products {
+            @include flex(row, center, stretch, wrap);
+            .product-box {
+                @include neomorphism;
+                flex-basis: calc(50% - 50px);
+                margin: 15px;
+                padding: 20px;
 
-            div {
                 .head-product {
                     @include flex(row, space-between, center, nowrap);
-                    border: 1px solid black;
-                    background-color: $yellow;
+                    // border: 1px solid black;
+                    // background-color: $yellow;
                     padding: 10px 30px;
-                    border-top-left-radius: 25px;
-                    border-top-right-radius: 25px;
+                    // border-top-left-radius: 25px;
+                    // border-top-right-radius: 25px;
 
                     h2 {
-                        @include itim;
+                        @include baloo;
+                        font-size: 18px;
                         color: $blue;
                     }
 
@@ -98,20 +106,20 @@
                 ul {
 
                     padding: 20px;
-                    background-color: $cream;
-                    border-bottom-left-radius: 25px;
-                    border-bottom-right-radius: 25px;
-                    border: 1px solid black;
+                    // background-color: $cream;
+                    // border-bottom-left-radius: 25px;
+                    // border-bottom-right-radius: 25px;
+                    // border: 1px solid black;
                     margin-bottom: 20px;
-                    transition: all 0.5s linear;
+                    // transition: all 0.5s linear;
 
-                    &:hover {
-                        box-shadow: 10px 20px 7px rgb(51, 50, 50);
-                    }
+                    // &:hover {
+                    //     box-shadow: 10px 20px 7px rgb(51, 50, 50);
+                    // }
 
                     li {
                         padding: 10px 20px 10px 5px;
-                        border-bottom: 2px solid $red;
+                        border-bottom: 2px solid $blue;
                         color: $blue;
 
                         &:first-child {
@@ -119,31 +127,33 @@
                             grid-template-columns: 20% auto 10% 10%;
                             grid-template-rows: auto;
                             column-gap: 15px;
-                            word-break: break-all;
                         }
 
                         &:last-child {
-                            padding: 30px 0 10px;
+                            padding: 40px 0 10px;
                             border: none;
-                            justify-content: center;
-                            align-items: center;
+                            @include flex(row, center, center, nowrap);
 
-                            div {   
-                                a {
-                                    @include baloo;
+                            div {
+                                button {
+                                    font-size: 18px;
                                     background-color: $yellow;
                                     border: 1px solid $blue;
                                     padding: 10px 20px;
                                     border-radius: 10px;
                                     margin: 20px;
-                                    color: $blue;
-                                    transition: 1s;
 
-                                    &:hover {
-                                        background-color: $yellowPastel;
+                                    &:active {
+                                        box-shadow: inset 5px 5px 10px #d19f38,
+                                        inset -5px -5px 10px #ffe550;
                                     }
-
-                                }
+    
+                                    a {
+                                        @include baloo;
+                                        color: $blue;  
+                                        font-size: 18px;  
+                                    }
+                                }   
                             }
 
                         }
