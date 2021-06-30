@@ -1,6 +1,6 @@
 footer {
      background-color: #1d1d1d;
-     padding: 70 8% 0 8%;
+     
 
      .footer-wave {
           width: 100%;
@@ -18,7 +18,7 @@ footer {
 
      .footer-list {
           @include flex(row, space-between, stretch, nowrap);
-          padding: 30px 10%;
+          padding: 100px 10% 20px;         
 
           ul {   
                flex-basis: calc(100% / 4 - 20px);
