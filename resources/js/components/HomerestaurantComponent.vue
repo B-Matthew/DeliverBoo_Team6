@@ -5,30 +5,50 @@
 
                <!-- <h2>Antipasti</h2>    -->
                <ul>
-                    <li v-for="antipasto in antipasti">
-                         {{ antipasto.name }}   
+                    <li class="selected">
+                         <a href="#antipasti">
+                              Antipasti
+                         </a>
                     </li>
+                    <!-- <li v-for="antipasto in antipasti">
+                         {{ antipasto.name }}   
+                    </li> -->
                </ul>   
        
                <!-- <h2>Primi</h2> -->
                <ul>
-                    <li v-for="primo in primi">
-                         {{ primo.name }}
+                     <li>
+                         <a href="#primi">
+                              Primi
+                         </a>
                     </li>
+                    <!-- <li v-for="primo in primi">
+                         {{ primo.name }}
+                    </li> -->
                </ul>
     
                <!-- <h2>Secondi</h2> -->
                <ul>
-                    <li v-for="secondo in secondi">
+                    <li>
+                         <a href="#secondi">
+                              Secondi
+                         </a>
+                    </li>
+                    <!-- <li v-for="secondo in secondi">
                          {{ secondo.name }}   
-                    </li>                
+                    </li>                 -->
                </ul>
 
                <!-- <h2>Dolce</h2>    -->
                <ul>
-                    <li v-for="dolce in dolci">
-                         {{ dolce.name }}   
+                    <li>
+                         <a href="#dolce">
+                              Dolce
+                         </a>
                     </li>
+                    <!-- <li v-for="dolce in dolci">
+                         {{ dolce.name }}   
+                    </li> -->
                </ul>   
 
           </div>
@@ -37,7 +57,7 @@
 
                <div class="products">
 
-                    <div class="singleProduct">
+                    <div class="singleProduct" id="antipasti">
                          <div>
                               <h2>Antipasti</h2>
                          </div> 
@@ -63,7 +83,7 @@
                          </ul>
                     </div>
 
-                    <div>    
+                    <div id="primi">    
                          <h2>Primi</h2>
                          <ul>
 
@@ -87,7 +107,7 @@
                          </ul>
                     </div>
 
-                    <div>      
+                    <div id="secondi">      
                          <h2>Secondi</h2>
                          <ul>
 
@@ -111,7 +131,7 @@
                          </ul>
                     </div>
 
-                    <div>
+                    <div id="dolce">
                          <h2>Dolce</h2>
                          <ul>
 
