@@ -124,7 +124,7 @@
                                    </div>   
 
                                    <div class="image">
-                                        <img :src="antipastoImg" alt=""> 
+                                        <img :src="dolceImg " alt=""> 
                                         <h4> 
                                         {{ dolce.price }}    
                                         <i class="fas fa-euro-sign"></i>
@@ -187,6 +187,7 @@
                    'antipastoImg': "../../../storage/img/antipasti.png",
                    'primoImg': "../../../storage/img/primi.png",
                    'secondoImg': "../../../storage/img/secondi.png",
+                   'dolceImg': "../../../storage/img/dolce.png",
                    'totale': 0,
                    'carrello': [],
                    'carrelloBackup': [],

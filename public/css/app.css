@@ -1505,7 +1505,7 @@ footer .links h5 {
   letter-spacing: 2px;
   font-size: 4.5vw;
   padding: 15px 0;
-  color: #d24448;
+  color: #25385f;
 }
 
 #home-restaurant .jumbotron div {
@@ -2174,7 +2174,7 @@ footer .links h5 {
 #my-product {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  background-color: #9dc09d;
+  background-color: #f1f1f1;
   color: #151616;
 }
 
@@ -2199,7 +2199,7 @@ footer .links h5 {
   letter-spacing: 2px;
   font-size: 4.5vw;
   padding: 15px 0;
-  color: #d24448;
+  color: #25385f;
 }
 
 #my-product .jumbotron div {
@@ -2219,10 +2219,14 @@ footer .links h5 {
 #my-product .container-menu h4,
 #my-product .container-menu label,
 #my-product .container-menu span {
-  font-family: "baloo", cursive;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
   font-size: 20px;
+  font-size: 17px;
   font-weight: normal;
+}
+
+#my-product .container-menu label {
+  font-weight: bold;
 }
 
 #my-product .container-menu > div {
@@ -2236,7 +2240,7 @@ footer .links h5 {
   background-color: #25385f;
   border: 1px solid transparent;
   border-radius: 10px;
-  color: aliceblue;
+  color: #f1f1f1;
   display: inline-block;
   margin: 40px auto;
 }
@@ -2245,84 +2249,99 @@ footer .links h5 {
   border-color: #ffc244;
 }
 
-#my-product .container-menu .products div .head-product {
+#my-product .container-menu .products {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+#my-product .container-menu .products .product-box {
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+  flex-basis: calc(50% - 50px);
+  margin: 15px;
+  padding: 20px;
+}
+
+#my-product .container-menu .products .product-box:hover {
+  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
+}
+
+#my-product .container-menu .products .product-box .head-product {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  border: 1px solid black;
-  background-color: #ffc244;
   padding: 10px 30px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
 }
 
-#my-product .container-menu .products div .head-product h2 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+#my-product .container-menu .products .product-box .head-product h2 {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 18px;
   color: #25385f;
 }
 
-#my-product .container-menu .products div .head-product .active {
+#my-product .container-menu .products .product-box .head-product .active {
   color: #238623;
 }
 
-#my-product .container-menu .products div .head-product .not-active {
+#my-product .container-menu .products .product-box .head-product .not-active {
   color: #d24448;
 }
 
-#my-product .container-menu .products div ul {
+#my-product .container-menu .products .product-box ul {
   padding: 20px;
-  background-color: #EEE7D7;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border: 1px solid black;
   margin-bottom: 20px;
-  transition: all 0.5s linear;
 }
 
-#my-product .container-menu .products div ul:hover {
-  box-shadow: 10px 20px 7px #333232;
-}
-
-#my-product .container-menu .products div ul li {
+#my-product .container-menu .products .product-box ul li {
   padding: 10px 20px 10px 5px;
-  border-bottom: 2px solid #d24448;
+  border-bottom: 2px solid #25385f;
   color: #25385f;
 }
 
-#my-product .container-menu .products div ul li:first-child {
+#my-product .container-menu .products .product-box ul li:first-child {
   display: grid;
   grid-template-columns: 20% auto 10% 10%;
   grid-template-rows: auto;
   -moz-column-gap: 15px;
        column-gap: 15px;
-  word-break: break-all;
 }
 
-#my-product .container-menu .products div ul li:last-child {
-  padding: 30px 0 10px;
+#my-product .container-menu .products .product-box ul li:last-child {
+  padding: 40px 0 10px;
   border: none;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
-#my-product .container-menu .products div ul li:last-child div a {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
+#my-product .container-menu .products .product-box ul li:last-child div button {
+  font-size: 18px;
   background-color: #ffc244;
   border: 1px solid #25385f;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 20px;
-  color: #25385f;
-  transition: 1s;
 }
 
-#my-product .container-menu .products div ul li:last-child div a:hover {
-  background-color: #f8f1ae;
+#my-product .container-menu .products .product-box ul li:last-child div button:active {
+  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+}
+
+#my-product .container-menu .products .product-box ul li:last-child div button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: #25385f;
+  font-size: 18px;
 }
 
 #edit-restaurant {
