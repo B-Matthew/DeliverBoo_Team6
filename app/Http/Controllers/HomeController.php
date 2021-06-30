@@ -10,9 +10,10 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\RestaurantRequest;
 use App\Http\Requests\ProductRequest;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-// PER TORNARE A PRIMA DECOMMENTARE L'AUTH CONSTRUCT E CANCELLARE IL LOGIN PER ID IN DASHBOARD
+// PER TORNARE A PRIMA DECOMMENTARE L'AUTH CONSTRUCT E CANCELLARE IL LOGIN PER ID IN DASHBOARD Togliere il commento sul gate
 
 class HomeController extends Controller
 {
@@ -51,40 +52,40 @@ class HomeController extends Controller
     public function updateRestaurant(RestaurantRequest $request, $id) 
     {
       $data = $request->all();
-      
       if(!empty($data['img'])){
-      $img = $data['img'];
-      $imgExt = $img -> getClientOriginalExtension();
-      $imgNew = time() . '_restaurtant-img.' .$imgExt;
-      $folder = '/restaurant-img/';
-      $imgFile = $img -> storeAs($folder , $imgNew, 'public');
-     }else {
-       $imgNew = 'carne3.png';
-     }
-      
-      $restaurant = Restaurant::findOrFail($id);
-      $restaurant -> img = $imgNew;
-      $restaurant -> categories() -> sync($data['categories']);
-      $restaurant -> update($data);
-      return redirect() -> route('dashBoard');
-    }
-      
-      
-      
-    // Aggiunta ristorante nella dashboard
-    public function storeRestaurant(RestaurantRequest $request)
-    {
-      $data = $request->all();
-      
-      if(!empty($data['img'])){
+        
         $img = $data['img'];
         $imgExt = $img -> getClientOriginalExtension();
-        $imgNew = time() . $data['name'] .$imgExt;
+        $imgNew = time() . $data['name'] ."." .$imgExt;
         $folder = '/restaurant-img/';
         $imgFile = $img -> storeAs($folder , $imgNew, 'public');
        }else {
          $imgNew = 'Alice Pizza.jpeg';
        }
+      
+      $restaurant = Restaurant::findOrFail($id);
+      $restaurant->fill($data);
+      $restaurant -> img = $imgNew;
+      $restaurant -> categories() -> sync($data['categories']);
+      $restaurant -> update();
+      return redirect() -> route('dashBoard');
+    }
+        
+    // Aggiunta ristorante nella dashboard
+    public function storeRestaurant(RestaurantRequest $request)
+    {
+      $data = $request->all();
+     
+      if(!empty($data['img'])){
+        $img = $data['img'];
+        $imgExt = $img -> getClientOriginalExtension();
+        $imgNew = time() . $data['name'] ."." .$imgExt;
+        $folder = '/restaurant-img/';
+        $imgFile = $img -> storeAs($folder , $imgNew, 'public');
+       }else {
+         $imgNew = 'Alice Pizza.jpeg';
+       }
+        
       
        $data['user_id'] = Auth::id();
        $restaurant = new Restaurant();
@@ -102,15 +103,23 @@ class HomeController extends Controller
   
     //  Pagina prodotti del ristorante
     public function myProduct($id) 
-    {
-      // Decripting dell'url
+    {   
+
       $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
+      $orders = DB::table('orders')
+                    ->select(DB::raw("orders.id ,orders.name,orders.lastname ,orders.amount,orders.created_at ,products.restaurant_id,GROUP_CONCAT(products.id SEPARATOR ' ') as products"))
+                    ->join('order_product' , 'orders.id' , '=' , 'order_product.order_id')
+                    ->join('products' ,'products.id' ,'=' , 'order_product.product_id')
+                    ->where('products.restaurant_id' , '=' , $restaurant['id'])
+                    ->groupBy('orders.id') 
+                    ->get();
+
       // Controllo sull'user loggato
       // if (! Gate::allows('userRoute', $restaurant)) {
       //         abort(403);
       //     }
   
-      return view('pages.Admin.myProducts', compact('restaurant'));
+      return view('pages.Admin.myProducts', compact('restaurant','orders'));
     }
   
     // Funzione per view per creare piatto
@@ -167,6 +176,9 @@ class HomeController extends Controller
     
   
     
+      
+      
+      
       
       
     
