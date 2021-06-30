@@ -106,9 +106,9 @@ class HomeController extends Controller
       // Decripting dell'url
       $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
       // Controllo sull'user loggato
-      if (! Gate::allows('userRoute', $restaurant)) {
-              abort(403);
-          }
+      // if (! Gate::allows('userRoute', $restaurant)) {
+      //         abort(403);
+      //     }
   
       return view('pages.Admin.myProducts', compact('restaurant'));
     }
