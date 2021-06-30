@@ -228,5 +228,157 @@
      }
 }
 
-// @media (max-width: 768px) {
-// }
+@media (max-width: 768px) {
+     .hide {
+          display: none;
+     }
+
+     header {
+          padding: 0 5%;
+          }
+
+     header ul .hamburger {
+         display: block;
+     }
+
+     header ul .show {
+          display: block;
+     }
+
+     header ul li .logo {
+          font-size: 70px;
+     }
+
+     body #homepage .jumbotron {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          }
+
+     body #homepage .jumbotron .text h2 {
+          font-size: 8vw;
+     }
+
+     body #homepage .jumbotron .attach {
+          padding: 27%;
+          }
+
+     body #homepage #categories h2 {
+          margin-top: 20%;
+          font-size: 55px;
+     }
+
+     body #homepage #categories .searchbar {
+          width: 80%;
+          font-size: 35px;
+          }
+
+     body #homepage #categories .typeOfFoods li {
+         flex-basis: 100%;
+         margin: 30px 0 50px 0;
+     }
+
+     body #homepage #categories .typeOfFoods li img {
+          width: 70%;
+          height: auto;
+     }
+
+     body #homepage #categories .typeOfFoods li div .checkbox {
+          padding: 25px;
+          border-radius: 15px;
+     }
+
+     body #homepage #categories .typeOfFoods li div .checkbox:checked:after {
+          font-size: 60px;
+     }
+
+     body #homepage #categories .typeOfFoods li div span {
+          font-size: 35px;
+     }
+
+     body #homepage #categories .restaurants {
+          padding: 30px 3%;
+          }
+
+     body #homepage #categories .restaurants li {
+          flex-basis: 740px;
+     }
+
+     body #homepage #categories .restaurants li a h3 {
+          padding: 10px;
+          font-size: 35px;
+          }
+
+     body #homepage #categories .restaurants li a div {
+          height: 320px;
+          width: 100%;
+     }
+
+     body #homepage .work h2 {
+          margin: 15% 0 20px 0;
+          font-size: 55px;
+     }
+
+     body #homepage .work ul {
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 100px 3%;
+     }
+
+     body #homepage .work ul li {
+          margin: 30px;
+          flex-basis: 80%;
+     }
+
+     body #homepage .work ul li div h3 {
+          font-size: 50px;
+     }
+
+     body #homepage .work ul li div .left p {
+          font-size: 40px;
+     }
+
+     body #homepage .work ul li div button a {
+          font-size: 40px;
+     }
+
+     footer .footer-list {
+          justify-content: center;
+          align-items: stretch;
+          flex-wrap: wrap;
+          padding: 100px 3% 20px;
+     }
+
+     footer .footer-list ul {
+          flex-basis: 80%;
+          margin: 15px;
+     }
+
+     footer .footer-list ul:last-child {
+          text-align: center;
+          }
+
+     footer .footer-list ul li:first-child strong {
+          font-family: "itim", cursive;
+          font-size: 50px;
+          color: #f1f1f1;
+     }
+
+     footer .footer-list ul li a {
+          font-family: "Baloo 2", cursive;
+          font-size: 40px;
+          color: #f1f1f1;
+     }
+
+     footer .footer-list ul li a img {
+          width: 80%;
+     }
+
+     footer .links {
+          padding: 40px 20%;
+          }
+
+     footer .links ul li a i {
+          font-size: 50px;
+     }
+}
