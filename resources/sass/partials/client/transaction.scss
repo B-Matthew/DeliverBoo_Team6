@@ -1,0 +1,6 @@
+#transaction{
+    @include flex(row,center,center,nowrap);   
+    background-color: $bluelight;
+    padding: 300px;   
+    @include itim;   
+}               
