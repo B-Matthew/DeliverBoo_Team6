@@ -46,13 +46,24 @@
             ul {
                 li {
                     @include baloo;
-                    padding: 10px  0 10px 20px;
+                    width: fit-content;
+                    padding: 20px 0 20px 20px;
                     border-left: 3px solid $yellow;
                     font-size: 18px;
                     letter-spacing: 2px;
+                    transition: border-color 0.3s linear;
+
+                    &:hover {
+                        border-color: $blue;
+                    }
 
                     div {
                         flex-basis: calc(50% - 20px);
+                    }
+
+                    a {
+                        color: $blue;
+                        font-size: 18px;
                     }
 
                 }
@@ -110,8 +121,8 @@
 
                 & > div {
                     // @include neomorphism;
-                    margin-bottom: 100px;
                     text-align: center;
+                    padding-top: 100px;
 
                     h2 {
                         margin-bottom: 30px;
@@ -297,6 +308,12 @@
     .carrello {
         position: sticky;
         position: -webkit-sticky;
-        top: 100px;
+        top: 150px;
     }
+
+    // .aside-menu {
+    //     position: sticky;
+    //     position: -webkit-sticky;
+    //     top: 40%;
+    // }
 }

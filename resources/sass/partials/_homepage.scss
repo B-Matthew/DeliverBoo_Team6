@@ -76,6 +76,7 @@ body {
 
                .searchbar {
                     @include baloo;
+                    font-size: 18px;
                     @include theButtonDesign($blue,$yellow, $yellow);
                     color: $whitePastel;
                     width: 30%;
@@ -89,10 +90,11 @@ body {
                     li {
                          @include flex(column, space-between, center, nowrap);
                          @include baloo;
+                         font-size: 18px;
                          margin: 20px 10px;
 
                          img {
-                              width: 50%;
+                              width: 40%;
                               height: auto;
                          }
 
@@ -218,6 +220,7 @@ body {
                                         width: 100%;
                                         margin-bottom: 20px;
                                         @include baloo;
+                                        font-size: 18px;
                                    }                                   
                               }
                               

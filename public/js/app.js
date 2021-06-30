@@ -310,6 +310,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39194,115 +39214,63 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "menu" }, [
-    _c("div", { staticClass: "aside-menu" }, [
-      _c(
-        "ul",
-        _vm._l(_vm.antipasti, function(antipasto) {
-          return _c("li", [
-            _vm._v(
-              "\n                    " +
-                _vm._s(antipasto.name) +
-                "   \n               "
-            )
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c(
-        "ul",
-        _vm._l(_vm.primi, function(primo) {
-          return _c("li", [
-            _vm._v(
-              "\n                    " +
-                _vm._s(primo.name) +
-                "\n               "
-            )
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c(
-        "ul",
-        _vm._l(_vm.secondi, function(secondo) {
-          return _c("li", [
-            _vm._v(
-              "\n                    " +
-                _vm._s(secondo.name) +
-                "   \n               "
-            )
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c(
-        "ul",
-        _vm._l(_vm.dolci, function(dolce) {
-          return _c("li", [
-            _vm._v(
-              "\n                    " +
-                _vm._s(dolce.name) +
-                "   \n               "
-            )
-          ])
-        }),
-        0
-      )
-    ]),
+    _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "container-menu" }, [
       _c("div", { staticClass: "products" }, [
-        _c("div", { staticClass: "singleProduct" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "ul",
-            _vm._l(_vm.antipasti, function(antipasto) {
-              return _c("li", [
-                _c("div", [
-                  _c("h3", { attrs: { value: antipasto.name } }, [
-                    _vm._v(_vm._s(antipasto.name))
+        _c(
+          "div",
+          { staticClass: "singleProduct", attrs: { id: "antipasti" } },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "ul",
+              _vm._l(_vm.antipasti, function(antipasto) {
+                return _c("li", [
+                  _c("div", [
+                    _c("h3", { attrs: { value: antipasto.name } }, [
+                      _vm._v(_vm._s(antipasto.name))
+                    ]),
+                    _vm._v(" "),
+                    _c("h5", [_vm._v(_vm._s(antipasto.ingredients))]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(antipasto.description))]),
+                    _vm._v(" "),
+                    _c("i", {
+                      staticClass: "fas fa-plus",
+                      on: {
+                        click: function($event) {
+                          return _vm.addProduct(
+                            antipasto.name,
+                            antipasto.price,
+                            antipasto.id
+                          )
+                        }
+                      }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("h5", [_vm._v(_vm._s(antipasto.ingredients))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(antipasto.description))]),
-                  _vm._v(" "),
-                  _c("i", {
-                    staticClass: "fas fa-plus",
-                    on: {
-                      click: function($event) {
-                        return _vm.addProduct(
-                          antipasto.name,
-                          antipasto.price,
-                          antipasto.id
-                        )
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
-                  _vm._v(" "),
-                  _c("h4", [
-                    _c("i", { staticClass: "fas fa-euro-sign" }),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(antipasto.price) +
-                        "    \n                                   "
-                    )
+                  _c("div", { staticClass: "image" }, [
+                    _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("i", { staticClass: "fas fa-euro-sign" }),
+                      _vm._v(
+                        "\n                                        " +
+                          _vm._s(antipasto.price) +
+                          "    \n                                   "
+                      )
+                    ])
                   ])
                 ])
-              ])
-            }),
-            0
-          )
-        ]),
+              }),
+              0
+            )
+          ]
+        ),
         _vm._v(" "),
-        _c("div", [
+        _c("div", { attrs: { id: "primi" } }, [
           _c("h2", [_vm._v("Primi")]),
           _vm._v(" "),
           _c(
@@ -39344,7 +39312,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", [
+        _c("div", { attrs: { id: "secondi" } }, [
           _c("h2", [_vm._v("Secondi")]),
           _vm._v(" "),
           _c(
@@ -39390,7 +39358,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", [
+        _c("div", { attrs: { id: "dolce" } }, [
           _c("h2", [_vm._v("Dolce")]),
           _vm._v(" "),
           _c(
@@ -39510,6 +39478,44 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "aside-menu" }, [
+      _c("ul", [
+        _c("li", { staticClass: "selected" }, [
+          _c("a", { attrs: { href: "#antipasti" } }, [
+            _vm._v("\n                         Antipasti\n                    ")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("a", { attrs: { href: "#primi" } }, [
+            _vm._v("\n                         Primi\n                    ")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("a", { attrs: { href: "#secondi" } }, [
+            _vm._v("\n                         Secondi\n                    ")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("a", { attrs: { href: "#dolce" } }, [
+            _vm._v("\n                         Dolce\n                    ")
+          ])
+        ])
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
