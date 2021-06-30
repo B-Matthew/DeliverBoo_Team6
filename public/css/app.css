@@ -5,7 +5,7 @@ header {
   padding: 0 8%;
   position: fixed;
   z-index: 100;
-  background-color: #ffc244;
+  background-color: #25385f;
   border-bottom: 1px solid #25385f;
 }
 
@@ -28,15 +28,14 @@ header ul li {
 header ul li .logo {
   font-family: "Norican", cursive;
   font-size: 60px;
-  color: #25385f;
+  color: #ffc244;
 }
 
 header ul li a {
   font-family: "Norican", cursive;
   font-size: 30px;
-  color: #25385f;
+  color: #ffc244;
   letter-spacing: 2px;
-  color: #25385f;
 }
 
 * {

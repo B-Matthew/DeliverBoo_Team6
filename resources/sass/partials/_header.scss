@@ -4,7 +4,7 @@ header {
      padding: 0 8%;
      position: fixed;
      z-index: 100;
-     background-color: $yellow;
+     background-color: $blue;
      border-bottom: 1px solid $blue;
 
      ul {
@@ -16,16 +16,15 @@ header {
                .logo {
                     font-family: 'Norican', cursive;
                     font-size: 60px;
-                    color: $blue;
+                    color: $yellow;
                }
      
                a {
                     // @include itim;
                     font-family: 'Norican', cursive;
                     font-size: 30px;
-                    color: $blue;
+                    color: $yellow;
                     letter-spacing: 2px;
-                    color: $blue;
                }
 
 
