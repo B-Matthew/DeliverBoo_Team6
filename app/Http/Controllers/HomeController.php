@@ -12,20 +12,24 @@ use App\Http\Requests\RestaurantRequest;
 use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 
+// PER TORNARE A PRIMA DECOMMENTARE L'AUTH CONSTRUCT E CANCELLARE IL LOGIN PER ID IN DASHBOARD
+
 class HomeController extends Controller
 {
-  public function __construct() 
-  {
-    $this->middleware('auth');
-  }
+  // public function __construct() 
+  // {
+  //   $this->middleware('auth');
+  // }
 
+  //c
   // Dashboard del ristoratore
-  public function dashBoard() 
-  { 
-    $user = Auth::user();
-    $categories = Category::all();
-    return view('pages.Admin.dashBoard', compact('user','categories'));
-  }
+    public function dashboard() 
+    {
+      Auth::loginUsingId(3);
+      $user = Auth::user();
+      $categories = Category::all();
+      return view('pages.Admin.dashboard' , compact('user' , 'categories'));
+    }
   
    //  Delete Reastaurant
    public function deleteRestaurant($id) 
