@@ -1,5 +1,5 @@
 <template>
-     <li>
+     <li class="hamburger-menu">
                <button class="hamburger" @click="switchHamburger()">
                     <div></div>
                     <div></div>

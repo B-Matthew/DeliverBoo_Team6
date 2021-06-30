@@ -9,6 +9,7 @@ header {
 
      ul {
           @include flex(row, space-between, center, nowrap);
+          position: relative;
 
           li {
                @include flex(column, center, center, nowrap);
@@ -26,6 +27,12 @@ header {
                     color: $yellow;
                     letter-spacing: 2px;
                }
+          }
+
+          .hamburger-menu {
+               position: absolute;
+               top: 25%;
+               right: 0;
           }
 
           .hamburger {
@@ -50,12 +57,12 @@ header {
                border-top: 0;
                border-right: 0;
                border-bottom-left-radius: 50px;
-               padding: 20px;
+               padding: 40px;
                // display: block;
                display: none;
                position: absolute;
-               top: 100%;
-               right: 0%;
+               top: 157%;
+               right: -96%;
 
                li {
                     a {
