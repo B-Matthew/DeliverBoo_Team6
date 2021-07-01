@@ -3577,3 +3577,81 @@ footer .links h5 {
   }
 }
 
+@media (max-width: 1200px) and (min-width: 998px) {
+  #login section form {
+    flex-basis: 80%;
+  }
+}
+
+@media (max-width: 998px) and (min-width: 768px) {
+  #login section {
+    padding: 30% 8%;
+  }
+
+  #login section form {
+    flex-basis: 100%;
+  }
+
+  #login section form fieldset legend {
+    font-size: 60px;
+  }
+
+  #login section form fieldset label {
+    font-size: 50px;
+  }
+
+  #login section form fieldset .checkbox-box {
+    display: flex;
+    align-items: center;
+  }
+
+  #login section form fieldset div {
+    margin: 40px 0;
+  }
+
+  #login section form fieldset .checkbox {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  #login section form fieldset div button {
+    font-size: 40px;
+  }
+
+  #login section form fieldset a {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 998px) {
+  #register section form {
+    flex-basis: 80%;
+  }
+}
+
+@media (max-width: 998px) and (min-width: 768px) {
+  #register section {
+    padding: 30% 8%;
+  }
+
+  #register section form {
+    flex-basis: 100%;
+  }
+
+  #register section form fieldset legend {
+    font-size: 60px;
+  }
+
+  #register section form fieldset label {
+    font-size: 50px;
+  }
+
+  #register section form fieldset div {
+    margin: 40px 0;
+  }
+
+  #register section form fieldset div button {
+    font-size: 40px;
+  }
+}
+
