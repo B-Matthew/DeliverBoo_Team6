@@ -431,9 +431,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     setLocalStorage: function setLocalStorage() {
       localStorage.clear();
-      localStorage.setItem("totale", this.totale);
       localStorage.setItem("prodotti", JSON.stringify(this.carrello));
-      console.log(localStorage);
     }
   },
   mounted: function mounted() {
@@ -605,9 +603,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      tot: localStorage.getItem('totale'),
       prodotti: JSON.parse(localStorage.getItem("prodotti"))
     };
+  },
+  methods: {
+    getTot: function getTot() {
+      var sum = 0;
+
+      for (var i = 0; i < this.prodotti.length; i++) {
+        var element = this.prodotti[i].prezzo;
+        sum += element;
+      }
+
+      return sum;
+    }
   },
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -39881,10 +39890,10 @@ var render = function() {
             name: "amount",
             placeholder: "Amount"
           },
-          domProps: { value: _vm.tot }
+          domProps: { value: _vm.getTot() }
         }),
         _vm._v(" "),
-        _c("p", [_vm._v("€ " + _vm._s(_vm.tot))])
+        _c("h2", [_vm._v("€ " + _vm._s(_vm.getTot()))])
       ])
     ]),
     _vm._v(" "),
@@ -52615,8 +52624,6 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

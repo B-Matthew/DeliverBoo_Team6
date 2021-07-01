@@ -157,6 +157,7 @@ class HomeController extends Controller
     public function updateProduct(ProductRequest $request, $id)
     {
       $data = $request->all();
+     
       $product = Product::findOrFail($id);
       $restaurant = $product -> restaurant_id;
       $product -> update($data);

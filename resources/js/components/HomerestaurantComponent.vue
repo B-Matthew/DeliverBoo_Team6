@@ -268,16 +268,16 @@
                setLocalStorage: function () {
                     
                     localStorage.clear();
-                    localStorage.setItem("totale", this.totale);
                     localStorage.setItem("prodotti", JSON.stringify(this.carrello));
-                    console.log(localStorage);
+                    
                }
           },
           mounted() {
-            console.log('Component mounted.')
+               console.log('Component mounted.')
           }
      }
 </script>
+                    
 
                     
                     
