@@ -148,6 +148,55 @@
                </div>
           </div>
 
+          <div class="carrello-icona">
+               <img @click="switchCarrello" :src="carrelloImg" alt="">
+               <div v-if="carrello.length != 0 && carrelloFlag == false" class="price">
+                    <span>{{totale}}</span>
+                    <i class="fas fa-euro-sign"></i>
+               </div>
+               <div v-else-if="carrello.length == 0 && carrelloFlag == false" class="price">
+                    <span>Il tuo carrello è ancora vuoto</span>
+               </div>
+               <div v-if="carrelloFlag == true" class="carrello-dropdown">
+               
+                    <h2>Carrello</h2>   
+                    <ul v-for ="(ordine, index) in carrello">
+                         <li>
+                              <div>
+                                   <h4>{{ordine.quantita}}x</h4>
+                                   <i @click="removeProduct(index)" class="fas fa-minus"></i>
+                              </div>
+                              <div>
+                                   <h5>{{ordine.prodotto}}</h5>
+                              </div>
+                              <div>
+                                   <div>
+                                        <i class="fas fa-euro-sign"></i>
+                                        <span>{{ordine.prezzo}} </span>
+                                   </div>
+                                   <i  @click="increaseProduct(index)" class="fas fa-plus"></i>  
+                              </div>
+                         </li>
+                    </ul>
+                                   
+    
+                    <div v-if="carrello.length != 0">
+                         <h3>Totale</h3>
+                         <div class="totalePrezzo">
+                              <i class="fas fa-euro-sign"></i>
+                              <span>{{totale}}</span>
+                         </div>
+                         <div>
+                              <a :href="checkout"><button v-on:click="setLocalStorage" type="submit">Vai al pagamento</button></a>  
+                         </div>   
+                    </div>
+
+                    <div class="no-products" v-else>
+                         <h3>Il tuo carrello è ancora vuoto.</h3>
+                    </div>
+               </div>
+          </div>
+
           <div class="carrello">
                
                     <h2>Carrello</h2>   
@@ -198,9 +247,11 @@
                    'primoImg': "../../../storage/img/primi.png",
                    'secondoImg': "../../../storage/img/secondi.png",
                    'dolceImg': "../../../storage/img/dolce.png",
+                   'carrelloImg': "../../../storage/img/carrello.png",
                    'totale': 0,
                    'carrello': [],
                    'carrelloBackup': [],
+                   'carrelloFlag': false,
                    'inputs' : {},
                    'errors' : {},
                }
@@ -270,6 +321,10 @@
                     localStorage.clear();
                     localStorage.setItem("prodotti", JSON.stringify(this.carrello));
                     
+               },
+
+               switchCarrello: function() {
+                    this.carrelloFlag = !this.carrelloFlag;
                }
           },
           mounted() {
