@@ -7,17 +7,25 @@ export default {
    data() {
       return {
          datacollection: {
-            
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
             datasets: [{
-               label: 'Data One',
+               label: 'Numero Ordini per anno',
                backgroundColor: '#f87979',
-               pointBackgroundColor: 'white',
+               pointBackgroundColor: 'yellow',
+               borderWidth: 1,
+               pointBorderColor: '#249EBF',
+               data: this.getMonth(),
+               
+            },{
+            label: 'Incasso',
+               backgroundColor: '#black',
+               pointBackgroundColor: 'yellow',
                borderWidth: 1,
                pointBorderColor: '#249EBF',
                
-               data: [40, 20, 30, 50, 90, 10, 20, 40, 50, 70, 90, 100]
-            }]
+               data: this.getPrice(),
+               }
+            ]
          },
          
          options: {
@@ -42,13 +50,62 @@ export default {
             responsive: true,
             maintainAspectRatio: false
          }
+            
       }
+               
    },
-   props : ['orders'],
+   props : ['orders','amount'],
+   methods: {
+      getMonth: function() {
+         let year = new Date().getFullYear();
+         let arr1 = [];
+         let arr2 = [];
+         for (let i = 0; i < this.orders.length; i++) {
+            const element = this.orders[i];
+            const month = element.month;
+            if (year == element.year) {
+               
+               arr2.push(month);
+            }
+          }
+      arr2.forEach(function (x) { arr1[x] = (arr1[x] || 0) + 1; });
+      console.log(arr1);
+      return arr1;
+      },
+
+      getPrice : function () {
+         let arr2 ={
+            
+         };
+         
+         console.log(arr2);
+         return arr2;
+      }
+         
+               
+         
+
+     
+      
+      
+   },
    mounted() {
-      console.log(this.orders);
+      // console.log(this.orders);
+      console.log(this.amount);
       this.renderChart(this.datacollection, this.options);
    }
 }
 </script>
+         
+      
+               
+            
+           
+            
+         
 
+
+
+            
+
+         
