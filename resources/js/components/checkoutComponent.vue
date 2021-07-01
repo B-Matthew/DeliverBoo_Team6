@@ -3,8 +3,8 @@
         <label for="Totale">
             <span class="input-label">Totale</span>
             <div class="input-wrapper amount-wrapper">
-                <input type="hidden" id="amount" name="amount" placeholder="Amount" :value="tot">
-                <p>€ {{tot}}</p>
+                <input type="hidden" id="amount" name="amount" placeholder="Amount" :value="getTot()">
+                <h2>€ {{getTot()}}</h2>
             </div>
         </label>
         <ul>
@@ -19,16 +19,32 @@
     export default {
         data: function() {
             return {
-                tot: localStorage.getItem('totale'),
                 prodotti: JSON.parse(localStorage.getItem("prodotti")),
             }
         },
+                
+
+        methods: {
+            getTot : function() {
+                let sum = 0;
+                for (let i = 0; i < this.prodotti.length; i++) {
+                    const element = this.prodotti[i].prezzo;
+                    sum += element;
+                }
+                return sum;
+            }
+        }, 
+                
         mounted() {
             console.log('Component mounted.');
             console.log(this.prodotti);
         }
+            
     }
 </script>
+            
+                
+                    
     
     
 

@@ -39,8 +39,8 @@
         </label>
         <select required name="availability" id="type-food">
             <option selected value="">Scegli il tipo</option>
-            <option value="true">Disponibile</option>
-            <option value="false">Non Disponibile</option>
+            <option value="1">Disponibile</option>
+            <option value="0">Non Disponibile</option>
         </select>
             
         <label class="" for="description">
