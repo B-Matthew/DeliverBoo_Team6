@@ -3,55 +3,40 @@
 
           <div class="aside-menu">
 
-               <!-- <h2>Antipasti</h2>    -->
                <ul>
                     <li class="selected">
                          <a href="#antipasti">
                               Antipasti
                          </a>
                     </li>
-                    <!-- <li v-for="antipasto in antipasti">
-                         {{ antipasto.name }}   
-                    </li> -->
                </ul>   
-       
-               <!-- <h2>Primi</h2> -->
+                    
                <ul>
                      <li>
                          <a href="#primi">
                               Primi
                          </a>
                     </li>
-                    <!-- <li v-for="primo in primi">
-                         {{ primo.name }}
-                    </li> -->
                </ul>
-    
-               <!-- <h2>Secondi</h2> -->
+       
                <ul>
                     <li>
                          <a href="#secondi">
                               Secondi
                          </a>
                     </li>
-                    <!-- <li v-for="secondo in secondi">
-                         {{ secondo.name }}   
-                    </li>                 -->
                </ul>
-
-               <!-- <h2>Dolce</h2>    -->
+              
                <ul>
                     <li>
                          <a href="#dolce">
                               Dolce
                          </a>
                     </li>
-                    <!-- <li v-for="dolce in dolci">
-                         {{ dolce.name }}   
-                    </li> -->
                </ul>   
-
+                    
           </div>
+    
 
           <div class="container-menu">   
 
@@ -68,8 +53,10 @@
                                         <h3 :value="antipasto.name">{{ antipasto.name }}</h3> 
                                         <h5>{{ antipasto.ingredients }}</h5> 
                                         <p>{{ antipasto.description }}</p>
-                                        <i @click="addProduct(antipasto.name, antipasto.price,antipasto.id)" class="fas fa-plus"></i>  
+                                        <i @click="addProduct(antipasto.name, antipasto.price,antipasto.id)" class="fas fa-plus" v-if="antipasto.availability"></i>  
+                                        <h3 v-if="!antipasto.availability">Non Disponibile</h3> 
                                    </div>   
+                                        
 
                                    <div class="image">
                                         <img :src="antipastoImg" alt=""> 
@@ -92,7 +79,8 @@
                                         <h3>{{ primo.name }}</h3> 
                                         <h5>{{ primo.ingredients }}</h5> 
                                         <p>{{ primo.description }}</p>
-                                        <i @click="addProduct(primo.name, primo.price,primo.id)"class="fas fa-plus"></i> 
+                                        <i @click="addProduct(primo.name, primo.price,primo.id)"class="fas fa-plus" v-if="primo.availability"></i> 
+                                        <h3 v-if="!primo.availability">Non Disponibile</h3> 
                                    </div>
                                    
                                    <div class="image">
@@ -116,7 +104,8 @@
                                         <h3>{{ secondo.name }}</h3> 
                                         <h5>{{ secondo.ingredients }}</h5> 
                                         <p>{{ secondo.description }}</p>
-                                        <i @click="addProduct(secondo.name, secondo.price,secondo.id)" class="fas fa-plus"></i> 
+                                        <i @click="addProduct(secondo.name, secondo.price,secondo.id)" class="fas fa-plus" v-if="secondo.availability"></i> 
+                                        <h3 v-if="!secondo.availability">Non Disponibile</h3> 
                                    </div>   
 
                                    <div class="image">
@@ -140,7 +129,8 @@
                                         <h3>{{ dolce.name }}</h3> 
                                         <h5>{{ dolce.ingredients }}</h5> 
                                         <p>{{ dolce.description }}</p>
-                                        <i @click="addProduct(dolce.name, dolce.price,dolce.id)" class="fas fa-plus"></i>  
+                                        <i @click="addProduct(dolce.name, dolce.price,dolce.id)" class="fas fa-plus" v-if="dolce.availability"></i>  
+                                        <h3 v-if="!dolce.availability">Non Disponibile</h3> 
                                    </div>   
 
                                    <div class="image">
@@ -299,3 +289,9 @@
                
 
                     
+               
+                                   
+
+              
+                    
+
