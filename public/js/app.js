@@ -361,16 +361,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -595,6 +585,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -39325,18 +39316,24 @@ var render = function() {
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(antipasto.description))]),
                     _vm._v(" "),
-                    _c("i", {
-                      staticClass: "fas fa-plus",
-                      on: {
-                        click: function($event) {
-                          return _vm.addProduct(
-                            antipasto.name,
-                            antipasto.price,
-                            antipasto.id
-                          )
-                        }
-                      }
-                    })
+                    antipasto.availability
+                      ? _c("i", {
+                          staticClass: "fas fa-plus",
+                          on: {
+                            click: function($event) {
+                              return _vm.addProduct(
+                                antipasto.name,
+                                antipasto.price,
+                                antipasto.id
+                              )
+                            }
+                          }
+                        })
+                      : _vm._e(),
+                    _vm._v(" "),
+                    !antipasto.availability
+                      ? _c("h3", [_vm._v("Non Disponibile")])
+                      : _vm._e()
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "image" }, [
@@ -39372,14 +39369,24 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", [_vm._v(_vm._s(primo.description))]),
                   _vm._v(" "),
-                  _c("i", {
-                    staticClass: "fas fa-plus",
-                    on: {
-                      click: function($event) {
-                        return _vm.addProduct(primo.name, primo.price, primo.id)
-                      }
-                    }
-                  })
+                  primo.availability
+                    ? _c("i", {
+                        staticClass: "fas fa-plus",
+                        on: {
+                          click: function($event) {
+                            return _vm.addProduct(
+                              primo.name,
+                              primo.price,
+                              primo.id
+                            )
+                          }
+                        }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !primo.availability
+                    ? _c("h3", [_vm._v("Non Disponibile")])
+                    : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "image" }, [
@@ -39414,18 +39421,24 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", [_vm._v(_vm._s(secondo.description))]),
                   _vm._v(" "),
-                  _c("i", {
-                    staticClass: "fas fa-plus",
-                    on: {
-                      click: function($event) {
-                        return _vm.addProduct(
-                          secondo.name,
-                          secondo.price,
-                          secondo.id
-                        )
-                      }
-                    }
-                  })
+                  secondo.availability
+                    ? _c("i", {
+                        staticClass: "fas fa-plus",
+                        on: {
+                          click: function($event) {
+                            return _vm.addProduct(
+                              secondo.name,
+                              secondo.price,
+                              secondo.id
+                            )
+                          }
+                        }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !secondo.availability
+                    ? _c("h3", [_vm._v("Non Disponibile")])
+                    : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "image" }, [
@@ -39460,14 +39473,24 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", [_vm._v(_vm._s(dolce.description))]),
                   _vm._v(" "),
-                  _c("i", {
-                    staticClass: "fas fa-plus",
-                    on: {
-                      click: function($event) {
-                        return _vm.addProduct(dolce.name, dolce.price, dolce.id)
-                      }
-                    }
-                  })
+                  dolce.availability
+                    ? _c("i", {
+                        staticClass: "fas fa-plus",
+                        on: {
+                          click: function($event) {
+                            return _vm.addProduct(
+                              dolce.name,
+                              dolce.price,
+                              dolce.id
+                            )
+                          }
+                        }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !dolce.availability
+                    ? _c("h3", [_vm._v("Non Disponibile")])
+                    : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "image" }, [
@@ -39853,15 +39876,15 @@ var render = function() {
       _c("div", { staticClass: "input-wrapper amount-wrapper" }, [
         _c("input", {
           attrs: {
+            type: "hidden",
             id: "amount",
             name: "amount",
-            type: "tel",
-            min: "1",
-            placeholder: "Amount",
-            readonly: ""
+            placeholder: "Amount"
           },
           domProps: { value: _vm.tot }
-        })
+        }),
+        _vm._v(" "),
+        _c("p", [_vm._v("€ " + _vm._s(_vm.tot))])
       ])
     ]),
     _vm._v(" "),

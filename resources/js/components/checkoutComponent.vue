@@ -3,7 +3,8 @@
         <label for="Totale">
             <span class="input-label">Totale</span>
             <div class="input-wrapper amount-wrapper">
-                <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" readonly :value="tot">
+                <input type="hidden" id="amount" name="amount" placeholder="Amount" :value="tot">
+                <p>€ {{tot}}</p>
             </div>
         </label>
         <ul>
