@@ -13,11 +13,7 @@ use App\Http\Requests\ProductRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-<<<<<<< HEAD
-// PER TORNARE A PRIMA DECOMMENTARE L'AUTH CONSTRUCT E CANCELLARE IL LOGIN PER ID IN DASHBOARD Togliere il commento sul gate
-=======
 // PER TORNARE A PRIMA DECOMMENTARE L'AUTH CONSTRUCT E CANCELLARE IL LOGIN PER ID IN DASHBOARD e gate
->>>>>>> Mats
 
 class HomeController extends Controller
 {
