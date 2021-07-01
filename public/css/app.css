@@ -2660,7 +2660,7 @@ footer .links h5 {
   }
 
   body #homepage .jumbotron .text h2 {
-    font-size: 5vw;
+    font-size: 7vw;
   }
 
   body #homepage .jumbotron .attach {
@@ -2669,22 +2669,34 @@ footer .links h5 {
 
   body #homepage #categories h2 {
     margin-top: 20%;
-    font-size: 55px;
+    font-size: 65px;
   }
 
   body #homepage #categories .searchbar {
-    width: 80%;
+    width: 60%;
     font-size: 40px;
+  }
+
+  body #homepage #categories .typeOfFoods {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: auto;
+    padding: 100px 8%;
   }
 
   body #homepage #categories .typeOfFoods li {
     flex-basis: calc(50% - 20px);
-    margin: 30px 0 50px 0;
+    margin: 30px 100px;
   }
 
   body #homepage #categories .typeOfFoods li img {
-    width: 70%;
+    width: 200px;
     height: auto;
+  }
+
+  body #homepage #categories .typeOfFoods li div {
+    display: flex;
+    flex-wrap: nowrap;
   }
 
   body #homepage #categories .typeOfFoods li div .checkbox {
@@ -2698,6 +2710,7 @@ footer .links h5 {
 
   body #homepage #categories .typeOfFoods li div span {
     font-size: 35px;
+    word-break: keep-all;
   }
 
   body #homepage #categories .restaurants li {
@@ -2716,7 +2729,7 @@ footer .links h5 {
 
   body #homepage .work h2 {
     margin: 15% 0 20px 0;
-    font-size: 55px;
+    font-size: 65px;
   }
 
   body #homepage .work ul {
@@ -2743,15 +2756,15 @@ footer .links h5 {
   }
 
   footer .footer-list {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
-    flex-wrap: wrap;
+    overflow: auto;
     padding: 100px 10% 20px;
   }
 
   footer .footer-list ul {
-    flex-basis: 80%;
-    margin: 15px;
+    min-width: 550px;
+    margin: 50px;
   }
 
   footer .footer-list ul:last-child {
@@ -2760,7 +2773,7 @@ footer .links h5 {
 
   footer .footer-list ul li:first-child strong {
     font-family: "itim", cursive;
-    font-size: 50px;
+    font-size: 45px;
     color: #f1f1f1;
   }
 
