@@ -162,6 +162,7 @@ class HomeController extends Controller
       $product -> update($data);
       return redirect() -> route('myProduct', encrypt($restaurant));
     }
+      
   
     //  Funzione per cancellare i prodotti 
     public function deleteProduct($id)

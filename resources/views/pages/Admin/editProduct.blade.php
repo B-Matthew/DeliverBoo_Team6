@@ -34,7 +34,15 @@
             <h4>Prezzo</h4>
         </label>
         <input step=".01" type="number" class="" id="price" name="price" value="{{ $product -> price }}">
-
+        <label class="" for="type">
+            <h4>Disponibilità</h4>
+        </label>
+        <select required name="availability" id="type-food">
+            <option selected value="">Scegli il tipo</option>
+            <option value="true">Disponibile</option>
+            <option value="false">Non Disponibile</option>
+        </select>
+            
         <label class="" for="description">
             <h4>Descrizione</h4>
         </label>
