@@ -92,7 +92,7 @@
         </ul>
     </div>
     <div style="padding-bottom: 300px;width:70%">
-    <chart-component :orders = '{{$orders}}'></chart-component>
+    <chart-component :amount="{{$amount}}" :orders = '{{$orders}}'></chart-component>
     </div>
 </main>
 @endsection

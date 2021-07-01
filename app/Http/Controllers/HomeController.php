@@ -107,19 +107,33 @@ class HomeController extends Controller
 
       $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
       $orders = DB::table('orders')
-                    ->select(DB::raw("orders.id ,orders.name,orders.lastname ,orders.amount,orders.created_at ,products.restaurant_id,GROUP_CONCAT(products.id SEPARATOR ' ') as products"))
+                    ->select(DB::raw("orders.id ,orders.name,orders.lastname ,orders.amount,MONTH(orders.created_at) as month, YEAR(orders.created_at) as year ,DAY(orders.created_at) as day,products.restaurant_id,GROUP_CONCAT(products.id SEPARATOR ' ') as products"))
                     ->join('order_product' , 'orders.id' , '=' , 'order_product.order_id')
                     ->join('products' ,'products.id' ,'=' , 'order_product.product_id')
                     ->where('products.restaurant_id' , '=' , $restaurant['id'])
                     ->groupBy('orders.id') 
                     ->get();
 
+      // SELECT   MONTH(orders.created_at), YEAR(orders.created_at) ,SUM(orders.amount) FROM orders 
+      // JOIN order_product ON order_product.order_id = orders.id
+      // JOIN products ON products.id = order_product.product_id
+      // WHERE products.restaurant_id = 3
+      // GROUP BY MONTH(orders.created_at), YEAR(orders.created_at)
+      // ORDER BY MONTH(orders.created_at), YEAR(orders.created_at)
+
+      $amount = DB::table('orders')
+                ->select(DB::raw("MONTH(orders.created_at) as month, YEAR(orders.created_at) as year , SUM(orders.amount) as amount"))
+                ->join('order_product' , 'orders.id' , '=' , 'order_product.order_id')
+                ->join('products' ,'products.id' ,'=' , 'order_product.product_id')
+                ->where('products.restaurant_id' , '=' , $restaurant['id'])
+                ->groupBy('month','year') 
+                ->get();
       // Controllo sull'user loggato
       // if (! Gate::allows('userRoute', $restaurant)) {
       //         abort(403);
       //     }
   
-      return view('pages.Admin.myProducts', compact('restaurant','orders'));
+      return view('pages.Admin.myProducts', compact('restaurant','orders','amount'));
     }
   
     // Funzione per view per creare piatto
