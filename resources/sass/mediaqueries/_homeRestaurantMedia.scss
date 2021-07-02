@@ -84,13 +84,13 @@
           font-family: "Itim", cursive;
           font-size: 40px;
           letter-spacing: 2px;
-          font-size: 5.5vw;
-          padding: 15px 0;
+          font-size: 7.5vw;
+          padding: 15px 5%;
           color: #25385f;
      }
 
      #home-restaurant .jumbotron div {
-          font-size: 2vw;
+          font-size: 4vw;
      }
 
      #home-restaurant .menu {
@@ -118,7 +118,7 @@
           }
 
      #home-restaurant .menu .container-menu {
-          flex-basis: 60%;
+          flex-basis: 100%;
           overflow: auto;
      }
 
@@ -162,12 +162,43 @@
      }
 
      #home-restaurant .menu .container-menu .products .image {
+          width: 500px;
+          height: auto;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li img {
           width: 300px;
           height: auto;
+          vertical-align: super;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li .fa-euro-sign {
+          font-size: 35px;
+          }
+
+     #home-restaurant .menu .container-menu .products > div ul li h4 {
+          border-radius: 10px;
+          font-weight: normal;
+          font-size: 40px;
+     }
+
+     #home-restaurant .menu .carrello-icona {
+          display: block;
+          flex-basis: 100%;
+          position:fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: $bluelight;
+          z-index: 10;
+          padding: 0 10%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
      }
 
      #home-restaurant .menu .carrello {
           flex-basis: 40%;
+          display: none;
      }
 
      #home-restaurant .menu .carrello h2 {

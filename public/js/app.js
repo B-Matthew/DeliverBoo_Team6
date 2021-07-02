@@ -361,6 +361,55 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -368,9 +417,11 @@ __webpack_require__.r(__webpack_exports__);
       'primoImg': "../../../storage/img/primi.png",
       'secondoImg': "../../../storage/img/secondi.png",
       'dolceImg': "../../../storage/img/dolce.png",
+      'carrelloImg': "../../../storage/img/carrello.png",
       'totale': 0,
       'carrello': [],
       'carrelloBackup': [],
+      'carrelloFlag': false,
       'inputs': {},
       'errors': {}
     };
@@ -432,6 +483,9 @@ __webpack_require__.r(__webpack_exports__);
     setLocalStorage: function setLocalStorage() {
       localStorage.clear();
       localStorage.setItem("prodotti", JSON.stringify(this.carrello));
+    },
+    switchCarrello: function switchCarrello() {
+      this.carrelloFlag = !this.carrelloFlag;
     }
   },
   mounted: function mounted() {
@@ -39556,6 +39610,101 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
+    _c("div", { staticClass: "carrello-icona" }, [
+      _c("img", {
+        attrs: { src: _vm.carrelloImg, alt: "" },
+        on: { click: _vm.switchCarrello }
+      }),
+      _vm._v(" "),
+      _vm.carrello.length != 0 && _vm.carrelloFlag == false
+        ? _c("div", { staticClass: "price" }, [
+            _c("span", [_vm._v(_vm._s(_vm.totale))]),
+            _vm._v(" "),
+            _c("i", { staticClass: "fas fa-euro-sign" })
+          ])
+        : _vm.carrello.length == 0 && _vm.carrelloFlag == false
+        ? _c("div", { staticClass: "price" }, [
+            _c("span", [_vm._v("Il tuo carrello è ancora vuoto")])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.carrelloFlag == true
+        ? _c(
+            "div",
+            { staticClass: "carrello-dropdown" },
+            [
+              _c("h2", [_vm._v("Carrello")]),
+              _vm._v(" "),
+              _vm._l(_vm.carrello, function(ordine, index) {
+                return _c("ul", [
+                  _c("li", [
+                    _c("div", [
+                      _c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")]),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "fas fa-minus",
+                        on: {
+                          click: function($event) {
+                            return _vm.removeProduct(index)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [_c("h5", [_vm._v(_vm._s(ordine.prodotto))])]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", [
+                        _c("i", { staticClass: "fas fa-euro-sign" }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")])
+                      ]),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "fas fa-plus",
+                        on: {
+                          click: function($event) {
+                            return _vm.increaseProduct(index)
+                          }
+                        }
+                      })
+                    ])
+                  ])
+                ])
+              }),
+              _vm._v(" "),
+              _vm.carrello.length != 0
+                ? _c("div", [
+                    _c("h3", [_vm._v("Totale")]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "totalePrezzo" }, [
+                      _c("i", { staticClass: "fas fa-euro-sign" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(_vm.totale))])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("a", { attrs: { href: _vm.checkout } }, [
+                        _c(
+                          "button",
+                          {
+                            attrs: { type: "submit" },
+                            on: { click: _vm.setLocalStorage }
+                          },
+                          [_vm._v("Vai al pagamento")]
+                        )
+                      ])
+                    ])
+                  ])
+                : _c("div", { staticClass: "no-products" }, [
+                    _c("h3", [_vm._v("Il tuo carrello è ancora vuoto.")])
+                  ])
+            ],
+            2
+          )
+        : _vm._e()
+    ]),
+    _vm._v(" "),
     _c(
       "div",
       { staticClass: "carrello" },
@@ -52656,6 +52805,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 

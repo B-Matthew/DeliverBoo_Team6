@@ -28,7 +28,7 @@
                         @enderror
                     </div>
 
-                    <div>
+                    <div class="checkbox-box">
                         <input class="checkbox" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                         <label class="checkbox-label" for="remember">
                             {{ __('Remember Me') }}
