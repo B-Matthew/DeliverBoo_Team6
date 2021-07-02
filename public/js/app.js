@@ -646,17 +646,17 @@ __webpack_require__.r(__webpack_exports__);
         labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
         datasets: [{
           label: 'Numero Ordini per anno',
-          backgroundColor: '#f87979',
+          backgroundColor: '#25385f',
           pointBackgroundColor: 'yellow',
-          borderWidth: 1,
-          pointBorderColor: '#249EBF',
+          borderWidth: 3,
+          pointBorderColor: '#25385f',
           data: this.getMonth()
         }, {
           label: 'Incasso',
-          backgroundColor: '#black',
-          pointBackgroundColor: 'yellow',
-          borderWidth: 1,
-          pointBorderColor: '#249EBF',
+          backgroundColor: '#ffc244',
+          pointBackgroundColor: '#25385f',
+          borderWidth: 3,
+          pointBorderColor: '#ffc244',
           data: this.getPrice()
         }]
       },
@@ -672,7 +672,7 @@ __webpack_require__.r(__webpack_exports__);
           }],
           xAxes: [{
             gridLines: {
-              display: false
+              display: true
             }
           }]
         },
@@ -707,7 +707,6 @@ __webpack_require__.r(__webpack_exports__);
       return arr1;
     },
     getPrice: function getPrice() {
-      var arr2 = {};
       console.log(arr2);
       return arr2;
     }
@@ -52657,10 +52656,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
