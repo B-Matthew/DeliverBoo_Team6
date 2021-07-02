@@ -20,8 +20,14 @@
                               "my-restaurants my-restaurants my-restaurants";
      }
 
+     #dashboard .welcome h1 {
+          font-size: 60px;
+          margin: 50px 0;
+          }
+
      #dashboard .my-restaurants ul li {
           flex-basis: 740px;
+          margin: 70px 0;
      }
 
      #dashboard .navbar ul > li {
@@ -52,12 +58,61 @@
           font-size: 30px;
      }
 
+     #dashboard .my-restaurants ul li > div .modifica a {
+          font-size: 40px;
+     }
+
+     #dashboard .my-restaurants ul li > div .modifica {
+          top: 100px;
+     }
+
+     #dashboard .my-restaurants ul li > div button:focus + .modifica {
+          transition: all 1s linear;
+          top: -120px;
+     }
+
      #dashboard .my-restaurants > h3 {
-          font-size: 50px;
+          font-size: 60px;
      }
 
      #dashboard .my-restaurants ul li > div:last-child {
      height: 320px;
      }
+
+     #dashboard .create {
+          padding: 50px 2% 200px;
+     }
+
+     #dashboard .create form fieldset legend {
+          font-size: 60px;
+     }
+
+     #dashboard .create form fieldset label, #dashboard .create form fieldset input {
+          font-size: 50px;
+     }
+
+     #dashboard .create ul {
+          justify-content: center;
+     }
+
+     #dashboard .create form fieldset button {
+          font-size: 40px;
+     }
      
+     #dashboard .create div:last-child {
+          text-align: center;
+     }
+
+     #dashboard .create ul li input {
+          padding: 20px;
+          border-radius: 12px;
+     }
+
+     #dashboard .create ul li input:checked:after {
+          font-size: 30px;
+     }
+
+     #dashboard .create h2 {
+          font-size: 60px;
+     }
 }
