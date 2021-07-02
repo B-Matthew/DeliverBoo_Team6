@@ -10,13 +10,13 @@
     <nav class="navbar nav">
         <ul>
             <li>
-                <a onclick="getRestaurant()" href="#">   
+                <a class="buttonActive" id ="restaurants" onclick="getRestaurant()" href="#">   
                     <h4>Ristoranti</h4>   
                     <i class="fas fa-utensils"></i>
                 </a>
             </li>
             <li>
-                <a onclick="getForm()" href="#">
+                <a id="section" onclick="getForm()" href="#">
                     <h4>Nuovo </h4>
                     <i class="far fa-plus-square"></i>
                 </a>
@@ -26,7 +26,7 @@
     </nav>
 
     <section  id="restaurantSection" class="my-restaurants">
-        <h3>I TUOI RISTORANTI</h3>
+        <h3>I tuoi ristoranti</h3>
         <ul>
             @foreach($user -> restaurants as $restaurant)
                 @if(!$restaurant -> deleted)
@@ -36,7 +36,7 @@
                             <h3><a
                                     href="{{ route('myProduct' , encrypt($restaurant -> id)) }}">{{ $restaurant -> name }}</a>
                             </h3>
-                            <button>modifica</button>
+                            <button>Modifica</button>
                             <div class="modifica">
                                 <a
                                     href="{{ route('deleteRestaurant', $restaurant -> id) }}">delete</a>
@@ -140,6 +140,10 @@
     function getRestaurant() {
         var restaurantSection = document.getElementById('restaurantSection');
         var createSection = document.getElementById('createSection');
+        var restaurantButton = document.getElementById('restaurants');
+        var sectionButton = document.getElementById('section');
+        restaurantButton.classList.add('buttonActive');
+        sectionButton.classList.remove('buttonActive');
 
         createSection.style.display='none';
         restaurantSection.style.display='block';
@@ -148,6 +152,11 @@
     function getForm() {
         var restaurantSection = document.getElementById('restaurantSection');
         var createSection = document.getElementById('createSection');
+        var sectionButton = document.getElementById('section');
+        var restaurantButton = document.getElementById('restaurants');
+        sectionButton.classList.add('buttonActive');
+        restaurantButton.classList.remove('buttonActive');
+        
 
         createSection.style.display='block';
         restaurantSection.style.display='none';

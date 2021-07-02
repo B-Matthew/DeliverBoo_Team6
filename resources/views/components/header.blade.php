@@ -18,7 +18,7 @@
      
           <li>
                <a class="logo" href="{{route('homepage')}}">
-                    DeliverBoo
+                    <span>D</span><span>eliverboo</span>{{-- DeliverBoo --}}
                </a>
           </li>
      
@@ -27,7 +27,7 @@
           <li class="hide">
                @auth
                    <a href="{{ route('dashBoard') }}">{{Auth::user() -> name}}</a>
-               <li>
+               <li class="hide">
                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -63,7 +63,7 @@
                <li>
                     @auth
                         <a href="{{ route('dashBoard') }}">{{Auth::user() -> name}}</a>
-                    <li>
+                    <li clas>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                     </li>
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

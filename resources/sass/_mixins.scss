@@ -253,6 +253,14 @@
     }
 }
 
+@mixin neomorphismNoHover {
+    border-radius: 10px;
+    background: $whitePastel;
+    box-shadow: 5px 5px 10px #cdcdcd,
+        -5px -5px 10px #ffffff;
+    transition: all 0.5s linear;
+}
+
 @mixin neomorphismIn {
     border-radius: 10px;
     background: $whitePastel;
