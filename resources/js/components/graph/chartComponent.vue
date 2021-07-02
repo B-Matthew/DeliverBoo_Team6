@@ -9,7 +9,7 @@ export default {
          datacollection: {
             labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
             datasets: [{
-               label: 'Numero Ordini per anno',
+               label: 'Numero Ordini mensili',
                backgroundColor: '#f87979',
                pointBackgroundColor: 'yellow',
                borderWidth: 1,
@@ -22,12 +22,10 @@ export default {
                pointBackgroundColor: 'yellow',
                borderWidth: 1,
                pointBorderColor: '#249EBF',
-               
                data: this.getPrice(),
                }
             ]
          },
-         
          options: {
             scales: {
                yAxes: [{
@@ -52,13 +50,12 @@ export default {
          }
             
       }
-               
    },
    props : ['orders','amount'],
    methods: {
       getMonth: function() {
          let year = new Date().getFullYear();
-         let arr1 = [];
+         let arr1 = [0,0,0,0,0,0,0,0,0,0,0,0];
          let arr2 = [];
          for (let i = 0; i < this.orders.length; i++) {
             const element = this.orders[i];
@@ -74,13 +71,33 @@ export default {
       },
 
       getPrice : function () {
-         let arr2 ={
-            
-         };
+         let arr = [0,0,0,0,0,0,0,0,0,0,0,0];
          
-         console.log(arr2);
-         return arr2;
+            for (let j = 0; j < this.amount.length; j++) {
+               const element = this.amount[j];
+               let month = element.month;
+               let amount = element.amount.toFixed(2);
+               arr.splice(month -1 ,0,amount);
+            }
+         
+         return arr;
       }
+   },
+   
+   mounted() {
+      console.log(this.amount);
+      this.renderChart(this.datacollection, this.options);
+   }
+}
+</script>
+               
+         
+               
+            
+            
+          
+         
+
          
                
          
@@ -88,14 +105,6 @@ export default {
      
       
       
-   },
-   mounted() {
-      // console.log(this.orders);
-      console.log(this.amount);
-      this.renderChart(this.datacollection, this.options);
-   }
-}
-</script>
          
       
                

@@ -699,7 +699,7 @@ __webpack_require__.r(__webpack_exports__);
       datacollection: {
         labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
         datasets: [{
-          label: 'Numero Ordini per anno',
+          label: 'Numero Ordini mensili',
           backgroundColor: '#f87979',
           pointBackgroundColor: 'yellow',
           borderWidth: 1,
@@ -742,7 +742,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getMonth: function getMonth() {
       var year = new Date().getFullYear();
-      var arr1 = [];
+      var arr1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       var arr2 = [];
 
       for (var i = 0; i < this.orders.length; i++) {
@@ -761,13 +761,19 @@ __webpack_require__.r(__webpack_exports__);
       return arr1;
     },
     getPrice: function getPrice() {
-      var arr2 = {};
-      console.log(arr2);
-      return arr2;
+      var arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+      for (var j = 0; j < this.amount.length; j++) {
+        var element = this.amount[j];
+        var month = element.month;
+        var amount = element.amount.toFixed(2);
+        arr.splice(month - 1, 0, amount);
+      }
+
+      return arr;
     }
   },
   mounted: function mounted() {
-    // console.log(this.orders);
     console.log(this.amount);
     this.renderChart(this.datacollection, this.options);
   }
@@ -52806,8 +52812,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Megaport\Desktop\Corso-Boolean\Progetto-Finale\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
