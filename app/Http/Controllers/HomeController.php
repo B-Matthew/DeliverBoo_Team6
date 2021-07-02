@@ -122,11 +122,12 @@ class HomeController extends Controller
       // ORDER BY MONTH(orders.created_at), YEAR(orders.created_at)
 
       $amount = DB::table('orders')
-                ->select(DB::raw("MONTH(orders.created_at) as month, YEAR(orders.created_at) as year , SUM(orders.amount) as amount"))
+                ->select(DB::raw("MONTH(orders.created_at) as month, YEAR(orders.created_at) as year, sum(orders.amount) as amount"))
                 ->join('order_product' , 'orders.id' , '=' , 'order_product.order_id')
                 ->join('products' ,'products.id' ,'=' , 'order_product.product_id')
                 ->where('products.restaurant_id' , '=' , $restaurant['id'])
-                ->groupBy('month','year') 
+                ->groupBy('month')
+                ->orderBy('month')
                 ->get();
       // Controllo sull'user loggato
       // if (! Gate::allows('userRoute', $restaurant)) {

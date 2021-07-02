@@ -13,5 +13,6 @@ $factory->define(Order::class, function (Faker $faker) {
         'address' => $faker -> streetAddress,
         'email' => $faker -> freeEmail, 
         'amount' => $faker -> randomFloat(2, 1, 100 ),
+        'created_at'=> $this->faker->dateTimeBetween("-6 months", now()),
     ];
 });
