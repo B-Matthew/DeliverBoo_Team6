@@ -10,18 +10,18 @@ export default {
             labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
             datasets: [{
                label: 'Numero Ordini per anno',
-               backgroundColor: '#f87979',
+               backgroundColor: '#25385f',
                pointBackgroundColor: 'yellow',
-               borderWidth: 1,
-               pointBorderColor: '#249EBF',
+               borderWidth: 3,
+               pointBorderColor: '#25385f',   
                data: this.getMonth(),
                
             },{
             label: 'Incasso',
-               backgroundColor: '#black',
-               pointBackgroundColor: 'yellow',
-               borderWidth: 1,
-               pointBorderColor: '#249EBF',
+               backgroundColor: '#ffc244',
+               pointBackgroundColor: '#25385f',
+               borderWidth: 3,   
+               pointBorderColor: '#ffc244',
                
                data: this.getPrice(),
                }
@@ -38,9 +38,9 @@ export default {
                      display: true
                   }
                }],
-               xAxes: [{
+               xAxes: [{   
                   gridLines: {
-                     display: false
+                     display: true
                   }
                }]
             },
@@ -74,14 +74,12 @@ export default {
       },
 
       getPrice : function () {
-         let arr2 ={
-            
-         };
+         
          
          console.log(arr2);
          return arr2;
       }
-         
+            
                
          
 
