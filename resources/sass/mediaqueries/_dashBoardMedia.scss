@@ -1,0 +1,63 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #dashboard {
+          grid-template-columns: 15% auto 5%;
+          grid-template-rows: auto 1fr;
+          grid-template-areas: "welcome welcome welcome" 
+          "navbar my-restaurants my-restaurants";
+     }
+
+     #dashboard .my-restaurants ul li {
+          margin: 50px;
+     }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+     #dashboard {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto 1fr;
+          grid-template-areas: "welcome welcome welcome" 
+                              "navbar navbar navbar" 
+                              "my-restaurants my-restaurants my-restaurants";
+     }
+
+     #dashboard .my-restaurants ul li {
+          flex-basis: 740px;
+     }
+
+     #dashboard .navbar ul > li {
+          margin-bottom: 50px;
+     }
+
+     // #dashboard .navbar ul > li:first-child a {
+     //      left: 0;
+     // }
+
+     // #dashboard .navbar ul > li:last-child a {
+     //      left: 0;
+     // }
+
+     #dashboard .navbar ul > li > a h4 {
+          font-size: 50; 
+     }
+
+     #dashboard .navbar {
+          padding-bottom: 0; 
+     }
+
+     #dashboard .my-restaurants ul li > div a {
+          font-size: 40px;
+     }
+
+     #dashboard .my-restaurants ul li > div button {
+          font-size: 30px;
+     }
+
+     #dashboard .my-restaurants > h3 {
+          font-size: 50px;
+     }
+
+     #dashboard .my-restaurants ul li > div:last-child {
+     height: 320px;
+     }
+     
+}

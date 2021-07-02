@@ -312,7 +312,7 @@
                     button {
                         @include theButtonDesign($yellow, $blue, $red);
                         color: $blue;
-                        font-size: 40px;
+                        font-size: 50px;
     
                         a {
                             @include baloo;
