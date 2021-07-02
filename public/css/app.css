@@ -1170,6 +1170,7 @@ footer .links h5 {
 }
 
 #dashboard .welcome h1 {
+  font-family: Itim, coursive;
   margin-top: 50px;
 }
 
@@ -1251,7 +1252,7 @@ footer .links h5 {
 #dashboard .my-restaurants ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px 0;
@@ -1318,12 +1319,18 @@ footer .links h5 {
   transition: all 0.5s linear;
   padding: 7px 17px;
   margin-right: 10px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border: none;
 }
 
 #dashboard .my-restaurants ul li > div button:hover {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
+}
+
+#dashboard .my-restaurants ul li > div button:focus {
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
 }
 
 #dashboard .my-restaurants ul li > div button:focus + .modifica {
@@ -1334,6 +1341,13 @@ footer .links h5 {
 #dashboard .my-restaurants ul li > div button:focus + .modifica a {
   transition: 1s linear;
   margin: 0 35px;
+}
+
+#dashboard .my-restaurants ul li > div button:focus + .modifica a:hover {
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
 }
 
 #dashboard .my-restaurants ul li > div a {
@@ -2530,6 +2544,10 @@ footer .links h5 {
 #my-product .container-menu .products .product-box ul {
   padding: 20px;
   margin-bottom: 20px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #my-product .container-menu .products .product-box ul li {
@@ -2544,6 +2562,7 @@ footer .links h5 {
   grid-template-rows: auto;
   -moz-column-gap: 15px;
        column-gap: 15px;
+  flex-grow: 1;
 }
 
 #my-product .container-menu .products .product-box ul li:last-child {
@@ -2725,6 +2744,32 @@ footer .links h5 {
   font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
+}
+
+#transaction div {
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+  background-color: #f1f1f1;
+  padding: 40px;
+}
+
+#transaction div:hover {
+  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
+}
+
+#transaction div * {
+  margin: 20px 0;
+  color: #25385f;
+}
+
+#transaction div h2 {
+  font-size: 40px;
+}
+
+#transaction div h3 {
+  font-size: 30px;
 }
 
 @media (max-width: 1600px) and (min-width: 1200px) {

@@ -1,6 +1,21 @@
 #transaction{
     @include flex(row,center,center,nowrap);   
-    background-color: $bluelight;
+    background-color: $whitePastel;
     padding: 300px;   
-    @include itim;   
+    @include itim;  
+    div{
+        @include neomorphism;  
+        background-color: $whitePastel;
+        padding: 40px;
+        *{
+            margin: 20px 0;   
+            color: $blue;   
+        }
+        h2{
+            font-size: 40px;
+        }
+        h3{
+            font-size: 30px;   
+        }
+    }    
 }               

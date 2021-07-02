@@ -12,8 +12,8 @@ export default {
                label: 'Numero Ordini mensili',
                backgroundColor: '#f87979',
                pointBackgroundColor: 'yellow',
-               borderWidth: 1,
-               pointBorderColor: '#249EBF',
+               borderWidth: 3,
+               pointBorderColor: '#25385f',   
                data: this.getMonth(),
                
             },{
@@ -36,9 +36,9 @@ export default {
                      display: true
                   }
                }],
-               xAxes: [{
+               xAxes: [{   
                   gridLines: {
-                     display: false
+                     display: true
                   }
                }]
             },
