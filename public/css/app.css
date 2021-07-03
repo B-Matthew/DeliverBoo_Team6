@@ -1551,6 +1551,7 @@ footer .links h5 {
 }
 
 #home-restaurant {
+  scroll-behavior: smooth;
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   background-color: #f1f1f1;
@@ -1709,13 +1710,13 @@ footer .links h5 {
   background: #f1f1f1;
   box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
   transition: all 0.5s linear;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: auto auto auto auto;
   padding: 20px;
   margin: 15px;
+  gap: 10px;
+  grid-template-areas: "image title" ". description" "price price";
   color: #25385f;
 }
 
@@ -1723,13 +1724,26 @@ footer .links h5 {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li h3 {
+#home-restaurant .menu .container-menu .products > div ul li img {
+  grid-area: image;
+  width: 80px;
+  height: auto;
+  vertical-align: super;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
+#home-restaurant .menu .container-menu .products > div ul li .title {
+  grid-area: title;
+}
+
+#home-restaurant .menu .container-menu .products > div ul li .title h3 {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 18px;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li h5 {
+#home-restaurant .menu .container-menu .products > div ul li .title h5 {
   font-weight: normal;
   font-family: "Baloo 2", cursive;
   font-size: 20px;
@@ -1737,18 +1751,32 @@ footer .links h5 {
   margin: 10px 0;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li p {
+#home-restaurant .menu .container-menu .products > div ul li .description {
+  grid-area: description;
+}
+
+#home-restaurant .menu .container-menu .products > div ul li .description p {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 17px;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li h4 {
+#home-restaurant .menu .container-menu .products > div ul li div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  grid-area: price;
+  padding: 0 20px;
+}
+
+#home-restaurant .menu .container-menu .products > div ul li div:last-child h4 {
   border-radius: 10px;
   font-weight: normal;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li .fa-plus {
+#home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus {
   color: #25385f;
   border-radius: 50%;
   font-size: 15px;
@@ -1756,24 +1784,15 @@ footer .links h5 {
   margin: 10px 0;
   background-color: #dadef5;
   transition: all 0.5s linear;
+  margin: 0;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li .fa-plus:hover {
+#home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus:hover {
   transform: scale(1.2);
 }
 
-#home-restaurant .menu .container-menu .products > div ul li .fa-euro-sign {
+#home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-euro-sign {
   font-size: 17px;
-}
-
-#home-restaurant .menu .container-menu .products > div ul li img {
-  width: 100px;
-  height: auto;
-  vertical-align: super;
-}
-
-#home-restaurant .menu .container-menu .products .image {
-  text-align: center;
 }
 
 #home-restaurant .menu .carrello-icona {
@@ -3430,11 +3449,26 @@ footer .links h5 {
   }
 
   #home-restaurant .menu .container-menu {
-    flex-basis: 70%;
+    flex-basis: 60%;
+  }
+
+  #home-restaurant .menu .container-menu .products > div ul li p {
+    font-size: 30px;
+    display: none;
+  }
+
+  #home-restaurant .menu .container-menu .products > div ul li {
+    flex-basis: 100%;
+  }
+
+  #home-restaurant .menu .container-menu .products > div ul li img {
+    width: 100px;
+    height: auto;
+    vertical-align: super;
   }
 
   #home-restaurant .menu .carrello {
-    flex-basis: 30%;
+    flex-basis: 40%;
   }
 
   #home-restaurant .menu .carrello h2 {
@@ -3509,53 +3543,43 @@ footer .links h5 {
     font-size: 60px;
   }
 
-  #home-restaurant .menu .container-menu .products > div ul li h3 {
+  #home-restaurant .menu .container-menu .products > div ul li .title h3 {
     font-size: 40px;
   }
 
-  #home-restaurant .menu .container-menu .products > div ul li h5 {
-    font-size: 40px;
-  }
-
-  #home-restaurant .menu .container-menu .products > div ul li p {
+  #home-restaurant .menu .container-menu .products > div ul li .title h5 {
     font-size: 30px;
-    display: none;
+  }
+
+  #home-restaurant .menu .container-menu .products > div ul li .description p {
+    font-size: 30px;
+  }
+
+  #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus {
+    font-size: 40px;
   }
 
   #home-restaurant .menu .container-menu .products > div ul {
-    flex-wrap: nowrap;
-    overflow: auto;
     justify-content: flex-start;
   }
 
   #home-restaurant .menu .container-menu .products > div ul li {
-    flex-basis: 50%;
+    flex-basis: 100%;
     border-radius: 10px;
     background: #f1f1f1;
     box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
     transition: all 0.5s linear;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+    grid-template-columns: 200px 1fr;
     padding: 20px;
-    margin: 15px 80px;
+    margin: 50px 20px;
     color: #25385f;
   }
 
-  #home-restaurant .menu .container-menu .products .image {
-    width: 500px;
-    height: auto;
-  }
-
   #home-restaurant .menu .container-menu .products > div ul li img {
-    width: 300px;
-    height: auto;
-    vertical-align: super;
+    width: 150px;
   }
 
-  #home-restaurant .menu .container-menu .products > div ul li .fa-euro-sign {
+  #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-euro-sign {
     font-size: 35px;
   }
 
