@@ -410,6 +410,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -418,6 +441,7 @@ __webpack_require__.r(__webpack_exports__);
       'secondoImg': "../../../storage/img/secondi.png",
       'dolceImg': "../../../storage/img/dolce.png",
       'carrelloImg': "../../../storage/img/carrello.png",
+      'lollipop': "../../../storage/img/productsImage/",
       'totale': 0,
       'carrello': [],
       'carrelloBackup': [],
@@ -39411,15 +39435,26 @@ var render = function() {
               "ul",
               _vm._l(_vm.antipasti, function(antipasto) {
                 return _c("li", [
-                  _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src: _vm.lollipop + antipasto.name + ".jpg",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "title" }, [
                     _c("h3", { attrs: { value: antipasto.name } }, [
                       _vm._v(_vm._s(antipasto.name))
                     ]),
                     _vm._v(" "),
-                    _c("h5", [_vm._v(_vm._s(antipasto.ingredients))]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(antipasto.description))]),
-                    _vm._v(" "),
+                    _c("h5", [_vm._v(_vm._s(antipasto.ingredients))])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "description" }, [
+                    _c("p", [_vm._v(_vm._s(antipasto.description))])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
                     antipasto.availability
                       ? _c("i", {
                           staticClass: "fas fa-plus",
@@ -39437,11 +39472,7 @@ var render = function() {
                     _vm._v(" "),
                     !antipasto.availability
                       ? _c("h3", [_vm._v("Non Disponibile")])
-                      : _vm._e()
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "image" }, [
-                    _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
+                      : _vm._e(),
                     _vm._v(" "),
                     _c("h4", [
                       _c("i", { staticClass: "fas fa-euro-sign" }),
@@ -39466,13 +39497,21 @@ var render = function() {
             "ul",
             _vm._l(_vm.primi, function(primo) {
               return _c("li", [
-                _c("div", [
+                _c("img", {
+                  attrs: { src: _vm.lollipop + primo.name + ".jpg", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "title" }, [
                   _c("h3", [_vm._v(_vm._s(primo.name))]),
                   _vm._v(" "),
-                  _c("h5", [_vm._v(_vm._s(primo.ingredients))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(primo.description))]),
-                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(primo.ingredients))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "description" }, [
+                  _c("p", [_vm._v(_vm._s(primo.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "price" }, [
                   primo.availability
                     ? _c("i", {
                         staticClass: "fas fa-plus",
@@ -39490,11 +39529,7 @@ var render = function() {
                   _vm._v(" "),
                   !primo.availability
                     ? _c("h3", [_vm._v("Non Disponibile")])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.primoImg, alt: "" } }),
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("h4", [
                     _c("i", { staticClass: "fas fa-euro-sign" }),
@@ -39518,13 +39553,21 @@ var render = function() {
             "ul",
             _vm._l(_vm.secondi, function(secondo) {
               return _c("li", [
-                _c("div", [
+                _c("img", {
+                  attrs: { src: _vm.lollipop + secondo.name + ".jpg", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "title" }, [
                   _c("h3", [_vm._v(_vm._s(secondo.name))]),
                   _vm._v(" "),
-                  _c("h5", [_vm._v(_vm._s(secondo.ingredients))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(secondo.description))]),
-                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(secondo.ingredients))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "description" }, [
+                  _c("p", [_vm._v(_vm._s(secondo.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "price" }, [
                   secondo.availability
                     ? _c("i", {
                         staticClass: "fas fa-plus",
@@ -39542,11 +39585,7 @@ var render = function() {
                   _vm._v(" "),
                   !secondo.availability
                     ? _c("h3", [_vm._v("Non Disponibile")])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.secondoImg, alt: "" } }),
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("h4", [
                     _c("i", { staticClass: "fas fa-euro-sign" }),
@@ -39570,13 +39609,21 @@ var render = function() {
             "ul",
             _vm._l(_vm.dolci, function(dolce) {
               return _c("li", [
-                _c("div", [
+                _c("img", {
+                  attrs: { src: _vm.lollipop + dolce.name + ".jpg", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "title" }, [
                   _c("h3", [_vm._v(_vm._s(dolce.name))]),
                   _vm._v(" "),
-                  _c("h5", [_vm._v(_vm._s(dolce.ingredients))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(dolce.description))]),
-                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(dolce.ingredients))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "description" }, [
+                  _c("p", [_vm._v(_vm._s(dolce.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "price" }, [
                   dolce.availability
                     ? _c("i", {
                         staticClass: "fas fa-plus",
@@ -39594,11 +39641,7 @@ var render = function() {
                   _vm._v(" "),
                   !dolce.availability
                     ? _c("h3", [_vm._v("Non Disponibile")])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.dolceImg, alt: "" } }),
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("h4", [
                     _vm._v(
