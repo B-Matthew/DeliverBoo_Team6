@@ -138,9 +138,7 @@
                         border-bottom-right-radius: 25px;
                         margin-bottom: 40px;
                         transition: all 0.5s linear;
-                        display: flex;
-                        justify-content: center;
-                        flex-wrap: wrap;
+                        @include flex(row, flex-start, stretch, wrap);
 
                         li {
                             flex-basis: calc(100% / 2 - 50px);
