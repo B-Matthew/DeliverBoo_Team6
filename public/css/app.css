@@ -806,6 +806,88 @@ footer .links h5 {
   box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
 }
 
+#reset {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #f1f1f1;
+  padding: 10% 8%;
+}
+
+#reset form {
+  flex-basis: 50%;
+  padding: 0 40px 40px;
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+}
+
+#reset form:hover {
+  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
+}
+
+#reset form #myfilebutton {
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+  margin: 20px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #e9ebf8;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
+}
+
+#reset form fieldset {
+  border: 3px solid #25385f;
+  background-color: #dadef5;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#reset form fieldset legend {
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+#reset form fieldset label,
+#reset form fieldset input {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin: 20px;
+  color: #25385f;
+}
+
+#reset form fieldset input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #dadef5;
+  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
+}
+
+#reset form fieldset button {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #ffc244;
+  color: #25385f;
+  border-radius: 10px;
+  border: 1px solid #25385f;
+}
+
+#reset form fieldset button:active {
+  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+}
+
 #chi-siamo .banner div {
   display: flex;
   flex-direction: column;
@@ -2739,7 +2821,7 @@ footer .links h5 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #dadef5;
+  background-color: #f1f1f1;
   padding: 300px;
   font-family: "Itim", cursive;
   font-size: 40px;
