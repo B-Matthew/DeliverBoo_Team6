@@ -1782,7 +1782,9 @@ footer .links h5 {
   margin-bottom: 40px;
   transition: all 0.5s linear;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
@@ -2571,8 +2573,7 @@ footer .links h5 {
 }
 
 #my-product .container-menu {
-  padding: 40px 0;
-  width: 80%;
+  padding: 40px 8%;
   margin: auto;
   padding-bottom: 200px;
 }
@@ -2610,7 +2611,41 @@ footer .links h5 {
   border-color: #ffc244;
 }
 
-#my-product .container-menu .products {
+#my-product .container-menu .products-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+#my-product .container-menu .products-box .info {
+  flex-basis: 30%;
+  border-left: 3px solid #ffc244;
+  padding-left: 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 300px;
+}
+
+#my-product .container-menu .products-box .info li {
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+  transition: all 0.5s linear;
+  text-align: left;
+  padding: 20px;
+  width: 60%;
+  margin: 20px 0;
+}
+
+#my-product .container-menu .products-box .info li i {
+  color: #25385f;
+  margin-right: 30px;
+}
+
+#my-product .container-menu .products-box .products {
+  flex-basis: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2618,7 +2653,7 @@ footer .links h5 {
   flex-wrap: wrap;
 }
 
-#my-product .container-menu .products .product-box {
+#my-product .container-menu .products-box .products .product-box {
   border-radius: 10px;
   background: #f1f1f1;
   box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
@@ -2628,11 +2663,11 @@ footer .links h5 {
   padding: 20px;
 }
 
-#my-product .container-menu .products .product-box:hover {
+#my-product .container-menu .products-box .products .product-box:hover {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
-#my-product .container-menu .products .product-box .head-product {
+#my-product .container-menu .products-box .products .product-box .head-product {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2641,22 +2676,22 @@ footer .links h5 {
   padding: 10px 30px;
 }
 
-#my-product .container-menu .products .product-box .head-product h2 {
+#my-product .container-menu .products-box .products .product-box .head-product h2 {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 18px;
   color: #25385f;
 }
 
-#my-product .container-menu .products .product-box .head-product .active {
+#my-product .container-menu .products-box .products .product-box .head-product .active {
   color: #238623;
 }
 
-#my-product .container-menu .products .product-box .head-product .not-active {
+#my-product .container-menu .products-box .products .product-box .head-product .not-active {
   color: #d24448;
 }
 
-#my-product .container-menu .products .product-box ul {
+#my-product .container-menu .products-box .products .product-box ul {
   padding: 20px;
   margin-bottom: 20px;
   height: 90%;
@@ -2665,22 +2700,34 @@ footer .links h5 {
   justify-content: flex-end;
 }
 
-#my-product .container-menu .products .product-box ul li {
+#my-product .container-menu .products-box .products .product-box ul li {
   padding: 10px 20px 10px 5px;
   border-bottom: 2px solid #25385f;
   color: #25385f;
 }
 
-#my-product .container-menu .products .product-box ul li:first-child {
-  display: grid;
-  grid-template-columns: 20% auto 10% 10%;
-  grid-template-rows: auto;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  flex-grow: 1;
+#my-product .container-menu .products-box .products .product-box ul li:first-child {
+  text-align: left;
 }
 
-#my-product .container-menu .products .product-box ul li:last-child {
+#my-product .container-menu .products-box .products .product-box ul li:first-child div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin: 15px 0;
+}
+
+#my-product .container-menu .products-box .products .product-box ul li:first-child div label {
+  flex-basis: 50%;
+}
+
+#my-product .container-menu .products-box .products .product-box ul li:first-child div h4 {
+  flex-basis: 50%;
+}
+
+#my-product .container-menu .products-box .products .product-box ul li:last-child {
   padding: 40px 0 10px;
   border: none;
   display: flex;
@@ -2690,7 +2737,7 @@ footer .links h5 {
   flex-wrap: nowrap;
 }
 
-#my-product .container-menu .products .product-box ul li:last-child div button {
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button {
   font-size: 18px;
   background-color: #ffc244;
   border: 1px solid #25385f;
@@ -2699,11 +2746,11 @@ footer .links h5 {
   margin: 20px;
 }
 
-#my-product .container-menu .products .product-box ul li:last-child div button:active {
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button:active {
   box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
 }
 
-#my-product .container-menu .products .product-box ul li:last-child div button a {
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button a {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   color: #25385f;
