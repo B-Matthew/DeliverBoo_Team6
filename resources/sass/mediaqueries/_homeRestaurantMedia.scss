@@ -196,6 +196,11 @@
           align-items: center;
      }
 
+     #home-restaurant .menu .carrello-icona .carrello-dropdown {
+          height: 40vh;
+         overflow: auto;
+          }
+
      #home-restaurant .menu .carrello {
           flex-basis: 40%;
           display: none;

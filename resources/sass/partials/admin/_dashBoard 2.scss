@@ -43,11 +43,11 @@
                 height: 110px;
 
                 &:first-child a {
-                    left: -185px;
+                    left: -180px;
                 }
 
                 &:last-child a {
-                    left: -122px;
+                    left: -125px;
                 }
 
                 >a {
@@ -58,7 +58,7 @@
                     font-size: 30px;   
                     padding: 30px 10%;
                     color: $blue;
-                    @include neomorphismNoHover;   
+                    @include neomorphismIn;   
 
                     h4 {
                         margin-right: 20px;
@@ -67,10 +67,6 @@
                     &:hover {
                         left: 0;
                     }
-                }
-
-                .buttonActive {
-                    @include neomorphismIn;
                 }
 
             }
@@ -97,7 +93,7 @@
         ul {
             @include flex(row, center, center, wrap);
             padding: 30px 0;
-   
+
             li {
                 @include neomorphism;
                 flex-basis: 370px;
@@ -124,11 +120,13 @@
                             display: block;
                         }
                         a {
-                            @include baloo;
+                            @include itim;
                             @include neomorphism;   
                             font-size: 20px;
                             padding: 10px 20px;
                             margin: 0 35px;   
+                            
+
                         }
 
                     }      
@@ -136,10 +134,10 @@
                     button {
                         @include baloo;
                         font-size: 13px;
-                        @include neomorphismNoHover;
-                        padding: 5px 15px;
+                        @include neomorphism;
+                        padding: 7px 17px;
                         margin-right: 20px;
-                        border-radius: 5px;
+                        border-radius: 10px;
                         border: 0;
 
                         &:active {
@@ -149,21 +147,17 @@
    
                         &:focus +.modifica {
                             transition: all 1s linear;
-                            top: -80px;   
+                            top: -70px;   
                                
                             a{   
                                 transition: 1s linear;   
                                 margin: 0 35px;
-                                &:hover{
-                                    @include neomorphismIn;   
-                                }
                             }                  
                         }  
    
                     }   
        
                     a {
-                        @include baloo;
                         color: $blue;
                         width: 100%;
                         height: 100%;
@@ -229,7 +223,7 @@
                 input {
                     -webkit-appearance: none;
                     background-color: $yellow;   
-                    border: 2px solid $blue;
+                    border: 1px solid $yellow;
                     padding: 10px;
                     border-radius: 5px;
                     margin: 0 10px;
@@ -237,10 +231,14 @@
                     position: relative;
                     width: auto;   
                     
+                    
+                    &:hover {
+                        border-color: black;
+                    }
 
                     &:checked {
                         background-color: $yellow;
-                        border-color: $red;
+                        border: 1px solid black;
                     }
 
                     &:checked:after {
@@ -250,7 +248,7 @@
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        color:$red;
+                        color: black;
                     }
                 }
             }

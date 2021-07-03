@@ -17,16 +17,20 @@
           padding: 0 5%;
      }
 
+     header ul li .logo span:first-child {
+          font-size: 80px;
+     }
+
+     header ul li .logo span:last-child {
+          display: none;
+     }
+
      header ul .hamburger {
          display: block;
      }
 
      header ul .show {
           display: block;
-     }
-
-     header ul li .logo {
-          font-size: 70px;
      }
 }
 

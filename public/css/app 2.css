@@ -31,6 +31,7 @@ header ul li .logo {
 }
 
 header ul li .logo span:first-child {
+  font-family: "Delius Swash Caps", cursive;
   font-family: "Norican", cursive;
   font-size: 55px;
 }
@@ -41,7 +42,7 @@ header ul li .logo span:last-child {
 }
 
 header ul li a {
-  font-family: "Itim", cursive;
+  font-family: "Norican", cursive;
   font-size: 30px;
   color: #ffc244;
   letter-spacing: 2px;
@@ -816,88 +817,6 @@ footer .links h5 {
   box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
 }
 
-#reset {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  background-color: #f1f1f1;
-  padding: 10% 8%;
-}
-
-#reset form {
-  flex-basis: 50%;
-  padding: 0 40px 40px;
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
-  transition: all 0.5s linear;
-}
-
-#reset form:hover {
-  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
-}
-
-#reset form #myfilebutton {
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
-  transition: all 0.5s linear;
-  margin: 20px;
-  width: 100%;
-  border-radius: 10px;
-  padding: 10px 20px;
-  border: 0;
-  background-color: #e9ebf8;
-  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
-}
-
-#reset form fieldset {
-  border: 3px solid #25385f;
-  background-color: #dadef5;
-  padding: 40px;
-  border-radius: 10px;
-}
-
-#reset form fieldset legend {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
-  padding: 20px;
-}
-
-#reset form fieldset label,
-#reset form fieldset input {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  margin: 20px;
-  color: #25385f;
-}
-
-#reset form fieldset input {
-  width: 100%;
-  border-radius: 10px;
-  padding: 10px 20px;
-  border: 0;
-  background-color: #dadef5;
-  box-shadow: inset 5px 5px 10px #bfc1cb, inset -5px -5px 10px #ffffff;
-}
-
-#reset form fieldset button {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  padding: 10px 20px;
-  background-color: #ffc244;
-  color: #25385f;
-  border-radius: 10px;
-  border: 1px solid #25385f;
-}
-
-#reset form fieldset button:active {
-  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
-}
-
 #chi-siamo .banner div {
   display: flex;
   flex-direction: column;
@@ -1291,11 +1210,11 @@ footer .links h5 {
 }
 
 #dashboard .navbar ul > li:first-child a {
-  left: -185px;
+  left: -180px;
 }
 
 #dashboard .navbar ul > li:last-child a {
-  left: -122px;
+  left: -125px;
 }
 
 #dashboard .navbar ul > li > a {
@@ -1314,7 +1233,7 @@ footer .links h5 {
   color: #25385f;
   border-radius: 10px;
   background: #f1f1f1;
-  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
   transition: all 0.5s linear;
 }
 
@@ -1324,13 +1243,6 @@ footer .links h5 {
 
 #dashboard .navbar ul > li > a:hover {
   left: 0;
-}
-
-#dashboard .navbar ul > li .buttonActive {
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
-  transition: all 0.5s linear;
 }
 
 #dashboard .my-restaurants {
@@ -1398,8 +1310,9 @@ footer .links h5 {
 }
 
 #dashboard .my-restaurants ul li > div .modifica a {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
+  font-family: "Itim", cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
   border-radius: 10px;
   background: #f1f1f1;
   box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
@@ -1421,10 +1334,14 @@ footer .links h5 {
   background: #f1f1f1;
   box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
   transition: all 0.5s linear;
-  padding: 5px 15px;
+  padding: 7px 17px;
   margin-right: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0;
+}
+
+#dashboard .my-restaurants ul li > div button:hover {
+  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
 #dashboard .my-restaurants ul li > div button:active {
@@ -1433,7 +1350,7 @@ footer .links h5 {
 
 #dashboard .my-restaurants ul li > div button:focus + .modifica {
   transition: all 1s linear;
-  top: -80px;
+  top: -70px;
 }
 
 #dashboard .my-restaurants ul li > div button:focus + .modifica a {
@@ -1441,16 +1358,7 @@ footer .links h5 {
   margin: 0 35px;
 }
 
-#dashboard .my-restaurants ul li > div button:focus + .modifica a:hover {
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
-  transition: all 0.5s linear;
-}
-
 #dashboard .my-restaurants ul li > div a {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
   color: #25385f;
   width: 100%;
   height: 100%;
@@ -1608,7 +1516,7 @@ footer .links h5 {
 #dashboard .create ul li input {
   -webkit-appearance: none;
   background-color: #ffc244;
-  border: 2px solid #25385f;
+  border: 1px solid #ffc244;
   padding: 10px;
   border-radius: 5px;
   margin: 0 10px;
@@ -1617,9 +1525,13 @@ footer .links h5 {
   width: auto;
 }
 
+#dashboard .create ul li input:hover {
+  border-color: black;
+}
+
 #dashboard .create ul li input:checked {
   background-color: #ffc244;
-  border-color: #d24448;
+  border: 1px solid black;
 }
 
 #dashboard .create ul li input:checked:after {
@@ -1629,7 +1541,7 @@ footer .links h5 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #d24448;
+  color: black;
 }
 
 #home-restaurant {
@@ -2640,10 +2552,6 @@ footer .links h5 {
 #my-product .container-menu .products .product-box ul {
   padding: 20px;
   margin-bottom: 20px;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 #my-product .container-menu .products .product-box ul li {
@@ -2658,7 +2566,6 @@ footer .links h5 {
   grid-template-rows: auto;
   -moz-column-gap: 15px;
        column-gap: 15px;
-  flex-grow: 1;
 }
 
 #my-product .container-menu .products .product-box ul li:last-child {
@@ -2835,37 +2742,11 @@ footer .links h5 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #f1f1f1;
+  background-color: #dadef5;
   padding: 300px;
   font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
-}
-
-#transaction div {
-  border-radius: 10px;
-  background: #f1f1f1;
-  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
-  transition: all 0.5s linear;
-  background-color: #f1f1f1;
-  padding: 40px;
-}
-
-#transaction div:hover {
-  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
-}
-
-#transaction div * {
-  margin: 20px 0;
-  color: #25385f;
-}
-
-#transaction div h2 {
-  font-size: 40px;
-}
-
-#transaction div h3 {
-  font-size: 30px;
 }
 
 @media (max-width: 1600px) and (min-width: 1200px) {
@@ -3948,115 +3829,6 @@ footer .links h5 {
 
   #faq .faq .text-box p {
     font-size: 45px;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 998px) {
-  #dashboard {
-    grid-template-columns: 15% auto 5%;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "welcome welcome welcome" "navbar my-restaurants my-restaurants";
-  }
-
-  #dashboard .my-restaurants ul li {
-    margin: 50px;
-  }
-}
-
-@media (max-width: 998px) and (min-width: 768px) {
-  #dashboard {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas: "welcome welcome welcome" "navbar navbar navbar" "my-restaurants my-restaurants my-restaurants";
-  }
-
-  #dashboard .welcome h1 {
-    font-size: 60px;
-    margin: 50px 0;
-  }
-
-  #dashboard .my-restaurants ul li {
-    flex-basis: 740px;
-    margin: 70px 0;
-  }
-
-  #dashboard .navbar ul > li {
-    margin-bottom: 50px;
-  }
-
-  #dashboard .navbar ul > li > a h4 {
-    font-size: 50;
-  }
-
-  #dashboard .navbar {
-    padding-bottom: 0;
-  }
-
-  #dashboard .my-restaurants ul li > div a {
-    font-size: 40px;
-  }
-
-  #dashboard .my-restaurants ul li > div button {
-    font-size: 30px;
-  }
-
-  #dashboard .my-restaurants ul li > div .modifica a {
-    font-size: 40px;
-  }
-
-  #dashboard .my-restaurants ul li > div .modifica {
-    top: 100px;
-  }
-
-  #dashboard .my-restaurants ul li > div button:focus + .modifica {
-    transition: all 1s linear;
-    top: -120px;
-  }
-
-  #dashboard .my-restaurants > h3 {
-    font-size: 60px;
-  }
-
-  #dashboard .my-restaurants ul li > div:last-child {
-    height: 320px;
-  }
-
-  #dashboard .create {
-    padding: 50px 2% 200px;
-  }
-
-  #dashboard .create form fieldset legend {
-    font-size: 60px;
-  }
-
-  #dashboard .create form fieldset label,
-  #dashboard .create form fieldset input {
-    font-size: 50px;
-  }
-
-  #dashboard .create ul {
-    justify-content: center;
-  }
-
-  #dashboard .create form fieldset button {
-    font-size: 40px;
-  }
-
-  #dashboard .create div:last-child {
-    text-align: center;
-  }
-
-  #dashboard .create ul li input {
-    padding: 20px;
-    border-radius: 12px;
-  }
-
-  #dashboard .create ul li input:checked:after {
-    font-size: 30px;
-  }
-
-  #dashboard .create h2 {
-    font-size: 60px;
   }
 }
 
