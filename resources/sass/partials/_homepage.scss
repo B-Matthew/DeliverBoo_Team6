@@ -226,15 +226,11 @@ body {
                               }
                               
                               button {
-                                   @include theButtonDesign($yellow, $blue, $red);
+                                   // @include theButtonDesign($yellow, $blue, $red);
                                    width: fit-content;
                                    align-self: center;
-                                   justify-self: end;        
-
-                                   a {
-                                        @include baloo;
-                                        color: $blue;
-                                   }
+                                   justify-self: end;
+                                   @include definitiveButtonDesign;
                               }
                          }
 

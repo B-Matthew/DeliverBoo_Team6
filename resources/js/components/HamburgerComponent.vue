@@ -1,9 +1,9 @@
 <template>
      <li class="hamburger-menu">
                <button class="hamburger" @click="switchHamburger()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div :class ="hambugerFlag == true ? 'line1' : '' "></div>
+                    <div :class ="hambugerFlag == true ? 'line2' : '' "></div>
+                    <div :class ="hambugerFlag == true ? 'line3' : '' "></div>
                </button>
                <ul :class ="hambugerFlag == true ? 'show' : '' " class="dropdown-menu">
                     <slot></slot>

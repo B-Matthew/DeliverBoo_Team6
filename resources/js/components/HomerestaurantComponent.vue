@@ -49,23 +49,27 @@
                          <ul>
                               <li v-for="antipasto in antipasti">   
 
-                                   <div>
+                                   <!-- <img :src="antipastoImg" alt=""> -->
+                                   <img :src="lollipop + antipasto.name + '.jpg' " alt=""> 
+
+                                   <div class="title">
                                         <h3 :value="antipasto.name">{{ antipasto.name }}</h3> 
                                         <h5>{{ antipasto.ingredients }}</h5> 
+                                   </div>
+
+                                   <div class="description">
                                         <p>{{ antipasto.description }}</p>
+                                   </div>
+
+                                   <div>
                                         <i @click="addProduct(antipasto.name, antipasto.price,antipasto.id)" class="fas fa-plus" v-if="antipasto.availability"></i>  
                                         <h3 v-if="!antipasto.availability">Non Disponibile</h3> 
-                                   </div>   
-                                        
 
-                                   <div class="image">
-                                        <img :src="antipastoImg" alt=""> 
                                         <h4> 
                                              <i class="fas fa-euro-sign"></i>
                                              {{ antipasto.price }}    
                                         </h4>          
                                    </div>
-
                               </li>            
                          </ul>
                     </div>
@@ -75,20 +79,26 @@
                          <ul>
 
                               <li v-for="primo in primi">   
-                                   <div>
+                                   <img :src="lollipop + primo.name + '.jpg' " alt=""> 
+                                   <!-- <img :src="primoImg" alt="">  -->
+
+                                   <div class="title">
                                         <h3>{{ primo.name }}</h3> 
                                         <h5>{{ primo.ingredients }}</h5> 
+                                   </div>
+
+                                   <div class="description">
                                         <p>{{ primo.description }}</p>
+                                   </div>
+
+                                   <div class="price">
                                         <i @click="addProduct(primo.name, primo.price,primo.id)"class="fas fa-plus" v-if="primo.availability"></i> 
                                         <h3 v-if="!primo.availability">Non Disponibile</h3> 
-                                   </div>
-                                   
-                                   <div class="image">
-                                        <img :src="primoImg" alt=""> 
+
                                         <h4> 
                                              <i class="fas fa-euro-sign"></i>
                                              {{ primo.price }}    
-                                        </h4>      
+                                        </h4>     
                                    </div>
                               </li> 
 
@@ -100,16 +110,23 @@
                          <ul>
 
                               <li v-for="secondo in secondi">   
-                                   <div>
+
+                                   <!-- <img :src="secondoImg" alt=""> -->
+                                   <img :src="lollipop + secondo.name + '.jpg' " alt=""> 
+
+                                   <div class="title">
                                         <h3>{{ secondo.name }}</h3> 
                                         <h5>{{ secondo.ingredients }}</h5> 
+                                   </div>
+
+                                   <div class="description">
                                         <p>{{ secondo.description }}</p>
+                                   </div>
+
+                                   <div class="price">
                                         <i @click="addProduct(secondo.name, secondo.price,secondo.id)" class="fas fa-plus" v-if="secondo.availability"></i> 
                                         <h3 v-if="!secondo.availability">Non Disponibile</h3> 
-                                   </div>   
 
-                                   <div class="image">
-                                        <img :src="secondoImg" alt=""> 
                                         <h4> 
                                              <i class="fas fa-euro-sign"></i>
                                              {{ secondo.price }}    
@@ -125,22 +142,28 @@
                          <ul>
 
                               <li v-for="dolce in dolci">   
-                                   <div>
+                                   <!-- <img :src="dolceImg " alt=""> -->
+                                   <img :src="lollipop + dolce.name + '.jpg' " alt=""> 
+
+                                   <div class="title">
                                         <h3>{{ dolce.name }}</h3> 
                                         <h5>{{ dolce.ingredients }}</h5> 
-                                        <p>{{ dolce.description }}</p>
-                                        <i @click="addProduct(dolce.name, dolce.price,dolce.id)" class="fas fa-plus" v-if="dolce.availability"></i>  
-                                        <h3 v-if="!dolce.availability">Non Disponibile</h3> 
-                                   </div>   
+                                   </div>
 
-                                   <div class="image">
-                                        <img :src="dolceImg " alt=""> 
+                                   <div class="description">
+                                       <p>{{ dolce.description }}</p> 
+                                   </div>
+
+                                   <div class="price">
+                                         <i @click="addProduct(dolce.name, dolce.price,dolce.id)" class="fas fa-plus" v-if="dolce.availability"></i>  
+                                        <h3 v-if="!dolce.availability">Non Disponibile</h3> 
+
                                         <h4> 
                                         {{ dolce.price }}    
                                         <i class="fas fa-euro-sign"></i>
                                         </h4>          
                                    </div>
-                              </li>   
+                              </li>
 
                          </ul>
                     </div>
@@ -187,7 +210,11 @@
                               <span>{{totale}}</span>
                          </div>
                          <div>
-                              <a :href="checkout"><button v-on:click="setLocalStorage" type="submit">Vai al pagamento</button></a>  
+                              <button v-on:click="setLocalStorage" type="submit">
+                                   <a :href="checkout">
+                                        Vai al pagamento
+                                   </a>
+                              </button>  
                          </div>   
                     </div>
 
@@ -227,7 +254,11 @@
                               <span>{{totale}}</span>
                          </div>
                          <div>
-                              <a :href="checkout"><button v-on:click="setLocalStorage" type="submit">Vai al pagamento</button></a>  
+                              <button v-on:click="setLocalStorage" type="submit">
+                                   <a :href="checkout">
+                                        Vai al pagamento
+                                   </a>
+                              </button>  
                          </div>   
                     </div>
 
@@ -248,6 +279,7 @@
                    'secondoImg': "../../../storage/img/secondi.png",
                    'dolceImg': "../../../storage/img/dolce.png",
                    'carrelloImg': "../../../storage/img/carrello.png",
+                   'lollipop': "../../../storage/img/productsImage/",
                    'totale': 0,
                    'carrello': [],
                    'carrelloBackup': [],
