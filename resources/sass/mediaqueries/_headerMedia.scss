@@ -4,7 +4,7 @@
      }
 
      header ul li a {
-          font-size: 25px;
+          font-size: 20px;
      }          
 }
 
@@ -30,7 +30,10 @@
      }
 
      header ul .show {
+          visibility: visible;
+          height: 100vh;
           display: block;
+          transition: height 0.5s linear;
      }
 }
 
