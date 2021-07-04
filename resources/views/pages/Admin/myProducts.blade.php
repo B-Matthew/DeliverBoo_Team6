@@ -123,7 +123,7 @@
         </div>
 
     </div>
-    <div style="padding-bottom: 300px;width:70%">
+    <div style="padding-bottom: 300px;width:70%; margin:auto;">
     <chart-component :amount="{{$amount}}" :orders = '{{$orders}}'></chart-component>
     </div>
 </main>

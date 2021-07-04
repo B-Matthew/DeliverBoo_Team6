@@ -172,18 +172,9 @@
 
                                 div {
                                     button {
-                                        font-size: 18px;
-                                        background-color: $yellow;   
-                                        border: 1px solid $blue;
-                                        padding: 10px 20px;
-                                        border-radius: 10px;
+                                        @include definitiveButtonDesign;
                                         margin: 20px;
 
-                                        &:active {
-                                            box-shadow: inset 5px 5px 10px #d19f38,
-                                            inset -5px -5px 10px #ffe550;
-                                        }
-        
                                         a {
                                             @include baloo;   
                                             color: $blue;  

@@ -1019,17 +1019,55 @@ footer .links h5 {
 }
 
 #reset form fieldset button {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  padding: 10px 20px;
   background-color: #ffc244;
-  color: #25385f;
+  border: 2px solid #25385f;
   border-radius: 10px;
-  border: 1px solid #25385f;
+  color: #25385f;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
 }
 
-#reset form fieldset button:active {
-  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+#reset form fieldset button::after {
+  background-color: #25385f;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+#reset form fieldset button:hover::after {
+  transform: translate(0, 0);
+}
+
+#reset form fieldset button:hover {
+  border: 2px solid #ffc244;
+  color: #ffc244;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#reset form fieldset button:hover a {
+  color: #ffc244;
+}
+
+#reset form fieldset button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: #25385f;
 }
 
 #chi-siamo .banner div {
@@ -1694,17 +1732,55 @@ footer .links h5 {
 }
 
 #dashboard .create form fieldset button {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  padding: 10px 20px;
   background-color: #ffc244;
-  color: #25385f;
+  border: 2px solid #25385f;
   border-radius: 10px;
-  border: 1px solid #25385f;
+  color: #25385f;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
 }
 
-#dashboard .create form fieldset button:active {
-  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+#dashboard .create form fieldset button::after {
+  background-color: #25385f;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+#dashboard .create form fieldset button:hover::after {
+  transform: translate(0, 0);
+}
+
+#dashboard .create form fieldset button:hover {
+  border: 2px solid #ffc244;
+  color: #ffc244;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#dashboard .create form fieldset button:hover a {
+  color: #ffc244;
+}
+
+#dashboard .create form fieldset button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: #25385f;
 }
 
 #dashboard .create h2 {
@@ -2656,17 +2732,55 @@ footer .links h5 {
 }
 
 #createProduct form fieldset button {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  padding: 10px 20px;
   background-color: #ffc244;
-  color: #25385f;
+  border: 2px solid #25385f;
   border-radius: 10px;
-  border: 1px solid #25385f;
+  color: #25385f;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
 }
 
-#createProduct form fieldset button:active {
-  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+#createProduct form fieldset button::after {
+  background-color: #25385f;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+#createProduct form fieldset button:hover::after {
+  transform: translate(0, 0);
+}
+
+#createProduct form fieldset button:hover {
+  border: 2px solid #ffc244;
+  color: #ffc244;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#createProduct form fieldset button:hover a {
+  color: #ffc244;
+}
+
+#createProduct form fieldset button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: #25385f;
 }
 
 #createProduct #description,
@@ -2753,17 +2867,59 @@ footer .links h5 {
 }
 
 #editProduct form fieldset button {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  padding: 10px 20px;
   background-color: #ffc244;
-  color: #25385f;
+  border: 2px solid #25385f;
   border-radius: 10px;
-  border: 1px solid #25385f;
+  color: #25385f;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
 }
 
-#editProduct form fieldset button:active {
-  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+#editProduct form fieldset button::after {
+  background-color: #25385f;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+#editProduct form fieldset button:hover::after {
+  transform: translate(0, 0);
+}
+
+#editProduct form fieldset button:hover {
+  border: 2px solid #ffc244;
+  color: #ffc244;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#editProduct form fieldset button:hover a {
+  color: #ffc244;
+}
+
+#editProduct form fieldset button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: #25385f;
+}
+
+#editProduct div button {
+  font-size: 20px;
 }
 
 #editProduct #description,
@@ -2985,16 +3141,56 @@ footer .links h5 {
 }
 
 #my-product .container-menu .products-box .products .product-box ul li:last-child div button {
-  font-size: 18px;
   background-color: #ffc244;
-  border: 1px solid #25385f;
-  padding: 10px 20px;
+  border: 2px solid #25385f;
   border-radius: 10px;
+  color: #25385f;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
   margin: 20px;
 }
 
-#my-product .container-menu .products-box .products .product-box ul li:last-child div button:active {
-  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button::after {
+  background-color: #25385f;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button:hover::after {
+  transform: translate(0, 0);
+}
+
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button:hover {
+  border: 2px solid #ffc244;
+  color: #ffc244;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button:hover a {
+  color: #ffc244;
+}
+
+#my-product .container-menu .products-box .products .product-box ul li:last-child div button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: #25385f;
 }
 
 #my-product .container-menu .products-box .products .product-box ul li:last-child div button a {
@@ -3073,17 +3269,55 @@ footer .links h5 {
 }
 
 #edit-restaurant form fieldset button {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  padding: 10px 20px;
   background-color: #ffc244;
-  color: #25385f;
+  border: 2px solid #25385f;
   border-radius: 10px;
-  border: 1px solid #25385f;
+  color: #25385f;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
 }
 
-#edit-restaurant form fieldset button:active {
-  box-shadow: inset 5px 5px 10px #d19f38, inset -5px -5px 10px #ffe550;
+#edit-restaurant form fieldset button::after {
+  background-color: #25385f;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+#edit-restaurant form fieldset button:hover::after {
+  transform: translate(0, 0);
+}
+
+#edit-restaurant form fieldset button:hover {
+  border: 2px solid #ffc244;
+  color: #ffc244;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#edit-restaurant form fieldset button:hover a {
+  color: #ffc244;
+}
+
+#edit-restaurant form fieldset button a {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  color: #25385f;
 }
 
 #edit-restaurant ul {
@@ -4498,6 +4732,144 @@ footer .links h5 {
 
   #checkout section form fieldset button {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 998px) {
+  #my-product .container-menu {
+    padding: 40px 5%;
+    margin: auto;
+    padding-bottom: 200px;
+  }
+
+  #my-product .container-menu .products-box .info {
+    flex-basis: 40%;
+    border-left: 3px solid #ffc244;
+    padding-left: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 300px;
+  }
+
+  #my-product .container-menu .products-box .products {
+    flex-basis: 60%;
+  }
+
+  #my-product .container-menu .products-box .products .product-box {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 998px) and (min-width: 768px) {
+  #my-product .container-menu {
+    padding: 40px 5%;
+    margin: auto;
+    padding-bottom: 200px;
+  }
+
+  #my-product .container-menu > div > a {
+    font-size: 40px;
+  }
+
+  #my-product .container-menu .products-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  #my-product .container-menu .products-box .info {
+    position: inherit;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    border-left: 0;
+    border-top: 3px solid #ffc244;
+    margin-bottom: 50px;
+  }
+
+  #my-product .container-menu h4,
+  #my-product .container-menu label,
+  #my-product .container-menu span {
+    font-size: 50px;
+  }
+
+  #my-product .container-menu .products-box .info li {
+    flex-basis: calc(50% - 30px);
+  }
+
+  #my-product .container-menu .products-box .info li i {
+    display: block;
+    font-size: 40px;
+  }
+
+  .fa,
+  .fas {
+    font-size: 40px;
+  }
+
+  #my-product .container-menu .products-box .products .product-box .head-product h2 {
+    font-size: 60px;
+  }
+
+  #my-product .container-menu .products-box .products .product-box .head-product {
+    text-align: left;
+  }
+
+  #my-product .container-menu .products-box .products .product-box ul {
+    height: auto;
+  }
+
+  #my-product .container-menu .products-box .products {
+    flex-basis: 60%;
+  }
+
+  #my-product .container-menu .products-box .products .product-box {
+    flex-basis: 100%;
+    margin: 30px 0;
+  }
+
+  #my-product .container-menu .products-box .products .product-box ul li:last-child div button a {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 998px) {
+  #editProduct form {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 998px) and (min-width: 768px) {
+  #editProduct {
+    padding: 20% 2%;
+  }
+
+  #editProduct form {
+    flex-basis: 100%;
+  }
+
+  #editProduct form fieldset legend {
+    font-size: 60px;
+  }
+
+  #editProduct form fieldset label,
+  #editProduct form fieldset input {
+    font-size: 50px;
+  }
+
+  #editProduct #description,
+  #editProduct #type-food {
+    font-size: 40px;
+  }
+
+  #editProduct form fieldset button {
+    font-size: 40px;
+    margin: 20px 0;
   }
 }
 

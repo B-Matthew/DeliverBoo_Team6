@@ -10,18 +10,18 @@ export default {
             labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
             datasets: [{
                label: 'Numero Ordini mensili',
-               backgroundColor: '#f87979',
-               pointBackgroundColor: 'yellow',
+               backgroundColor: '#ffc244',
+               pointBackgroundColor: '#ffc244',
                borderWidth: 3,
                pointBorderColor: '#25385f',   
                data: this.getMonth(),
                
             },{
             label: 'Incasso',
-               backgroundColor: '#black',
-               pointBackgroundColor: 'yellow',
-               borderWidth: 1,
-               pointBorderColor: '#249EBF',
+               backgroundColor: '#25385f',
+               pointBackgroundColor: '#25385f',
+               borderWidth: 3,
+               pointBorderColor: '#ffc244',
                data: this.getPrice(),
                }
             ]
