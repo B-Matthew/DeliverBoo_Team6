@@ -6,11 +6,11 @@
     #type-food {
         @include neomorphismIn;
         width: 100%;
-        margin: 20px;
+        margin: 20px 0;
         border-radius: 10px;
-        padding: 10px 20px;
-        border: 0;
-        background-color: #e9ebf8;
+        padding: 10px 20px;   
+        border: 0;   
+        background-color: $bluelight;   
         box-shadow: inset 5px 5px 10px #bfc1cb,
             inset -5px -5px 10px #ffffff;
 
