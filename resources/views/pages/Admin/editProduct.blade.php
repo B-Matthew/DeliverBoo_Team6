@@ -47,8 +47,9 @@
             <h4>Descrizione</h4>
         </label>
         <textarea id="description" name="description" id="" cols="30" rows="10">{{ $product -> description }}</textarea >
-
-        <button type="submit" class="">Aggiorna</button>
+        <div>
+            <button type="submit" class="">Aggiorna</button>
+        </div>
     </fieldset>
   </form>
 </div>     

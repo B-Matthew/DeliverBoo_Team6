@@ -2,6 +2,13 @@
    
     @include form;   
 
+    div {
+        // text-align: center;
+        button {
+            font-size: 20px;
+        }
+    }
+
         #description,   
         #type-food {        
              @include neomorphismIn;
