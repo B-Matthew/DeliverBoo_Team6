@@ -118,6 +118,7 @@
             }
 
             .products {
+                 scroll-behavior: smooth;   
 
                 & > div {
                     // @include neomorphism;

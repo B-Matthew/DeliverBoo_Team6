@@ -63,14 +63,15 @@
                     h4 {
                         margin-right: 20px;
                     }
-
-                    &:hover {
+   
+                    &:hover, &:focus {
                         left: 0;
-                    }
+                    }   
                 }
 
                 .buttonActive {
                     @include neomorphismIn;
+                    
                 }
 
             }
@@ -100,8 +101,8 @@
    
             li {
                 @include neomorphism;
-                flex-basis: 370px;
-                margin: 30px;   
+                flex-basis: 370px;    
+                margin: 40px 30px;   
                 z-index: 10;
 
 
