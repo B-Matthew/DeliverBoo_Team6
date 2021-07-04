@@ -210,7 +210,11 @@
                               <span>{{totale}}</span>
                          </div>
                          <div>
-                              <a :href="checkout"><button v-on:click="setLocalStorage" type="submit">Vai al pagamento</button></a>  
+                              <button v-on:click="setLocalStorage" type="submit">
+                                   <a :href="checkout">
+                                        Vai al pagamento
+                                   </a>
+                              </button>  
                          </div>   
                     </div>
 
@@ -250,7 +254,11 @@
                               <span>{{totale}}</span>
                          </div>
                          <div>
-                              <a :href="checkout"><button v-on:click="setLocalStorage" type="submit">Vai al pagamento</button></a>  
+                              <button v-on:click="setLocalStorage" type="submit">
+                                   <a :href="checkout">
+                                        Vai al pagamento
+                                   </a>
+                              </button>  
                          </div>   
                     </div>
 

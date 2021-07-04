@@ -330,13 +330,11 @@
                     text-align: center;
     
                     button {
-                        @include theButtonDesign($yellow, $blue, $red);
-                        color: $blue;
-                        font-size: 50px;
-    
-                        a {
-                            @include baloo;
-                        }
+                       @include definitiveButtonDesign;
+                        
+                       a {
+                           font-size: 50px;
+                       }
                     }
                 }
     
@@ -434,8 +432,7 @@
                 text-align: center;
 
                 button {
-                    @include theButtonDesign($yellow, $blue, $red);
-                    color: $blue;
+                    @include definitiveButtonDesign;
                     font-size: 18px;
 
                     a {

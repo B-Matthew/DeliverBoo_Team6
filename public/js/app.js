@@ -433,6 +433,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39384,7 +39392,13 @@ var render = function() {
           }
         }
       },
-      [_c("div"), _vm._v(" "), _c("div"), _vm._v(" "), _c("div")]
+      [
+        _c("div", { class: _vm.hambugerFlag == true ? "line1" : "" }),
+        _vm._v(" "),
+        _c("div", { class: _vm.hambugerFlag == true ? "line2" : "" }),
+        _vm._v(" "),
+        _c("div", { class: _vm.hambugerFlag == true ? "line3" : "" })
+      ]
     ),
     _vm._v(" "),
     _c(
@@ -39734,16 +39748,20 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", [
-                      _c("a", { attrs: { href: _vm.checkout } }, [
-                        _c(
-                          "button",
-                          {
-                            attrs: { type: "submit" },
-                            on: { click: _vm.setLocalStorage }
-                          },
-                          [_vm._v("Vai al pagamento")]
-                        )
-                      ])
+                      _c(
+                        "button",
+                        {
+                          attrs: { type: "submit" },
+                          on: { click: _vm.setLocalStorage }
+                        },
+                        [
+                          _c("a", { attrs: { href: _vm.checkout } }, [
+                            _vm._v(
+                              "\n                                   Vai al pagamento\n                              "
+                            )
+                          ])
+                        ]
+                      )
                     ])
                   ])
                 : _c("div", { staticClass: "no-products" }, [
@@ -39810,16 +39828,20 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", [
-                _c("a", { attrs: { href: _vm.checkout } }, [
-                  _c(
-                    "button",
-                    {
-                      attrs: { type: "submit" },
-                      on: { click: _vm.setLocalStorage }
-                    },
-                    [_vm._v("Vai al pagamento")]
-                  )
-                ])
+                _c(
+                  "button",
+                  {
+                    attrs: { type: "submit" },
+                    on: { click: _vm.setLocalStorage }
+                  },
+                  [
+                    _c("a", { attrs: { href: _vm.checkout } }, [
+                      _vm._v(
+                        "\n                                   Vai al pagamento\n                              "
+                      )
+                    ])
+                  ]
+                )
               ])
             ])
           : _c("div", { staticClass: "no-products" }, [
