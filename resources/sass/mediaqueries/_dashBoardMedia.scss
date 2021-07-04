@@ -35,7 +35,7 @@
      }
 
      #dashboard .navbar ul > li:first-child a {
-          left: -330;   
+          left: -350;   
           i{
                font-size: 60px;
                margin-left: 60px;
@@ -45,8 +45,8 @@
           }
      }
 
-     #dashboard .navbar ul > li:last-child a {
-          left: -240; 
+     #dashboard .navbar ul > li:last-child a {   
+          left: -260; 
           i {
               font-size: 60px;   
               margin-left: 60px;
@@ -107,13 +107,13 @@
      }
 
      #dashboard .create ul {
-          justify-content: center;
+          justify-content: space-between;   
      }
 
      #dashboard .create form fieldset button {
           font-size: 40px;
      }
-     
+        
      #dashboard .create div:last-child {
           text-align: center;
      }
@@ -130,4 +130,8 @@
      #dashboard .create h2 {
           font-size: 60px;
      }
+
+     #dashboard .create ul li{
+          flex-basis: calc(100% / 2 - 20px);   
+     }   
 }

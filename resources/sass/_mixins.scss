@@ -88,6 +88,8 @@
     background-color: $whitePastel;
     padding: 10% 8%;
 
+    
+
     form {
         flex-basis: 50%;
         padding: 0 40px 40px;
@@ -95,12 +97,14 @@
 
         #myfilebutton {
             @include neomorphismIn;
-            margin: 20px;   
+            @include baloo;
+            color: $blue;   
+            margin: 20px 0;      
             width: 100%;
             border-radius: 10px;
             padding: 10px 20px;
             border: 0;
-            background-color: #e9ebf8;
+            background-color: $bluelight;
             box-shadow: inset 5px 5px 10px #bfc1cb,
                 inset -5px -5px 10px #ffffff;
         }
@@ -109,7 +113,15 @@
             border: 3px solid $blue;
             background-color: $bluelight;
             padding: 40px;
-            border-radius: 10px;
+            border-radius: 10px;   
+
+            #type-food,
+            #description {
+                @include baloo;
+                margin: 20px 0;
+                background-color: $bluelight;
+
+            }
 
             legend {
                 @include itim;
@@ -117,9 +129,9 @@
             }
 
             label,
-            input {
+            input {    
                 @include baloo;
-                margin: 20px;
+                margin: 20px 0;
                 color: $blue;
             }
 
