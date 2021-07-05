@@ -1606,7 +1606,6 @@ footer .links h5 {
   width: 80px;
   height: auto;
   vertical-align: super;
-  margin-top: 8px;
   border-radius: 10px;
 }
 
@@ -2731,6 +2730,10 @@ footer .links h5 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #d24448;
+}
+
+#dashboard .create button {
+  font-size: 20px;
 }
 
 #createProduct {
@@ -4138,7 +4141,6 @@ footer .links h5 {
 
   #home-restaurant .menu .container-menu .products > div ul li p {
     font-size: 30px;
-    display: none;
   }
 
   #home-restaurant .menu .container-menu .products > div ul li {
