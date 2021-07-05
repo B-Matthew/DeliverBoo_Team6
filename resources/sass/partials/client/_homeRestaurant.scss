@@ -1,5 +1,4 @@
 #home-restaurant {
-    scroll-behavior: smooth;
     @include baloo;
     background-color: $whitePastel;
     color: rgb(21, 22, 22);
@@ -50,7 +49,7 @@
 
     .menu {
         @include flex(row, space-between, flex-start, nowrap);
-        padding: 10% 2% 20% 2%;
+        padding: 5% 2%;
 
 
         .aside-menu {
@@ -139,7 +138,6 @@
             }
 
             .products {
-                 scroll-behavior: smooth;   
 
                 & > div {
                     // @include neomorphism;
@@ -159,80 +157,60 @@
                         border-bottom-right-radius: 25px;
                         margin-bottom: 40px;
                         transition: all 0.5s linear;
-                        @include flex(row, flex-start, stretch, wrap);
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
 
                         li {
                             flex-basis: calc(100% / 2 - 50px);
                             @include neomorphism;
-                            display: grid;
-                            grid-template-columns: 100px 1fr;
-                            grid-template-rows: auto auto auto auto;
+                            @include flex(row, space-between, center, nowrap);
                             padding: 20px;
                             margin: 15px;
-                            gap: 10px;
-                            grid-template-areas: 
-                                "image title"
-                                ". description"
-                                "price price";
+                            // border-bottom: 2px solid $red;
                             color: $blue;
 
-                            img {
-                                grid-area: image;
-                                width: 80px;
-                                height: auto;
-                                vertical-align: super;
-                                border-radius: 10px;
+                            h3 {
+                                @include baloo;
+                                font-size: 18px;
                             }
 
-                            .title {
-                                grid-area: title;
-
-                                h3 {
-                                    @include baloo;
-                                    font-size: 18px;
-                                }
-    
-                                h5 {
-                                    font-weight: normal;
-                                    @include baloo;
-                                    font-size: 17px;
-                                    margin: 10px 0;
-                                }
-    
+                            h5 {
+                                font-weight: normal;
+                                @include baloo;
+                                font-size: 17px;
+                                margin: 10px 0;
                             }
 
-                            h4 {                                
+                            p {
+                                @include baloo;
+                                font-size: 17px;
+                            }
+
+                            h4 {
                                 border-radius: 10px;
                                 font-weight: normal;
                             }
 
-                                p {
-                                    @include baloo;
-                                    font-size: 17px;
-                                }
+                            .fa-plus {
+                                @include addRemove;
                             }
 
-                            div:last-child {
-                                @include flex(row, space-between, center, nowrap);
-                                grid-area: price;
-                                padding: 0 20px;
+                            .fa-euro-sign {
+                                font-size: 17px;
+                            }
 
-                                h4 {                                
-                                    border-radius: 10px;
-                                    font-weight: normal;
-                                }
-    
-                                .fa-plus {
-                                    @include addRemove;
-                                    margin: 0;
-                                }
-    
-                                .fa-euro-sign {
-                                    font-size: 17px;
-                                }
+                            img {
+                                width: 100px;
+                                height: auto;
+                                vertical-align: super;
                             }
                         }
                     }
+                }
+
+                .image {
+                    text-align: center;
                 }
             }
         }
@@ -245,11 +223,6 @@
                 img {
                     width: 150px;
                     height: auto;
-                    transition: transform 0.2s linear;
-
-                    &:hover {
-                        transform: scale(1.5);
-                    }
                 }
 
             .price {
@@ -324,16 +297,14 @@
 
                             .fa-minus {
                                 @include addRemove;
-                                padding: 10px;
+                                padding: 5px;
                                 font-size: 40px;
-                                margin: 10px 40px;
                             }
 
                             .fa-plus {
                                 @include addRemove;
-                                padding: 10px;
+                                padding: 5px;
                                 font-size: 40px;
-                                margin: 10px 40px;
                             }
                         }
 
@@ -362,7 +333,7 @@
                         @include theButtonDesign($yellow, $blue, $red);
                         color: $blue;
                         font-size: 50px;
-    
+
                         a {
                             @include baloo;
                         }
@@ -376,7 +347,6 @@
         }
 
         .carrello {
-            overflow: auto;
             text-align: center;
             // flex-basis: 25%;
             flex-basis: 20%;
@@ -433,14 +403,12 @@
 
                         .fa-minus {
                             @include addRemove;
-                            padding: 10px;
-                            margin:10px
+                            padding: 5px;
                         }
 
                         .fa-plus {
                             @include addRemove;
-                            padding: 10px;
-                            margin:10px
+                            padding: 5px;
                         }
                     }
 
@@ -466,7 +434,8 @@
                 text-align: center;
 
                 button {
-                    @include definitiveButtonDesign;
+                    @include theButtonDesign($yellow, $blue, $red);
+                    color: $blue;
                     font-size: 18px;
 
                     a {
