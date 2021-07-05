@@ -29,6 +29,14 @@
             list-style-type: none;
         }
 
+        @media (max-width: 998px) AND (min-width: 768px) {
+            
+            .container {
+                width: 100%;
+            }
+            
+        }
+
     </style>
 </head>
 <body>

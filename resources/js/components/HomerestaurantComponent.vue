@@ -232,7 +232,7 @@
                               <div>
                                    <h4>{{ordine.quantita}}x</h4>
                               </div>
-                              <div>
+                              <div class="cart-product">
                                    <h5>{{ordine.prodotto}}</h5>
                                    <i @click="removeProduct(index)" class="fas fa-minus"></i>
                                    <i  @click="increaseProduct(index)" class="fas fa-plus"></i>

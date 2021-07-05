@@ -28,6 +28,11 @@ header ul li {
 
 header ul li .logo {
   color: #ffc244;
+  transition: transform 0.2s linear;
+}
+
+header ul li .logo:hover {
+  transform: scale(1.1);
 }
 
 header ul li .logo span:first-child {
@@ -45,6 +50,11 @@ header ul li a {
   font-size: 20px;
   font-size: 25px;
   color: #ffc244;
+  transition: transform 0.2s linear;
+}
+
+header ul li a:hover {
+  transform: scale(1.3);
 }
 
 header ul .hamburger-menu {
@@ -234,12 +244,13 @@ body #homepage #categories .container .wave::after {
 }
 
 body #homepage #categories h2 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
   margin-bottom: 100px;
   color: #25385f;
   margin-top: 10%;
+  font-weight: 600;
+  font-size: 40px;
 }
 
 body #homepage #categories ::-moz-placeholder {
@@ -373,8 +384,8 @@ body #homepage #categories .restaurants li a h3 {
   padding: 10px;
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  font-weight: normal;
-  border-bottom: 1px solid black;
+  font-weight: 600;
+  border-bottom: 1px solid #25385f;
 }
 
 body #homepage #categories .restaurants li a div {
@@ -440,11 +451,12 @@ body #homepage .work .container .wave::after {
 }
 
 body #homepage .work h2 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
   margin: 10% 0 20px 0;
   color: #25385f;
+  font-weight: 600;
+  font-size: 40px;
 }
 
 body #homepage .work ul {
@@ -491,12 +503,12 @@ body #homepage .work ul li div.bg {
 }
 
 body #homepage .work ul li div h3 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
   width: 100%;
-  font-weight: normal;
+  font-weight: 600;
   margin: 20px 0;
+  font-size: 40px;
 }
 
 body #homepage .work ul li div .left {
@@ -509,6 +521,7 @@ body #homepage .work ul li div .left p {
   margin-bottom: 20px;
   font-family: "Baloo 2", cursive;
   font-size: 20px;
+  color: #25385f;
   font-size: 18px;
 }
 
@@ -627,7 +640,9 @@ footer .footer-list ul li:first-child {
 }
 
 footer .footer-list ul li:first-child strong {
-  font-family: "itim", cursive;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-weight: 600;
   font-size: 25px;
   color: #f1f1f1;
 }
@@ -676,9 +691,8 @@ footer .links ul li a i:hover {
 }
 
 footer .links h5 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
   font-size: 20px;
   flex-basis: 15%;
   color: #f1f1f1;
@@ -1284,9 +1298,10 @@ footer .links h5 {
 }
 
 #chi-siamo .box ul li h2 {
-  font-family: "Itim", cursive;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-weight: 600;
   font-size: 40px;
-  letter-spacing: 2px;
 }
 
 #chi-siamo .box ul li h5 {
@@ -1408,10 +1423,10 @@ footer .links h5 {
 }
 
 #faq .faq .text-box h1 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
   color: #25385f;
+  font-size: 30px;
 }
 
 #faq .faq .text-box p {
@@ -1582,11 +1597,11 @@ footer .links h5 {
 
 #home-restaurant .menu .container-menu .products > div h2 {
   margin-bottom: 30px;
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
   font-size: 35px;
   color: #25385f;
+  font-weight: 600;
 }
 
 #home-restaurant .menu .container-menu .products > div ul {
@@ -1742,10 +1757,11 @@ footer .links h5 {
   border-top-left-radius: 20px;
   border-top-right-radius: 25px;
   border-bottom: 1px solid #25385f;
-  font-family: "Itim", cursive;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-weight: 600;
   font-size: 40px;
-  letter-spacing: 2px;
-  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown .no-products {
@@ -1924,10 +1940,9 @@ footer .links h5 {
   border-top-left-radius: 20px;
   border-top-right-radius: 25px;
   border-bottom: 1px solid #25385f;
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
-  font-size: 30px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 35px;
 }
 
 #home-restaurant .menu .carrello .no-products {
@@ -1962,6 +1977,7 @@ footer .links h5 {
 
 #home-restaurant .menu .carrello ul li div {
   text-align: center;
+  flex-basis: 20%;
 }
 
 #home-restaurant .menu .carrello ul li div h5 {
@@ -1999,6 +2015,10 @@ footer .links h5 {
 
 #home-restaurant .menu .carrello ul li div .fa-plus:hover {
   transform: scale(1.5);
+}
+
+#home-restaurant .menu .carrello ul li .cart-product {
+  flex-basis: 60%;
 }
 
 #home-restaurant .menu .carrello ul li div:last-child {
@@ -2334,9 +2354,9 @@ footer .links h5 {
 }
 
 #dashboard .welcome h1 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-weight: 600;
   font-size: 50px;
   margin-top: 50px;
   padding: 20px;
@@ -2415,11 +2435,10 @@ footer .links h5 {
 
 #dashboard .my-restaurants > h3 {
   padding: 10px;
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-weight: 600;
   font-size: 35px;
-  font-weight: normal;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -2695,9 +2714,10 @@ footer .links h5 {
 }
 
 #dashboard .create h2 {
-  font-family: "Itim", cursive;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  font-size: 35px;
+  font-weight: 600;
   text-align: center;
   margin: 0 0 50px 0;
 }

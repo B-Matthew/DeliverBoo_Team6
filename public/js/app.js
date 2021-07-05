@@ -39786,7 +39786,7 @@ var render = function() {
             _c("li", [
               _c("div", [_c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")])]),
               _vm._v(" "),
-              _c("div", [
+              _c("div", { staticClass: "cart-product" }, [
                 _c("h5", [_vm._v(_vm._s(ordine.prodotto))]),
                 _vm._v(" "),
                 _c("i", {
@@ -52879,10 +52879,6 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\Users\sacha\Desktop\Boolean\Esercizi\Laravel\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\sacha\Desktop\Boolean\Esercizi\Laravel\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 

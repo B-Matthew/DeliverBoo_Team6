@@ -10,6 +10,12 @@
     font-size: 20px;
 }
 
+@mixin raleway {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+
 @mixin buttonDesign($color) {
     background-color: $color;
     border: 1px solid $color;

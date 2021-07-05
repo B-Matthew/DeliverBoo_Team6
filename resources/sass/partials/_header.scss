@@ -15,6 +15,11 @@ header {
      
                .logo {
                     color: $yellow;
+                    transition: transform 0.2s linear;
+
+                    &:hover {
+                         transform: scale(1.1);
+                    }
 
                     span:first-child {
                          font-family: 'Norican', cursive;
@@ -32,6 +37,11 @@ header {
                     @include baloo;
                     font-size: 25px;
                     color: $yellow;
+                    transition: transform 0.2s linear;
+
+                    &:hover {
+                         transform: scale(1.3);
+                    }
                }
           }
 

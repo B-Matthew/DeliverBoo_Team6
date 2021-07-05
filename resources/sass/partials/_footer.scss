@@ -40,7 +40,8 @@ footer {
                          margin-bottom: 20px;
 
                          strong {                        
-                              font-family: 'itim', cursive;
+                              @include baloo;
+                              font-weight: 600;
                               font-size: 25px;
                               color: $whitePastel;                 
                          }
@@ -88,7 +89,7 @@ footer {
           }
 
           h5 {
-               @include itim;
+               @include baloo;
                font-size: 20px;
                flex-basis: 15%;
                color: $whitePastel;
