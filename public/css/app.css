@@ -1640,12 +1640,13 @@ footer .links h5 {
 }
 
 #home-restaurant .jumbotron {
-  background-image: url(/images/ristorante-background.jpg?541743586d26ca703fa49f1fdf22c2eb);
-  background-size: contain;
+  background-image: url(/images/grilled.jpg?b536d8de12036eedf374f271e97e3e05);
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: auto;
-  max-height: 700px;
+  background-position-y: bottom;
+  height: 100vh;
   padding: 15% 0;
   display: flex;
   flex-direction: column;
@@ -1654,20 +1655,42 @@ footer .links h5 {
   flex-wrap: nowrap;
 }
 
+#home-restaurant .jumbotron .jumb {
+  background-color: rgba(37, 56, 95, 0.9);
+  border-radius: 100%;
+  padding: 50px;
+  background-position: left;
+  transition: 0.6s;
+}
+
+#home-restaurant .jumbotron .jumb:hover {
+  padding: 100px;
+}
+
+#home-restaurant .jumbotron .jumb .txt-jumb {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
 #home-restaurant .jumbotron h1 {
   font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
+  width: 70%;
+  text-align: center;
+  margin: auto;
   font-size: 4.5vw;
   padding: 15px 0;
-  color: #25385f;
+  color: #ffc244;
 }
 
 #home-restaurant .jumbotron div {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 1.3vw;
-  color: #25385f;
+  color: #ffc244;
 }
 
 #home-restaurant .menu {
@@ -1676,7 +1699,7 @@ footer .links h5 {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding: 20% 2%;
+  padding: 5% 2%;
 }
 
 #home-restaurant .menu .aside-menu {
@@ -3464,12 +3487,13 @@ footer .links h5 {
 
 @media (max-width: 1200px) and (min-width: 998px) {
   #home-restaurant .jumbotron {
-    background-image: url(/images/ristorante-background.jpg?541743586d26ca703fa49f1fdf22c2eb);
+    background-image: url(/images/grilled.jpg?b536d8de12036eedf374f271e97e3e05);
     background-size: cover;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: auto;
-    max-height: 1000px;
+    height: 100vh;
     padding: 30% 0;
     display: flex;
     flex-direction: column;
@@ -3484,7 +3508,7 @@ footer .links h5 {
     letter-spacing: 2px;
     font-size: 5.5vw;
     padding: 15px 0;
-    color: #25385f;
+    color: #ffc244;
   }
 
   #home-restaurant .jumbotron div {
@@ -3531,12 +3555,13 @@ footer .links h5 {
 
 @media (max-width: 998px) and (min-width: 768px) {
   #home-restaurant .jumbotron {
-    background-image: url(/images/ristorante-background.jpg?541743586d26ca703fa49f1fdf22c2eb);
+    background-image: url(/images/grilled.jpg?b536d8de12036eedf374f271e97e3e05);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position-y: bottom;
+    height: 100vh;
     width: auto;
-    max-height: 1000px;
     padding: 30% 0;
     display: flex;
     flex-direction: column;
@@ -3547,15 +3572,14 @@ footer .links h5 {
 
   #home-restaurant .jumbotron h1 {
     font-family: "Itim", cursive;
-    font-size: 40px;
+    font-size: 9vw;
     letter-spacing: 2px;
-    font-size: 7.5vw;
-    padding: 15px 5%;
-    color: #25385f;
+    padding: 20px 10%;
+    color: #ffc244;
   }
 
   #home-restaurant .jumbotron div {
-    font-size: 4vw;
+    font-size: 7vw;
   }
 
   #home-restaurant .menu {
