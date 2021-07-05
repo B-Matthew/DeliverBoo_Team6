@@ -58,6 +58,13 @@
                         </a>
                     </button>
                 </div>
+                <div>
+                    <button>
+                        <a href="{{ route('myOrders' , encrypt($restaurant -> id)) }}">
+                           Riepilogo Ordini
+                        </a>
+                    </button>
+                </div>
 
                 <ul class="products">
                 

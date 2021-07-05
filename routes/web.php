@@ -45,6 +45,9 @@ Route::post('/store/restaurant', 'HomeController@storeRestaurant')
 Route::get('/myProduct/{id}' , 'HomeController@myProduct')
         ->name('myProduct');
 
+Route::get('/myProduct/orders/{id}',  'HomeController@myOrders')
+        ->name('myOrders');
+
 // ROUTE AGGIUNGI PRODUCT
 Route::get('/product/create/{id}', 'HomeController@createProduct')
         -> name('createProduct');

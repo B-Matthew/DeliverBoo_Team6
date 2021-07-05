@@ -125,66 +125,85 @@ class HomeController extends Controller
 
     return view('pages.Admin.myProducts', compact('restaurant','orders','amount'));
   }
-    
-  // Funzione per view per creare piatto
-  public function createProduct($id) 
-  {
-    $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
-    if (! Gate::allows('userRoute', $restaurant)) {
-            abort(403);
-      }
-    return view('pages.Admin.createProduct', compact('restaurant'));
-  } 
 
-  // Funzione per creare piatto
-  public function storeProduct(ProductRequest $request, $id)
-  {
-    $data = $request->all();
-    $restaurant = Restaurant::findOrFail($id);
+  // funzione per riepilogo ordini
+
+  public function myOrders($id) {
+
+    $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
+    $orders = DB::table('orders')
+                  ->select(DB::raw("orders.id ,orders.name,orders.lastname ,orders.email,orders.address,orders.amount,orders.created_at"))
+                  ->join('order_product' , 'orders.id' , '=' , 'order_product.order_id')
+                  ->join('products' ,'products.id' ,'=' , 'order_product.product_id')
+                  ->where('products.restaurant_id' , '=' , $restaurant['id'])
+                  ->groupBy ('orders.id')
+                  ->orderBy ('orders.created_at', 'DESC')
+                  ->get();
     
-    $product = new Product();
-    $product-> fill($data);
-    $product -> restaurant() -> associate($restaurant -> id);
-    $product-> save();
-    
-    return redirect() -> route('myProduct', encrypt($restaurant -> id));
-  }
-    
-  // Funzione per view per editare il piatto
-  public function editProduct($id)
-  {
-    $product = Product::findOrFail(Crypt::decrypt($id));
-    return view('pages.Admin.editProduct', compact('product'));
-  }
-     
-  // Funzione per editare il piatto da sistemare
-  public function updateProduct(ProductRequest $request, $id)
-  {
-    $data = $request->all();
-   
-    $product = Product::findOrFail($id);
-    $restaurant = $product -> restaurant_id;
-    $product -> update($data);
-    return redirect() -> route('myProduct', encrypt($restaurant));
-  }
-    
-  //  Funzione per cancellare i prodotti 
-  public function deleteProduct($id)
-  {
-    $product = Product::findOrFail($id);
-    $restaurant = $product -> restaurant_id;
-    $product->delete();
-    return redirect() -> route('myProduct', encrypt($restaurant));
-  }
+  return view('pages.Admin.report',compact('restaurant' , 'orders'));
 }
+                  
     
-    
-        
-    
-        
+// Funzione per view per creare piatto
+public function createProduct($id) 
+{
+  $restaurant = Restaurant::findOrFail(Crypt::decrypt($id));
+  if (! Gate::allows('userRoute', $restaurant)) {
+          abort(403);
+    }
+  return view('pages.Admin.createProduct', compact('restaurant'));
+} 
+
+// Funzione per creare piatto
+public function storeProduct(ProductRequest $request, $id)
+{
+  $data = $request->all();
+  $restaurant = Restaurant::findOrFail($id);
+  
+  $product = new Product();
+  $product-> fill($data);
+  $product -> restaurant() -> associate($restaurant -> id);
+  $product-> save();
+  
+  return redirect() -> route('myProduct', encrypt($restaurant -> id));
+}
+  
+// Funzione per view per editare il piatto
+public function editProduct($id)
+{
+  $product = Product::findOrFail(Crypt::decrypt($id));
+  return view('pages.Admin.editProduct', compact('product'));
+}
+   
+// Funzione per editare il piatto da sistemare
+public function updateProduct(ProductRequest $request, $id)
+{
+  $data = $request->all();
+ 
+  $product = Product::findOrFail($id);
+  $restaurant = $product -> restaurant_id;
+  $product -> update($data);
+  return redirect() -> route('myProduct', encrypt($restaurant));
+}
+  
+//  Funzione per cancellare i prodotti 
+public function deleteProduct($id)
+{
+  $product = Product::findOrFail($id);
+  $restaurant = $product -> restaurant_id;
+  $product->delete();
+  return redirect() -> route('myProduct', encrypt($restaurant));
+}
+}
+  
+  
+      
+  
       
     
-      
+  
+    
+    
         
         
         

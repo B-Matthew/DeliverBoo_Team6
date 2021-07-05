@@ -53,46 +53,48 @@
 
                 <div>
                     <button>
-                        <a href="{{ route('createProduct' , encrypt($restaurant -> id)) }}">
-                           torna al menu
+                        <a href="{{ route('myProduct' , encrypt($restaurant -> id)) }}">
+                           Torna al Menu
                         </a>
                     </button>
                 </div>
    
                 <ul class="products">
-                
-                    @foreach($restaurant -> products as $product)
+                    
+                    @foreach($orders  as $order)
                         <li class="product-box">
                             <div class="head-product">
-                                <h2>{{ $product -> name }}</h2>
+                                <h2>{{ $order -> name }}</h2>
                             </div>
         
                             <ul>
                                 <li>
         
                                     <div>
-                                        <label for="ingredienti">Ingredienti</label>
-                                        <h4>{{ $product -> ingredients }}</h4>
+                                        
+                                        <h4>{{ $order -> address }}</h4>
                                     </div>
                                     <div>
-                                        <label for="descrizione">Descrizione</label>
-                                        <h4>{{ $product -> description }}</h4>
+                                        
+                                        <h4>{{ $order -> email }}</h4>
                                     </div>
         
                                     <div>
-                                        <label for="prezzo">Prezzo</label>
-                                        <h4>{{ $product -> price }} €</h4>
+                                        
+                                        <h4>{{ $order -> created_at }}</h4>
                                     </div>
                                     <div>
-                                        <label for="tipo">Tipo</label>
-                                        <h4>{{ $product -> type }}</h4>
+                                        
+                                        <h4>€ {{ $order -> amount }}</h4>
                                     </div>
-        
+                                   
+                                    
                                 </li>   
         
                             </ul>
                         </li>
                     @endforeach
+                    
                 </ul>
             </div>
 
