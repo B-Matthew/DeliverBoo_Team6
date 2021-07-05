@@ -2,34 +2,54 @@
     @include baloo;
     background-color: $whitePastel;
     color: rgb(21, 22, 22);
-   
+
     .jumbotron {
-        background-image: url(../img/ristorante-background.jpg);
-        background-size: contain;
+        background-image: url(../img/grilled.jpg);
+        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         width: auto;
-        max-height: 700px;
+        background-position-y: bottom;
+        height: 100vh;
         padding: 15% 0;
         @include flex(column, center, center, nowrap);
+        .jumb{
+          background-color: rgba(37, 56, 95, 0.9);
+          border-radius: 100%;
+          padding: 50px;
+          background-position: left;
+          transition: .6s;
+          &:hover{
+            padding: 100px;
+          }
+          .txt-jumb{
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin: auto;
+          }
+        }
 
         h1 {
             @include itim;
+            width: 70%;
+            text-align: center;
+            margin: auto;
             font-size: 4.5vw;
             padding: 15px 0;
-            color: $blue;
+            color: rgba(255, 194, 68, 1);
         }
 
         div {
             @include baloo;
             font-size: 1.3vw;
-            color: $blue;
+            color: rgba(255, 194, 68, 1);
         }
     }
 
     .menu {
         @include flex(row, space-between, flex-start, nowrap);
-        padding: 20% 2%;
+        padding: 5% 2%;
 
 
         .aside-menu {
@@ -167,7 +187,7 @@
                                 font-size: 17px;
                             }
 
-                            h4 {                                
+                            h4 {
                                 border-radius: 10px;
                                 font-weight: normal;
                             }
@@ -198,8 +218,8 @@
         .carrello-icona {
             display: none;
             height: 200px;
-            
-            
+
+
                 img {
                     width: 150px;
                     height: auto;
@@ -230,7 +250,7 @@
                 .fa-euro-sign {
                     font-size: 35px;
                 }
-    
+
                 h2 {
                     padding: 0 20px 10px 0;
                     color: $blue;
@@ -241,85 +261,85 @@
                     @include itim;
                     font-size: 40px;
                 }
-    
+
                 .no-products {
                     padding: 20px;
-                    
+
                     h3 {
                         @include baloo;
                         font-size: 45px;
                     }
                 }
-    
+
                 ul,
                 h3,
                 span {
                     color: $blue;
                     font-size: 40px;
                 }
-    
+
                 ul {
                     padding: 20px 20px 0 20px;
                     background-color: $bluelight;
-    
+
                     li {
                         @include baloo;
                         @include flex(row, space-between, flex-start, nowrap);
-    
+
                         div {
                             text-align: center;
                             font-size: 40px;
-    
+
                             h5 {
                                 font-weight: normal;
                                 font-size: 40px;
                             }
-    
+
                             .fa-minus {
                                 @include addRemove;
                                 padding: 5px;
                                 font-size: 40px;
                             }
-    
+
                             .fa-plus {
                                 @include addRemove;
                                 padding: 5px;
                                 font-size: 40px;
                             }
                         }
-    
+
                         div:last-child {
                             text-align: right;
-                        }                    
+                        }
                     }
                 }
-    
+
                 h3 {
                     @include itim;
                     font-size: 40px;
                     font-weight: normal;
                     padding: 40px 0 10px 0;
                 }
-    
+
                 .totalePrezzo {
                     margin-bottom: 40px;
                     font-weight: bold;
                 }
-    
+
                 div {
                     text-align: center;
-    
+
                     button {
                         @include theButtonDesign($yellow, $blue, $red);
                         color: $blue;
                         font-size: 50px;
-    
+
                         a {
                             @include baloo;
                         }
                     }
                 }
-    
+
                 i {
                     color: $blue;
                 }
@@ -353,7 +373,7 @@
 
             .no-products {
                 padding: 20px;
-                
+
                 h3 {
                     @include baloo;
                     font-size: 20px;
@@ -394,7 +414,7 @@
 
                     div:last-child {
                         text-align: right;
-                    }                    
+                    }
                 }
             }
 

@@ -1,11 +1,12 @@
 @media (max-width: 1200px) AND (min-width: 998px) {
      #home-restaurant .jumbotron {
-          background-image: url(/images/ristorante-background.jpg?541743586d26ca703fa49f1fdf22c2eb);
+          background-image: url(../img/grilled.jpg);
           background-size: cover;
+          background-position-y: bottom;
           background-repeat: no-repeat;
           background-attachment: fixed;
           width: auto;
-          max-height: 1000px;
+          height: 100vh;
           padding: 30% 0;
           display: flex;
           flex-direction: column;
@@ -20,7 +21,7 @@
           letter-spacing: 2px;
           font-size: 5.5vw;
           padding: 15px 0;
-          color: #25385f;
+          color: rgba(255, 194, 68, 1);
      }
 
      #home-restaurant .jumbotron div {
@@ -42,7 +43,7 @@
           border-top: 3px solid #ffc244;
           border-left: 0;
      }
-     
+
      #home-restaurant .aside-menu {
           position: inherit;
      }
@@ -60,37 +61,38 @@
      }
 
      .aside-menu, #home-restaurant .carrello {
-          top: 0; 
+          top: 0;
      }
 }
 
 @media (max-width: 998px) AND (min-width: 768px) {
      #home-restaurant .jumbotron {
-          background-image: url(/images/ristorante-background.jpg?541743586d26ca703fa49f1fdf22c2eb);
+          background-image: url(../img/grilled.jpg);
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: fixed;
+          background-position-y: bottom;
+          height: 100vh;
           width: auto;
-          max-height: 1000px;
           padding: 30% 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           flex-wrap: nowrap;
+
      }
 
      #home-restaurant .jumbotron h1 {
           font-family: "Itim", cursive;
-          font-size: 40px;
+          font-size: 9vw;
           letter-spacing: 2px;
-          font-size: 7.5vw;
-          padding: 15px 5%;
-          color: #25385f;
+          padding: 20px 10%;
+          color: rgba(255, 194, 68, 1);
      }
 
      #home-restaurant .jumbotron div {
-          font-size: 4vw;
+          font-size: 7vw;
      }
 
      #home-restaurant .menu {
@@ -108,7 +110,7 @@
           border-top: 3px solid #ffc244;
           border-left: 0;
      }
-     
+
      #home-restaurant .aside-menu {
           position: inherit;
      }
@@ -194,6 +196,7 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
+
      }
 
      #home-restaurant .menu .carrello-icona .carrello-dropdown {
@@ -265,7 +268,7 @@
           }
 
      .aside-menu, #home-restaurant .carrello {
-          top: 0; 
+          top: 0;
      }
 
 }
