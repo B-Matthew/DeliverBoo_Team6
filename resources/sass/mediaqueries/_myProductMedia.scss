@@ -29,6 +29,14 @@
           padding-bottom: 200px;
      }
 
+     #my-product .jumbotron h1 {
+          font-size: 7vw;
+     }
+
+     #my-product .jumbotron div {
+          font-size: 3vw;
+     }
+
      #my-product .container-menu > div > a {
           font-size: 40px;
           }
@@ -83,13 +91,23 @@
           flex-basis: 60%;
      }
 
-     #my-product .container-menu .products-box .products .product-box {
-          flex-basis: 100%;
-          margin: 30px 0;
-     }
+     #my-product .container-menu .products-box div .products .product-box {
+     flex-basis: 100%;
+     margin: 30px 0;
+}    
 
      #my-product .container-menu .products-box .products .product-box ul li:last-child div button a {
           font-size: 40px;
+     }
+
+     #my-product .container-menu .products-box div .products .product-box ul li:last-child div button a {
+          font-size: 40px;
+          margin: 30px 0;
+     }
+
+     #my-product .container-menu > div button a {
+          font-size: 40px;
+          margin: 30px 0;
      }
     
 }
