@@ -9,6 +9,9 @@
      #dashboard .my-restaurants ul li {
           margin: 50px;
      }
+      #dashboard .my-restaurants ul li>div .modifica {
+          top: 100px;
+      }   
 }
 
 @media (max-width: 998px) AND (min-width: 768px) {
@@ -134,4 +137,8 @@
      #dashboard .create ul li{
           flex-basis: calc(100% / 2 - 20px);   
      }   
+
+     #dashboard .my-restaurants ul li>div .modifica{
+          top:100px;   
+     }
 }
