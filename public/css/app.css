@@ -1422,7 +1422,6 @@ footer .links h5 {
 }
 
 #home-restaurant {
-  scroll-behavior: smooth;
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   background-color: #f1f1f1;
@@ -1458,7 +1457,7 @@ footer .links h5 {
 }
 
 #home-restaurant .jumbotron .jumb .txt-jumb {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   width: 100%;
   margin: auto;
@@ -1468,7 +1467,6 @@ footer .links h5 {
   font-family: "Itim", cursive;
   font-size: 40px;
   letter-spacing: 2px;
-  width: 70%;
   text-align: center;
   margin: auto;
   font-size: 4.5vw;

@@ -8,7 +8,6 @@
 
           <div class="txt-jumb">
 
-
             <div>
               @foreach($restaurant -> categories as $category)
                 <span> {{ $category -> name }} </span>
