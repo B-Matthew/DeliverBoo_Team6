@@ -71,9 +71,9 @@
                    'restaurantInput': '',
                    'categoryId': false,
                    'typeOfFoods': [],
-                   'categoryImage': "../../../storage/img/",
+                   'categoryImage': "../../../storage/img/genresImage/",
                    'restaurantImage': "../../../storage/restaurant-img/"
-              }
+               }
           },
           props: ['restaurants','categories','route','categoryRestaurant'],
 

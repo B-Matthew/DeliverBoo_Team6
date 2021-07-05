@@ -13,7 +13,7 @@
     .welcome {
         grid-area: welcome;
         background-color: $whitePastel;
-        padding: 100px 0 50px;
+        padding: 100px 0;
         @include flex(row, center, center, nowrap);
         font-family: indie flower, cursive;
         font-size: 40px;
