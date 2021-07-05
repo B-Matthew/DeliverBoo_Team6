@@ -1487,7 +1487,7 @@ footer .links h5 {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding: 10% 2% 20% 2%;
+  padding: 5% 2%;
 }
 
 #home-restaurant .menu .aside-menu {
@@ -1571,10 +1571,6 @@ footer .links h5 {
   text-align: center;
 }
 
-#home-restaurant .menu .container-menu .products {
-  scroll-behavior: smooth;
-}
-
 #home-restaurant .menu .container-menu .products > div {
   text-align: center;
   padding-top: 100px;
@@ -1596,9 +1592,7 @@ footer .links h5 {
   margin-bottom: 40px;
   transition: all 0.5s linear;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -1608,13 +1602,13 @@ footer .links h5 {
   background: #f1f1f1;
   box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
   transition: all 0.5s linear;
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: auto auto auto auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   padding: 20px;
   margin: 15px;
-  gap: 10px;
-  grid-template-areas: "image title" ". description" "price price";
   color: #25385f;
 }
 
@@ -1622,25 +1616,13 @@ footer .links h5 {
   box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li img {
-  grid-area: image;
-  width: 80px;
-  height: auto;
-  vertical-align: super;
-  border-radius: 10px;
-}
-
-#home-restaurant .menu .container-menu .products > div ul li .title {
-  grid-area: title;
-}
-
-#home-restaurant .menu .container-menu .products > div ul li .title h3 {
+#home-restaurant .menu .container-menu .products > div ul li h3 {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 18px;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li .title h5 {
+#home-restaurant .menu .container-menu .products > div ul li h5 {
   font-weight: normal;
   font-family: "Baloo 2", cursive;
   font-size: 20px;
@@ -1648,32 +1630,18 @@ footer .links h5 {
   margin: 10px 0;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li .description {
-  grid-area: description;
-}
-
-#home-restaurant .menu .container-menu .products > div ul li .description p {
+#home-restaurant .menu .container-menu .products > div ul li p {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
   font-size: 17px;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li div:last-child {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  grid-area: price;
-  padding: 0 20px;
-}
-
-#home-restaurant .menu .container-menu .products > div ul li div:last-child h4 {
+#home-restaurant .menu .container-menu .products > div ul li h4 {
   border-radius: 10px;
   font-weight: normal;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus {
+#home-restaurant .menu .container-menu .products > div ul li .fa-plus {
   color: #25385f;
   border-radius: 50%;
   font-size: 15px;
@@ -1681,15 +1649,24 @@ footer .links h5 {
   margin: 10px 0;
   background-color: #dadef5;
   transition: all 0.2s linear;
-  margin: 0;
 }
 
-#home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus:hover {
+#home-restaurant .menu .container-menu .products > div ul li .fa-plus:hover {
   transform: scale(1.5);
 }
 
-#home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-euro-sign {
+#home-restaurant .menu .container-menu .products > div ul li .fa-euro-sign {
   font-size: 17px;
+}
+
+#home-restaurant .menu .container-menu .products > div ul li img {
+  width: 100px;
+  height: auto;
+  vertical-align: super;
+}
+
+#home-restaurant .menu .container-menu .products .image {
+  text-align: center;
 }
 
 #home-restaurant .menu .carrello-icona {
@@ -1700,11 +1677,6 @@ footer .links h5 {
 #home-restaurant .menu .carrello-icona img {
   width: 150px;
   height: auto;
-  transition: transform 0.2s linear;
-}
-
-#home-restaurant .menu .carrello-icona img:hover {
-  transform: scale(1.5);
 }
 
 #home-restaurant .menu .carrello-icona .price {
@@ -1798,9 +1770,8 @@ footer .links h5 {
   margin: 10px 0;
   background-color: #dadef5;
   transition: all 0.2s linear;
-  padding: 10px;
+  padding: 5px;
   font-size: 40px;
-  margin: 10px 40px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown ul li div .fa-minus:hover {
@@ -1815,9 +1786,8 @@ footer .links h5 {
   margin: 10px 0;
   background-color: #dadef5;
   transition: all 0.2s linear;
-  padding: 10px;
+  padding: 5px;
   font-size: 40px;
-  margin: 10px 40px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown ul li div .fa-plus:hover {
@@ -1849,57 +1819,24 @@ footer .links h5 {
 #home-restaurant .menu .carrello-icona .carrello-dropdown div button {
   background-color: #ffc244;
   border: 2px solid #25385f;
-  border-radius: 10px;
-  color: #25385f;
-  overflow: hidden;
   padding: 10px 20px;
-  position: relative;
-  text-decoration: none;
-  transition: 0.3s transform ease-in-out;
-  will-change: transform;
-  z-index: 0;
-}
-
-#home-restaurant .menu .carrello-icona .carrello-dropdown div button::after {
-  background-color: #25385f;
   border-radius: 10px;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-100%, 0) rotate(10deg);
-  transform-origin: top left;
-  transition: 0.3s transform ease-out;
-  will-change: transform;
-  z-index: -1;
-}
-
-#home-restaurant .menu .carrello-icona .carrello-dropdown div button:hover::after {
-  transform: translate(0, 0);
+  margin: 10px;
+  transition: all 0.5s linear;
+  color: #25385f;
+  font-size: 50px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown div button:hover {
-  border: 2px solid #ffc244;
-  color: #ffc244;
-  transform: scale(1.05);
-  will-change: transform;
-}
-
-#home-restaurant .menu .carrello-icona .carrello-dropdown div button:hover a {
-  color: #ffc244;
+  box-shadow: 5px 10px 3px #d24448;
+  border-color: #25385f;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown div button a {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  color: #25385f;
-}
-
-#home-restaurant .menu .carrello-icona .carrello-dropdown div button a {
-  font-size: 50px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown i {
@@ -1907,7 +1844,6 @@ footer .links h5 {
 }
 
 #home-restaurant .menu .carrello {
-  overflow: auto;
   text-align: center;
   flex-basis: 20%;
   border-radius: 25px;
@@ -1977,8 +1913,7 @@ footer .links h5 {
   margin: 10px 0;
   background-color: #dadef5;
   transition: all 0.2s linear;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
 }
 
 #home-restaurant .menu .carrello ul li div .fa-minus:hover {
@@ -1993,8 +1928,7 @@ footer .links h5 {
   margin: 10px 0;
   background-color: #dadef5;
   transition: all 0.2s linear;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
 }
 
 #home-restaurant .menu .carrello ul li div .fa-plus:hover {
@@ -2026,54 +1960,19 @@ footer .links h5 {
 #home-restaurant .menu .carrello div button {
   background-color: #ffc244;
   border: 2px solid #25385f;
-  border-radius: 10px;
-  color: #25385f;
-  overflow: hidden;
   padding: 10px 20px;
-  position: relative;
-  text-decoration: none;
-  transition: 0.3s transform ease-in-out;
-  will-change: transform;
-  z-index: 0;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.5s linear;
+  color: #25385f;
   font-size: 18px;
 }
 
-#home-restaurant .menu .carrello div button::after {
-  background-color: #25385f;
-  border-radius: 10px;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-100%, 0) rotate(10deg);
-  transform-origin: top left;
-  transition: 0.3s transform ease-out;
-  will-change: transform;
-  z-index: -1;
-}
-
-#home-restaurant .menu .carrello div button:hover::after {
-  transform: translate(0, 0);
-}
-
 #home-restaurant .menu .carrello div button:hover {
-  border: 2px solid #ffc244;
-  color: #ffc244;
-  transform: scale(1.05);
-  will-change: transform;
-}
-
-#home-restaurant .menu .carrello div button:hover a {
-  color: #ffc244;
-}
-
-#home-restaurant .menu .carrello div button a {
-  font-family: "Baloo 2", cursive;
-  font-size: 20px;
-  color: #25385f;
+  box-shadow: 5px 10px 3px #d24448;
+  border-color: #25385f;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #home-restaurant .menu .carrello div button a {
