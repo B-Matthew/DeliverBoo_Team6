@@ -35,7 +35,7 @@
                height: 100%;
                width: auto;
                margin: 0 50px;
-               background-image: url(../img/verde-italia-icona-mappa-cartoon-htmdm2-removebg-preview.png);
+               background-image: url(../img/verde-italia.png);   
                border-radius: 20px;
                background-repeat: no-repeat;
                background-size: 100% auto;
@@ -59,7 +59,7 @@
      .we {
          @include theWave($bluelight, $whitePastel);
           .text-box {
-               padding: 200px 10%;
+               padding: 200px 8%;
 
                p {
                     @include baloo;

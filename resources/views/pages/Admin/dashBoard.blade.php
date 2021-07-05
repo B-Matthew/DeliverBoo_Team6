@@ -64,7 +64,7 @@
     <section id="createSection" class="create" style="display: none;">
           <h2>Hai una nuova attività?</h2>
       
-          <form method="POST" action="{{ route('store-restaurant') }}" enctype="multipart/form-data">
+          <form method="POST" action="{{ route('storeRestaurant') }}" enctype="multipart/form-data">
     @csrf
     @method('POST')
     <fieldset>

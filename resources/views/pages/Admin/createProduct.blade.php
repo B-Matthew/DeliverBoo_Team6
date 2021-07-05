@@ -13,6 +13,7 @@
             <label class="" for="name">
                 <h4>Nome</h4>
             </label>
+            <input type="hidden" name="availability" value='1'>
             <input required type="text" class="" id="name" name="name">
 
             <label class="" for="ingredients">

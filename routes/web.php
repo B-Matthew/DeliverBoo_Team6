@@ -39,7 +39,7 @@ Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
 Route::get('/dashBoard/restaurant', 'HomeController@dashBoard')
 -> name('dashBoard');
 Route::post('/store/restaurant', 'HomeController@storeRestaurant')
-->name('store-restaurant');
+->name('storeRestaurant');
 
 // ROUTE DEI PRODUCT DEL RISTORANTE
 Route::get('/myProduct/{id}' , 'HomeController@myProduct')
@@ -80,10 +80,6 @@ Route::post('/restaurant/update/{id}', 'HomeController@updateRestaurant')
 // ROUTE TRANSAZIONE ESEGUITA
 Route::get('transaction/{id}', 'MainController@transaction')
         ->name('transaction');
-
-
-
-
 
 
 

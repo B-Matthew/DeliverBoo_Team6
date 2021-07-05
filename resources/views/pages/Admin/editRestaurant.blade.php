@@ -10,6 +10,7 @@
             <legend>
                 Modifica Ristorante
             </legend>
+
             <label for="name">Nome Ristorante</label>
             <input type="text" class="" id="name" name="name" placeholder="Inserisci il nome.."
                 value="{{ $restaurant -> name }}">
@@ -49,5 +50,6 @@
             <button type="submit">Update</button>
         </fieldset>
     </form>
+    
 </main>
 @endsection

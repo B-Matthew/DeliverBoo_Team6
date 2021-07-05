@@ -5,6 +5,7 @@
      list-style-type: none;
      text-decoration: none;
      outline: none;
+       
 }
    
 body {
@@ -122,7 +123,7 @@ body {
 
                .restaurants {
                     @include flex(row, center, center, wrap);
-                    padding: 30px 10%;
+                    padding: 0 8% 100px 8%;
 
                     li {
                          flex-basis: 370px;
@@ -171,7 +172,7 @@ body {
                ul {
                     @include flex(row, space-between, stretch, nowrap);
                     color: $blue;
-                    padding: 100px 10%;
+                    padding: 100px 8% 200px 8%;
 
                     li {
                          @include flex(column, flex-start, auto, nowrap);
@@ -225,15 +226,11 @@ body {
                               }
                               
                               button {
-                                   @include theButtonDesign($yellow, $blue, $red);
+                                   // @include theButtonDesign($yellow, $blue, $red);
                                    width: fit-content;
                                    align-self: center;
-                                   justify-self: end;        
-
-                                   a {
-                                        @include baloo;
-                                        color: $blue;
-                                   }
+                                   justify-self: end;
+                                   @include definitiveButtonDesign;
                               }
                          }
 

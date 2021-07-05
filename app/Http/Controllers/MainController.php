@@ -38,6 +38,19 @@ class MainController extends Controller
       return view('pages.homepage', compact('categories' , 'restaurants','filterJson'));
     }
 
+    // Pagina Info web
+    public function infoWebPage() {
+      
+      
+      return view('pages.Client.infoWebPage');
+    }
+  
+    // Pagina Faq
+    public function faq() {
+  
+      return view('pages.Client.faq');
+    }
+  
     // Pagina Menu ristorante
   public function clientRestaurant($id) {
 
@@ -59,85 +72,74 @@ class MainController extends Controller
       'dolci',
     ));
   }
-    
-  // Pagina Info web
-  public function infoWebPage() {
-    
-    
-    return view('pages.Client.infoWebPage');
-  }
-
-  // Pagina Faq
-  public function faq() {
-
-    return view('pages.Client.faq');
-  }
-
-  //Pagina Checkout
-  public function checkout() {
-    
-    $gateway = new Braintree\Gateway([
-    'environment' => config('services.braintree.environment'),
-    'merchantId' => config('services.braintree.merchantId'),
-    'publicKey' => config('services.braintree.publicKey'),
-    'privateKey' => config('services.braintree.privateKey')
-    ]);
-    
-    $token = $gateway -> ClientToken() -> generate();
-    return view('pages.Client.checkout', compact('token'));
-  }
-
-  public function payment(OrderRequest $request) {
-    
-    $gateway = new Braintree\Gateway([
-    'environment' => config('services.braintree.environment'),
-    'merchantId' => config('services.braintree.merchantId'),
-    'publicKey' => config('services.braintree.publicKey'),
-    'privateKey' => config('services.braintree.privateKey')
-    ]);
-
-    $data = $request->all();
-
-    $amount = $request -> amount;
-    
-    $result = $gateway->transaction()->sale([
-        'amount' => $amount,
-        'paymentMethodNonce' => 'fake-valid-nonce',
-        'options' => [
-            'submitForSettlement' => true
-        ]
-    ]);
-    
-    if ($result -> success) {
-        $transaction = $result->transaction;
-
-        $order = new Order();
-        $order->fill($data);
-        $order->save();
-        $order -> products() -> sync($data['product_id']);
-        $order->save();
-        
-        Mail::to('test@gmail.com')->send(new OrderConfirmed($order));
-        Mail::to($order -> email)->send(new OrderConfirmed($order));
-
-        return redirect() -> route('transaction', encrypt($transaction -> id));
-    } else {
-        $errorString = "";
-
-        foreach($result->errors->deepAll() as $error) {
-            $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
-        }
-
-        return back()->withErrors('Si è verificato un errore: ' .$result -> message);
+  
+    //Pagina Checkout
+    public function checkout() {
+      
+      $gateway = new Braintree\Gateway([
+      'environment' => config('services.braintree.environment'),
+      'merchantId' => config('services.braintree.merchantId'),
+      'publicKey' => config('services.braintree.publicKey'),
+      'privateKey' => config('services.braintree.privateKey')
+      ]);
+      
+      $token = $gateway -> ClientToken() -> generate();
+      return view('pages.Client.checkout', compact('token'));
+    }
+  
+    public function payment(OrderRequest $request) {
+      
+      $gateway = new Braintree\Gateway([
+      'environment' => config('services.braintree.environment'),
+      'merchantId' => config('services.braintree.merchantId'),
+      'publicKey' => config('services.braintree.publicKey'),
+      'privateKey' => config('services.braintree.privateKey')
+      ]);
+  
+      $data = $request->all();
+  
+      $amount = $request -> amount;
+      
+      $result = $gateway->transaction()->sale([
+          'amount' => $amount,
+          'paymentMethodNonce' => 'fake-valid-nonce',
+          'options' => [
+              'submitForSettlement' => true
+          ]
+      ]);
+      
+      if ($result -> success) {
+          $transaction = $result->transaction;
+  
+          $order = new Order();
+          $order->fill($data);
+          $order->save();
+          $order -> products() -> sync($data['product_id']);
+          $order->save();
+          
+          Mail::to('test@gmail.com')->send(new OrderConfirmed($order));
+          Mail::to($order -> email)->send(new OrderConfirmed($order));
+  
+          return redirect() -> route('transaction', encrypt($transaction -> id));
+      } else {
+          $errorString = "";
+  
+          foreach($result->errors->deepAll() as $error) {
+              $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
+          }
+  
+          return back()->withErrors('Si è verificato un errore: ' .$result -> message);
+      }
+    }
+         
+    public function transaction($id) {
+      
+      $transaction = Crypt::decrypt($id);
+      return view('pages.Client.transaction',compact('transaction'));
     }
   }
-       
-  public function transaction($id) {
     
-    $transaction = Crypt::decrypt($id);
-    return view('pages.Client.transaction',compact('transaction'));
-  }
-}
+    
     
   
    

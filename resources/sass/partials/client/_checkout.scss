@@ -6,7 +6,7 @@
 
           form {
                @include flex(row, space-between, center, nowrap);
-               margin-bottom: 200px;
+               margin-bottom: 100px;
                padding: 0 40px 40px;
                @include neomorphism;
 
@@ -39,17 +39,9 @@
                     }
 
                     button {
-                         @include baloo;
-                         padding: 10px 20px;
-                         background-color: $yellow;
-                         color: $blue;
-                         border-radius: 10px;
-                         border: 1px solid $blue;
-
-                         &:active {
-                              box-shadow: inset 5px 5px 10px #d19f38,
-                                   inset -5px -5px 10px #ffe550;
-                         }
+                         @include definitiveButtonDesign;
+                         font-size: 20px;
+                         margin: 20px 0;
                     }
                }
 

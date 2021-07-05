@@ -12,6 +12,7 @@
             </ul>
 
             <h2>IL TUO ORDINE É IN PREPARAZIONE</h2>
-        </div>       
+        </div>   
+            
     </main>   
 @endsection   

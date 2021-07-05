@@ -46,7 +46,7 @@
                     <checkout-component></checkout-component>
                 </fieldset>
                 
-                <fieldset class="payment-card">
+                <fieldset id="pay-card" class="payment-card">   
                     <div class="bt-drop-in-wrapper">
                         <div id="bt-dropin"></div>
                     </div>

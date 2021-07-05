@@ -1,8 +1,3 @@
-@mixin indie {
-    font-family: 'Indie Flower', cursive;
-    font-size: 40px;
-    letter-spacing: 2px;
-}
 
 @mixin itim {
     font-family: 'Itim', cursive;
@@ -88,6 +83,8 @@
     background-color: $whitePastel;
     padding: 10% 8%;
 
+    
+
     form {
         flex-basis: 50%;
         padding: 0 40px 40px;
@@ -95,12 +92,14 @@
 
         #myfilebutton {
             @include neomorphismIn;
-            margin: 20px;   
+            @include baloo;
+            color: $blue;   
+            margin: 20px 0;      
             width: 100%;
             border-radius: 10px;
             padding: 10px 20px;
             border: 0;
-            background-color: #e9ebf8;
+            background-color: $bluelight;
             box-shadow: inset 5px 5px 10px #bfc1cb,
                 inset -5px -5px 10px #ffffff;
         }
@@ -109,7 +108,15 @@
             border: 3px solid $blue;
             background-color: $bluelight;
             padding: 40px;
-            border-radius: 10px;
+            border-radius: 10px;   
+
+            #type-food,
+            #description {
+                @include baloo;
+                margin: 20px 0;
+                background-color: $bluelight;
+
+            }
 
             legend {
                 @include itim;
@@ -117,9 +124,9 @@
             }
 
             label,
-            input {
+            input {    
                 @include baloo;
-                margin: 20px;
+                margin: 20px 0;
                 color: $blue;
             }
 
@@ -134,17 +141,7 @@
             }
 
             button {
-                @include baloo;
-                padding: 10px 20px;
-                background-color: $yellow;
-                color: $blue;
-                border-radius: 10px;
-                border: 1px solid $blue;
-
-                &:active {
-                    box-shadow: inset 5px 5px 10px #d19f38,
-                        inset -5px -5px 10px #ffe550;
-                }
+                @include definitiveButtonDesign();
             }
         }
     }
@@ -276,9 +273,60 @@
     padding: 10px;
     margin: 10px 0;
     background-color: $bluelight;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.5);
+    }
+}
+
+@mixin definitiveButtonDesign {
+    background-color: $yellow;
+    border: 2px solid $blue;
+    border-radius: 10px;
+    color: $blue;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    transition: .3s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    
+    &::after {
+        background-color: $blue;
+        border-radius: 10px;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%, 0) rotate(10deg);
+        transform-origin: top left;
+        transition: .3s transform ease-out;
+        will-change: transform;
+        z-index: -1
+    }
+    
+    &:hover::after {
+        transform: translate(0, 0);
+    }
+    &:hover {
+        border: 2px solid $yellow;
+        color: $yellow;
+        transform: scale(1.05);
+        will-change: transform;
+    }
+
+    &:hover a {
+        color: $yellow;
+    }
+
+
+    a {
+        @include baloo;
+        color: $blue;
     }
 }

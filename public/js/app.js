@@ -410,6 +410,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -418,6 +449,7 @@ __webpack_require__.r(__webpack_exports__);
       'secondoImg': "../../../storage/img/secondi.png",
       'dolceImg': "../../../storage/img/dolce.png",
       'carrelloImg': "../../../storage/img/carrello.png",
+      'lollipop': "../../../storage/img/productsImage/",
       'totale': 0,
       'carrello': [],
       'carrelloBackup': [],
@@ -576,7 +608,7 @@ __webpack_require__.r(__webpack_exports__);
       'restaurantInput': '',
       'categoryId': false,
       'typeOfFoods': [],
-      'categoryImage': "../../../storage/img/",
+      'categoryImage': "../../../storage/img/genresImage/",
       'restaurantImage': "../../../storage/restaurant-img/"
     };
   },
@@ -700,17 +732,17 @@ __webpack_require__.r(__webpack_exports__);
         labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
         datasets: [{
           label: 'Numero Ordini mensili',
-          backgroundColor: '#f87979',
-          pointBackgroundColor: 'yellow',
+          backgroundColor: '#ffc244',
+          pointBackgroundColor: '#ffc244',
           borderWidth: 3,
           pointBorderColor: '#25385f',
           data: this.getMonth()
         }, {
           label: 'Incasso',
-          backgroundColor: '#black',
-          pointBackgroundColor: 'yellow',
-          borderWidth: 1,
-          pointBorderColor: '#249EBF',
+          backgroundColor: '#25385f',
+          pointBackgroundColor: '#25385f',
+          borderWidth: 3,
+          pointBorderColor: '#ffc244',
           data: this.getPrice()
         }]
       },
@@ -39360,7 +39392,13 @@ var render = function() {
           }
         }
       },
-      [_c("div"), _vm._v(" "), _c("div"), _vm._v(" "), _c("div")]
+      [
+        _c("div", { class: _vm.hambugerFlag == true ? "line1" : "" }),
+        _vm._v(" "),
+        _c("div", { class: _vm.hambugerFlag == true ? "line2" : "" }),
+        _vm._v(" "),
+        _c("div", { class: _vm.hambugerFlag == true ? "line3" : "" })
+      ]
     ),
     _vm._v(" "),
     _c(
@@ -39411,15 +39449,26 @@ var render = function() {
               "ul",
               _vm._l(_vm.antipasti, function(antipasto) {
                 return _c("li", [
-                  _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src: _vm.lollipop + antipasto.name + ".jpg",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "title" }, [
                     _c("h3", { attrs: { value: antipasto.name } }, [
                       _vm._v(_vm._s(antipasto.name))
                     ]),
                     _vm._v(" "),
-                    _c("h5", [_vm._v(_vm._s(antipasto.ingredients))]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(antipasto.description))]),
-                    _vm._v(" "),
+                    _c("h5", [_vm._v(_vm._s(antipasto.ingredients))])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "description" }, [
+                    _c("p", [_vm._v(_vm._s(antipasto.description))])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
                     antipasto.availability
                       ? _c("i", {
                           staticClass: "fas fa-plus",
@@ -39437,11 +39486,7 @@ var render = function() {
                     _vm._v(" "),
                     !antipasto.availability
                       ? _c("h3", [_vm._v("Non Disponibile")])
-                      : _vm._e()
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "image" }, [
-                    _c("img", { attrs: { src: _vm.antipastoImg, alt: "" } }),
+                      : _vm._e(),
                     _vm._v(" "),
                     _c("h4", [
                       _c("i", { staticClass: "fas fa-euro-sign" }),
@@ -39466,13 +39511,21 @@ var render = function() {
             "ul",
             _vm._l(_vm.primi, function(primo) {
               return _c("li", [
-                _c("div", [
+                _c("img", {
+                  attrs: { src: _vm.lollipop + primo.name + ".jpg", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "title" }, [
                   _c("h3", [_vm._v(_vm._s(primo.name))]),
                   _vm._v(" "),
-                  _c("h5", [_vm._v(_vm._s(primo.ingredients))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(primo.description))]),
-                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(primo.ingredients))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "description" }, [
+                  _c("p", [_vm._v(_vm._s(primo.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "price" }, [
                   primo.availability
                     ? _c("i", {
                         staticClass: "fas fa-plus",
@@ -39490,11 +39543,7 @@ var render = function() {
                   _vm._v(" "),
                   !primo.availability
                     ? _c("h3", [_vm._v("Non Disponibile")])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.primoImg, alt: "" } }),
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("h4", [
                     _c("i", { staticClass: "fas fa-euro-sign" }),
@@ -39518,13 +39567,21 @@ var render = function() {
             "ul",
             _vm._l(_vm.secondi, function(secondo) {
               return _c("li", [
-                _c("div", [
+                _c("img", {
+                  attrs: { src: _vm.lollipop + secondo.name + ".jpg", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "title" }, [
                   _c("h3", [_vm._v(_vm._s(secondo.name))]),
                   _vm._v(" "),
-                  _c("h5", [_vm._v(_vm._s(secondo.ingredients))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(secondo.description))]),
-                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(secondo.ingredients))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "description" }, [
+                  _c("p", [_vm._v(_vm._s(secondo.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "price" }, [
                   secondo.availability
                     ? _c("i", {
                         staticClass: "fas fa-plus",
@@ -39542,11 +39599,7 @@ var render = function() {
                   _vm._v(" "),
                   !secondo.availability
                     ? _c("h3", [_vm._v("Non Disponibile")])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.secondoImg, alt: "" } }),
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("h4", [
                     _c("i", { staticClass: "fas fa-euro-sign" }),
@@ -39570,13 +39623,21 @@ var render = function() {
             "ul",
             _vm._l(_vm.dolci, function(dolce) {
               return _c("li", [
-                _c("div", [
+                _c("img", {
+                  attrs: { src: _vm.lollipop + dolce.name + ".jpg", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "title" }, [
                   _c("h3", [_vm._v(_vm._s(dolce.name))]),
                   _vm._v(" "),
-                  _c("h5", [_vm._v(_vm._s(dolce.ingredients))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(dolce.description))]),
-                  _vm._v(" "),
+                  _c("h5", [_vm._v(_vm._s(dolce.ingredients))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "description" }, [
+                  _c("p", [_vm._v(_vm._s(dolce.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "price" }, [
                   dolce.availability
                     ? _c("i", {
                         staticClass: "fas fa-plus",
@@ -39594,11 +39655,7 @@ var render = function() {
                   _vm._v(" "),
                   !dolce.availability
                     ? _c("h3", [_vm._v("Non Disponibile")])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "image" }, [
-                  _c("img", { attrs: { src: _vm.dolceImg, alt: "" } }),
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("h4", [
                     _vm._v(
@@ -39646,7 +39703,11 @@ var render = function() {
                 return _c("ul", [
                   _c("li", [
                     _c("div", [
-                      _c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")]),
+                      _c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("h5", [_vm._v(_vm._s(ordine.prodotto))]),
                       _vm._v(" "),
                       _c("i", {
                         staticClass: "fas fa-minus",
@@ -39655,17 +39716,7 @@ var render = function() {
                             return _vm.removeProduct(index)
                           }
                         }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [_c("h5", [_vm._v(_vm._s(ordine.prodotto))])]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", [
-                        _c("i", { staticClass: "fas fa-euro-sign" }),
-                        _vm._v(" "),
-                        _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")])
-                      ]),
+                      }),
                       _vm._v(" "),
                       _c("i", {
                         staticClass: "fas fa-plus",
@@ -39675,6 +39726,14 @@ var render = function() {
                           }
                         }
                       })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", [
+                        _c("i", { staticClass: "fas fa-euro-sign" }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")])
+                      ])
                     ])
                   ])
                 ])
@@ -39691,16 +39750,20 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", [
-                      _c("a", { attrs: { href: _vm.checkout } }, [
-                        _c(
-                          "button",
-                          {
-                            attrs: { type: "submit" },
-                            on: { click: _vm.setLocalStorage }
-                          },
-                          [_vm._v("Vai al pagamento")]
-                        )
-                      ])
+                      _c(
+                        "button",
+                        {
+                          attrs: { type: "submit" },
+                          on: { click: _vm.setLocalStorage }
+                        },
+                        [
+                          _c("a", { attrs: { href: _vm.checkout } }, [
+                            _vm._v(
+                              "\n                                   Vai al pagamento\n                              "
+                            )
+                          ])
+                        ]
+                      )
                     ])
                   ])
                 : _c("div", { staticClass: "no-products" }, [
@@ -39721,8 +39784,10 @@ var render = function() {
         _vm._l(_vm.carrello, function(ordine, index) {
           return _c("ul", [
             _c("li", [
+              _c("div", [_c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")])]),
+              _vm._v(" "),
               _c("div", [
-                _c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")]),
+                _c("h5", [_vm._v(_vm._s(ordine.prodotto))]),
                 _vm._v(" "),
                 _c("i", {
                   staticClass: "fas fa-minus",
@@ -39731,17 +39796,7 @@ var render = function() {
                       return _vm.removeProduct(index)
                     }
                   }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", [_c("h5", [_vm._v(_vm._s(ordine.prodotto))])]),
-              _vm._v(" "),
-              _c("div", [
-                _c("div", [
-                  _c("i", { staticClass: "fas fa-euro-sign" }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")])
-                ]),
+                }),
                 _vm._v(" "),
                 _c("i", {
                   staticClass: "fas fa-plus",
@@ -39751,6 +39806,14 @@ var render = function() {
                     }
                   }
                 })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("div", [
+                  _c("i", { staticClass: "fas fa-euro-sign" }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v(_vm._s(ordine.prezzo) + " ")])
+                ])
               ])
             ])
           ])
@@ -39767,16 +39830,20 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", [
-                _c("a", { attrs: { href: _vm.checkout } }, [
-                  _c(
-                    "button",
-                    {
-                      attrs: { type: "submit" },
-                      on: { click: _vm.setLocalStorage }
-                    },
-                    [_vm._v("Vai al pagamento")]
-                  )
-                ])
+                _c(
+                  "button",
+                  {
+                    attrs: { type: "submit" },
+                    on: { click: _vm.setLocalStorage }
+                  },
+                  [
+                    _c("a", { attrs: { href: _vm.checkout } }, [
+                      _vm._v(
+                        "\n                                   Vai al pagamento\n                              "
+                      )
+                    ])
+                  ]
+                )
               ])
             ])
           : _c("div", { staticClass: "no-products" }, [
@@ -52812,6 +52879,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alessandroventi/Desktop/Esercizi boolean/DeliverBoo_Team6/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\Users\sacha\Desktop\Boolean\Esercizi\Laravel\DeliverBoo_Team6\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\sacha\Desktop\Boolean\Esercizi\Laravel\DeliverBoo_Team6\resources\sass\app.scss */"./resources/sass/app.scss");
 

@@ -6,19 +6,8 @@
 
         <h1>{{ $restaurant -> name }}</h1>
 
-          <div class="txt-jumb">
-
-            <div>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-
-            <div>
-              @foreach($restaurant -> categories as $category)
+        <div>
+            @foreach($restaurant -> categories as $category)
                 <span> {{ $category -> name }} </span>
               @endforeach
             </div>
@@ -37,7 +26,7 @@
     checkout="{{route('checkout')}}"
     :dolci="{{$dolci}}"
     >
-
-</homerestaurant-component>
-</main>
+    
+</homerestaurant-component>    
+</main>   
 @endsection

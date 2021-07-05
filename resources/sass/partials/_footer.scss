@@ -18,7 +18,7 @@ footer {
 
      .footer-list {
           @include flex(row, space-between, stretch, nowrap);
-          padding: 100px 10% 20px;         
+          padding: 100px 8% 20px;         
 
           ul {   
                flex-basis: calc(100% / 4 - 20px);
@@ -63,7 +63,7 @@ footer {
 
      .links {
           @include flex(row, space-between, center, nowrap);
-          padding: 40px 10%;
+          padding: 40px 8%;
 
           ul {
                flex-basis: 85%;
@@ -77,6 +77,11 @@ footer {
      
                          i {
                               font-size: 30px;
+                              transition: transform 0.2s linear;
+
+                              &:hover {
+                                   transform: scale(1.5);
+                              }
                          }
                     }
                }

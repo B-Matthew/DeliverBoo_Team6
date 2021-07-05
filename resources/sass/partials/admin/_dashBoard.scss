@@ -13,7 +13,7 @@
     .welcome {
         grid-area: welcome;
         background-color: $whitePastel;
-        padding: 100px 0 50px;
+        padding: 100px 0;
         @include flex(row, center, center, nowrap);
         font-family: indie flower, cursive;
         font-size: 40px;
@@ -63,14 +63,15 @@
                     h4 {
                         margin-right: 20px;
                     }
-
-                    &:hover {
+   
+                    &:hover, &:focus {
                         left: 0;
-                    }
+                    }   
                 }
 
                 .buttonActive {
                     @include neomorphismIn;
+                    
                 }
 
             }
@@ -100,8 +101,8 @@
    
             li {
                 @include neomorphism;
-                flex-basis: 370px;
-                margin: 30px;   
+                flex-basis: 370px;    
+                margin: 40px 30px;   
                 z-index: 10;
 
 
@@ -254,6 +255,9 @@
                     }
                 }
             }
+        }
+        button {
+            font-size: 20px;
         }
     }   
 

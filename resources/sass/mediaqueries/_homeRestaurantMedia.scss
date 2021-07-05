@@ -49,11 +49,25 @@
      }
 
      #home-restaurant .menu .container-menu {
-          flex-basis: 70%;
+          flex-basis: 60%;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li p {
+          font-size: 30px;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li {
+          flex-basis: 100%;
+          }
+
+     #home-restaurant .menu .container-menu .products > div ul li img {
+          width: 100px;
+          height: auto;
+          vertical-align: super;
      }
 
      #home-restaurant .menu .carrello {
-          flex-basis: 30%;
+          flex-basis: 40%;
      }
 
      #home-restaurant .menu .carrello h2 {
@@ -128,53 +142,46 @@
           font-size: 60px;
      }
 
-     #home-restaurant .menu .container-menu .products > div ul li h3 {
+     #home-restaurant .menu .container-menu .products > div ul li .title h3 {
           font-size: 40px;
      }
 
-     #home-restaurant .menu .container-menu .products > div ul li h5 {
-          font-size: 40px;
+     #home-restaurant .menu .container-menu .products > div ul li .title h5 {
+          font-size: 30px;
      }
 
-     #home-restaurant .menu .container-menu .products > div ul li p {
+     #home-restaurant .menu .container-menu .products > div ul li .description p {
          font-size: 30px;
-         display: none;
+     //     display: none;
      }
+
+     #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus {
+          font-size: 40px;
+          }
 
      #home-restaurant .menu .container-menu .products > div ul {
-          flex-wrap: nowrap;
-          overflow: auto;
+          // flex-wrap: nowrap;
+          // overflow: auto;
           justify-content: flex-start;
      }
 
      #home-restaurant .menu .container-menu .products > div ul li {
-          flex-basis: 50%;
+          flex-basis: 100%;
           border-radius: 10px;
           background: #f1f1f1;
           box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
           transition: all 0.5s linear;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          flex-wrap: nowrap;
+          grid-template-columns: 200px 1fr;
           padding: 20px;
-          margin: 15px 80px;
-          color: #25385f;
-     }
-
-     #home-restaurant .menu .container-menu .products .image {
-          width: 500px;
-          height: auto;
+          margin: 50px 20px;
+          color: $blue;
      }
 
      #home-restaurant .menu .container-menu .products > div ul li img {
-          width: 300px;
-          height: auto;
-          vertical-align: super;
+          width: 150px;
      }
 
-     #home-restaurant .menu .container-menu .products > div ul li .fa-euro-sign {
+     #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-euro-sign {
           font-size: 35px;
           }
 
