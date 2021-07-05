@@ -65,10 +65,12 @@ body {
                @include theWave($yellow, $whitePastel);
 
                h2 {
-                    @include itim;
+                    @include baloo;
                     margin-bottom: 100px;
                     color: $blue;
                     margin-top: 10%;
+                    font-weight: 600;
+                    font-size: 40px;
                }
 
                ::placeholder {
@@ -136,8 +138,8 @@ body {
                               h3 {
                                    padding: 10px;
                                    @include baloo;
-                                   font-weight: normal;
-                                   border-bottom: 1px solid black;
+                                   font-weight: 600;
+                                   border-bottom: 1px solid $blue;
                               }
 
                               div {                                  
@@ -164,9 +166,11 @@ body {
           
 
                h2 {
-                    @include itim;
+                    @include baloo;
                     margin: 10% 0 20px 0;
                     color: $blue;
+                    font-weight: 600;
+                    font-size: 40px;
                }
 
                ul {
@@ -207,10 +211,11 @@ body {
                               
 
                               h3 {
-                                   @include itim;
+                                   @include baloo;
                                    width: 100%;
-                                   font-weight: normal;
+                                   font-weight: 600;
                                    margin: 20px 0;
+                                   font-size: 40px;
                               }
 
                               .left {   
@@ -221,6 +226,7 @@ body {
                                         width: 100%;
                                         margin-bottom: 20px;
                                         @include baloo;
+                                        color: $blue;
                                         font-size: 18px;
                                    }                                   
                               }

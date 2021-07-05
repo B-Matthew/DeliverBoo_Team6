@@ -88,7 +88,9 @@
                     }
 
                     h2 {
-                         @include itim;
+                         @include baloo;
+                         font-weight: 600;
+                         font-size: 40px; 
                     }
 
                     h5 {

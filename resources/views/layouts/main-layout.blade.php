@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">   
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">

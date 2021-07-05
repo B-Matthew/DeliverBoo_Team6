@@ -39786,7 +39786,7 @@ var render = function() {
             _c("li", [
               _c("div", [_c("h4", [_vm._v(_vm._s(ordine.quantita) + "x")])]),
               _vm._v(" "),
-              _c("div", [
+              _c("div", { staticClass: "cart-product" }, [
                 _c("h5", [_vm._v(_vm._s(ordine.prodotto))]),
                 _vm._v(" "),
                 _c("i", {

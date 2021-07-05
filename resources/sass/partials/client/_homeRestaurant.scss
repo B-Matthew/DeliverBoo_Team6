@@ -147,9 +147,10 @@
 
                     h2 {
                         margin-bottom: 30px;
-                        @include itim;
+                        @include baloo;
                         font-size: 35px;
                         color: $blue;
+                        font-weight: 600;
                     }
 
                     ul {
@@ -282,8 +283,10 @@
                     border-top-left-radius: 20px;
                     border-top-right-radius: 25px;
                     border-bottom: 1px solid $blue;
-                    @include itim;
+                    @include baloo;
+                    font-weight: 600;
                     font-size: 40px;
+                    margin-bottom: 40px;
                 }
 
                 .no-products {
@@ -391,8 +394,8 @@
                 border-top-left-radius: 20px;
                 border-top-right-radius: 25px;
                 border-bottom: 1px solid $blue;
-                @include itim;
-                font-size: 30px;
+                @include baloo;
+                font-size: 35px;
                 // background-color: $bluelight;
             }
 
@@ -420,6 +423,7 @@
 
                     div {
                         text-align: center;
+                        flex-basis: 20%;
 
                         h5 {
                             font-weight: normal;
@@ -437,6 +441,10 @@
                             padding: 10px;
                             margin:10px
                         }
+                    }
+
+                    .cart-product {
+                        flex-basis: 60%;
                     }
 
                     div:last-child {

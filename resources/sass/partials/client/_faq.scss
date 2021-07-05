@@ -57,8 +57,9 @@
                padding: 200px 8% 350px 8%;
 
                h1 {
-                    @include itim;
+                    @include baloo;
                     color: $blue;
+                    font-size: 30px;
                }
      
                p {
