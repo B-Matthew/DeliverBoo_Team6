@@ -103,7 +103,7 @@
 
      body #homepage #categories .typeOfFoods li div span {
           font-size: 35px;
-          word-break: keep-all;
+          white-space:nowrap;   
      }
 
      body #homepage #categories .restaurants {

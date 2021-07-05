@@ -26,6 +26,7 @@
 @import 'partials/admin/editProduct';  
 @import 'partials/admin/myProducts';        
 @import 'partials/admin/editRestaurant';
+@import 'partials/admin/report';   
 
 // mediaquery
 @import 'mediaqueries/homepageMedia';
@@ -42,3 +43,4 @@
 @import 'mediaqueries/editProductMedia';
 @import 'mediaqueries/editRestaurantMedia.scss';      
 @import 'mediaqueries/createProductMedia.scss';
+@import 'mediaqueries/transactionMedia';   
