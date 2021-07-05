@@ -30,7 +30,7 @@
 
     .menu {
         @include flex(row, space-between, flex-start, nowrap);
-        padding: 20% 2%;
+        padding: 10% 2% 20% 2%;
 
 
         .aside-menu {
@@ -224,6 +224,11 @@
                 img {
                     width: 150px;
                     height: auto;
+                    transition: transform 0.2s linear;
+
+                    &:hover {
+                        transform: scale(1.5);
+                    }
                 }
 
             .price {
@@ -298,14 +303,16 @@
     
                             .fa-minus {
                                 @include addRemove;
-                                padding: 5px;
+                                padding: 10px;
                                 font-size: 40px;
+                                margin: 10px 40px;
                             }
     
                             .fa-plus {
                                 @include addRemove;
-                                padding: 5px;
+                                padding: 10px;
                                 font-size: 40px;
+                                margin: 10px 40px;
                             }
                         }
     
@@ -402,12 +409,14 @@
 
                         .fa-minus {
                             @include addRemove;
-                            padding: 5px;
+                            padding: 10px;
+                            margin:10px
                         }
 
                         .fa-plus {
                             @include addRemove;
-                            padding: 5px;
+                            padding: 10px;
+                            margin:10px
                         }
                     }
 

@@ -59,7 +59,7 @@
      .we {
          @include theWave($bluelight, $whitePastel);
           .text-box {
-               padding: 200px 10%;
+               padding: 200px 8%;
 
                p {
                     @include baloo;

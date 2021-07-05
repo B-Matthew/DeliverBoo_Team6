@@ -5,15 +5,6 @@
 
         <h1>{{ $restaurant -> name }}</h1>
 
-        <div>   
-            <i class="far fa-star"></i>   
-            <i class="far fa-star"></i>   
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>   
-            <span>recensioni?</span>
-        </div>
-
         <div>
             @foreach($restaurant -> categories as $category)
                 <span> {{ $category -> name }} </span>
