@@ -7,12 +7,9 @@
             
             <h3>id transazione : {{$transaction}}</h3>
 
-            <ul>
-                <li></li>   
-            </ul>
+            <h3>Controlla tutti i dettagli  dell'ordine nell'email di conferma che ti abbiamo inviato</h3>
 
             <h2>IL TUO ORDINE É IN PREPARAZIONE</h2>
-        </div>   
-            
-    </main>   
-@endsection   
+        </div>       
+    </main>         
+@endsection            
