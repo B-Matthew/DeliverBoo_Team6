@@ -86,10 +86,6 @@ Route::get('transaction/{id}', 'MainController@transaction')
 
 
 
-
-
-
-
         
 
 
