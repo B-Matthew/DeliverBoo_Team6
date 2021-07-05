@@ -39,7 +39,7 @@ Route::get('/client/restaurant/{id}', 'MainController@clientRestaurant')
 Route::get('/dashBoard/restaurant', 'HomeController@dashBoard')
 -> name('dashBoard');
 Route::post('/store/restaurant', 'HomeController@storeRestaurant')
-->name('store-restaurant');
+->name('storeRestaurant');
 
 // ROUTE DEI PRODUCT DEL RISTORANTE
 Route::get('/myProduct/{id}' , 'HomeController@myProduct')
