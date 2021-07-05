@@ -187,17 +187,17 @@
                          <li>
                               <div>
                                    <h4>{{ordine.quantita}}x</h4>
-                                   <i @click="removeProduct(index)" class="fas fa-minus"></i>
                               </div>
                               <div>
                                    <h5>{{ordine.prodotto}}</h5>
+                                   <i @click="removeProduct(index)" class="fas fa-minus"></i>
+                                   <i  @click="increaseProduct(index)" class="fas fa-plus"></i> 
                               </div>
                               <div>
                                    <div>
                                         <i class="fas fa-euro-sign"></i>
                                         <span>{{ordine.prezzo}} </span>
                                    </div>
-                                   <i  @click="increaseProduct(index)" class="fas fa-plus"></i>  
                               </div>
                          </li>
                     </ul>
@@ -231,17 +231,17 @@
                          <li>
                               <div>
                                    <h4>{{ordine.quantita}}x</h4>
-                                   <i @click="removeProduct(index)" class="fas fa-minus"></i>
                               </div>
                               <div>
                                    <h5>{{ordine.prodotto}}</h5>
+                                   <i @click="removeProduct(index)" class="fas fa-minus"></i>
+                                   <i  @click="increaseProduct(index)" class="fas fa-plus"></i>
                               </div>
                               <div>
                                    <div>
                                         <i class="fas fa-euro-sign"></i>
                                         <span>{{ordine.prezzo}} </span>
                                    </div>
-                                   <i  @click="increaseProduct(index)" class="fas fa-plus"></i>  
                               </div>
                          </li>
                     </ul>

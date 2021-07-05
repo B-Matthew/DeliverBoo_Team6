@@ -105,7 +105,7 @@ header ul ul li {
 header ul ul li a {
   font-family: "Baloo 2", cursive;
   font-size: 20px;
-  font-size: 50px;
+  font-size: 70px;
   margin: 0 50px;
 }
 
@@ -349,7 +349,7 @@ body #homepage #categories .restaurants {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 30px 10%;
+  padding: 0 8% 100px 8%;
 }
 
 body #homepage #categories .restaurants li {
@@ -454,7 +454,7 @@ body #homepage .work ul {
   align-items: stretch;
   flex-wrap: nowrap;
   color: #25385f;
-  padding: 100px 10%;
+  padding: 100px 8% 200px 8%;
 }
 
 body #homepage .work ul li {
@@ -602,7 +602,7 @@ footer .footer-list {
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: nowrap;
-  padding: 100px 10% 20px;
+  padding: 100px 8% 20px;
 }
 
 footer .footer-list ul {
@@ -650,7 +650,7 @@ footer .links {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 40px 10%;
+  padding: 40px 8%;
 }
 
 footer .links ul {
@@ -1192,7 +1192,7 @@ footer .links h5 {
 }
 
 #chi-siamo .we .text-box {
-  padding: 200px 10%;
+  padding: 200px 8%;
 }
 
 #chi-siamo .we .text-box p {
@@ -1404,7 +1404,7 @@ footer .links h5 {
 }
 
 #faq .faq .text-box {
-  padding: 20%;
+  padding: 200px 8% 350px 8%;
 }
 
 #faq .faq .text-box h1 {
@@ -1466,7 +1466,7 @@ footer .links h5 {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding: 20% 2%;
+  padding: 10% 2% 20% 2%;
 }
 
 #home-restaurant .menu .aside-menu {
@@ -1660,12 +1660,12 @@ footer .links h5 {
   padding: 10px;
   margin: 10px 0;
   background-color: #dadef5;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
   margin: 0;
 }
 
 #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-euro-sign {
@@ -1680,6 +1680,11 @@ footer .links h5 {
 #home-restaurant .menu .carrello-icona img {
   width: 150px;
   height: auto;
+  transition: transform 0.2s linear;
+}
+
+#home-restaurant .menu .carrello-icona img:hover {
+  transform: scale(1.5);
 }
 
 #home-restaurant .menu .carrello-icona .price {
@@ -1772,13 +1777,14 @@ footer .links h5 {
   padding: 10px;
   margin: 10px 0;
   background-color: #dadef5;
-  transition: all 0.5s linear;
-  padding: 5px;
+  transition: all 0.2s linear;
+  padding: 10px;
   font-size: 40px;
+  margin: 10px 40px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown ul li div .fa-minus:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown ul li div .fa-plus {
@@ -1788,13 +1794,14 @@ footer .links h5 {
   padding: 10px;
   margin: 10px 0;
   background-color: #dadef5;
-  transition: all 0.5s linear;
-  padding: 5px;
+  transition: all 0.2s linear;
+  padding: 10px;
   font-size: 40px;
+  margin: 10px 40px;
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown ul li div .fa-plus:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 #home-restaurant .menu .carrello-icona .carrello-dropdown ul li div:last-child {
@@ -1948,12 +1955,13 @@ footer .links h5 {
   padding: 10px;
   margin: 10px 0;
   background-color: #dadef5;
-  transition: all 0.5s linear;
-  padding: 5px;
+  transition: all 0.2s linear;
+  padding: 10px;
+  margin: 10px;
 }
 
 #home-restaurant .menu .carrello ul li div .fa-minus:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 #home-restaurant .menu .carrello ul li div .fa-plus {
@@ -1963,12 +1971,13 @@ footer .links h5 {
   padding: 10px;
   margin: 10px 0;
   background-color: #dadef5;
-  transition: all 0.5s linear;
-  padding: 5px;
+  transition: all 0.2s linear;
+  padding: 10px;
+  margin: 10px;
 }
 
 #home-restaurant .menu .carrello ul li div .fa-plus:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 #home-restaurant .menu .carrello ul li div:last-child {
@@ -2078,7 +2087,7 @@ footer .links h5 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   padding: 0 40px 40px;
   border-radius: 10px;
   background: #f1f1f1;
@@ -2293,7 +2302,7 @@ footer .links h5 {
 #dashboard .welcome {
   grid-area: welcome;
   background-color: #f1f1f1;
-  padding: 100px 0 50px;
+  padding: 100px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3539,7 +3548,7 @@ footer .links h5 {
   }
 
   body #homepage #categories h2 {
-    margin-top: 20%;
+    margin: 200px 0;
     font-size: 65px;
   }
 
@@ -3552,7 +3561,7 @@ footer .links h5 {
     flex-wrap: nowrap;
     justify-content: flex-start;
     overflow: auto;
-    padding: 100px 8%;
+    padding: 200px 8%;
   }
 
   body #homepage #categories .typeOfFoods li {
@@ -3590,6 +3599,7 @@ footer .links h5 {
 
   body #homepage #categories .restaurants li {
     flex-basis: 740px;
+    margin: 50px 0;
   }
 
   body #homepage #categories .restaurants li a h3 {
@@ -3607,7 +3617,7 @@ footer .links h5 {
   }
 
   body #homepage .work h2 {
-    margin: 15% 0 20px 0;
+    margin: 200px 0;
     font-size: 65px;
   }
 
@@ -3618,7 +3628,7 @@ footer .links h5 {
   }
 
   body #homepage .work ul li {
-    margin: 30px;
+    margin: 50px 0;
     flex-basis: 80%;
   }
 
