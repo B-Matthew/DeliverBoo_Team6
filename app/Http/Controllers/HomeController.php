@@ -13,23 +13,24 @@ use App\Http\Requests\ProductRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-// PER TORNARE A PRIMA DECOMMENTARE L'AUTH CONSTRUCT E CANCELLARE IL LOGIN PER ID IN DASHBOARD e gate
+
+// PER ALE, PER ACCEDERE ALLA PARTE ADMIN COMMENTA LA FUNCTION __CONSTRUCT , AGGIUNGI Auth::loginUsingId(3); ALLA FUNZIONE DASHBOARD E COMMENTA IL GATE NELLA FUNCTION MY PRODUCT
 
 class HomeController extends Controller
 {
-// public function __construct() 
-// {
-//   $this->middleware('auth');
-// }
+public function __construct() 
+{
+  $this->middleware('auth');
+}
 
 // Dashboard del ristoratore
   public function dashboard() 
   {
-    Auth::loginUsingId(3);
     $user = Auth::user();
     $categories = Category::all();
     return view('pages.Admin.dashboard' , compact('user' , 'categories'));
   }
+    
     
   //  Delete Reastaurant
   public function deleteRestaurant($id) 

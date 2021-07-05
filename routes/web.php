@@ -89,6 +89,61 @@ Route::get('transaction/{id}', 'MainController@transaction')
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('easterEgg' , function() {
+        return view('pages.Client.Sainato');
+
+})->name('easterEgg');
+         
         
 
 
