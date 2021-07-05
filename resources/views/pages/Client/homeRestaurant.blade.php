@@ -23,8 +23,7 @@
     checkout="{{route('checkout')}}" 
     :dolci="{{$dolci}}"
     >
-    
-</homerestaurant-component>    
+    </homerestaurant-component>    
 </main>   
 @endsection
     

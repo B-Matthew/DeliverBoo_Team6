@@ -16,11 +16,9 @@
         <div>
             <p>{{ $restaurant -> address }}</p>
         </div>
-
     </section>
 
     <div class="container-menu">
-
         <div>
             <a href="{{ route('createProduct' , encrypt($restaurant -> id)) }}">
                 Aggiungi un piatto
@@ -121,7 +119,6 @@
             </ul>
 
         </div>
-
     </div>   
     <div style="padding-bottom: 300px;width:95%; margin:auto;">
     <chart-component :amount="{{$amount}}" :orders = '{{$orders}}'></chart-component>
