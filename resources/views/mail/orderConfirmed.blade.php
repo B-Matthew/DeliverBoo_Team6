@@ -29,7 +29,7 @@
             list-style-type: none;
         }
 
-        @media (max-width: 998px) AND (min-width: 768px) {
+        @media (max-width: 998px){
             
             .container {
                 width: 100%;
@@ -44,13 +44,11 @@
     <div class="container">
         <h1>Riepilogo dell'ordine:</h1>
         <ul id="first">
-            <li>Nome: {{$order -> name}} {{$order -> lastname}}</li>
-            <li>Indirizzo: {{$order -> address}}</li>
-            <li>Metodo di Pagamento: Visa **** **** **** 4242</li>
-            
-            <li>Dettagli dell'ordine :</li>        
-                
-                
+            <li><h3>Nome:</h3> {{$order -> name}} {{$order -> lastname}}</li>
+            <li><h3>Indirizzo :</h3> {{$order -> address}}</li>
+            <li><h3>Metodo di Pagamento :</h3> Visa **** **** **** 4242</li>
+            <li><h3>Dettagli dell'ordine :</h3>       
+
                 <ul>
                     @foreach ($order -> products as $product)
                     <li>
@@ -61,9 +59,12 @@
                 
             </li>
         </ul>
-        <h3> Totale: € {{$order -> amount}}</h3>
+        <h3> Totale : € {{$order -> amount}}</h3>
         
         <p>Grazie e buona giornata</p>
     </div>
 </body>
 </html>
+                
+                
+            
