@@ -2265,14 +2265,10 @@ footer .links h5 {
 #transaction div {
   border-radius: 10px;
   background: #f1f1f1;
-  box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+  box-shadow: inset 5px 5px 10px #cdcdcd, inset -5px -5px 10px #ffffff;
   transition: all 0.5s linear;
   background-color: #f1f1f1;
   padding: 40px;
-}
-
-#transaction div:hover {
-  box-shadow: 12px -12px 24px #bdbdbd, -12px 12px 24px #ffffff;
 }
 
 #transaction div * {
@@ -3593,7 +3589,7 @@ footer .links h5 {
 
   body #homepage #categories .typeOfFoods li div span {
     font-size: 35px;
-    word-break: keep-all;
+    white-space: nowrap;
   }
 
   body #homepage #categories .restaurants {
@@ -5037,6 +5033,42 @@ footer .links h5 {
 
   #createProduct form fieldset button {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 998px) {
+  #transaction {
+    padding: 300px 2%;
+  }
+
+  #transaction div {
+    padding: 40px 2%;
+  }
+
+  #transaction div h2 {
+    font-size: 50px;
+  }
+
+  #transaction div h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 998px) and (min-width: 768px) {
+  #transaction {
+    padding: 300px 2%;
+  }
+
+  #transaction div {
+    padding: 40px 2%;
+  }
+
+  #transaction div h2 {
+    font-size: 60px;
+  }
+
+  #transaction div h3 {
+    font-size: 50px;
   }
 }
 
