@@ -5191,10 +5191,10 @@ footer .links h5 {
   }
 
   #my-product .container-menu .products-box .products {
-    flex-basis: 60%;
+    flex-basis: 100%;
   }
 
-  #my-product .container-menu .products-box .products .product-box {
+  #my-product .container-menu .products-box div .products .product-box {
     flex-basis: 100%;
   }
 }
@@ -5246,7 +5246,7 @@ footer .links h5 {
   }
 
   #my-product .container-menu .products-box .info li {
-    flex-basis: calc(50% - 30px);
+    flex-basis: 100%;
   }
 
   #my-product .container-menu .products-box .info li i {

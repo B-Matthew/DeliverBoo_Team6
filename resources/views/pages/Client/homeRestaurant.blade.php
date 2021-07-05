@@ -4,9 +4,9 @@
     <section class="jumbotron">
       <div class="jumb">
 
-        <h1>{{ $restaurant -> name }}</h1>
 
           <div class="txt-jumb">
+            <h1>{{ $restaurant -> name }}</h1>
 
             <div>
               @foreach($restaurant -> categories as $category)
