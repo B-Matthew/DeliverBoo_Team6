@@ -11,5 +11,11 @@
 
             <h2>IL TUO ORDINE É IN PREPARAZIONE</h2>
         </div>       
-    </main>         
+    </main>     
+    <script>
+        setTimeout(function () {
+   window.location.href= '{{route("homepage")}}'; // the redirect goes here
+
+},5000); // 5 seconds
+</script>    
 @endsection            
